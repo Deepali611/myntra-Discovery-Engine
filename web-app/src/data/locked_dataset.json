@@ -62,7 +62,7 @@
       "id": "Q4",
       "question": "Photo vs. reality quality/color doubts",
       "evidence_tier": "Direct Wishlist Evidence",
-      "evidence_status": "PARTIAL",
+      "evidence_status": "MEDIUM (Low Volume - 2 Records)",
       "direct_wishlist_count": 2,
       "general_pre_purchase_count": 0,
       "sources": [
@@ -77,14 +77,14 @@
     {
       "id": "Q5",
       "question": "Comparing shortlisted items / choice dilemma",
-      "evidence_tier": "General Pre-Purchase Evidence",
-      "evidence_status": "STRONG",
+      "evidence_tier": "Supporting Pre-Purchase Fashion Decision Evidence",
+      "evidence_status": "WEAK (Single-Sentence Title Records)",
       "direct_wishlist_count": 0,
       "general_pre_purchase_count": 12,
       "sources": [
         "reddit"
       ],
-      "synthesis": "Shoppers experience choice paralysis between 2+ specific shortlisted outfits for milestone occasions (receptions, date nights, engagements).",
+      "synthesis": "Shoppers post short title-only questions asking for help choosing between outfits for receptions/dates, but lack detailed behavioral elaboration in public comment text.",
       "verbatim_evidence": [
         "Help me choose one dress for reception party (reddit_rss_t3_1k48pyu)"
       ]
@@ -92,8 +92,8 @@
     {
       "id": "Q6",
       "question": "Info sought outside Myntra (reviews, social proof, trust)",
-      "evidence_tier": "General Pre-Purchase Evidence",
-      "evidence_status": "STRONG",
+      "evidence_tier": "Supporting Pre-Purchase Fashion Decision Evidence",
+      "evidence_status": "PARTIAL (Thin / 3 Records)",
       "direct_wishlist_count": 0,
       "general_pre_purchase_count": 3,
       "sources": [
@@ -108,15 +108,15 @@
     {
       "id": "Q7",
       "question": "Fit, size, styling, price, reviews & occasion suitability",
-      "evidence_tier": "General Pre-Purchase Evidence",
-      "evidence_status": "STRONG",
+      "evidence_tier": "Supporting Pre-Purchase Fashion Decision Evidence",
+      "evidence_status": "WEAK (Single-Sentence Title Records)",
       "direct_wishlist_count": 2,
       "general_pre_purchase_count": 18,
       "sources": [
         "reddit",
         "myntra_pdp"
       ],
-      "synthesis": "Multi-dimensional outfit selection evaluating occasion appropriateness (reception, date night, engagement, cocktail).",
+      "synthesis": "Multi-dimensional outfit selection evaluating occasion appropriateness (receptions, date nights, engagements), primarily in short title-only posts.",
       "verbatim_evidence": [
         "Help Me Choose an Outfit for My Third Date! (reddit_rss_t3_1e64y2w)"
       ]
@@ -139,8 +139,8 @@
     {
       "id": "Q9",
       "question": "Behavioral differences across user segments",
-      "evidence_tier": "General Pre-Purchase Evidence",
-      "evidence_status": "STRONG",
+      "evidence_tier": "Supporting Pre-Purchase Fashion Decision Evidence",
+      "evidence_status": "HYPOTHESISED (Archetypes)",
       "record_count": 19,
       "sources": [
         "reddit",
