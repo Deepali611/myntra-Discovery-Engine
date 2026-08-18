@@ -1,0 +1,67 @@
+{
+  "phase": "Phase 8 - Targeted Expansion & Opportunity Score Calculation",
+  "total_raw_pulled": 2705,
+  "stage_a_passed_count": 179,
+  "layer1_grounded_count": 179,
+  "layer2_synthesized_count": 25,
+  "relevant_evidence_volume": {
+    "directly_relevant": 22,
+    "indirectly_relevant": 3,
+    "not_relevant": 0,
+    "total_relevant_volume": 25
+  },
+  "evidence_tag_breakdown": {
+    "explicit_wishlist_evidence": 2,
+    "broader_pre_purchase_evidence": 23
+  },
+  "opportunity_scores": [
+    {
+      "theme": "inspiration_board",
+      "frequency_count": 8,
+      "cross_source_corroboration": 1,
+      "sources_present": [
+        "youtube"
+      ],
+      "relevance_strength": 1.0,
+      "metric_linkage_strength": 0.8,
+      "opportunity_score": 6.4,
+      "representative_quote": "Amazing choice, I see your content and you really bring high quality clothes recommendations"
+    },
+    {
+      "theme": "intent_to_buy",
+      "frequency_count": 6,
+      "cross_source_corroboration": 1,
+      "sources_present": [
+        "youtube"
+      ],
+      "relevance_strength": 1.0,
+      "metric_linkage_strength": 1.0,
+      "opportunity_score": 6.0,
+      "representative_quote": "Plz recommend tops for chubby people"
+    },
+    {
+      "theme": "peer_sizing_inquiry",
+      "frequency_count": 6,
+      "cross_source_corroboration": 1,
+      "sources_present": [
+        "youtube"
+      ],
+      "relevance_strength": 1.0,
+      "metric_linkage_strength": 0.9,
+      "opportunity_score": 5.4,
+      "representative_quote": "Which size do u wear ?"
+    },
+    {
+      "theme": "platform_review_trust_gap",
+      "frequency_count": 2,
+      "cross_source_corroboration": 1,
+      "sources_present": [
+        "youtube"
+      ],
+      "relevance_strength": 1.0,
+      "metric_linkage_strength": 0.7,
+      "opportunity_score": 1.4,
+      "representative_quote": "ajio pe jitna cancel karoge utni br platform fee bdte jaaegi"
+    }
+  ]
+}

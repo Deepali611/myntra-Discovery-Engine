@@ -1,0 +1,12 @@
+{
+  "phase": "Phase 4 - Layer 1 Extraction",
+  "provider": "groq",
+  "model": "llama-3.3-70b-versatile",
+  "input_gated_records_count": 59,
+  "successfully_extracted_count": 59,
+  "grounding_failures_count": 0,
+  "grounding_failure_rate": "0.0%",
+  "grounding_pass_rate": "100.0%",
+  "extracted_intents_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\processed\\pilot_20260817_005050\\extracted_intents.json",
+  "grounding_failures_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\processed\\pilot_20260817_005050\\grounding_failures.json"
+}

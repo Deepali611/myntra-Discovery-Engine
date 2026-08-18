@@ -1,0 +1,16 @@
+[
+  {
+    "source": "youtube",
+    "source_id": "yt_UgxwgOLXutzy5DEXd354AaABAg",
+    "raw_text": "Parfact",
+    "length": 7,
+    "reason": "removed_too_short (<10 characters)"
+  },
+  {
+    "source": "youtube",
+    "source_id": "yt_Ugzpv-BzZ9I8GCnmygx4AaABAg",
+    "raw_text": "beautiful",
+    "length": 9,
+    "reason": "removed_too_short (<10 characters)"
+  }
+]

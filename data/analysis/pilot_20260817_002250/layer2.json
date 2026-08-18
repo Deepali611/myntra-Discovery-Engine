@@ -1,0 +1,35 @@
+{
+  "pdp_rev_101": {
+    "source_id": "pdp_rev_101",
+    "bucket": "friction",
+    "seed_code": [
+      "waiting_for_sale"
+    ],
+    "new_code_candidate": null,
+    "monetary_flag": "monetary",
+    "segment_hypothesis": "budget_conscious",
+    "supporting_quote": "kept it in my wishlist for weeks waiting for a sale"
+  },
+  "yt_UgydqB_C6_PpKdhPQit4AaABAg": {
+    "source_id": "yt_UgydqB_C6_PpKdhPQit4AaABAg",
+    "bucket": "friction",
+    "seed_code": [
+      "does_not_fit"
+    ],
+    "new_code_candidate": "price_negotiation_request",
+    "monetary_flag": "monetary",
+    "segment_hypothesis": "budget_conscious",
+    "supporting_quote": "it&#39;s out of budget. It would be great if you could bring it within budget a little."
+  },
+  "pdp_rev_103": {
+    "source_id": "pdp_rev_103",
+    "bucket": "friction",
+    "seed_code": [
+      "quality_doubt_from_photos"
+    ],
+    "new_code_candidate": null,
+    "monetary_flag": "non_monetary",
+    "segment_hypothesis": "unknown",
+    "supporting_quote": "Color in reality is much darker than shown in the app photos."
+  }
+}

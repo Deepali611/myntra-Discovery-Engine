@@ -1,0 +1,51 @@
+{
+  "yt_Ugz8Uv8W3h5Y9lnAGoN4AaABAg": {
+    "source_id": "yt_Ugz8Uv8W3h5Y9lnAGoN4AaABAg",
+    "observed_behavior": "The user complimented a previous haul video and requested a long-form footwear try-on haul video.",
+    "stated_reason": "The user liked the creator's collection haul.",
+    "consequence": "unclear",
+    "grounding_span": "nice collection haul dii...dii please footwear try on haul long form video mein banao na ek please dii lao na try on haul"
+  },
+  "yt_Ugwwq_7QHa9BUywaZUp4AaABAg": {
+    "source_id": "yt_Ugwwq_7QHa9BUywaZUp4AaABAg",
+    "observed_behavior": "Regularly watches the creator's YouTube videos and purchases multiple products from them.",
+    "stated_reason": "Considers all videos to be outstanding and feels a personal connection as a YouTube friend.",
+    "consequence": "buys products",
+    "grounding_span": "All videos are outstanding mai regular dekhati hu aapke video aapki youtube friend hu aapke lots of products buy karti hu"
+  },
+  "yt_UgwtLL16fgchhKaUWvh4AaABAg": {
+    "source_id": "yt_UgwtLL16fgchhKaUWvh4AaABAg",
+    "observed_behavior": "User watches the creator's haul videos every Sunday.",
+    "stated_reason": "User loves every haul video and feels their Sunday is incomplete without seeing new videos.",
+    "consequence": "unclear",
+    "grounding_span": "My Sunday is Incomplete Without Seeing your New Videos And I Really Really Love your Each And Every Single Haul Videos on Every Sundays"
+  },
+  "yt_UgyP9OrMOvM4BaVxreF4AaABAg": {
+    "source_id": "yt_UgyP9OrMOvM4BaVxreF4AaABAg",
+    "observed_behavior": "Advocated for minimalism and environmental preservation for future generations.",
+    "stated_reason": "Desire to save the environment and protect the next generation.",
+    "consequence": "unclear",
+    "grounding_span": "Less is more<br>Save environment <br>Save ur next generation \ud83d\ude4f"
+  },
+  "yt_UgydqB_C6_PpKdhPQit4AaABAg": {
+    "source_id": "yt_UgydqB_C6_PpKdhPQit4AaABAg",
+    "observed_behavior": "Expressed positive feedback on the dress but asked for a price reduction to fit within budget.",
+    "stated_reason": "The dress is currently out of budget.",
+    "consequence": "still pending",
+    "grounding_span": "Dude, the dress is good but it&#39;s out of budget. It would be great if you could bring it within budget a little."
+  },
+  "pdp_rev_101": {
+    "source_id": "pdp_rev_101",
+    "observed_behavior": "Saved item to wishlist waiting for a sale, purchased it, then returned it.",
+    "stated_reason": "The fabric quality was paper thin and translucent.",
+    "consequence": "Returned immediately",
+    "grounding_span": "The dress looked gorgeous in the pictures, so I kept it in my wishlist for weeks waiting for a sale. When I finally bought it, the fabric quality was paper thin and translucent. Returned immediately."
+  },
+  "pdp_rev_103": {
+    "source_id": "pdp_rev_103",
+    "observed_behavior": "Kept item in shortlist for a month before receiving it",
+    "stated_reason": "Color in reality is much darker than shown in the app photos",
+    "consequence": "bought after delay",
+    "grounding_span": "Kept it in shortlist for a month, but feeling underwhelmed now after receiving."
+  }
+}

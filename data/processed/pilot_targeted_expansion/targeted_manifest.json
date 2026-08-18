@@ -1,0 +1,79 @@
+{
+  "phase": "Targeted Data Expansion & Question Coverage",
+  "total_new_raw_fetched": 1336,
+  "total_final_merged_records": 28,
+  "total_directly_relevant_records": 22,
+  "query_breakdown": {
+    "Q5": {
+      "myntra this or that": {
+        "raw_fetched": 135,
+        "stage_a_passed": 2,
+        "directly_relevant": 0
+      },
+      "which one should I buy myntra": {
+        "raw_fetched": 226,
+        "stage_a_passed": 14,
+        "directly_relevant": 0
+      },
+      "myntra which dress should I buy": {
+        "raw_fetched": 0,
+        "stage_a_passed": 0,
+        "directly_relevant": 0
+      },
+      "help me choose myntra": {
+        "raw_fetched": 0,
+        "stage_a_passed": 0,
+        "directly_relevant": 0
+      }
+    },
+    "Q6": {
+      "myntra honest review before ordering": {
+        "raw_fetched": 219,
+        "stage_a_passed": 30,
+        "directly_relevant": 0
+      },
+      "should I trust myntra reviews": {
+        "raw_fetched": 288,
+        "stage_a_passed": 16,
+        "directly_relevant": 0
+      },
+      "myntra reviews trustworthy": {
+        "raw_fetched": 0,
+        "stage_a_passed": 0,
+        "directly_relevant": 0
+      },
+      "checked before buying myntra": {
+        "raw_fetched": 0,
+        "stage_a_passed": 0,
+        "directly_relevant": 0
+      }
+    },
+    "Q7": {
+      "myntra outfit occasion": {
+        "raw_fetched": 215,
+        "stage_a_passed": 1,
+        "directly_relevant": 0
+      },
+      "myntra styling help": {
+        "raw_fetched": 253,
+        "stage_a_passed": 3,
+        "directly_relevant": 0
+      },
+      "myntra wedding outfit": {
+        "raw_fetched": 0,
+        "stage_a_passed": 0,
+        "directly_relevant": 0
+      },
+      "myntra festival shopping": {
+        "raw_fetched": 0,
+        "stage_a_passed": 0,
+        "directly_relevant": 0
+      }
+    }
+  },
+  "segment_distribution": {
+    "general_fashion_shopper": 18,
+    "working_professional": 2,
+    "brand_quality_conscious": 2
+  }
+}

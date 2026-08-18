@@ -1,0 +1,44 @@
+{
+  "per_source": {
+    "play_store": {
+      "total": 46,
+      "stage_a_pass": 4,
+      "stage_a_fail": 42,
+      "stage_b_pass": 4,
+      "stage_b_fail": 0,
+      "combined_pass": 4
+    },
+    "app_store": {
+      "total": 12,
+      "stage_a_pass": 1,
+      "stage_a_fail": 11,
+      "stage_b_pass": 1,
+      "stage_b_fail": 0,
+      "combined_pass": 1
+    },
+    "reddit": {
+      "total": 35,
+      "stage_a_pass": 1,
+      "stage_a_fail": 34,
+      "stage_b_pass": 1,
+      "stage_b_fail": 0,
+      "combined_pass": 1
+    },
+    "youtube": {
+      "total": 859,
+      "stage_a_pass": 53,
+      "stage_a_fail": 806,
+      "stage_b_pass": 43,
+      "stage_b_fail": 10,
+      "combined_pass": 43
+    },
+    "myntra_pdp": {
+      "total": 12,
+      "stage_a_pass": 10,
+      "stage_a_fail": 2,
+      "stage_b_pass": 10,
+      "stage_b_fail": 0,
+      "combined_pass": 10
+    }
+  }
+}

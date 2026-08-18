@@ -1,0 +1,83 @@
+{
+  "timestamp": "20260817_005050",
+  "raw_dir": "data\\raw\\pilot_20260817_005050",
+  "total_raw_records": 964,
+  "counts_per_source": {
+    "play_store": 46,
+    "app_store": 12,
+    "reddit": 35,
+    "youtube": 859,
+    "myntra_pdp": 12
+  },
+  "pull_methods": {
+    "play_store": "google-play-scraper (app: com.myntra.android, rating_skew: 1-3 stars, keyword filtered)",
+    "app_store": "app-store-scraper + iTunes RSS JSON fallback (app_id: 907394059, rating_skew: 1-3 stars, keyword filtered)",
+    "reddit": "Apify actor trudax/reddit-scraper-lite (subreddits: r/IndianFashionAddicts, r/india, r/IndianStreetwear, r/AskIndia)",
+    "youtube": "YouTube Data API v3 commentThreads (search terms: myntra haul, myntra try on haul, myntra review before buying, myntra vs ajio comparison, myntra size guide)",
+    "myntra_pdp": "Targeted small-volume pull across dresses, ethnic wear, footwear (source_role: corroboration_only)"
+  },
+  "errors_or_skips": [],
+  "removed_too_short": 0,
+  "duplicates_flagged": 5,
+  "pre_filter_counts_1_to_3_star": {
+    "play_store": 44,
+    "app_store": 40
+  },
+  "per_query_counts": {
+    "reddit": {
+      "myntra wishlist": 1,
+      "myntra size doubt": 6,
+      "myntra fit issue": 0,
+      "myntra vs ajio": 1,
+      "myntra vs nykaa fashion": 2,
+      "myntra sale": 12,
+      "myntra returned": 5,
+      "bought myntra": 8,
+      "myntra youtube review before buying": 0,
+      "asked friends myntra": 0
+    },
+    "youtube": {
+      "myntra haul": 181,
+      "myntra try on haul": 130,
+      "myntra review before buying": 167,
+      "myntra vs ajio comparison": 119,
+      "myntra size guide": 102,
+      "myntra honest review": 81,
+      "myntra shopping tips": 79
+    }
+  },
+  "fallback_junk_removed": {
+    "myntra wishlist": 14,
+    "myntra size doubt": 7,
+    "myntra fit issue": 15,
+    "myntra vs ajio": 10,
+    "myntra vs nykaa fashion": 12,
+    "myntra sale": 17,
+    "bought myntra": 22,
+    "myntra youtube review before buying": 15,
+    "asked friends myntra": 15
+  },
+  "pull_strategy_update": "Keyword-targeted pull across ALL star ratings (1-5) for terms: wishlist, save, saved, price drop, notify, notification, forgot",
+  "all_ratings_keyword_pull_audit": {
+    "play_store": {
+      "before_keyword_filter": 3000,
+      "after_keyword_filter": 46
+    },
+    "app_store": {
+      "before_keyword_filter": 200,
+      "after_keyword_filter": 12
+    },
+    "keywords_used": [
+      "wishlist",
+      "save",
+      "saved",
+      "price drop",
+      "notify",
+      "notification",
+      "forgot",
+      "later",
+      "size",
+      "fit"
+    ]
+  }
+}

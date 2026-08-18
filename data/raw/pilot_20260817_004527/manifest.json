@@ -1,0 +1,20 @@
+{
+  "timestamp": "20260817_004527",
+  "raw_dir": "data\\raw\\pilot_20260817_004527",
+  "total_raw_records": 52,
+  "counts_per_source": {
+    "play_store": 5,
+    "app_store": 0,
+    "reddit": 0,
+    "youtube": 35,
+    "myntra_pdp": 12
+  },
+  "pull_methods": {
+    "play_store": "google-play-scraper (app: com.myntra.android, rating_skew: 1-3 stars, keyword filtered)",
+    "app_store": "app-store-scraper + iTunes RSS JSON fallback (app_id: 907394059, rating_skew: 1-3 stars, keyword filtered)",
+    "reddit": "Apify actor trudax/reddit-scraper-lite (subreddits: r/IndianFashionAddicts, r/india, r/IndianStreetwear, r/AskIndia)",
+    "youtube": "YouTube Data API v3 commentThreads (search terms: myntra haul, myntra try on haul, myntra review before buying, myntra vs ajio comparison, myntra size guide)",
+    "myntra_pdp": "Targeted small-volume pull across dresses, ethnic wear, footwear (source_role: corroboration_only)"
+  },
+  "errors_or_skips": []
+}

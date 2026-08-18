@@ -1,0 +1,457 @@
+[
+  {
+    "source_id": "yt_Ugw4x8XapjL8rAvpX2t4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "How to add products to wishlist for affiliate first time I added next time how to add, and how to sale",
+    "reason": "Layer 2 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199993, Requested 1454. Please try again in 10m25.104s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugy06vd5VqmEiSNNar54AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "This is not a loophole... This is dishonesty... Don&#39;t do it guys... You ll get blacklisted and ajio will block your account",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199979, Requested 340. Please try again in 2m17.808s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxfJ_z6xNDDDcOEyjB4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "after doing 2,3 times with this process, ajio add you to blocklist",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199965, Requested 795. Please try again in 5m28.32s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxXk4tPI8BpK_Itzsp4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Bhai ajio cart disable kr deta h. Mere 3-4 accounts ka kr diya\ud83d\ude02",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199951, Requested 864. Please try again in 5m52.08s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgwDqkIvHuBbqY03MF94AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Bhai ajio se hair dryer lena safe rahega kya qki ajio mai return or exchange nhi de raha  agar product damaged agaya toh kaise return karunga ??",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199937, Requested 813. Please try again in 5m24s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgwctOc2rhoQWeZpB614AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Sabko kyu btate ho , tumhari wajah se sabko pta chal jata h . Then ajio wale is loophole ko correct krdete h.",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199922, Requested 810. Please try again in 5m16.224s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxhI0xVn_xHOpwdxjN4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Cash on delivery not available in ajio please help me",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199908, Requested 856. Please try again in 5m30.048s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgyNMLzVIFLdNpj18cV4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Myntra pe ye kaam nhi krra, aur ajio pe jitna cancel karoge utni br platform fee bdte jaaegi\ud83d\ude02\ud83d\ude05",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199894, Requested 809. Please try again in 5m3.696s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgyxaZEdxFk7PQRPsDx4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Wanna ask u one thing my height is same as you 5 &#39;3 and waist 28 but idk every time when I order online denim the length is always short like even...",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199880, Requested 828. Please try again in 5m5.856s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxyU-Xu3u7sm3E3i8F4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Can u pls tell that which size u ordered for jeans in this vedio ar usually do",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199866, Requested 863. Please try again in 5m14.928s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgzlniFrbQwZusG6MW94AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Myntra my favorite\u2764myntra my favorite \u2764",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199852, Requested 788. Please try again in 4m36.48s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugw-tLRI_Kv2ELEWuNx4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "I don&#39;t think , paysa jyada hota hai isliye hum sochte hai quality accha hai lekin aysa Nehi hai ,same hi hota hai \ud83d\ude0aye bass psychology trick hai ....",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199838, Requested 850. Please try again in 4m57.216s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxoxKrP92aJzj9AxbF4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "I was about to order a lipgloss from myntra but your video saved me from wasting my money thankyou \ud83d\ude4f\ud83c\udffc\ud83d\ude2d idc even if I don&#39;t get any extra discount ...",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199823, Requested 826. Please try again in 4m40.368s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugytds9SEZibKXF6c0F4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "\ud83e\udd72\ud83e\udd72\ud83e\udd72 I ordered 2 simple facewash for stock from nykaa sale in nov-dec, just now opened one and realised- isme pani bhara hua h.. Idk what to do",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199809, Requested 352. Please try again in 1m9.552s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxKEhEYojl-cVa0s1F4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "What about ajio now I see lots of makeup product available in ajio?",
+    "reason": "Layer 2 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199993, Requested 1374. Please try again in 9m50.544s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxoxKrP92aJzj9AxbF4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "I was about to order a lipgloss from myntra but your video saved me from wasting my money thankyou \ud83d\ude4f\ud83c\udffc\ud83d\ude2d idc even if I don&#39;t get any extra discount ...",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199979, Requested 894. Please try again in 6m17.136s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugytds9SEZibKXF6c0F4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "\ud83e\udd72\ud83e\udd72\ud83e\udd72 I ordered 2 simple facewash for stock from nykaa sale in nov-dec, just now opened one and realised- isme pani bhara hua h.. Idk what to do",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199965, Requested 820. Please try again in 5m39.119999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxKEhEYojl-cVa0s1F4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "What about ajio now I see lots of makeup product available in ajio?",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199951, Requested 791. Please try again in 5m20.544s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgzE18kcfeiWWQ2MFFJ4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Women comparing iphone with nokia 3310\ud83d\ude02 heads off",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199937, Requested 857. Please try again in 5m43.008s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgzlniFrbQwZusG6MW94AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Myntra my favorite\u2764myntra my favorite \u2764",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199923, Requested 856. Please try again in 5m36.528s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugw-tLRI_Kv2ELEWuNx4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "I don&#39;t think , paysa jyada hota hai isliye hum sochte hai quality accha hai lekin aysa Nehi hai ,same hi hota hai \ud83d\ude0aye bass psychology trick hai ....",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199908, Requested 918. Please try again in 5m56.832s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugz9V7SyRxFD8aT1krx4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Bro ajio give you 15% <br>Myntra gives 9% but why you suggest myntra",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199894, Requested 868. Please try again in 5m29.184s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugy0fC_gy5PEfHLKlBh4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Fila shoes original on ajio please someone reply",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199880, Requested 778. Please try again in 4m44.256s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgzBHUdqsdesQARHUsd4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Bro products quality kis pe best hai Ajio vs Myntra",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199866, Requested 781. Please try again in 4m39.504s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgytQ-Bl2Tc4eqUjbRp4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Cheapest with convenience fee offer  internal wallet added ajio mental   mynter high cost product of course good",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199852, Requested 791. Please try again in 4m37.776s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxSamC0E1JnaKBzq3l4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Bro mujhe AJIO se refund abhi tak nahi mila.",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199838, Requested 857. Please try again in 5m0.24s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgyTxkAzmXEkHo9CXL54AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Sir is ajio sells original product",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199824, Requested 776. Please try again in 4m19.2s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxDxzQzrbcR0hKnE1Z4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Quality matters.... Ajio really delivers quality goods at reasonable price ... Myntra delivers fake product, myntra really disappoint me..",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199810, Requested 802. Please try again in 4m24.383999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgwSJt_3XLEJhHCZ1sp4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "It&#39;s better to shop from ajio luxe",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199796, Requested 787. Please try again in 4m11.856s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxVv4xNsiCWXBcc-KV4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Invite Karne par ajio par ajio cash milta hai",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199782, Requested 790. Please try again in 4m7.104s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugyk2BUlnITYK7mec6Z4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "I bought 2 United Colours Benetton shirts from ajio for 450 a piece around 81% off flat I was shocked to see they were 100% genuine I have bought stuf...",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199767, Requested 846. Please try again in 4m24.815999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgwLyukRYLp10wfOoeF4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "In Ajio available best collection",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199753, Requested 850. Please try again in 4m20.495999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugyqwb75WER7rZpCPNR4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Does ajio sell authentic products ??? Do they sell fakes also ???",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199739, Requested 791. Please try again in 3m48.96s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugw4Fg12WI6ip5X2oxR4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "I prefer Ajio because ajio provide quality products and its exchange and return policy is far better than myntra.",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199725, Requested 790. Please try again in 3m42.48s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxNpEw8QfqzTvZrhwN4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "but i am prefer you ajio",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199711, Requested 776. Please try again in 3m30.384s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugw_0g268v5ED_fBgJN4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio is best",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199697, Requested 773. Please try again in 3m23.04s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgyZO8kzKrVMFWjC9Et4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio ka pass luxury brand ha mantra pa luxury brand nahi ha",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199683, Requested 782. Please try again in 3m20.88s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxU0i_k4vpphX8wf_l4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "First time ajio sale discount is good",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199669, Requested 777. Please try again in 3m12.672s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgwVFBLXJBZ92gItVCF4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Galat bol rhe ho ajio sabse best h isse affordable koi nahi clothings me",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199655, Requested 796. Please try again in 3m14.832s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgzdryOERdNkYiR5tZp4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio me kapde ki photo kuch or kapda kuch or",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199641, Requested 782. Please try again in 3m2.736s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgyXzXnm4ndJaujDHup4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio is worst gives wrong products",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199626, Requested 776. Please try again in 2m53.664s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgyUz_2ajp8thw_F70d4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio ka quality kaisa h",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199612, Requested 852. Please try again in 3m20.448s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugz-7x7lj4vWecpZOd14AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio is totally fake",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199598, Requested 850. Please try again in 3m13.535999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgwH_4phOaZ44So_kh94AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Bhai ajio se hair dryer lena safe rahega kya qki ajio mai return or exchange nhi de raha  agar product damaged agaya toh kaise return karunga ??",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199584, Requested 813. Please try again in 2m51.504s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgyXTr9ODUNGIvjUnsB4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio quality accha deta hai mene dono se kai bar order kiye ajio best laga \u2764",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199570, Requested 797. Please try again in 2m38.544s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugy06vd5VqmEiSNNar54AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "This is not a loophole... This is dishonesty... Don&#39;t do it guys... You ll get blacklisted and ajio will block your account",
+    "reason": "Layer 2 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199993, Requested 929. Please try again in 6m38.304s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxfJ_z6xNDDDcOEyjB4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "after doing 2,3 times with this process, ajio add you to blocklist",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199979, Requested 795. Please try again in 5m34.368s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxXk4tPI8BpK_Itzsp4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Bhai ajio cart disable kr deta h. Mere 3-4 accounts ka kr diya\ud83d\ude02",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199965, Requested 939. Please try again in 6m30.527999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgwDqkIvHuBbqY03MF94AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Bhai ajio se hair dryer lena safe rahega kya qki ajio mai return or exchange nhi de raha  agar product damaged agaya toh kaise return karunga ??",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199951, Requested 813. Please try again in 5m30.048s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgwctOc2rhoQWeZpB614AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Sabko kyu btate ho , tumhari wajah se sabko pta chal jata h . Then ajio wale is loophole ko correct krdete h.",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199937, Requested 953. Please try again in 6m24.48s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxhI0xVn_xHOpwdxjN4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Cash on delivery not available in ajio please help me",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199923, Requested 320. Please try again in 1m44.976s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgyNMLzVIFLdNpj18cV4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Myntra pe ye kaam nhi krra, aur ajio pe jitna cancel karoge utni br platform fee bdte jaaegi\ud83d\ude02\ud83d\ude05",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199909, Requested 341. Please try again in 1m48s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxoxKrP92aJzj9AxbF4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "I was about to order a lipgloss from myntra but your video saved me from wasting my money thankyou \ud83d\ude4f\ud83c\udffc\ud83d\ude2d idc even if I don&#39;t get any extra discount ...",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199894, Requested 818. Please try again in 5m7.584s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugytds9SEZibKXF6c0F4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "\ud83e\udd72\ud83e\udd72\ud83e\udd72 I ordered 2 simple facewash for stock from nykaa sale in nov-dec, just now opened one and realised- isme pani bhara hua h.. Idk what to do",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199880, Requested 812. Please try again in 4m58.944s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxKEhEYojl-cVa0s1F4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "What about ajio now I see lots of makeup product available in ajio?",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199866, Requested 934. Please try again in 5m45.6s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgzlniFrbQwZusG6MW94AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Myntra my favorite\u2764myntra my favorite \u2764",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199852, Requested 931. Please try again in 5m38.256s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugw-tLRI_Kv2ELEWuNx4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "I don&#39;t think , paysa jyada hota hai isliye hum sochte hai quality accha hai lekin aysa Nehi hai ,same hi hota hai \ud83d\ude0aye bass psychology trick hai ....",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199838, Requested 842. Please try again in 4m53.76s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgyosoE7nn9VOhot_TV4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "That&#39;s why i always order by nykaa",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199824, Requested 931. Please try again in 5m26.16s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugw5DnlZGpVOmU7bFXN4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "I was just going to make a purchase from Amazon for a cosrx product, you saved me God bless you!!!!!",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199810, Requested 331. Please try again in 1m0.912s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgwaAiST_5QOqj6hQS54AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "I always order from Nykaa or from the website.This is the first time I tried Amazon fir skincare and i received fake product!!",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199656, Requested 794. Please try again in 3m14.399999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgwyYssTwt_Gn2WONfB4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Does ajio offers fake or original products?",
+    "reason": "Layer 2 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199993, Requested 889. Please try again in 6m21.024s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxTmod0fvsWlfvsH8R4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Which size you choose for 2nd dress?",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199979, Requested 929. Please try again in 6m32.256s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgyxaZEdxFk7PQRPsDx4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Wanna ask u one thing my height is same as you 5 &#39;3 and waist 28 but idk every time when I order online denim the length is always short like even...",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199965, Requested 360. Please try again in 2m20.4s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxyU-Xu3u7sm3E3i8F4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Can u pls tell that which size u ordered for jeans in this vedio ar usually do",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199951, Requested 938. Please try again in 6m24.048s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgyvBp01ectwGVyj7-F4AaABAg",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "Didi which size you can ordered of pink co orde set",
+    "reason": "Layer 1 AI extraction failure: Extraction failed for provider groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199937, Requested 510. Please try again in 3m13.104s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  }
+]

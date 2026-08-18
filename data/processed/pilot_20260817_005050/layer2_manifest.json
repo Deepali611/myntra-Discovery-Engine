@@ -1,0 +1,17 @@
+{
+  "phase": "Phase 5 - Layer 2 Audit",
+  "provider": "groq",
+  "model": "llama-3.3-70b-versatile",
+  "input_layer1_records_count": 59,
+  "successfully_synthesized_count": 0,
+  "bucket_distribution": {
+    "intent": 0,
+    "friction": 0,
+    "decision_process": 0,
+    "does_not_fit": 0
+  },
+  "seed_code_distribution": {},
+  "grounding_failures_count": 59,
+  "grounding_failure_rate": "100.0%",
+  "structured_intents_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\processed\\pilot_20260817_005050\\structured_intents.json"
+}

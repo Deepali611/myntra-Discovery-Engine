@@ -1,0 +1,23 @@
+{
+  "phase": "Phase 8 - Targeted Expansion Run",
+  "total_raw_records": 920,
+  "stage_a_passed_count": 61,
+  "layer1_grounded_count": 59,
+  "layer2_synthesized_count": 37,
+  "relevance_tier_distribution": {
+    "directly_relevant": 31,
+    "indirectly_relevant": 2,
+    "not_relevant": 4
+  },
+  "directly_relevant_count": 31,
+  "directly_relevant_percent": "83.8%",
+  "indirectly_relevant_count": 2,
+  "not_relevant_count": 4,
+  "directly_relevant_seed_codes": {
+    "intent_to_buy": 12,
+    "platform_review_trust_gap": 3,
+    "quality_doubt_from_photos": 7,
+    "fit_sizing_doubt": 9,
+    "price_tracking": 1
+  }
+}

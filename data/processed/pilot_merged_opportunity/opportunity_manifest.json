@@ -1,0 +1,76 @@
+{
+  "phase": "Merged Opportunity Score Analysis (Combined Dataset)",
+  "total_merged_records": 27,
+  "relevant_evidence_volume": {
+    "directly_relevant": 22,
+    "indirectly_relevant": 5,
+    "not_relevant": 0,
+    "total_relevant_volume": 27
+  },
+  "evidence_tag_breakdown": {
+    "explicit_wishlist_evidence": 2,
+    "broader_pre_purchase_evidence": 25
+  },
+  "opportunity_scores": [
+    {
+      "theme": "peer_sizing_inquiry",
+      "frequency_count": 6,
+      "cross_source_corroboration": 1,
+      "sources_present": [
+        "youtube"
+      ],
+      "relevance_strength": 1.0,
+      "metric_linkage_strength": 0.9,
+      "opportunity_score": 5.4,
+      "representative_quote": "Which size do u wear ?"
+    },
+    {
+      "theme": "inspiration_board",
+      "frequency_count": 7,
+      "cross_source_corroboration": 1,
+      "sources_present": [
+        "youtube"
+      ],
+      "relevance_strength": 0.88,
+      "metric_linkage_strength": 0.8,
+      "opportunity_score": 4.9,
+      "representative_quote": "Amazing choice, I see your content and you really bring high quality clothes recommendations"
+    },
+    {
+      "theme": "intent_to_buy",
+      "frequency_count": 5,
+      "cross_source_corroboration": 1,
+      "sources_present": [
+        "youtube"
+      ],
+      "relevance_strength": 0.83,
+      "metric_linkage_strength": 1.0,
+      "opportunity_score": 4.17,
+      "representative_quote": "Plz recommend tops for chubby people"
+    },
+    {
+      "theme": "platform_review_trust_gap",
+      "frequency_count": 2,
+      "cross_source_corroboration": 1,
+      "sources_present": [
+        "youtube"
+      ],
+      "relevance_strength": 1.0,
+      "metric_linkage_strength": 0.7,
+      "opportunity_score": 1.4,
+      "representative_quote": "ajio pe jitna cancel karoge utni br platform fee bdte jaaegi"
+    },
+    {
+      "theme": "fit_sizing_doubt",
+      "frequency_count": 1,
+      "cross_source_corroboration": 1,
+      "sources_present": [
+        "myntra_pdp"
+      ],
+      "relevance_strength": 1.0,
+      "metric_linkage_strength": 1.0,
+      "opportunity_score": 1.0,
+      "representative_quote": "Sole slipperiness issue on polished floors. Looks stylish but safety fit doubt made me return."
+    }
+  ]
+}

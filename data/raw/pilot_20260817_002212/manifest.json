@@ -1,0 +1,219 @@
+{
+  "timestamp": "20260817_002212",
+  "ai_provider": "gemini",
+  "total_raw_records": 51,
+  "counts_per_source": {
+    "play_store": 4,
+    "app_store": 0,
+    "reddit": 0,
+    "youtube": 35,
+    "myntra_pdp": 12
+  },
+  "collection_errors": [],
+  "raw_records": [
+    {
+      "source": "play_store",
+      "source_id": "play_store_e5e5fb97-64f2-4555-bf0e-2b36029acacc"
+    },
+    {
+      "source": "play_store",
+      "source_id": "play_store_32b0c992-e7a7-4ad5-a7c9-77015d818ce1"
+    },
+    {
+      "source": "play_store",
+      "source_id": "play_store_1bf0314d-d31c-428d-9587-f12efd0ef830"
+    },
+    {
+      "source": "play_store",
+      "source_id": "play_store_150f5e0e-96ef-43d9-8a85-f4c7cab9e9a9"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgxsG-ox9DTtNyndMgZ4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgyiR_s9WUaedOAqJUp4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_Ugwp1wqi_WVLiDukIRh4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_Ugz8Uv8W3h5Y9lnAGoN4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgwtLL16fgchhKaUWvh4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_Ugw4aHUknb_ikbGO2794AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_Ugweug0nMjflq-Gpm1x4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgxuuoXvABaElKQHMxN4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgwfgAuyFgWg6Quztp54AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_Ugwwq_7QHa9BUywaZUp4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgzNAJ8dKXQQt4KHgNV4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgwklrZ2jnToLYutHZV4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgxHFJsBVVhuCOY4o2p4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgwGMaboNA8QLyglblN4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgyaQD39O1JPTay3rMt4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgwBOOTqvJroQl_DomR4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgxN9R90g2dhEXzWjPl4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgyMO2klrw4u8D-pYQV4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgwDAIBCrnpzLVIqzTR4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgxKtScR3lnI7BZ7Yuh4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgwlDiJjcx3yge6JBaV4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_Ugx5tmXZ4KTwVKdLFHl4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_Ugz-GKTDYHEAyOl3_td4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgzmuR2zRGAj8gXZUxZ4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgwFUMh-vv1e5UHKO4R4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_Ugx8XYuzpwXfM16VeK14AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgyL8NwPO5OHXzrQeDt4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_Ugwx9PoyCWJ5Xj3OW054AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_Ugx0_mGS-Ewoj7qlJVB4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_Ugz_qi0QsTbkOdt7rR54AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgxAXd_LstxvwS-1SO94AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgwiLC5Zl7lB1ysfgeh4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_Ugzpv-BzZ9I8GCnmygx4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgzyrNgnZNDfUIoc6px4AaABAg"
+    },
+    {
+      "source": "youtube",
+      "source_id": "yt_UgyP9OrMOvM4BaVxreF4AaABAg"
+    },
+    {
+      "source": "myntra_pdp",
+      "source_id": "pdp_rev_101"
+    },
+    {
+      "source": "myntra_pdp",
+      "source_id": "pdp_qa_102"
+    },
+    {
+      "source": "myntra_pdp",
+      "source_id": "pdp_rev_103"
+    },
+    {
+      "source": "myntra_pdp",
+      "source_id": "pdp_rev_104"
+    },
+    {
+      "source": "myntra_pdp",
+      "source_id": "pdp_qa_105"
+    },
+    {
+      "source": "myntra_pdp",
+      "source_id": "pdp_rev_106"
+    },
+    {
+      "source": "myntra_pdp",
+      "source_id": "pdp_rev_107"
+    },
+    {
+      "source": "myntra_pdp",
+      "source_id": "pdp_qa_108"
+    },
+    {
+      "source": "myntra_pdp",
+      "source_id": "pdp_rev_109"
+    },
+    {
+      "source": "myntra_pdp",
+      "source_id": "pdp_rev_110"
+    },
+    {
+      "source": "myntra_pdp",
+      "source_id": "pdp_qa_111"
+    },
+    {
+      "source": "myntra_pdp",
+      "source_id": "pdp_rev_112"
+    }
+  ]
+}

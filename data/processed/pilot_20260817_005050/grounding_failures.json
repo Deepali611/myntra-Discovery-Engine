@@ -1,0 +1,1241 @@
+[
+  {
+    "source_id": "pdp_rev_106",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Saved these block heels for 2 months. Cushioning is decent but strap length is shorter than standard UK 6.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 3 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99479, Requested 744. Please try again in 3m12.672s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "pdp_qa_108",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: Does the kurta shrink after washing? A: Cotton material shrinks slightly by 0.5 inches after first wash.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 3 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99472, Requested 767. Please try again in 3m26.496s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "pdp_rev_109",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Sole slipperiness issue on polished floors. Looks stylish but safety fit doubt made me return.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 3 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99465, Requested 728. Please try again in 2m46.752s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "pdp_rev_110",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Nice design but zip gets stuck repeatedly. Kept in wishlist for weeks, bought on price drop but zip quality gap.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 3 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 734. Please try again in 2m45.888s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "pdp_qa_111",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: What is the heel height in inches? A: Heel height is 3 inches.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 3 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99451, Requested 760. Please try again in 3m2.304s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "play_store_47b8d8de-10aa-4cc9-a64e-381c05aed50f",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "app is extremely slow , it takes forever to search something and then lands on \"oops something went wrong\" (It is not my network issue). once clicked ...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99777, Requested 798. Please try again in 8m16.8s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "play_store_ed881b47-9463-46bd-9d3a-81fa269729af",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "very bad experience with myntra . I ordered a pair of jeans from myntra but I got a oversized product so I returned. once I asked for refunded to cust...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99516, Requested 723. Please try again in 3m26.496s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "app_store_14422078662",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Awesome I recently ordered a sweatshirt from Roadster and I'm really happy with the purchase. The quality of the fabric is very good and it feels comf...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99826, Requested 703. Please try again in 7m37.056s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxoxKrP92aJzj9AxbF4AaABAg",
+    "layer": 2,
+    "invalid_string": "quality_doubt_from_photos",
+    "raw_text_snippet": "I was about to order a lipgloss from myntra but your video saved me from wasting my money thankyou idc even if I don't get any extra discount imma tru...",
+    "reason": "supporting_quote is not an exact substring of raw_text"
+  },
+  {
+    "source_id": "yt_UgxfJ_z6xNDDDcOEyjB4AaABAg",
+    "layer": 2,
+    "invalid_string": "quality_doubt_from_photos",
+    "raw_text_snippet": "after doing 2,3 times with this process, ajio add you to blocklist",
+    "reason": "supporting_quote is not an exact substring of raw_text"
+  },
+  {
+    "source_id": "yt_UgwVFBLXJBZ92gItVCF4AaABAg",
+    "layer": 2,
+    "invalid_string": "isssse affordable koi nahi",
+    "raw_text_snippet": "Galat bol rhe ho ajio sabse best h isse affordable koi nahi clothings me",
+    "reason": "supporting_quote is not an exact substring of raw_text"
+  },
+  {
+    "source_id": "yt_UgzBHUdqsdesQARHUsd4AaABAg",
+    "layer": 2,
+    "invalid_string": "product quality between two websites",
+    "raw_text_snippet": "Bro products quality kis pe best hai Ajio vs Myntra",
+    "reason": "supporting_quote is not an exact substring of raw_text"
+  },
+  {
+    "source_id": "reddit_t3_1nywvf3",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Why is Snitch's price and quality different on their official website vs Flipkart/Myntra? Hey everyone, I've noticed that Snitch clothes are priced di...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99565, Requested 690. Please try again in 3m40.32s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugxt4GGe_9_PLgFJM454AaABAg",
+    "layer": 2,
+    "invalid_string": "frequent price changes which irritates me so much and clothes quality is not good for now ajio offering good quality and low price",
+    "raw_text_snippet": "i used myntra for almost 2 years but now switched to ajio which is far better than myntra in my opinion, ajio has better quality clothes and also mynt...",
+    "reason": "supporting_quote is not an exact substring of raw_text"
+  },
+  {
+    "source_id": "yt_UgwjFfeJybv_jWYmMFB4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "1st green violet & pink embroidered with floral dupatta my favs.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99861, Requested 625. Please try again in 6m59.904s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugx__RblZUK54J2cS4l4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I love your fashion sense so much and i also buy so much clothes recommended by you",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99600, Requested 626. Please try again in 3m15.263999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "play_store_81a64b39-1110-41e3-9752-865a08442359",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "''Nice fit and great material! The color is exactly like the picture on the app. True to size. Highly recommend!\"",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99968, Requested 642. Please try again in 8m47.04s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxuDS24tyrxRnhjohd4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Which size you purchased ?",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99826, Requested 686. Please try again in 7m22.368s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxoxKrP92aJzj9AxbF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I was about to order a lipgloss from myntra but your video saved me from wasting my money thankyou idc even if I don't get any extra discount imma tru...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99622, Requested 667. Please try again in 4m9.696s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "play_store_81a64b39-1110-41e3-9752-865a08442359",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "''Nice fit and great material! The color is exactly like the picture on the app. True to size. Highly recommend!\"",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99444, Requested 725. Please try again in 2m26.016s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "play_store_47b8d8de-10aa-4cc9-a64e-381c05aed50f",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "app is extremely slow , it takes forever to search something and then lands on \"oops something went wrong\" (It is not my network issue). once clicked ...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99790, Requested 854. Please try again in 9m16.416s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxfJ_z6xNDDDcOEyjB4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "after doing 2,3 times with this process, ajio add you to blocklist",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99827, Requested 702. Please try again in 7m37.056s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "play_store_ed881b47-9463-46bd-9d3a-81fa269729af",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "very bad experience with myntra . I ordered a pair of jeans from myntra but I got a oversized product so I returned. once I asked for refunded to cust...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99821, Requested 806. Please try again in 9m1.728s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxU0i_k4vpphX8wf_l4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "First time ajio sale discount is good",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99749, Requested 682. Please try again in 6m12.383999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "play_store_1aa89492-3f0b-4dbe-8e8c-f0306206d87c",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I have been shopping on Myntra for quite some time, and my overall experience has been very good. The app is easy to use, with a wide variety of fashi...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99530, Requested 800. Please try again in 4m45.12s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugz9V7SyRxFD8aT1krx4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Bro ajio give you 15% Myntra gives 9% but why you suggest myntra",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99821, Requested 708. Please try again in 7m37.056s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "app_store_14422078662",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Awesome I recently ordered a sweatshirt from Roadster and I'm really happy with the purchase. The quality of the fabric is very good and it feels comf...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99717, Requested 786. Please try again in 7m14.592s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "reddit_t3_1nywvf3",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Why is Snitch's price and quality different on their official website vs Flipkart/Myntra? Hey everyone, I've noticed that Snitch clothes are priced di...",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgxuDS24tyrxRnhjohd4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Which size you purchased ?",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_Ugy0fC_gy5PEfHLKlBh4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Fila shoes original on ajio please someone reply",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99560, Requested 620. Please try again in 2m35.519999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugz9V7SyRxFD8aT1krx4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Bro ajio give you 15% Myntra gives 9% but why you suggest myntra",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgzBHUdqsdesQARHUsd4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Bro products quality kis pe best hai Ajio vs Myntra",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_Ugw3oo5KHTEaeuKyRAp4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "where I will get premium clothes Myntra or Ajio?",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgzgbdYOK8vJsCCGS9B4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I really liked the analogy. One thing I would add from my own experience is - Customers Mental Model. I have done business in this field and have inte...",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgzQa_qrTmn8RaRHyTF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Hey there! Don\u2019t forget to check out the Community Tab for all the links! Let me know which one you liked better \u2013 Meesho or Ajio ? I can\u2019t wait to he...",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "reddit_t3_1nywvf3",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Why is Snitch's price and quality different on their official website vs Flipkart/Myntra? Hey everyone, I've noticed that Snitch clothes are priced di...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99427, Requested 773. Please try again in 2m52.8s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugz7C2tDDerLoUmgpZF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio is far better price wise quality wise",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_Ugx5Y7NLIj6ES_ks_xt4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio is looking premium",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_Ugyr9oNiEa8Jd6X_FUB4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Myntra quality is always best, Ajio is fraud,never refund your money",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_Ugw7o1GNDMAHKx76Xp14AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio is better",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_Ugwgzx1TIAqnmL_BEdB4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Loved ajio dress color",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_UgySU7Nv-koO805AnHF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Love from ajio",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_Ugy-F5tkuZxGsCGrFCF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Myntra duplicate deta h ajio original",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_UgzNbK19K4IE7Ob93RF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "i used both, and i can definitely say that myntra has the great ux as compared to Ajio , ajio never shows the user reviews text and photos, and myntra...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_Ugw3AT6RY1NO9ka6Nlx4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "\u092e\u093f\u0902\u0924\u094d\u0930\u093e \u092c\u0939\u0941\u0924 \u092c\u0947\u0939\u0924\u0930\u0940\u0928 \u0939\u0948,\u0915\u094d\u092f\u094b\u0902\u0915\u093f \u0935\u094b \u092a\u0942\u0930\u0940 \u0915\u094d\u0932\u093f\u092f\u0930 \u0915\u0930\u0915\u0930 \u092c\u0924\u093e\u0924\u093e \u0939\u0948 ,\u091c\u093f\u0938\u0938\u0947 \u0915\u092a\u0921\u093c\u0947 \u0932\u0947\u0928\u0947 \u092e\u0947\u0902 \u0906\u0938\u093e\u0928\u0940 \u0939\u094b\u0924\u0940 \u0939\u0948,Ajio Confused \u0915\u0930\u0924\u093e \u0939\u0948,\u091c\u093f\u0938\u0938\u0947 \u0915\u092a\u0921\u093c\u0947 \u0938\u0932\u0947\u0915\u094d\u091f \u0915\u0930\u0928\u0947 \u092e\u0947\u0902 \u092c\u0939\u0941...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_Ugz57j5JpwAcFBT-w-B4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "For me review is most important and clean setup also, so I like Myntra more than ajio.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_Ugxt4GGe_9_PLgFJM454AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "i used myntra for almost 2 years but now switched to ajio which is far better than myntra in my opinion, ajio has better quality clothes and also mynt...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_UgzB0BySN4gyzgChbYp4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "What about international brands on ajio?",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_UgxFuppsIv1aYJm4mhV4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Same feeling myntra quality better than Ajio",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_UgzRKsyejDDN_lQdcO54AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio okapudu bagundedi but present poor quality...vastunnai mam",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_UgxuHsPJba5kI2aDC0t4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Give ajio link",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_Ugz42nrFSIDuutmxqhh4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio always better options",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_UgzBHUdqsdesQARHUsd4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Bro products quality kis pe best hai Ajio vs Myntra",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99843, Requested 681. Please try again in 7m32.736s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgwlYgg6thTDYhjtpyZ4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Good and practical video . I always prefer Ajio. Ajio is my favorite.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_UgwKcuWLJCoD7N-IZUF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I always prefer ajio",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_UgyqugsoZu_bhssmVZ14AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I love Myntra,Ajio is also ok,but Myntra is my favourite",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_UgxyzwSGikUsyXY0gkR4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio is anytime affordable with good quality .",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_Ugzqfm9lWy_alrwxPih4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "High 169 cm and chest 33 inch and sleem boday which size T-shirt best for me???",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_UgwjFfeJybv_jWYmMFB4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "1st green violet & pink embroidered with floral dupatta my favs.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99726, Requested 708. Please try again in 6m14.976s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgwTnOnpdqkNZJd91Lt4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Which size you order",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_UgxFCcVHIgvV5yS7UsN4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Mam can u pls help me in choosing my bust size...I never shopped from online...I Ware my bra of 32 size...my I measured my bust by a inch tape ..n it ...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_Ugy-hrRKQnXMCOBp6JF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Abhi Ajio wale dund rahe hei isko",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_UgwsTPcJI9ZwmVN4e5N4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Myntra is best ajio me delivery or charges count ho jata h",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_UgzYzHDaZE-iSc3KPuB4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ye hacks toh mere roj ke hi hai bohot pareshan kiya hai maine Myntra n AJIO ko",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "pdp_qa_108",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: Does the kurta shrink after washing? A: Cotton material shrinks slightly by 0.5 inches after first wash.",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "play_store_81a64b39-1110-41e3-9752-865a08442359",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "''Nice fit and great material! The color is exactly like the picture on the app. True to size. Highly recommend!\"",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "play_store_47b8d8de-10aa-4cc9-a64e-381c05aed50f",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "app is extremely slow , it takes forever to search something and then lands on \"oops something went wrong\" (It is not my network issue). once clicked ...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_Ugw3oo5KHTEaeuKyRAp4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "where I will get premium clothes Myntra or Ajio?",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99502, Requested 620. Please try again in 1m45.408s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "play_store_ed881b47-9463-46bd-9d3a-81fa269729af",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "very bad experience with myntra . I ordered a pair of jeans from myntra but I got a oversized product so I returned. once I asked for refunded to cust...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "play_store_1aa89492-3f0b-4dbe-8e8c-f0306206d87c",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I have been shopping on Myntra for quite some time, and my overall experience has been very good. The app is easy to use, with a wide variety of fashi...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "app_store_14422078662",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Awesome I recently ordered a sweatshirt from Roadster and I'm really happy with the purchase. The quality of the fabric is very good and it feels comf...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "reddit_t3_1nywvf3",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Why is Snitch's price and quality different on their official website vs Flipkart/Myntra? Hey everyone, I've noticed that Snitch clothes are priced di...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_UgwjFfeJybv_jWYmMFB4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "1st green violet & pink embroidered with floral dupatta my favs.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_Ugx__RblZUK54J2cS4l4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I love your fashion sense so much and i also buy so much clothes recommended by you",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_Ugx__RblZUK54J2cS4l4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I love your fashion sense so much and i also buy so much clothes recommended by you",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99887, Requested 709. Please try again in 8m34.943999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "play_store_81a64b39-1110-41e3-9752-865a08442359",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "''Nice fit and great material! The color is exactly like the picture on the app. True to size. Highly recommend!\"",
+    "reason": "Layer 2 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "reddit_t3_1nywvf3",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Why is Snitch's price and quality different on their official website vs Flipkart/Myntra? Hey everyone, I've noticed that Snitch clothes are priced di...",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgxuDS24tyrxRnhjohd4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Which size you purchased ?",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgzgbdYOK8vJsCCGS9B4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I really liked the analogy. One thing I would add from my own experience is - Customers Mental Model. I have done business in this field and have inte...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99774, Requested 726. Please try again in 7m12s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugz9V7SyRxFD8aT1krx4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Bro ajio give you 15% Myntra gives 9% but why you suggest myntra",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgzBHUdqsdesQARHUsd4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Bro products quality kis pe best hai Ajio vs Myntra",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_Ugw3oo5KHTEaeuKyRAp4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "where I will get premium clothes Myntra or Ajio?",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgzgbdYOK8vJsCCGS9B4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I really liked the analogy. One thing I would add from my own experience is - Customers Mental Model. I have done business in this field and have inte...",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgzQa_qrTmn8RaRHyTF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Hey there! Don\u2019t forget to check out the Community Tab for all the links! Let me know which one you liked better \u2013 Meesho or Ajio ? I can\u2019t wait to he...",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_Ugz7C2tDDerLoUmgpZF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio is far better price wise quality wise",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_Ugx5Y7NLIj6ES_ks_xt4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio is looking premium",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgzNAE_KtxKfAHPs_dF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I liked the last set on you and will probably buy the same one too given I like this style more compared to other sets.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99597, Requested 722. Please try again in 4m35.616s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugw7o1GNDMAHKx76Xp14AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio is better",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgzNbK19K4IE7Ob93RF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "i used both, and i can definitely say that myntra has the great ux as compared to Ajio , ajio never shows the user reviews text and photos, and myntra...",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_Ugw3AT6RY1NO9ka6Nlx4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "\u092e\u093f\u0902\u0924\u094d\u0930\u093e \u092c\u0939\u0941\u0924 \u092c\u0947\u0939\u0924\u0930\u0940\u0928 \u0939\u0948,\u0915\u094d\u092f\u094b\u0902\u0915\u093f \u0935\u094b \u092a\u0942\u0930\u0940 \u0915\u094d\u0932\u093f\u092f\u0930 \u0915\u0930\u0915\u0930 \u092c\u0924\u093e\u0924\u093e \u0939\u0948 ,\u091c\u093f\u0938\u0938\u0947 \u0915\u092a\u0921\u093c\u0947 \u0932\u0947\u0928\u0947 \u092e\u0947\u0902 \u0906\u0938\u093e\u0928\u0940 \u0939\u094b\u0924\u0940 \u0939\u0948,Ajio Confused \u0915\u0930\u0924\u093e \u0939\u0948,\u091c\u093f\u0938\u0938\u0947 \u0915\u092a\u0921\u093c\u0947 \u0938\u0932\u0947\u0915\u094d\u091f \u0915\u0930\u0928\u0947 \u092e\u0947\u0902 \u092c\u0939\u0941...",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_Ugz57j5JpwAcFBT-w-B4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "For me review is most important and clean setup also, so I like Myntra more than ajio.",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgxFuppsIv1aYJm4mhV4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Same feeling myntra quality better than Ajio",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgzQa_qrTmn8RaRHyTF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Hey there! Don\u2019t forget to check out the Community Tab for all the links! Let me know which one you liked better \u2013 Meesho or Ajio ? I can\u2019t wait to he...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99513, Requested 657. Please try again in 2m26.88s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgyqugsoZu_bhssmVZ14AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I love Myntra,Ajio is also ok,but Myntra is my favourite",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgwTnOnpdqkNZJd91Lt4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Which size you order",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgxFCcVHIgvV5yS7UsN4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Mam can u pls help me in choosing my bust size...I never shopped from online...I Ware my bra of 32 size...my I measured my bust by a inch tape ..n it ...",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgxuDS24tyrxRnhjohd4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Which size you purchased ?",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99430, Requested 724. Please try again in 2m13.055999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "pdp_qa_108",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: Does the kurta shrink after washing? A: Cotton material shrinks slightly by 0.5 inches after first wash.",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_Ugx5Y7NLIj6ES_ks_xt4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio is looking premium",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99826, Requested 645. Please try again in 6m46.943999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxoxKrP92aJzj9AxbF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I was about to order a lipgloss from myntra but your video saved me from wasting my money thankyou idc even if I don't get any extra discount imma tru...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99755, Requested 750. Please try again in 7m16.32s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugyr9oNiEa8Jd6X_FUB4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Myntra quality is always best, Ajio is fraud,never refund your money",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99566, Requested 641. Please try again in 2m58.848s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugy06vd5VqmEiSNNar54AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "This is not a loophole... This is dishonesty... Don't do it guys... You ll get blacklisted and ajio will block your account",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99464, Requested 717. Please try again in 2m36.384s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxfJ_z6xNDDDcOEyjB4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "after doing 2,3 times with this process, ajio add you to blocklist",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99781, Requested 713. Please try again in 7m6.816s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugwgzx1TIAqnmL_BEdB4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Loved ajio dress color",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99827, Requested 612. Please try again in 6m19.296s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgySU7Nv-koO805AnHF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Love from ajio",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99841, Requested 602. Please try again in 6m22.752s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxXk4tPI8BpK_Itzsp4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Bhai ajio cart disable kr deta h. Mere 3-4 accounts ka kr diya",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99766, Requested 728. Please try again in 7m6.816s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugy-F5tkuZxGsCGrFCF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Myntra duplicate deta h ajio original",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99580, Requested 623. Please try again in 2m55.392s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxU0i_k4vpphX8wf_l4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "First time ajio sale discount is good",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99476, Requested 696. Please try again in 2m28.608s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgwVFBLXJBZ92gItVCF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Galat bol rhe ho ajio sabse best h isse affordable koi nahi clothings me",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99815, Requested 720. Please try again in 7m42.239999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugw3AT6RY1NO9ka6Nlx4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "\u092e\u093f\u0902\u0924\u094d\u0930\u093e \u092c\u0939\u0941\u0924 \u092c\u0947\u0939\u0924\u0930\u0940\u0928 \u0939\u0948,\u0915\u094d\u092f\u094b\u0902\u0915\u093f \u0935\u094b \u092a\u0942\u0930\u0940 \u0915\u094d\u0932\u093f\u092f\u0930 \u0915\u0930\u0915\u0930 \u092c\u0924\u093e\u0924\u093e \u0939\u0948 ,\u091c\u093f\u0938\u0938\u0947 \u0915\u092a\u0921\u093c\u0947 \u0932\u0947\u0928\u0947 \u092e\u0947\u0902 \u0906\u0938\u093e\u0928\u0940 \u0939\u094b\u0924\u0940 \u0939\u0948,Ajio Confused \u0915\u0930\u0924\u093e \u0939\u0948,\u091c\u093f\u0938\u0938\u0947 \u0915\u092a\u0921\u093c\u0947 \u0938\u0932\u0947\u0915\u094d\u091f \u0915\u0930\u0928\u0947 \u092e\u0947\u0902 \u092c\u0939\u0941...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99826, Requested 897. Please try again in 10m24.672s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgzdryOERdNkYiR5tZp4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio me kapde ki photo kuch or kapda kuch or",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99525, Requested 706. Please try again in 3m19.584s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugz57j5JpwAcFBT-w-B4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "For me review is most important and clean setup also, so I like Myntra more than ajio.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99566, Requested 633. Please try again in 2m51.936s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugz9V7SyRxFD8aT1krx4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Bro ajio give you 15% Myntra gives 9% but why you suggest myntra",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99845, Requested 799. Please try again in 9m16.416s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgzB0BySN4gyzgChbYp4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "What about international brands on ajio?",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99827, Requested 697. Please try again in 7m32.736s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugy0fC_gy5PEfHLKlBh4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Fila shoes original on ajio please someone reply",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99555, Requested 703. Please try again in 3m42.911999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxFuppsIv1aYJm4mhV4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Same feeling myntra quality better than Ajio",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99566, Requested 616. Please try again in 2m37.248s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgzBHUdqsdesQARHUsd4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Bro products quality kis pe best hai Ajio vs Myntra",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99891, Requested 779. Please try again in 9m38.88s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgxuHsPJba5kI2aDC0t4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Give ajio link",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99826, Requested 678. Please try again in 7m15.456s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugw3oo5KHTEaeuKyRAp4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "where I will get premium clothes Myntra or Ajio?",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99601, Requested 703. Please try again in 4m22.656s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugz42nrFSIDuutmxqhh4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio always better options",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99565, Requested 606. Please try again in 2m27.744s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgzgbdYOK8vJsCCGS9B4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I really liked the analogy. One thing I would add from my own experience is - Customers Mental Model. I have done business in this field and have inte...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99946, Requested 878. Please try again in 11m51.936s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgwKcuWLJCoD7N-IZUF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I always prefer ajio",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99827, Requested 609. Please try again in 6m16.704s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgzQa_qrTmn8RaRHyTF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Hey there! Don\u2019t forget to check out the Community Tab for all the links! Let me know which one you liked better \u2013 Meesho or Ajio ? I can\u2019t wait to he...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99959, Requested 740. Please try again in 10m3.935999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_UgyqugsoZu_bhssmVZ14AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I love Myntra,Ajio is also ok,but Myntra is my favourite",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01ksx2k365epyr61befmve7rs1` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99870, Requested 635. Please try again in 7m16.32s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  },
+  {
+    "source_id": "yt_Ugz7C2tDDerLoUmgpZF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio is far better price wise quality wise",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Connection error."
+  },
+  {
+    "source_id": "yt_UgxyzwSGikUsyXY0gkR4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio is anytime affordable with good quality .",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Connection error."
+  },
+  {
+    "source_id": "yt_Ugx5Y7NLIj6ES_ks_xt4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio is looking premium",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_Ugzqfm9lWy_alrwxPih4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "High 169 cm and chest 33 inch and sleem boday which size T-shirt best for me???",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_Ugyr9oNiEa8Jd6X_FUB4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Myntra quality is always best, Ajio is fraud,never refund your money",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_Ugw7o1GNDMAHKx76Xp14AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio is better",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_UgwTnOnpdqkNZJd91Lt4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Which size you order",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_Ugwgzx1TIAqnmL_BEdB4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Loved ajio dress color",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_UgxFCcVHIgvV5yS7UsN4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Mam can u pls help me in choosing my bust size...I never shopped from online...I Ware my bra of 32 size...my I measured my bust by a inch tape ..n it ...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_UgySU7Nv-koO805AnHF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Love from ajio",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_Ugy-F5tkuZxGsCGrFCF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Myntra duplicate deta h ajio original",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_Ugy-hrRKQnXMCOBp6JF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Abhi Ajio wale dund rahe hei isko",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_UgzNbK19K4IE7Ob93RF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "i used both, and i can definitely say that myntra has the great ux as compared to Ajio , ajio never shows the user reviews text and photos, and myntra...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_UgwsTPcJI9ZwmVN4e5N4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Myntra is best ajio me delivery or charges count ho jata h",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_Ugw3AT6RY1NO9ka6Nlx4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "\u092e\u093f\u0902\u0924\u094d\u0930\u093e \u092c\u0939\u0941\u0924 \u092c\u0947\u0939\u0924\u0930\u0940\u0928 \u0939\u0948,\u0915\u094d\u092f\u094b\u0902\u0915\u093f \u0935\u094b \u092a\u0942\u0930\u0940 \u0915\u094d\u0932\u093f\u092f\u0930 \u0915\u0930\u0915\u0930 \u092c\u0924\u093e\u0924\u093e \u0939\u0948 ,\u091c\u093f\u0938\u0938\u0947 \u0915\u092a\u0921\u093c\u0947 \u0932\u0947\u0928\u0947 \u092e\u0947\u0902 \u0906\u0938\u093e\u0928\u0940 \u0939\u094b\u0924\u0940 \u0939\u0948,Ajio Confused \u0915\u0930\u0924\u093e \u0939\u0948,\u091c\u093f\u0938\u0938\u0947 \u0915\u092a\u0921\u093c\u0947 \u0938\u0932\u0947\u0915\u094d\u091f \u0915\u0930\u0928\u0947 \u092e\u0947\u0902 \u092c\u0939\u0941...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_Ugz57j5JpwAcFBT-w-B4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "For me review is most important and clean setup also, so I like Myntra more than ajio.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_UgzYzHDaZE-iSc3KPuB4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ye hacks toh mere roj ke hi hai bohot pareshan kiya hai maine Myntra n AJIO ko",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_Ugxt4GGe_9_PLgFJM454AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "i used myntra for almost 2 years but now switched to ajio which is far better than myntra in my opinion, ajio has better quality clothes and also mynt...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_rev_101",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "The dress looked gorgeous in the pictures, so I kept it in my wishlist for weeks waiting for a sale. When I finally bought it, the fabric quality was ...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_UgzB0BySN4gyzgChbYp4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "What about international brands on ajio?",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_UgxFuppsIv1aYJm4mhV4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Same feeling myntra quality better than Ajio",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_qa_102",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: Is size M true to size or should I size up for a comfortable fit around the waist? A: It runs slightly small at the waist, recommend ordering size ...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_UgzRKsyejDDN_lQdcO54AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio okapudu bagundedi but present poor quality...vastunnai mam",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_rev_103",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Color in reality is much darker than shown in the app photos. Kept it in shortlist for a month, but feeling underwhelmed now after receiving.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_UgxuHsPJba5kI2aDC0t4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Give ajio link",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_Ugz42nrFSIDuutmxqhh4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio always better options",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_rev_104",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Sizing is totally inconsistent across brands on Myntra. My usual size L in ethnic wear was way too tight in sleeves. Had to issue return request.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_UgwlYgg6thTDYhjtpyZ4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Good and practical video . I always prefer Ajio. Ajio is my favorite.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_qa_105",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: Are these heels suitable for wide feet? A: No, the front strap is narrow and bites into wide feet.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_UgwKcuWLJCoD7N-IZUF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I always prefer ajio",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_UgyqugsoZu_bhssmVZ14AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I love Myntra,Ajio is also ok,but Myntra is my favourite",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_rev_106",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Saved these block heels for 2 months. Cushioning is decent but strap length is shorter than standard UK 6.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_UgxyzwSGikUsyXY0gkR4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio is anytime affordable with good quality .",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_qa_108",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: Does the kurta shrink after washing? A: Cotton material shrinks slightly by 0.5 inches after first wash.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_Ugzqfm9lWy_alrwxPih4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "High 169 cm and chest 33 inch and sleem boday which size T-shirt best for me???",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_UgwTnOnpdqkNZJd91Lt4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Which size you order",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_rev_109",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Sole slipperiness issue on polished floors. Looks stylish but safety fit doubt made me return.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_UgxFCcVHIgvV5yS7UsN4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Mam can u pls help me in choosing my bust size...I never shopped from online...I Ware my bra of 32 size...my I measured my bust by a inch tape ..n it ...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_rev_110",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Nice design but zip gets stuck repeatedly. Kept in wishlist for weeks, bought on price drop but zip quality gap.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_Ugy-hrRKQnXMCOBp6JF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Abhi Ajio wale dund rahe hei isko",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_UgwsTPcJI9ZwmVN4e5N4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Myntra is best ajio me delivery or charges count ho jata h",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_qa_111",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: What is the heel height in inches? A: Heel height is 3 inches.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 5 attempts using groq: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "yt_UgzYzHDaZE-iSc3KPuB4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ye hacks toh mere roj ke hi hai bohot pareshan kiya hai maine Myntra n AJIO ko",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_rev_101",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "The dress looked gorgeous in the pictures, so I kept it in my wishlist for weeks waiting for a sale. When I finally bought it, the fabric quality was ...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_qa_102",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: Is size M true to size or should I size up for a comfortable fit around the waist? A: It runs slightly small at the waist, recommend ordering size ...",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_rev_103",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Color in reality is much darker than shown in the app photos. Kept it in shortlist for a month, but feeling underwhelmed now after receiving.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_rev_104",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Sizing is totally inconsistent across brands on Myntra. My usual size L in ethnic wear was way too tight in sleeves. Had to issue return request.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_qa_105",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: Are these heels suitable for wide feet? A: No, the front strap is narrow and bites into wide feet.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_rev_106",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Saved these block heels for 2 months. Cushioning is decent but strap length is shorter than standard UK 6.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_qa_108",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: Does the kurta shrink after washing? A: Cotton material shrinks slightly by 0.5 inches after first wash.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_rev_109",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Sole slipperiness issue on polished floors. Looks stylish but safety fit doubt made me return.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_rev_110",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Nice design but zip gets stuck repeatedly. Kept in wishlist for weeks, bought on price drop but zip quality gap.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  },
+  {
+    "source_id": "pdp_qa_111",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: What is the heel height in inches? A: Heel height is 3 inches.",
+    "reason": "Layer 2 AI extraction failure: Extraction failed after 10 attempts using groq (llama-3.3-70b-versatile): Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+  }
+]

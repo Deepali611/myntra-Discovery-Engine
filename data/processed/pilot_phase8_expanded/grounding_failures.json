@@ -1,0 +1,170 @@
+[
+  {
+    "source_id": "yt_UgwjFfeJybv_jWYmMFB4AaABAg",
+    "layer": 1,
+    "invalid_string": "1st green violet & pink embroidered with floral dupatta my favs.",
+    "raw_text_snippet": "1st green \ud83d\udc9a violet \ud83d\udc9c &amp; pink \ud83d\udc95 embroidered with floral dupatta my favs.\u2764\u2764\u2764",
+    "reason": "grounding_span is not an exact substring of raw_text"
+  },
+  {
+    "source_id": "play_store_ed881b47-9463-46bd-9d3a-81fa269729af",
+    "layer": 1,
+    "invalid_string": "",
+    "raw_text_snippet": "very bad experience with myntra . I ordered a pair of jeans from myntra but I got a oversized product so I returned. once I asked for refunded to cust...",
+    "reason": "Layer 1 AI extraction failure: Extraction failed across all models for provider groq"
+  },
+  {
+    "source_id": "yt_UgyZ8UURIbaiOGrng9N4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Amazing choice, I see your content and you really bring high quality clothes recommendations",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgzdryOERdNkYiR5tZp4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio me kapde ki photo kuch or kapda kuch or",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgzQa_qrTmn8RaRHyTF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "\ud83c\udf1f Hey there! Don\u2019t forget to check out the Community Tab for all the links! \u2728 Let me know which one you liked better \u2013 Meesho \ud83d\udecd\ufe0f or Ajio \ud83d\udc57? I can\u2019t wa...",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_Ugz7C2tDDerLoUmgpZF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio is far better price wise quality wise",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_Ugw7o1GNDMAHKx76Xp14AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Ajio is better",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_Ugz9V7SyRxFD8aT1krx4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Bro ajio give you 15% <br>Myntra gives 9% but why you suggest myntra",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgzBHUdqsdesQARHUsd4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Bro products quality kis pe best hai Ajio vs Myntra",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_Ugwfs_yV-uro4RPxl0J4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "We want next to be gpay vs phonepay",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgxuoaNPCj8EVwKtFmJ4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "All these companies have huge user data and are already working on UI and UX. It would be really interesting if you can drop a video on comparing AI m...",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_Ugw3oo5KHTEaeuKyRAp4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "<b>where I will get premium clothes Myntra or Ajio?</b>",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_Ugw3wKB9a58Nt0BEGwN4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "I need to knwo the users perspective as well and like when you juge the Apps on the UX how does that reflect to the end user???<br><br>Just for exampl...",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgzNbK19K4IE7Ob93RF4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "i used both, and i can definitely say that myntra has the great ux as compared to Ajio , ajio never shows the user reviews text and photos, and myntra...",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgxFuppsIv1aYJm4mhV4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Same feeling myntra quality better than Ajio",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_Ugz57j5JpwAcFBT-w-B4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "For me review is most important and clean setup also, so I like Myntra more than ajio.",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgzB0BySN4gyzgChbYp4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "What about international brands on ajio?",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_Ugzqfm9lWy_alrwxPih4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "High 169 cm  and chest 33 inch and sleem boday which size T-shirt best for me???",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgwTnOnpdqkNZJd91Lt4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Which size you order",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgyTwPfyJWhV1zmGGXt4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "5.8 height or kamar 38 h..... which size is comfortable",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_UgzE18kcfeiWWQ2MFFJ4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Women comparing iphone with nokia 3310\ud83d\ude02 heads off",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "yt_Ugy86qq3uljN9RIpWWZ4AaABAg",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Acount block kardenge aise mintra or Ajio bale\ud83d\ude0a",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "pdp_qa_108",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: Does the kurta shrink after washing?\nA: Cotton material shrinks slightly by 0.5 inches after first wash.",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "pdp_qa_111",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: What is the heel height in inches?\nA: Heel height is 3 inches.",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  }
+]

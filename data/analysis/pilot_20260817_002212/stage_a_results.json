@@ -1,0 +1,413 @@
+[
+  {
+    "relevance_gate_stage_a": "pass",
+    "score": 4.0,
+    "matched_terms": {
+      "fit_quality_trust": [
+        "size",
+        "fit",
+        "returned"
+      ],
+      "review_social_proof": [
+        "reviews"
+      ]
+    },
+    "source_id": "play_store_e5e5fb97-64f2-4555-bf0e-2b36029acacc"
+  },
+  {
+    "relevance_gate_stage_a": "pass",
+    "score": 1.0,
+    "matched_terms": {
+      "fit_quality_trust": [
+        "return"
+      ]
+    },
+    "source_id": "play_store_32b0c992-e7a7-4ad5-a7c9-77015d818ce1"
+  },
+  {
+    "relevance_gate_stage_a": "pass",
+    "score": 1.0,
+    "matched_terms": {
+      "fit_quality_trust": [
+        "return"
+      ]
+    },
+    "source_id": "play_store_1bf0314d-d31c-428d-9587-f12efd0ef830"
+  },
+  {
+    "relevance_gate_stage_a": "pass",
+    "score": 1.0,
+    "matched_terms": {
+      "fit_quality_trust": [
+        "return"
+      ]
+    },
+    "source_id": "play_store_150f5e0e-96ef-43d9-8a85-f4c7cab9e9a9"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgxsG-ox9DTtNyndMgZ4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgyiR_s9WUaedOAqJUp4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_Ugwp1wqi_WVLiDukIRh4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "pass",
+    "score": 2.0,
+    "matched_terms": {
+      "review_social_proof": [
+        "haul",
+        "try on"
+      ]
+    },
+    "source_id": "yt_Ugz8Uv8W3h5Y9lnAGoN4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "pass",
+    "score": 1.0,
+    "matched_terms": {
+      "review_social_proof": [
+        "haul"
+      ]
+    },
+    "source_id": "yt_UgwtLL16fgchhKaUWvh4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_Ugw4aHUknb_ikbGO2794AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_Ugweug0nMjflq-Gpm1x4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgxuuoXvABaElKQHMxN4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgwfgAuyFgWg6Quztp54AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "pass",
+    "score": 1.0,
+    "matched_terms": {
+      "review_social_proof": [
+        "friend"
+      ]
+    },
+    "source_id": "yt_Ugwwq_7QHa9BUywaZUp4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgzNAJ8dKXQQt4KHgNV4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgwklrZ2jnToLYutHZV4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgxHFJsBVVhuCOY4o2p4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgwGMaboNA8QLyglblN4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgyaQD39O1JPTay3rMt4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgwBOOTqvJroQl_DomR4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgxN9R90g2dhEXzWjPl4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgyMO2klrw4u8D-pYQV4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgwDAIBCrnpzLVIqzTR4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgxKtScR3lnI7BZ7Yuh4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgwlDiJjcx3yge6JBaV4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_Ugx5tmXZ4KTwVKdLFHl4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_Ugz-GKTDYHEAyOl3_td4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgzmuR2zRGAj8gXZUxZ4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgwFUMh-vv1e5UHKO4R4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_Ugx8XYuzpwXfM16VeK14AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgyL8NwPO5OHXzrQeDt4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_Ugwx9PoyCWJ5Xj3OW054AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_Ugx0_mGS-Ewoj7qlJVB4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_Ugz_qi0QsTbkOdt7rR54AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgxAXd_LstxvwS-1SO94AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgwiLC5Zl7lB1ysfgeh4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_Ugzpv-BzZ9I8GCnmygx4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "yt_UgzyrNgnZNDfUIoc6px4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "pass",
+    "score": 2.0,
+    "matched_terms": {
+      "wishlist_save": [
+        "save"
+      ]
+    },
+    "source_id": "yt_UgyP9OrMOvM4BaVxreF4AaABAg"
+  },
+  {
+    "relevance_gate_stage_a": "pass",
+    "score": 8.0,
+    "matched_terms": {
+      "wishlist_save": [
+        "wishlist"
+      ],
+      "deferral_postponement": [
+        "waiting",
+        "sale"
+      ],
+      "fit_quality_trust": [
+        "fabric",
+        "quality",
+        "returned"
+      ]
+    },
+    "source_id": "pdp_rev_101"
+  },
+  {
+    "relevance_gate_stage_a": "pass",
+    "score": 3.0,
+    "matched_terms": {
+      "fit_quality_trust": [
+        "size",
+        "fit"
+      ],
+      "review_social_proof": [
+        "recommend"
+      ]
+    },
+    "source_id": "pdp_qa_102"
+  },
+  {
+    "relevance_gate_stage_a": "pass",
+    "score": 2.0,
+    "matched_terms": {
+      "wishlist_save": [
+        "shortlist"
+      ]
+    },
+    "source_id": "pdp_rev_103"
+  },
+  {
+    "relevance_gate_stage_a": "pass",
+    "score": 3.0,
+    "matched_terms": {
+      "fit_quality_trust": [
+        "size",
+        "sizing",
+        "return"
+      ]
+    },
+    "source_id": "pdp_rev_104"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "pdp_qa_105"
+  },
+  {
+    "relevance_gate_stage_a": "pass",
+    "score": 2.0,
+    "matched_terms": {
+      "wishlist_save": [
+        "saved"
+      ]
+    },
+    "source_id": "pdp_rev_106"
+  },
+  {
+    "relevance_gate_stage_a": "pass",
+    "score": 4.0,
+    "matched_terms": {
+      "deferral_postponement": [
+        "waiting",
+        "discount"
+      ],
+      "fit_quality_trust": [
+        "quality"
+      ]
+    },
+    "source_id": "pdp_rev_107"
+  },
+  {
+    "relevance_gate_stage_a": "pass",
+    "score": 1.0,
+    "matched_terms": {
+      "fit_quality_trust": [
+        "material"
+      ]
+    },
+    "source_id": "pdp_qa_108"
+  },
+  {
+    "relevance_gate_stage_a": "pass",
+    "score": 2.0,
+    "matched_terms": {
+      "fit_quality_trust": [
+        "fit",
+        "return"
+      ]
+    },
+    "source_id": "pdp_rev_109"
+  },
+  {
+    "relevance_gate_stage_a": "pass",
+    "score": 4.5,
+    "matched_terms": {
+      "wishlist_save": [
+        "wishlist"
+      ],
+      "deferral_postponement": [
+        "price drop"
+      ],
+      "fit_quality_trust": [
+        "quality"
+      ]
+    },
+    "source_id": "pdp_rev_110"
+  },
+  {
+    "relevance_gate_stage_a": "fail",
+    "score": 0.0,
+    "matched_terms": {},
+    "source_id": "pdp_qa_111"
+  },
+  {
+    "relevance_gate_stage_a": "pass",
+    "score": 2.0,
+    "matched_terms": {
+      "fit_quality_trust": [
+        "fabric",
+        "quality"
+      ]
+    },
+    "source_id": "pdp_rev_112"
+  }
+]

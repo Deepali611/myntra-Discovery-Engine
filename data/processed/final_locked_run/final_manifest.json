@@ -1,0 +1,73 @@
+{
+  "phase": "Final Locked Collection Run",
+  "total_new_raw_fetched": 1325,
+  "new_directly_relevant_added": 0,
+  "total_final_dataset": 28,
+  "tier_breakdown": {
+    "directly_relevant": 22,
+    "indirectly_relevant": 6,
+    "not_relevant": 0
+  },
+  "opportunity_scores": [
+    {
+      "theme": "inspiration_board",
+      "opportunity_score": 5.6,
+      "frequency_count": 7,
+      "cross_source_corroboration": 1,
+      "sources_present": [
+        "youtube"
+      ],
+      "relevance_strength": 1.0,
+      "metric_linkage_strength": 0.8,
+      "representative_quote": "Amazing choice, I see your content and you really bring high quality clothes recommendations"
+    },
+    {
+      "theme": "peer_sizing_inquiry",
+      "opportunity_score": 5.4,
+      "frequency_count": 6,
+      "cross_source_corroboration": 1,
+      "sources_present": [
+        "youtube"
+      ],
+      "relevance_strength": 1.0,
+      "metric_linkage_strength": 0.9,
+      "representative_quote": "Which size do u wear ?"
+    },
+    {
+      "theme": "intent_to_buy",
+      "opportunity_score": 5.0,
+      "frequency_count": 5,
+      "cross_source_corroboration": 1,
+      "sources_present": [
+        "youtube"
+      ],
+      "relevance_strength": 1.0,
+      "metric_linkage_strength": 1.0,
+      "representative_quote": "Plz recommend tops for chubby people"
+    },
+    {
+      "theme": "platform_review_trust_gap",
+      "opportunity_score": 1.4,
+      "frequency_count": 2,
+      "cross_source_corroboration": 1,
+      "sources_present": [
+        "youtube"
+      ],
+      "relevance_strength": 1.0,
+      "metric_linkage_strength": 0.7,
+      "representative_quote": "ajio pe jitna cancel karoge utni br platform fee bdte jaaegi"
+    },
+    {
+      "theme": "fit_sizing_doubt",
+      "opportunity_score": 1.0,
+      "frequency_count": 1,
+      "cross_source_corroboration": 1,
+      "sources_present": [
+        "myntra_pdp"
+      ],
+      "relevance_strength": 1.0,
+      "metric_linkage_strength": 1.0,
+      "representative_quote": "Sole slipperiness issue on polished floors. Looks stylish but safety fit doubt made me return."
+    }
+  ]
+}
