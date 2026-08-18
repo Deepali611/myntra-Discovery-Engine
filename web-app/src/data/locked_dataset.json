@@ -15,7 +15,7 @@
       "id": "Q1",
       "question": "What items do users wishlist/save and why?",
       "evidence_tier": "Direct Wishlist Evidence",
-      "evidence_status": "STRONG",
+      "evidence_status": "STRONG (Detailed Reviews > 15 Words)",
       "direct_wishlist_count": 4,
       "general_pre_purchase_count": 0,
       "sources": [
@@ -25,13 +25,14 @@
       "synthesis": "Shoppers save footwear and ethnic wear to wishlists either to defer purchase decisions until discount events or when inspired by creator try-on videos.",
       "verbatim_evidence": [
         "Saved these block heels for 2 months. Cushioning is decent... (pdp_rev_106)"
-      ]
+      ],
+      "record_count": 4
     },
     {
       "id": "Q2",
       "question": "Why do items sit in wishlists without purchase?",
       "evidence_tier": "Direct Wishlist Evidence",
-      "evidence_status": "STRONG",
+      "evidence_status": "STRONG (Detailed PDP Reviews > 15 Words)",
       "direct_wishlist_count": 3,
       "general_pre_purchase_count": 0,
       "sources": [
@@ -40,13 +41,14 @@
       "synthesis": "Items stall in wishlists for weeks/months due to quality uncertainty (zip sticking) or photo color misrepresentation fears while waiting for a sale.",
       "verbatim_evidence": [
         "Kept in wishlist for weeks, bought on price drop but zip quality gap. (pdp_rev_110)"
-      ]
+      ],
+      "record_count": 3
     },
     {
       "id": "Q3",
       "question": "Sizing/fit uncertainty vs. return fear",
       "evidence_tier": "General Pre-Purchase Evidence",
-      "evidence_status": "STRONG",
+      "evidence_status": "WEAK (Short Sizing Inquiries <= 15 Words)",
       "direct_wishlist_count": 1,
       "general_pre_purchase_count": 6,
       "sources": [
@@ -56,7 +58,8 @@
       "synthesis": "Inconsistent brand size charts drive pre-purchase sizing inquiries asking creators for exact try-on height/bust/waist measurements.",
       "verbatim_evidence": [
         "Which size do u wear ? (yt_UgzVyaf2RGHG6Vw4II14)"
-      ]
+      ],
+      "record_count": 7
     },
     {
       "id": "Q4",
@@ -72,13 +75,14 @@
       "verbatim_evidence": [
         "Color in reality is much darker than shown in the app photos. Kept it in shortlist for a month... (pdp_rev_103)"
       ],
-      "confidence": "MEDIUM (Low Volume - 2 Records)"
+      "confidence": "MEDIUM (Low Volume - 2 Records)",
+      "record_count": 2
     },
     {
       "id": "Q5",
       "question": "Comparing shortlisted items / choice dilemma",
       "evidence_tier": "Supporting Pre-Purchase Fashion Decision Evidence",
-      "evidence_status": "WEAK (Single-Sentence Title Records)",
+      "evidence_status": "WEAK (Single-Sentence Titles <= 15 Words)",
       "direct_wishlist_count": 0,
       "general_pre_purchase_count": 12,
       "sources": [
@@ -87,7 +91,8 @@
       "synthesis": "Shoppers post short title-only questions asking for help choosing between outfits for receptions/dates, but lack detailed behavioral elaboration in public comment text.",
       "verbatim_evidence": [
         "Help me choose one dress for reception party (reddit_rss_t3_1k48pyu)"
-      ]
+      ],
+      "record_count": 12
     },
     {
       "id": "Q6",
@@ -103,13 +108,14 @@
       "synthesis": "Shoppers research brand official website pricing vs Myntra and check platform cancellation fee increases before ordering.",
       "verbatim_evidence": [
         "Why is Snitch's price and quality different on official website vs Flipkart/Myntra? (reddit_t3_1nywvf3)"
-      ]
+      ],
+      "record_count": 3
     },
     {
       "id": "Q7",
       "question": "Fit, size, styling, price, reviews & occasion suitability",
       "evidence_tier": "Supporting Pre-Purchase Fashion Decision Evidence",
-      "evidence_status": "WEAK (Single-Sentence Title Records)",
+      "evidence_status": "WEAK (Single-Sentence Titles <= 15 Words)",
       "direct_wishlist_count": 2,
       "general_pre_purchase_count": 18,
       "sources": [
@@ -119,13 +125,14 @@
       "synthesis": "Multi-dimensional outfit selection evaluating occasion appropriateness (receptions, date nights, engagements), primarily in short title-only posts.",
       "verbatim_evidence": [
         "Help Me Choose an Outfit for My Third Date! (reddit_rss_t3_1e64y2w)"
-      ]
+      ],
+      "record_count": 20
     },
     {
       "id": "Q8",
       "question": "Price vs value / discount waiting behavior",
       "evidence_tier": "Direct Wishlist Evidence",
-      "evidence_status": "STRONG",
+      "evidence_status": "STRONG (Detailed PDP Reviews > 15 Words)",
       "direct_wishlist_count": 3,
       "general_pre_purchase_count": 0,
       "sources": [
@@ -134,7 +141,8 @@
       "synthesis": "Wishlists act as price-drop watchlists, holding items for weeks/months waiting for a sale discount.",
       "verbatim_evidence": [
         "kept it in my wishlist for weeks waiting for a sale. (pdp_rev_101)"
-      ]
+      ],
+      "record_count": 3
     },
     {
       "id": "Q9",
@@ -155,7 +163,7 @@
       "id": "Q10",
       "question": "Strategic product opportunity matrix",
       "evidence_tier": "Direct Wishlist Evidence",
-      "evidence_status": "STRONG",
+      "evidence_status": "STRONG (Composite Opportunity Matrix)",
       "record_count": 19,
       "sources": [
         "myntra_pdp",
