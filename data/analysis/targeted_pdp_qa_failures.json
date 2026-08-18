@@ -1,0 +1,51 @@
+[
+  {
+    "source_id": "pdp_qa_201",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: Is this dress material better than the similar floral dress from Libas or should I buy that one instead?\nA: The fabric on this dress is rayon blend...",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "pdp_qa_203",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: How does this Anarkali set compare with Biba's sizing and fabric durability?\nA: Biba fits more true to size, whereas this brand runs slightly tight...",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "pdp_qa_201",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: Is this dress material better than the similar floral dress from Libas or should I buy that one instead?\nA: The fabric on this dress is rayon blend...",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "pdp_qa_205",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: Are these block heels more comfortable for long events compared to Metro or Inc.5 heels?\nA: Inc.5 has thicker memory foam cushioning, so Inc.5 is m...",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "pdp_qa_208",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: Why is the price on Myntra 500 rupees lower than the brand's official store?\nA: Discount is provided as part of Myntra brand festival sale.",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "pdp_qa_205",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: Are these block heels more comfortable for long events compared to Metro or Inc.5 heels?\nA: Inc.5 has thicker memory foam cushioning, so Inc.5 is m...",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  },
+  {
+    "source_id": "pdp_qa_208",
+    "layer": 2,
+    "invalid_string": "",
+    "raw_text_snippet": "Q: Why is the price on Myntra 500 rupees lower than the brand's official store?\nA: Discount is provided as part of Myntra brand festival sale.",
+    "reason": "Layer 2 AI extraction failure: name 'item_w' is not defined"
+  }
+]

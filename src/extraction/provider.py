@@ -24,7 +24,7 @@ class AIProvider:
             if not self.gemini_key:
                 raise ValueError("GEMINI_API_KEY is missing in .env")
             self.client = genai.Client(api_key=self.gemini_key)
-            self.model_name = "gemini-2.5-flash"
+            self.model_name = "gemini-3.6-flash"
         elif self.provider == "groq":
             import groq
             if not self.groq_key:

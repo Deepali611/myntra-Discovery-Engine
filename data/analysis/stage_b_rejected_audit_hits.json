@@ -1,0 +1,44 @@
+{
+  "total_audited": 59,
+  "q5_hits": [
+    {
+      "source_id": "reddit_rss_t3_1pd283c",
+      "source": "reddit",
+      "raw_text": "Guys need help choosing the best looking Hollister jacket among these",
+      "target_question": "Q5",
+      "reasoning": "Explicitly comparing multiple Hollister jackets to decide which is best looking.",
+      "verbatim_span": "choosing the best looking Hollister jacket among these",
+      "file_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\raw\\targeted_expanded\\reddit_rss_fashion.json"
+    },
+    {
+      "source_id": "reddit_rss_t3_1b70l87",
+      "source": "reddit",
+      "raw_text": "Help me to choose between 2 watches",
+      "target_question": "Q5",
+      "reasoning": "User is explicitly comparing two watches before purchase.",
+      "verbatim_span": "choose between 2 watches",
+      "file_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\raw\\targeted_expanded\\reddit_rss_fashion.json"
+    }
+  ],
+  "q6_hits": [],
+  "q9_hits": [
+    {
+      "source_id": "reddit_rss_t3_1t69nz2",
+      "source": "reddit",
+      "raw_text": "Need help with choosing some cool shoes with 5k budget!",
+      "target_question": "Q9",
+      "reasoning": "Mentions a 5k budget indicating a budget-conscious shopper archetype.",
+      "verbatim_span": "5k budget",
+      "file_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\raw\\targeted_expanded\\reddit_rss_fashion.json"
+    },
+    {
+      "source_id": "reddit_rss_t3_1ejncx2",
+      "source": "reddit",
+      "raw_text": "need help choosing my first white sneakers",
+      "target_question": "Q9",
+      "reasoning": "The user mentions \"my first white sneakers\", indicating they are a first-time buyer, which is a clear shopper archetype.",
+      "verbatim_span": "my first white sneakers",
+      "file_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\raw\\targeted_expanded\\reddit_rss_fashion.json"
+    }
+  ]
+}

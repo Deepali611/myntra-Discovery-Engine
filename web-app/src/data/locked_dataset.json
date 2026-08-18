@@ -14,8 +14,8 @@
     {
       "id": "Q1",
       "question": "What items do users wishlist/save and why?",
-      "evidence_tier": "Direct Wishlist Evidence",
-      "evidence_status": "STRONG (Detailed Reviews > 15 Words)",
+      "evidence_tier": "STRONG EVIDENCE",
+      "evidence_status": "STRONG EVIDENCE",
       "direct_wishlist_count": 4,
       "general_pre_purchase_count": 0,
       "sources": [
@@ -31,8 +31,8 @@
     {
       "id": "Q2",
       "question": "Why do items sit in wishlists without purchase?",
-      "evidence_tier": "Direct Wishlist Evidence",
-      "evidence_status": "STRONG (Detailed PDP Reviews > 15 Words)",
+      "evidence_tier": "STRONG EVIDENCE",
+      "evidence_status": "STRONG EVIDENCE",
       "direct_wishlist_count": 3,
       "general_pre_purchase_count": 0,
       "sources": [
@@ -47,8 +47,8 @@
     {
       "id": "Q3",
       "question": "Sizing/fit uncertainty vs. return fear",
-      "evidence_tier": "General Pre-Purchase Evidence",
-      "evidence_status": "WEAK (Short Sizing Inquiries <= 15 Words)",
+      "evidence_tier": "MODERATE EVIDENCE",
+      "evidence_status": "MODERATE EVIDENCE",
       "direct_wishlist_count": 1,
       "general_pre_purchase_count": 6,
       "sources": [
@@ -64,8 +64,8 @@
     {
       "id": "Q4",
       "question": "Photo vs. reality quality/color doubts",
-      "evidence_tier": "Direct Wishlist Evidence",
-      "evidence_status": "MEDIUM (Low Volume - 2 Records)",
+      "evidence_tier": "DIRECTIONAL SIGNAL (LOW VOLUME)",
+      "evidence_status": "DIRECTIONAL SIGNAL (LOW VOLUME)",
       "direct_wishlist_count": 2,
       "general_pre_purchase_count": 0,
       "sources": [
@@ -81,8 +81,8 @@
     {
       "id": "Q5",
       "question": "Comparing shortlisted items / choice dilemma",
-      "evidence_tier": "Supporting Pre-Purchase Fashion Decision Evidence",
-      "evidence_status": "WEAK (Single-Sentence Titles <= 15 Words)",
+      "evidence_tier": "DIRECTIONAL SIGNAL (LOW VOLUME)",
+      "evidence_status": "DIRECTIONAL SIGNAL (LOW VOLUME)",
       "direct_wishlist_count": 0,
       "general_pre_purchase_count": 12,
       "sources": [
@@ -97,8 +97,8 @@
     {
       "id": "Q6",
       "question": "Info sought outside Myntra (reviews, social proof, trust)",
-      "evidence_tier": "Supporting Pre-Purchase Fashion Decision Evidence",
-      "evidence_status": "PARTIAL (Thin / 3 Records)",
+      "evidence_tier": "MODERATE EVIDENCE",
+      "evidence_status": "MODERATE EVIDENCE",
       "direct_wishlist_count": 0,
       "general_pre_purchase_count": 3,
       "sources": [
@@ -114,8 +114,8 @@
     {
       "id": "Q7",
       "question": "Fit, size, styling, price, reviews & occasion suitability",
-      "evidence_tier": "Supporting Pre-Purchase Fashion Decision Evidence",
-      "evidence_status": "WEAK (Single-Sentence Titles <= 15 Words)",
+      "evidence_tier": "MODERATE EVIDENCE",
+      "evidence_status": "MODERATE EVIDENCE",
       "direct_wishlist_count": 2,
       "general_pre_purchase_count": 18,
       "sources": [
@@ -131,8 +131,8 @@
     {
       "id": "Q8",
       "question": "Price vs value / discount waiting behavior",
-      "evidence_tier": "Direct Wishlist Evidence",
-      "evidence_status": "STRONG (Detailed PDP Reviews > 15 Words)",
+      "evidence_tier": "STRONG EVIDENCE",
+      "evidence_status": "STRONG EVIDENCE",
       "direct_wishlist_count": 3,
       "general_pre_purchase_count": 0,
       "sources": [
@@ -147,8 +147,8 @@
     {
       "id": "Q9",
       "question": "Behavioral differences across user segments",
-      "evidence_tier": "Supporting Pre-Purchase Fashion Decision Evidence",
-      "evidence_status": "HYPOTHESISED (Archetypes)",
+      "evidence_tier": "DIRECTIONAL SIGNAL (LOW VOLUME)",
+      "evidence_status": "DIRECTIONAL SIGNAL (LOW VOLUME)",
       "record_count": 19,
       "sources": [
         "reddit",
@@ -162,8 +162,8 @@
     {
       "id": "Q10",
       "question": "Strategic product opportunity matrix",
-      "evidence_tier": "Direct Wishlist Evidence",
-      "evidence_status": "STRONG (Composite Opportunity Matrix)",
+      "evidence_tier": "STRONG EVIDENCE",
+      "evidence_status": "STRONG EVIDENCE",
       "record_count": 19,
       "sources": [
         "myntra_pdp",
