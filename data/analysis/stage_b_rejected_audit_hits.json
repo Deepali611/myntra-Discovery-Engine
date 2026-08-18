@@ -1,44 +1,108 @@
 {
-  "total_audited": 59,
+  "total_audited": 559,
   "q5_hits": [
     {
       "source_id": "reddit_rss_t3_1pd283c",
       "source": "reddit",
       "raw_text": "Guys need help choosing the best looking Hollister jacket among these",
       "target_question": "Q5",
-      "reasoning": "Explicitly comparing multiple Hollister jackets to decide which is best looking.",
+      "reasoning": "User is explicitly comparing multiple Hollister jackets to determine the best looking one.",
       "verbatim_span": "choosing the best looking Hollister jacket among these",
       "file_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\raw\\targeted_expanded\\reddit_rss_fashion.json"
     },
     {
-      "source_id": "reddit_rss_t3_1b70l87",
-      "source": "reddit",
-      "raw_text": "Help me to choose between 2 watches",
+      "source_id": "yt_Ugx1nFG7MFUgAJ_xOpR4AaABAg",
+      "source": "youtube",
+      "raw_text": "The white one was same like ruru from splitsvilla 16",
       "target_question": "Q5",
-      "reasoning": "User is explicitly comparing two watches before purchase.",
-      "verbatim_span": "choose between 2 watches",
-      "file_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\raw\\targeted_expanded\\reddit_rss_fashion.json"
+      "reasoning": "Explicit comparison between 'the white one' and 'ruru from splitsvilla 16' indicates a pre-purchase comparison.",
+      "verbatim_span": "The white one was same like ruru from splitsvilla 16",
+      "file_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\processed\\pilot_20260817_005050\\relevance_gated.json"
+    },
+    {
+      "source_id": "yt_UgwRURpNWZMi6lqlL7F4AaABAg",
+      "source": "youtube",
+      "raw_text": "Difference is that meesho sales replica of the original",
+      "target_question": "Q5",
+      "reasoning": "Explicit comparison between Meesho replica and original",
+      "verbatim_span": "Difference is that meesho sales replica of the original",
+      "file_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\processed\\pilot_20260817_005050\\relevance_gated.json"
+    },
+    {
+      "source_id": "yt_UgxFA7VKtn-oaR9au-t4AaABAg",
+      "source": "youtube",
+      "raw_text": "Didi 700 or 390 me difference hota hai",
+      "target_question": "Q5",
+      "reasoning": "User is explicitly comparing two price points (700 vs 390) before making a purchase decision.",
+      "verbatim_span": "700 or 390",
+      "file_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\processed\\pilot_20260817_005050\\relevance_gated.json"
+    },
+    {
+      "source_id": "yt_Ugy5V8BUKDMe2cI544h4AaABAg",
+      "source": "youtube",
+      "raw_text": "I am confused, jeans dekhna tha ya top",
+      "target_question": "Q5",
+      "reasoning": "Explicit comparison between jeans and top",
+      "verbatim_span": "jeans dekhna tha ya top",
+      "file_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\processed\\pilot_20260817_005050\\relevance_gated.json"
+    },
+    {
+      "source_id": "yt_UgxhN2nCfKFDLK4Wuwx4AaABAg",
+      "source": "youtube",
+      "raw_text": "Second and third are so elegant Vibes",
+      "target_question": "Q5",
+      "reasoning": "Explicit comparison between second and third items",
+      "verbatim_span": "Second and third are so elegant Vibes",
+      "file_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\processed\\pilot_20260817_005050\\relevance_gated.json"
     }
   ],
-  "q6_hits": [],
+  "q6_hits": [
+    {
+      "source_id": "yt_UgzZK3OdpM8P_MEMOb14AaABAg",
+      "source": "youtube",
+      "raw_text": "Which cost more.",
+      "target_question": "Q6",
+      "reasoning": "The user is asking about price differences, indicating a price comparison concern.",
+      "verbatim_span": "Which cost more.",
+      "file_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\processed\\pilot_20260817_005050\\relevance_gated.json"
+    }
+  ],
   "q9_hits": [
+    {
+      "source_id": "play_store_83ec5f7a-5e0f-45e6-966a-49bddbfffa9e",
+      "source": "play_store",
+      "raw_text": "from the last 1 month the service and product are getting worst in myntra.they send wrong size or damaged product and they hold the return pick up. they are showing nonsense. makeup products are always damaged I got. no return and exchange properly. don't buy from Myntra this is my suggestion. they send low quality cloths at heigh cost. always assured customer care but on ground they want rating but doesn't do in favour of customer. I was 10 years old customer but now I am going to uninstall",
+      "target_question": "Q9",
+      "reasoning": "The reviewer indicates being a long-term customer (10 years) and now uninstalling, showing repeat buyer behavior.",
+      "verbatim_span": "I was 10 years old customer but now I am going to uninstall",
+      "file_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\processed\\pilot_20260817_005050\\relevance_gated.json"
+    },
+    {
+      "source_id": "yt_UgyvpxrAZU1jHaaspLB4AaABAg",
+      "source": "youtube",
+      "raw_text": "Is there any way to reduce price i can't afford it",
+      "target_question": "Q9",
+      "reasoning": "The user states they cannot afford the price, indicating a budget\u2011conscious shopper archetype.",
+      "verbatim_span": "i can't afford it",
+      "file_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\processed\\pilot_20260817_005050\\relevance_gated.json"
+    },
     {
       "source_id": "reddit_rss_t3_1t69nz2",
       "source": "reddit",
       "raw_text": "Need help with choosing some cool shoes with 5k budget!",
       "target_question": "Q9",
-      "reasoning": "Mentions a 5k budget indicating a budget-conscious shopper archetype.",
+      "reasoning": "Mentions a 5k budget, indicating a budget\u2011conscious shopper archetype.",
       "verbatim_span": "5k budget",
       "file_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\raw\\targeted_expanded\\reddit_rss_fashion.json"
     },
     {
-      "source_id": "reddit_rss_t3_1ejncx2",
-      "source": "reddit",
-      "raw_text": "need help choosing my first white sneakers",
+      "source_id": "yt_UgxU0i_k4vpphX8wf_l4AaABAg",
+      "source": "youtube",
+      "raw_text": "First time ajio sale discount is good",
       "target_question": "Q9",
-      "reasoning": "The user mentions \"my first white sneakers\", indicating they are a first-time buyer, which is a clear shopper archetype.",
-      "verbatim_span": "my first white sneakers",
-      "file_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\raw\\targeted_expanded\\reddit_rss_fashion.json"
+      "reasoning": "Indicates first-time buyer behavior",
+      "verbatim_span": "First time ajio sale discount is good",
+      "file_path": "c:\\Users\\patil\\myntra-Discovery-Engine\\data\\processed\\pilot_20260817_005050\\extracted_intents.json"
     }
   ]
 }
