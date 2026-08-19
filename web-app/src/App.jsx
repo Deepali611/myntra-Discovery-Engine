@@ -65,8 +65,8 @@ export default function App() {
                 <div style={{ color: '#535766', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                   Total Pipeline Records Processed
                 </div>
-                <div style={{ fontSize: '2.2rem', fontWeight: '800', color: '#FF3F6C', marginTop: '4px', fontFamily: 'var(--font-heading)' }}>
-                  979 Records
+                <div style={{ fontSize: '1.85rem', fontWeight: '800', color: '#FF3F6C', marginTop: '4px', fontFamily: 'var(--font-heading)' }}>
+                  979 pieces of feedback analysed
                 </div>
                 <div style={{ color: '#535766', fontSize: '0.8rem', marginTop: '4px' }}>
                   Breakdown: 17 Direct Wishlist + 5 Supporting Evidence (22 Grounded Baseline)
