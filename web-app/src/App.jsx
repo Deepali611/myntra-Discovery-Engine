@@ -93,6 +93,112 @@ const GROUNDED_KNOWLEDGE = {
   }
 };
 
+const EXAMPLE_LINES = [
+  "Kept these block heels in my wishlist for 2 months waiting for a sale price drop.",
+  "What size should I get if my waist is 28 inches? Height is 5'4\".",
+  "Color of this kurta in reality is much darker than shown in app photos.",
+  "Delivered 3 days late, delivery courier was rude. Refund pending.",
+  "Is Snitch official website price cheaper than Myntra listing?"
+].join("\n");
+
+function classifyLinesText(inputText) {
+  if (!inputText.trim()) return null;
+
+  const lines = inputText
+    .split('\n')
+    .map(l => l.trim())
+    .filter(l => l.length > 0)
+    .slice(0, 20);
+
+  const classifiedItems = lines.map((lineText) => {
+    const lower = lineText.toLowerCase();
+
+    let category = "Unspecified";
+    if (lower.includes("heel") || lower.includes("shoe") || lower.includes("sandal") || lower.includes("footwear")) {
+      category = "Footwear";
+    } else if (lower.includes("kurta") || lower.includes("saree") || lower.includes("lehenga") || lower.includes("ethnic")) {
+      category = "Ethnic Wear";
+    } else if (lower.includes("waist") || lower.includes("bust") || lower.includes("size") || lower.includes("dress") || lower.includes("shirt") || lower.includes("top")) {
+      category = "Apparel";
+    } else if (lower.includes("snitch")) {
+      category = "Apparel";
+    }
+
+    const isDeliveryNoise = lower.includes("delivered") || lower.includes("delivery") || lower.includes("courier") || lower.includes("refund") || lower.includes("late");
+
+    if (isDeliveryNoise) {
+      return {
+        text: lineText,
+        matched: false,
+        theme: "No blocker detected",
+        category
+      };
+    }
+
+    if (lower.includes("saved") || lower.includes("wishlist") || lower.includes("waiting") || lower.includes("price drop") || lower.includes("sale")) {
+      return {
+        text: lineText,
+        matched: true,
+        theme: "Wishlist Price-Drop & Restock Activation",
+        category
+      };
+    }
+
+    if (lower.includes("size") || lower.includes("waist") || lower.includes("bust") || lower.includes("height") || lower.includes("measurements")) {
+      return {
+        text: lineText,
+        matched: true,
+        theme: "Peer Sizing & Creator Body Measurement Guidance",
+        category
+      };
+    }
+
+    if (lower.includes("color") || lower.includes("photo") || lower.includes("darker") || lower.includes("translucent") || lower.includes("fabric")) {
+      return {
+        text: lineText,
+        matched: true,
+        theme: "Fabric Transparency & Photo Reality Guarantee",
+        category
+      };
+    }
+
+    if (lower.includes("website") || lower.includes("cheaper") || lower.includes("snitch") || lower.includes("price")) {
+      return {
+        text: lineText,
+        matched: true,
+        theme: "Cross-Platform Price & Trust Transparency",
+        category
+      };
+    }
+
+    return {
+      text: lineText,
+      matched: false,
+      theme: "No blocker detected",
+      category
+    };
+  });
+
+  const summaryMap = {};
+  classifiedItems.forEach(item => {
+    if (item.matched) {
+      summaryMap[item.theme] = (summaryMap[item.theme] || 0) + 1;
+    }
+  });
+
+  const summaryBars = Object.keys(summaryMap).map(theme => ({
+    theme,
+    count: summaryMap[theme],
+    percent: Math.round((summaryMap[theme] / classifiedItems.length) * 100)
+  })).sort((a, b) => b.count - a.count);
+
+  return {
+    totalItems: classifiedItems.length,
+    summaryBars,
+    items: classifiedItems
+  };
+}
+
 export default function App() {
   // DEFAULT LANDING TAB: Ask Assistant
   const [activePage, setActivePage] = useState('assistant');
@@ -101,9 +207,9 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [expandedCards, setExpandedCards] = useState({});
 
-  // Live Analyzer state
-  const [analyzerText, setAnalyzerText] = useState("Saved these block heels for 2 months waiting for sale. Cushioning is decent.");
-  const [analyzerResult, setAnalyzerResult] = useState(null);
+  // Live Analyzer Multi-Line State
+  const [analyzerInput, setAnalyzerInput] = useState(EXAMPLE_LINES);
+  const [analyzedResults, setAnalyzedResults] = useState(() => classifyLinesText(EXAMPLE_LINES));
   const [analyzerLoading, setAnalyzerLoading] = useState(false);
 
   const toggleExpand = (cardId) => {
@@ -179,140 +285,23 @@ export default function App() {
     }, 400);
   };
 
-  // Robust Live Analyzer
-  const handleRunAnalyzer = async () => {
-    if (!analyzerText.trim()) return;
+  // Multi-Line Analyzer Logic
+  const handleAnalyzeMultiLine = (textToAnalyze) => {
+    const text = textToAnalyze || analyzerInput;
+    if (!text.trim()) return;
     setAnalyzerLoading(true);
-    setAnalyzerResult(null);
 
-    try {
-      const res = await fetch('/api/process', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ mode: 'try_it', text: analyzerText })
-      });
-
-      if (res.ok) {
-        const data = await res.json();
-        if (data && data.stage_a) {
-          setAnalyzerResult(data);
-          setAnalyzerLoading(false);
-          return;
-        }
-      }
-    } catch (e) {}
-
-    // Clean client-side fallback
-    const lower = analyzerText.toLowerCase();
-    const isNoise = lower.includes("delivered") || lower.includes("delivery") || lower.includes("refund") || lower.includes("courier") || lower.includes("late");
-    
-    let simulatedResult;
-    if (isNoise) {
-      simulatedResult = {
-        passed: false,
-        message: "No wishlist/purchase-decision signal detected — this looks like a delivery/service/generic comment, correctly excluded from findings."
-      };
-    } else if (lower.includes("size") || lower.includes("waist") || lower.includes("bust") || lower.includes("measurements") || lower.includes("height")) {
-      simulatedResult = {
-        passed: true,
-        theme: "Peer Sizing & Creator Body Measurement Guidance",
-        tierPill: "pill-moderate",
-        tierLabel: "Moderate Evidence",
-        summary: analyzerText
-      };
-    } else {
-      simulatedResult = {
-        passed: true,
-        theme: "Wishlist Price-Drop & Restock Activation",
-        tierPill: "pill-strong",
-        tierLabel: "Strong Evidence",
-        summary: analyzerText
-      };
-    }
+    const res = classifyLinesText(text);
 
     setTimeout(() => {
-      setAnalyzerResult(simulatedResult);
+      setAnalyzedResults(res);
       setAnalyzerLoading(false);
-    }, 300);
+    }, 200);
   };
 
-  // Helper for formatting server response
-  const renderAnalyzerCard = () => {
-    if (!analyzerResult) return null;
-
-    // Handle client fallback object
-    if (analyzerResult.passed === false) {
-      return (
-        <div className="finding-row" style={{ backgroundColor: '#F9FAFB' }}>
-          <p style={{ fontSize: '0.92rem', color: 'var(--muted)' }}>
-            No wishlist/purchase-decision signal detected — this looks like a delivery/service/generic comment, correctly excluded from findings.
-          </p>
-        </div>
-      );
-    }
-
-    if (analyzerResult.passed === true) {
-      return (
-        <div className="finding-row">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-              <span className={analyzerResult.tierPill}>{analyzerResult.tierLabel}</span>
-              <h3 style={{ fontSize: '1.05rem', fontWeight: '600' }}>{analyzerResult.theme}</h3>
-            </div>
-            <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>Classified Result</span>
-          </div>
-          <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '8px', fontStyle: 'italic' }}>
-            "{analyzerResult.summary}"
-          </p>
-        </div>
-      );
-    }
-
-    // Handle server API response
-    const stageA = analyzerResult.stage_a;
-    if (stageA && stageA.stage_a_status === "fail") {
-      return (
-        <div className="finding-row" style={{ backgroundColor: '#F9FAFB' }}>
-          <p style={{ fontSize: '0.92rem', color: 'var(--muted)' }}>
-            No wishlist/purchase-decision signal detected — this looks like a delivery/service/generic comment, correctly excluded from findings.
-          </p>
-        </div>
-      );
-    }
-
-    const l1 = analyzerResult.layer1 || {};
-    const l2 = analyzerResult.layer2 || {};
-    const seedCodes = l2.seed_code || [];
-    const seedStr = Array.isArray(seedCodes) ? seedCodes.join(", ") : seedCodes;
-
-    let themeTitle = "Wishlist Price-Drop & Restock Activation";
-    if (seedStr.includes("size") || seedStr.includes("measurement")) {
-      themeTitle = "Peer Sizing & Creator Body Measurement Guidance";
-    } else if (seedStr.includes("trust") || seedStr.includes("snitch")) {
-      themeTitle = "Cross-Platform Price & Trust Transparency";
-    }
-
-    let pillClass = "pill-strong";
-    let pillLabel = "Strong Evidence";
-    if (l2.relevance_tier === "indirectly_relevant") {
-      pillClass = "pill-moderate";
-      pillLabel = "Moderate Evidence";
-    }
-
-    return (
-      <div className="finding-row">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-            <span className={pillClass}>{pillLabel}</span>
-            <h3 style={{ fontSize: '1.05rem', fontWeight: '600' }}>{themeTitle}</h3>
-          </div>
-          <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>Classified Result</span>
-        </div>
-        <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '8px', fontStyle: 'italic' }}>
-          "{l1.grounding_span || analyzerText}"
-        </p>
-      </div>
-    );
+  const handleLoadExample = () => {
+    setAnalyzerInput(EXAMPLE_LINES);
+    handleAnalyzeMultiLine(EXAMPLE_LINES);
   };
 
   return (
@@ -825,7 +814,7 @@ export default function App() {
           </div>
         )}
 
-        {/* TAB 3: LIVE ANALYZER (EXACT REWRITE SUBTITLE + PLAIN-LANGUAGE FINDING ROW RESULTS) */}
+        {/* TAB 3: REBUILT MULTI-LINE LIVE ANALYZER */}
         {activePage === 'analyzer' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
             <div>
@@ -837,35 +826,93 @@ export default function App() {
               </p>
             </div>
 
+            {/* Amber Disclosure Banner */}
+            <div style={{ backgroundColor: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 'var(--radius)', padding: '12px 18px', fontSize: '0.88rem', color: '#92400E', fontWeight: '500' }}>
+              Temporary session — nothing is saved to database.
+            </div>
+
             <div className="finding-row" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              <div style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--muted)' }}>
-                SAMPLE CUSTOMER FEEDBACK PRESETS:
-              </div>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                <button className="chip-btn" onClick={() => setAnalyzerText("Saved these block heels for 2 months waiting for sale. Cushioning is decent.")}>
-                  1. Wishlist holding (Relevant)
-                </button>
-                <button className="chip-btn" onClick={() => setAnalyzerText("Delivered 3 days late, delivery guy was rude. Refund still pending.")}>
-                  2. Delivery/Courier issue (Filtered Out)
-                </button>
-                <button className="chip-btn" onClick={() => setAnalyzerText("Which size do u wear ? Height and bust waist measurements pls?")}>
-                  3. Peer sizing inquiry (Relevant)
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+                <span style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--muted)' }}>
+                  PASTE CUSTOMER COMMENTS (ONE PER LINE, UP TO 20 LINES):
+                </span>
+                <button
+                  className="chip-btn"
+                  onClick={handleLoadExample}
+                  style={{ backgroundColor: 'var(--brand-tint)', color: 'var(--brand-dark)', borderColor: 'var(--brand-tint-2)' }}
+                >
+                  Load example
                 </button>
               </div>
 
               <textarea
-                style={{ width: '100%', minHeight: '100px', padding: '14px', borderRadius: 'var(--radius)', border: '1px solid var(--line)', fontSize: '0.92rem', outline: 'none' }}
-                value={analyzerText}
-                onChange={(e) => setAnalyzerText(e.target.value)}
+                style={{ width: '100%', minHeight: '140px', padding: '14px', borderRadius: 'var(--radius)', border: '1px solid var(--line)', fontSize: '0.92rem', outline: 'none', lineHeight: '1.6', fontFamily: 'system-ui, sans-serif' }}
+                value={analyzerInput}
+                onChange={(e) => setAnalyzerInput(e.target.value)}
+                placeholder="Paste customer feedback comments, one per line (up to 20 lines)..."
               />
 
-              <button className="send-btn" style={{ height: '44px', alignSelf: 'flex-start' }} onClick={handleRunAnalyzer} disabled={analyzerLoading}>
-                {analyzerLoading ? 'Classifying Feedback...' : 'Run Live Analysis'}
+              <button className="send-btn" style={{ height: '44px', alignSelf: 'flex-start' }} onClick={() => handleAnalyzeMultiLine()} disabled={analyzerLoading}>
+                {analyzerLoading ? 'Classifying Feedback...' : 'Analyze'}
               </button>
 
-              {/* Render Plain-Language Finding Row Card (Matching Dashboard Style) */}
-              {renderAnalyzerCard()}
+              {/* Multi-Line Classified Results */}
+              {analyzedResults && (
+                <div style={{ marginTop: '24px', display: 'flex', flexDirection: 'column', gap: '28px' }}>
+                  
+                  {/* Summary Bar List at Top: "Blockers in your pasted items" */}
+                  {analyzedResults.summaryBars.length > 0 && (
+                    <div style={{ backgroundColor: '#ffffff', border: '1px solid var(--line)', borderRadius: 'var(--radius)', padding: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                      <h3 style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--ink)' }}>
+                        Blockers in your pasted items
+                      </h3>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                        {analyzedResults.summaryBars.map((bar, bIdx) => (
+                          <div key={bIdx} style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.88rem', fontWeight: '500' }}>
+                              <span>{bar.theme}</span>
+                              <span style={{ color: 'var(--muted)', fontWeight: '600' }}>{bar.count} {bar.count === 1 ? 'item' : 'items'}</span>
+                            </div>
+                            <div style={{ width: '100%', height: '6px', backgroundColor: '#F3F4F6', borderRadius: '3px', overflow: 'hidden' }}>
+                              <div style={{ width: `${bar.percent}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
+                  {/* Individual Item Cards */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                    <div style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--muted)', textTransform: 'uppercase' }}>
+                      Pasted Line Classifications ({analyzedResults.totalItems} items):
+                    </div>
+                    {analyzedResults.items.map((item, idx) => (
+                      <div key={idx} className="finding-row" style={{ backgroundColor: item.matched ? '#ffffff' : '#F9FAFB' }}>
+                        <p style={{ fontSize: '0.92rem', color: 'var(--ink)', marginBottom: '10px', lineHeight: '1.5' }}>
+                          "{item.text}"
+                        </p>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                          {/* Tag 1: Matched Blocker Theme or Neutral No Blocker */}
+                          {item.matched ? (
+                            <span className="pill-strong">{item.theme}</span>
+                          ) : (
+                            <span style={{ backgroundColor: '#F3F4F6', color: '#6B7280', border: '1px solid #E5E7EB', padding: '4px 10px', borderRadius: '12px', fontSize: '0.78rem', fontWeight: '500' }}>
+                              No blocker detected
+                            </span>
+                          )}
+
+                          {/* Tag 2: Inferred Category Tag */}
+                          <span style={{ backgroundColor: '#F3F4F6', color: '#374151', border: '1px solid #E5E7EB', padding: '4px 10px', borderRadius: '12px', fontSize: '0.78rem', fontWeight: '500' }}>
+                            {item.category}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                </div>
+              )}
             </div>
           </div>
         )}
