@@ -93,16 +93,39 @@ const GROUNDED_KNOWLEDGE = {
   }
 };
 
-const EXAMPLE_LINES = [
-  "Kept these block heels in my wishlist for 2 months waiting for a sale price drop.",
-  "What size should I get if my waist is 28 inches? Height is 5'4\".",
-  "Color of this kurta in reality is much darker than shown in app photos.",
-  "Delivered 3 days late, delivery courier was rude. Refund pending.",
-  "Is Snitch official website price cheaper than Myntra listing?"
-].join("\n");
+const EXAMPLE_POOLS = [
+  [
+    "Kept these block heels in my wishlist for 2 months waiting for a sale price drop.",
+    "What size should I get if my waist is 28 inches? Height is 5'4\".",
+    "Color of this kurta in reality is much darker than shown in app photos.",
+    "Delivered 3 days late, delivery courier was rude. Refund pending.",
+    "Is Snitch official website price cheaper than Myntra listing?"
+  ].join("\n"),
+  [
+    "Wishlisted this ethnic saree a month ago, hoping for restocking in red color.",
+    "Should I buy size M or L for a relaxed fit on 38 inch chest?",
+    "Fabric feels very thin and see-through compared to app picture.",
+    "Order cancelled automatically by seller. Delivery delayed.",
+    "Help me choose between two reception party dresses!"
+  ].join("\n"),
+  [
+    "Adding to wishlist until Diwali sale discounts go live.",
+    "Can anyone share exact bust and waist try-on measurements for this dress?",
+    "Studio photos show bright yellow but actual dress is dull mustard.",
+    "Package arrived torn, courier driver did not call before delivery.",
+    "Comparing price on Flipkart vs Myntra before checking out."
+  ].join("\n"),
+  [
+    "Saved these leather boots for 3 weeks waiting for price alert.",
+    "Does this denim jacket run small on shoulders?",
+    "Translucent material not mentioned in description.",
+    "Wrong size delivered, return pickup delayed.",
+    "Is warranty valid if bought on Myntra instead of official site?"
+  ].join("\n")
+];
 
 function classifyLinesText(inputText) {
-  if (!inputText.trim()) return null;
+  if (!inputText || !inputText.trim()) return null;
 
   const lines = inputText
     .split('\n')
@@ -114,17 +137,17 @@ function classifyLinesText(inputText) {
     const lower = lineText.toLowerCase();
 
     let category = "Unspecified";
-    if (lower.includes("heel") || lower.includes("shoe") || lower.includes("sandal") || lower.includes("footwear")) {
+    if (lower.includes("heel") || lower.includes("shoe") || lower.includes("sandal") || lower.includes("boot") || lower.includes("footwear")) {
       category = "Footwear";
     } else if (lower.includes("kurta") || lower.includes("saree") || lower.includes("lehenga") || lower.includes("ethnic")) {
       category = "Ethnic Wear";
-    } else if (lower.includes("waist") || lower.includes("bust") || lower.includes("size") || lower.includes("dress") || lower.includes("shirt") || lower.includes("top")) {
+    } else if (lower.includes("waist") || lower.includes("bust") || lower.includes("chest") || lower.includes("size") || lower.includes("dress") || lower.includes("shirt") || lower.includes("top") || lower.includes("jacket")) {
       category = "Apparel";
     } else if (lower.includes("snitch")) {
       category = "Apparel";
     }
 
-    const isDeliveryNoise = lower.includes("delivered") || lower.includes("delivery") || lower.includes("courier") || lower.includes("refund") || lower.includes("late");
+    const isDeliveryNoise = lower.includes("delivered") || lower.includes("delivery") || lower.includes("courier") || lower.includes("refund") || lower.includes("late") || lower.includes("cancelled") || lower.includes("package") || lower.includes("pickup");
 
     if (isDeliveryNoise) {
       return {
@@ -135,7 +158,7 @@ function classifyLinesText(inputText) {
       };
     }
 
-    if (lower.includes("saved") || lower.includes("wishlist") || lower.includes("waiting") || lower.includes("price drop") || lower.includes("sale")) {
+    if (lower.includes("saved") || lower.includes("wishlist") || lower.includes("wishlisted") || lower.includes("adding to wishlist") || lower.includes("waiting") || lower.includes("price drop") || lower.includes("price alert") || lower.includes("sale") || lower.includes("restocking")) {
       return {
         text: lineText,
         matched: true,
@@ -144,7 +167,7 @@ function classifyLinesText(inputText) {
       };
     }
 
-    if (lower.includes("size") || lower.includes("waist") || lower.includes("bust") || lower.includes("height") || lower.includes("measurements")) {
+    if (lower.includes("size") || lower.includes("waist") || lower.includes("bust") || lower.includes("chest") || lower.includes("height") || lower.includes("measurements") || lower.includes("shoulders") || lower.includes("fit")) {
       return {
         text: lineText,
         matched: true,
@@ -153,7 +176,7 @@ function classifyLinesText(inputText) {
       };
     }
 
-    if (lower.includes("color") || lower.includes("photo") || lower.includes("darker") || lower.includes("translucent") || lower.includes("fabric")) {
+    if (lower.includes("color") || lower.includes("photo") || lower.includes("darker") || lower.includes("see-through") || lower.includes("thin") || lower.includes("translucent") || lower.includes("fabric") || lower.includes("picture") || lower.includes("mustard") || lower.includes("yellow")) {
       return {
         text: lineText,
         matched: true,
@@ -162,11 +185,20 @@ function classifyLinesText(inputText) {
       };
     }
 
-    if (lower.includes("website") || lower.includes("cheaper") || lower.includes("snitch") || lower.includes("price")) {
+    if (lower.includes("website") || lower.includes("cheaper") || lower.includes("snitch") || lower.includes("price") || lower.includes("flipkart") || lower.includes("warranty")) {
       return {
         text: lineText,
         matched: true,
         theme: "Cross-Platform Price & Trust Transparency",
+        category
+      };
+    }
+
+    if (lower.includes("choose") || lower.includes("reception") || lower.includes("option") || lower.includes("between")) {
+      return {
+        text: lineText,
+        matched: true,
+        theme: "Occasion-Based Shortlist Choice Assistant",
         category
       };
     }
@@ -207,10 +239,11 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [expandedCards, setExpandedCards] = useState({});
 
-  // Live Analyzer Multi-Line State
-  const [analyzerInput, setAnalyzerInput] = useState(EXAMPLE_LINES);
-  const [analyzedResults, setAnalyzedResults] = useState(() => classifyLinesText(EXAMPLE_LINES));
+  // Live Analyzer Initial State: MUST START COMPLETELY EMPTY (NO PRE-FILLED RESULTS)
+  const [analyzerInput, setAnalyzerInput] = useState('');
+  const [analyzedResults, setAnalyzedResults] = useState(null);
   const [analyzerLoading, setAnalyzerLoading] = useState(false);
+  const [poolIndex, setPoolIndex] = useState(0);
 
   const toggleExpand = (cardId) => {
     setExpandedCards(prev => ({
@@ -299,9 +332,12 @@ export default function App() {
     }, 200);
   };
 
+  // Load Example Cycles Through Pool of 4 Different Sets
   const handleLoadExample = () => {
-    setAnalyzerInput(EXAMPLE_LINES);
-    handleAnalyzeMultiLine(EXAMPLE_LINES);
+    const nextText = EXAMPLE_POOLS[poolIndex];
+    setAnalyzerInput(nextText);
+    setAnalyzedResults(null); // Reset results so they only appear after clicking 'Analyze'
+    setPoolIndex((prev) => (prev + 1) % EXAMPLE_POOLS.length);
   };
 
   return (
@@ -814,7 +850,7 @@ export default function App() {
           </div>
         )}
 
-        {/* TAB 3: REBUILT MULTI-LINE LIVE ANALYZER */}
+        {/* TAB 3: REBUILT MULTI-LINE LIVE ANALYZER (FIXED EMPTY INITIAL STATE) */}
         {activePage === 'analyzer' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
             <div>
@@ -856,7 +892,7 @@ export default function App() {
                 {analyzerLoading ? 'Classifying Feedback...' : 'Analyze'}
               </button>
 
-              {/* Multi-Line Classified Results */}
+              {/* Multi-Line Classified Results (ONLY DISPLAYED AFTER CLICKING 'ANALYZE') */}
               {analyzedResults && (
                 <div style={{ marginTop: '24px', display: 'flex', flexDirection: 'column', gap: '28px' }}>
                   
