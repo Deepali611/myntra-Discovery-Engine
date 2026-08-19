@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap');
-
 :root {
-  --bg-page: #F5F5F6;
-  --bg-card: #FFFFFF;
-  --border-light: #EAEAEC;
-  --myntra-pink: #FF3F6C;
-  --text-primary: #282C3F;
-  --text-secondary: #535766;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --brand: #FF3F6C;
+  --brand-dark: #C81E4A;
+  --brand-tint: #FFF0F4;
+  --brand-tint-2: #FFE3EC;
+  --ink: #282C3F;
+  --muted: #535766;
+  --line: #ECECEC;
+  --bg: #ffffff;
+  --radius: 16px;
+  --shadow: 0 1px 2px rgba(40,44,63,0.04), 0 8px 30px rgba(40,44,63,0.06);
+  --maxw: 1080px;
 }
 
 * {
@@ -18,96 +19,157 @@
 }
 
 body {
-  background-color: var(--bg-page);
-  color: var(--text-primary);
-  font-family: var(--font-sans);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background-color: var(--bg);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  line-height: 1.5;
 }
 
-/* Site-wide Serif Headings */
 h1, h2, h3 {
-  font-family: var(--font-serif) !important;
-  font-weight: 700;
-  color: var(--text-primary);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
 }
 
-.nav-header {
-  background-color: #FFFFFF;
-  border-bottom: 1px solid var(--border-light);
-  padding: 0 32px;
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+  padding: 0 24px;
 }
 
-.nav-item {
-  padding: 18px 16px;
-  font-weight: 500;
-  font-size: 0.92rem;
+.header-container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.brand-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--brand);
+  display: inline-block;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 24px;
+  height: 100%;
+}
+
+.nav-tab {
+  background: none;
   border: none;
   border-bottom: 2px solid transparent;
-  border-radius: 0;
-  background: transparent;
-  color: var(--text-secondary);
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.15s ease;
-}
-
-.nav-item:hover {
-  color: var(--text-primary);
-}
-
-.nav-item.active {
-  background-color: transparent;
-  color: #FF3F6C;
-  border-bottom: 2px solid #FF3F6C;
-  font-weight: 700;
-}
-
-.page-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 32px;
-}
-
-.card {
-  background: #FFFFFF;
-  border: 1px solid var(--border-light);
-  border-radius: 8px;
-  padding: 24px;
-}
-
-.badge {
-  display: inline-flex;
+  height: 100%;
+  display: flex;
   align-items: center;
-  gap: 4px;
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 700;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.nav-tab:hover {
+  color: var(--ink);
+}
+
+.nav-tab.active {
+  color: var(--brand);
+  border-bottom: 2px solid var(--brand);
+  font-weight: 600;
+}
+
+.page-layout {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 40px 24px 80px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stat-number {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-family: var(--font-sans);
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-top: 10px;
 }
 
-.badge-strong {
-  background-color: #D1FAE5;
-  color: #065F46;
-  border: 1px solid #A7F3D0;
+.finding-row {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+  transition: border-color 0.15s ease;
 }
 
-.badge-moderate {
-  background-color: #E0E7FF;
-  color: #3730A3;
-  border: 1px solid #C7D2FE;
+.finding-row:hover {
+  border-color: #D1D5DB;
 }
 
-.badge-directional {
+.pill-strong {
+  background-color: var(--brand-tint);
+  color: var(--brand-dark);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.pill-moderate {
+  background-color: #F3F4F6;
+  color: var(--muted);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.pill-directional {
   background-color: #FEF3C7;
   color: #92400E;
-  border: 1px solid #FDE68A;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 
-.badge-gray {
-  background-color: #F3F4F6;
-  color: #4B5563;
-  border: 1px solid #E5E7EB;
+.takeaway-arrow {
+  color: var(--brand-dark);
+  font-weight: 600;
+  margin-top: 8px;
+  font-size: 0.88rem;
 }
