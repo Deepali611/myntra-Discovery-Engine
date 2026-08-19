@@ -62,20 +62,25 @@ STRICT EVIDENCE TIER RULES:
                 self._send_json(200, res)
                 return
 
-            # LIVE TRY MODE
+            # LIVE TRY MODE / ANALYZER
             raw_text = body.get('text', '').strip()
             if not raw_text:
                 self._send_json(400, {"error": "Empty text provided"})
                 return
 
+            # Evaluate Stage A Gate
             stage_a_res = evaluate_stage_a(raw_text)
             layer1_res = None
             layer2_res = None
             
             if stage_a_res.get("stage_a_status") == "pass":
-                temp_log = os.path.join("data", "analysis", "live_grounding_failures.json")
-                os.makedirs(os.path.dirname(temp_log), exist_ok=True)
-                
+                # Use serverless-safe writable directory (/tmp)
+                temp_log = os.path.join("/tmp", "live_grounding_failures.json")
+                try:
+                    os.makedirs(os.path.dirname(temp_log), exist_ok=True)
+                except Exception:
+                    temp_log = None
+
                 l1 = extract_layer1(source_id="live_try_mode", raw_text=raw_text, failure_log_path=temp_log)
                 if l1:
                     layer1_res = l1
@@ -91,7 +96,7 @@ STRICT EVIDENCE TIER RULES:
             self._send_json(200, response_payload)
 
         except Exception as e:
-            self._send_json(500, {"error": str(e)})
+            self._send_json(500, {"error": f"Server execution error: {str(e)}"})
 
     def _send_json(self, status_code, data):
         self.send_response(status_code)
