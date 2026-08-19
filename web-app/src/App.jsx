@@ -485,14 +485,13 @@ export default function App() {
                 <div className="stat-card">
                   <div className="stat-number">179</div>
                   <div className="stat-label">feedback items passed relevance screening</div>
-                  <div style={{ fontSize: '0.78rem', color: 'var(--muted)', marginTop: '4px', fontWeight: '500' }}>from 979 raw items collected</div>
                 </div>
                 <div className="stat-card">
                   <div className="stat-number">5</div>
                   <div className="stat-label">blockers detected</div>
                 </div>
                 <div className="stat-card">
-                  <div className="stat-number">4</div>
+                  <div className="stat-number">5</div>
                   <div className="stat-label">sources</div>
                 </div>
               </div>
@@ -500,25 +499,26 @@ export default function App() {
               {/* About this data note */}
               <div style={{ backgroundColor: 'var(--brand-tint)', border: '1px solid var(--brand-tint-2)', borderRadius: 'var(--radius)', padding: '14px 18px', fontSize: '0.88rem', color: 'var(--ink)', lineHeight: '1.5' }}>
                 <strong style={{ color: 'var(--brand-dark)', fontWeight: '600' }}>About this data: </strong>
-                Of 979 raw feedback items collected, 179 passed Stage A/B relevance screening. Across these, 46 surfaced as genuine pre-purchase wishlist evidence in the 6 findings below — the remainder were correctly excluded as post-purchase service complaints, generic praise, or off-topic noise.
+                179 of our collected feedback items passed relevance screening. Of these, 46 surfaced as genuine pre-purchase wishlist evidence across the 6 findings below.
               </div>
 
-              {/* Where the feedback came from (Raw Records Collected) */}
+              {/* Where the 179 screened items came from */}
               <div className="finding-row" style={{ marginTop: '4px' }}>
                 <h3 style={{ fontSize: '1.05rem', fontWeight: '600', color: 'var(--ink)' }}>
-                  Raw feedback records collected per source (979 total)
+                  Where the 179 screened items came from
                 </h3>
                 <p style={{ color: 'var(--muted)', fontSize: '0.84rem', marginTop: '2px', marginBottom: '14px' }}>
-                  Total raw items collected across 4 channels prior to relevance filtering into the 46 confirmed evidence findings.
+                  Breakdown of the 179 Stage A/B gate-passed customer feedback items by source channel.
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {[
-                    { source: 'YouTube Comments', count: 859 },
-                    { source: 'Google Play Store Reviews', count: 46 },
-                    { source: 'Myntra PDP Reviews & Q&A', count: 39 },
-                    { source: 'Reddit Fashion Communities', count: 35 }
+                    { source: 'YouTube Comments', count: 135 },
+                    { source: 'Reddit Fashion Communities', count: 26 },
+                    { source: 'Myntra PDP Reviews & Q&A', count: 10 },
+                    { source: 'Google Play Store Reviews', count: 7 },
+                    { source: 'Apple App Store Reviews', count: 1 }
                   ].map((srcItem, idx) => {
-                    const maxSourceCount = 859;
+                    const maxSourceCount = 135;
                     const barPct = Math.round((srcItem.count / maxSourceCount) * 100);
                     return (
                       <div key={idx} style={{ display: 'grid', gridTemplateColumns: '220px 1fr 60px', alignItems: 'center', gap: '12px' }}>
@@ -885,7 +885,7 @@ export default function App() {
                     <div>
                       <h4 style={{ fontSize: '0.95rem', fontWeight: '600', color: 'var(--brand-dark)', marginBottom: '4px' }}>Data Sources</h4>
                       <p style={{ color: 'var(--muted)' }}>
-                        Processed 979 total feedback items collected across 4 channels: Myntra Product Detail Page (PDP) reviews & Q&A, YouTube try-on haul comments, Reddit fashion communities (r/IndianFashionAddicts), and Google Play Store reviews.
+                        Processed 979 total raw feedback items collected across 4 channels (YouTube: 859, Play Store: 46, Myntra PDP: 39, Reddit: 35). Of these, 179 passed Stage A/B relevance screening into the locked dataset.
                       </p>
                     </div>
 
