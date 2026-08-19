@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 // EXACT 3 NAVIGATION TABS ONLY
 const NAV_PAGES = [
@@ -124,64 +124,6 @@ const EXAMPLE_POOLS = [
   ].join("\n")
 ];
 
-
-// Custom Hook for Headline Stat Counting-Up Animation
-function useCountUp(target, duration = 800) {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    let start = 0;
-    const increment = target / (duration / 16);
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= target) {
-        setCount(target);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 16);
-    return () => clearInterval(timer);
-  }, [target, duration]);
-  return count;
-}
-
-// Master Evidence Records per Finding for Interactive Drill-Down
-const EVIDENCE_RECORDS_BY_FINDING = {
-  rank_1: [
-    { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgzVyaf2RGHG6Vw4II14AaABAg', quote: 'Which size do u wear ?', url: 'https://youtube.com' },
-    { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_Ugwwq_7QHa9BUywaZUp4AaABAg', quote: 'Can you share exact bust and waist try-on measurements for this dress?', url: 'https://youtube.com' },
-    { source: 'Myntra PDP Q&A', date: 'Aug 17, 2026', source_id: 'pdp_qa_204', quote: 'Should I buy size M or L for a relaxed fit on 38 inch chest?', url: 'https://myntra.com' },
-    { source: 'Myntra PDP Q&A', date: 'Aug 17, 2026', source_id: 'pdp_qa_205', quote: 'What size should I get if my waist is 28 inches? Height is 5\'4".', url: 'https://myntra.com' },
-    { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgwtLL16fgchhKaUWvh4AaABAg', quote: 'Does this denim jacket run small on shoulders?', url: 'https://youtube.com' },
-    { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgyP9OrMOvM4BaVxreF4AaABAg', quote: 'Please tell your height di so I can compare dress length', url: 'https://youtube.com' },
-    { source: 'Myntra PDP Q&A', date: 'Aug 17, 2026', source_id: 'pdp_qa_208', quote: 'Is size XL tight around arms or stretchy?', url: 'https://myntra.com' }
-  ],
-  rank_2: [
-    { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_110', quote: 'Kept in wishlist for weeks, bought on price drop but zip quality gap.', url: 'https://myntra.com' },
-    { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_106', quote: 'Saved these block heels for 2 months waiting for a sale price drop.', url: 'https://myntra.com' },
-    { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_114', quote: 'Wishlisted this ethnic saree a month ago, hoping for restocking in red color.', url: 'https://myntra.com' }
-  ],
-  rank_3: [
-    { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_t3_1nywvf3', quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?', url: 'https://reddit.com/r/IndianFashionAddicts' },
-    { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_comment_409', quote: 'Is Snitch official website price cheaper than Myntra listing?', url: 'https://youtube.com' },
-    { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_t3_1m88xyp', quote: 'Comparing price on Flipkart vs Myntra before checking out.', url: 'https://reddit.com/r/IndianFashionAddicts' }
-  ],
-  rank_4: [
-    { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_103', quote: 'Color in reality is much darker than shown in the app photos. Kept it in shortlist for a month...', url: 'https://myntra.com' },
-    { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_105', quote: 'Fabric feels very thin and see-through compared to app studio picture.', url: 'https://myntra.com' }
-  ],
-  rank_5: [
-    { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1k48pyu', quote: 'Help me choose one dress for reception party', url: 'https://reddit.com/r/IndianFashionAddicts' },
-    { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1e64y2w', quote: 'Help Me Choose an Outfit for My Third Date!', url: 'https://reddit.com/r/IndianFashionAddicts' },
-    { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' }
-  ],
-  rank_6: [
-    { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' },
-    { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_106', quote: 'Saved these block heels for 2 months. Cushioning is decent...', url: 'https://myntra.com' },
-    { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgzVyaf2RGHG6Vw4II14AaABAg', quote: 'Which size do u wear ?', url: 'https://youtube.com' }
-  ]
-};
-
 function classifyLinesText(inputText) {
   if (!inputText || !inputText.trim()) return null;
 
@@ -221,8 +163,6 @@ function classifyLinesText(inputText) {
         text: lineText,
         matched: true,
         theme: "Wishlist Price-Drop & Restock Activation",
-        matchingRankId: "rank_2",
-        findingNum: 2,
         category
       };
     }
@@ -232,8 +172,6 @@ function classifyLinesText(inputText) {
         text: lineText,
         matched: true,
         theme: "Peer Sizing & Creator Body Measurement Guidance",
-        matchingRankId: "rank_1",
-        findingNum: 1,
         category
       };
     }
@@ -243,8 +181,6 @@ function classifyLinesText(inputText) {
         text: lineText,
         matched: true,
         theme: "Fabric Transparency & Photo Reality Guarantee",
-        matchingRankId: "rank_4",
-        findingNum: 4,
         category
       };
     }
@@ -254,8 +190,6 @@ function classifyLinesText(inputText) {
         text: lineText,
         matched: true,
         theme: "Cross-Platform Price & Trust Transparency",
-        matchingRankId: "rank_3",
-        findingNum: 3,
         category
       };
     }
@@ -265,8 +199,6 @@ function classifyLinesText(inputText) {
         text: lineText,
         matched: true,
         theme: "Occasion-Based Shortlist Choice Assistant",
-        matchingRankId: "rank_5",
-        findingNum: 5,
         category
       };
     }
@@ -302,8 +234,6 @@ function classifyLinesText(inputText) {
 }
 
 export default function App() {
-  const animatedHeadlineCount = useCountUp(179, 800);
-
   // DEFAULT LANDING TAB: Ask Assistant
   const [activePage, setActivePage] = useState('assistant');
   const [messages, setMessages] = useState([]);
@@ -316,16 +246,6 @@ export default function App() {
   const [analyzedResults, setAnalyzedResults] = useState(null);
   const [analyzerLoading, setAnalyzerLoading] = useState(false);
   const [poolIndex, setPoolIndex] = useState(0);
-
-  
-  const navigateToFinding = (rankId) => {
-    setActivePage('dashboard');
-    setExpandedCards(prev => ({ ...prev, [rankId]: true }));
-    setTimeout(() => {
-      const el = document.getElementById(rankId);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 120);
-  };
 
   const toggleExpand = (cardId) => {
     setExpandedCards(prev => ({
@@ -435,17 +355,11 @@ export default function App() {
       <header className="sticky-header">
         <div className="header-container">
           
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <span className="brand-dot"></span>
-              <span style={{ fontSize: '1.05rem', fontWeight: '500', color: 'var(--ink)', letterSpacing: '-0.01em' }}>
-                Myntra Discovery Engine
-              </span>
-            </div>
-            <div className="status-line">
-              <span className="pulse-dot"></span>
-              <span>Data as of August 17, 2026 · Pipeline verified ✓</span>
-            </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <span className="brand-dot"></span>
+            <span style={{ fontSize: '1.05rem', fontWeight: '500', color: 'var(--ink)', letterSpacing: '-0.01em' }}>
+              Myntra Discovery Engine
+            </span>
           </div>
 
           <nav className="nav-tabs">
@@ -511,13 +425,6 @@ export default function App() {
                       <p style={{ fontSize: '0.94rem', color: 'var(--ink)', lineHeight: '1.6', marginBottom: '16px' }}>
                         {msg.content}
                       </p>
-                      {msg.evidence_tier && (
-                        <div style={{ marginTop: '12px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                          <button className="cross-link-btn" onClick={() => navigateToFinding('rank_1')}>1. Peer Sizing Guidance (7 records) →</button>
-                          <button className="cross-link-btn" onClick={() => navigateToFinding('rank_2')}>2. Price-Drop Activation (3 records) →</button>
-                          <button className="cross-link-btn" onClick={() => navigateToFinding('rank_3')}>3. Price & Trust Transparency (3 records) →</button>
-                        </div>
-                      )}
 
                       {msg.followups && msg.followups.length > 0 && (
                         <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid var(--line)' }}>
@@ -576,15 +483,16 @@ export default function App() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
                 <div className="stat-card">
-                  <div className="stat-number">{activePage === 'dashboard' ? animatedHeadlineCount : 179}</div>
+                  <div className="stat-number">179</div>
                   <div className="stat-label">feedback items passed relevance screening</div>
+                  <div style={{ fontSize: '0.78rem', color: 'var(--muted)', marginTop: '4px', fontWeight: '500' }}>from 979 raw items collected</div>
                 </div>
                 <div className="stat-card">
                   <div className="stat-number">5</div>
                   <div className="stat-label">blockers detected</div>
                 </div>
                 <div className="stat-card">
-                  <div className="stat-number">5</div>
+                  <div className="stat-number">4</div>
                   <div className="stat-label">sources</div>
                 </div>
               </div>
@@ -592,26 +500,25 @@ export default function App() {
               {/* About this data note */}
               <div style={{ backgroundColor: 'var(--brand-tint)', border: '1px solid var(--brand-tint-2)', borderRadius: 'var(--radius)', padding: '14px 18px', fontSize: '0.88rem', color: 'var(--ink)', lineHeight: '1.5' }}>
                 <strong style={{ color: 'var(--brand-dark)', fontWeight: '600' }}>About this data: </strong>
-                179 of our collected feedback items passed relevance screening. Of these, 46 surfaced as genuine pre-purchase wishlist evidence across the 6 findings below.
+                Of 979 raw feedback items collected, 179 passed Stage A/B relevance screening. Across these, 46 surfaced as genuine pre-purchase wishlist evidence in the 6 findings below — the remainder were correctly excluded as post-purchase service complaints, generic praise, or off-topic noise.
               </div>
 
-              {/* Where the 179 screened items came from */}
+              {/* Where the feedback came from (Raw Records Collected) */}
               <div className="finding-row" style={{ marginTop: '4px' }}>
                 <h3 style={{ fontSize: '1.05rem', fontWeight: '600', color: 'var(--ink)' }}>
-                  Where the 179 screened items came from
+                  Raw feedback records collected per source (979 total)
                 </h3>
                 <p style={{ color: 'var(--muted)', fontSize: '0.84rem', marginTop: '2px', marginBottom: '14px' }}>
-                  Breakdown of the 179 Stage A/B gate-passed customer feedback items by source channel.
+                  Total raw items collected across 4 channels prior to relevance filtering into the 46 confirmed evidence findings.
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {[
-                    { source: 'YouTube Comments', count: 135 },
-                    { source: 'Reddit Fashion Communities', count: 26 },
-                    { source: 'Myntra PDP Reviews & Q&A', count: 10 },
-                    { source: 'Google Play Store Reviews', count: 7 },
-                    { source: 'Apple App Store Reviews', count: 1 }
+                    { source: 'YouTube Comments', count: 859 },
+                    { source: 'Google Play Store Reviews', count: 46 },
+                    { source: 'Myntra PDP Reviews & Q&A', count: 39 },
+                    { source: 'Reddit Fashion Communities', count: 35 }
                   ].map((srcItem, idx) => {
-                    const maxSourceCount = 135;
+                    const maxSourceCount = 859;
                     const barPct = Math.round((srcItem.count / maxSourceCount) * 100);
                     return (
                       <div key={idx} style={{ display: 'grid', gridTemplateColumns: '220px 1fr 60px', alignItems: 'center', gap: '12px' }}>
@@ -660,31 +567,9 @@ export default function App() {
                     {expandedCards['rank_1'] ? '▲ Hide Detail' : '▼ Expand Detail'}
                   </button>
                   {expandedCards['rank_1'] && (
-                    <div className="detail-expanded" style={{ marginTop: '14px', paddingTop: '14px', borderTop: '1px solid var(--line)', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                      <div style={{ fontSize: '0.8rem', fontWeight: '600', textTransform: 'uppercase', color: 'var(--muted)', letterSpacing: '0.04em' }}>
-                        Evidence Record Drill-Down (7 verified records):
-                      </div>
-                      {EVIDENCE_RECORDS_BY_FINDING['rank_1'].map((rec, idx) => (
-                        <div key={idx} className="evidence-card">
-                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                              <span className="pill-moderate" style={{ fontSize: '0.72rem' }}>{rec.source}</span>
-                              <span style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>{rec.date}</span>
-                            </div>
-                            {rec.url && (
-                              <a href={rec.url} target="_blank" rel="noopener noreferrer" className="ext-link-btn">
-                                View original ↗
-                              </a>
-                            )}
-                          </div>
-                          <div className="quote-highlight">
-                            "{rec.quote}"
-                          </div>
-                          <div className="source-id-mono">
-                            source_id: {rec.source_id}
-                          </div>
-                        </div>
-                      ))}
+                    <div className="detail-expanded" style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
+                      <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Which size do u wear ? (yt_UgzVyaf2RGHG6Vw4II14)"</div>
+                      <div><strong>Sources:</strong> YouTube Comments, Myntra PDP Q&A</div>
                     </div>
                   )}
                 </div>
@@ -710,31 +595,9 @@ export default function App() {
                     {expandedCards['rank_2'] ? '▲ Hide Detail' : '▼ Expand Detail'}
                   </button>
                   {expandedCards['rank_2'] && (
-                    <div className="detail-expanded" style={{ marginTop: '14px', paddingTop: '14px', borderTop: '1px solid var(--line)', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                      <div style={{ fontSize: '0.8rem', fontWeight: '600', textTransform: 'uppercase', color: 'var(--muted)', letterSpacing: '0.04em' }}>
-                        Evidence Record Drill-Down (3 verified records):
-                      </div>
-                      {EVIDENCE_RECORDS_BY_FINDING['rank_2'].map((rec, idx) => (
-                        <div key={idx} className="evidence-card">
-                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                              <span className="pill-moderate" style={{ fontSize: '0.72rem' }}>{rec.source}</span>
-                              <span style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>{rec.date}</span>
-                            </div>
-                            {rec.url && (
-                              <a href={rec.url} target="_blank" rel="noopener noreferrer" className="ext-link-btn">
-                                View original ↗
-                              </a>
-                            )}
-                          </div>
-                          <div className="quote-highlight">
-                            "{rec.quote}"
-                          </div>
-                          <div className="source-id-mono">
-                            source_id: {rec.source_id}
-                          </div>
-                        </div>
-                      ))}
+                    <div className="detail-expanded" style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
+                      <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Kept in wishlist for weeks, bought on price drop but zip quality gap. (pdp_rev_110)"</div>
+                      <div><strong>Source:</strong> Myntra PDP Reviews</div>
                     </div>
                   )}
                 </div>
@@ -760,31 +623,9 @@ export default function App() {
                     {expandedCards['rank_3'] ? '▲ Hide Detail' : '▼ Expand Detail'}
                   </button>
                   {expandedCards['rank_3'] && (
-                    <div className="detail-expanded" style={{ marginTop: '14px', paddingTop: '14px', borderTop: '1px solid var(--line)', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                      <div style={{ fontSize: '0.8rem', fontWeight: '600', textTransform: 'uppercase', color: 'var(--muted)', letterSpacing: '0.04em' }}>
-                        Evidence Record Drill-Down (3 verified records):
-                      </div>
-                      {EVIDENCE_RECORDS_BY_FINDING['rank_3'].map((rec, idx) => (
-                        <div key={idx} className="evidence-card">
-                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                              <span className="pill-moderate" style={{ fontSize: '0.72rem' }}>{rec.source}</span>
-                              <span style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>{rec.date}</span>
-                            </div>
-                            {rec.url && (
-                              <a href={rec.url} target="_blank" rel="noopener noreferrer" className="ext-link-btn">
-                                View original ↗
-                              </a>
-                            )}
-                          </div>
-                          <div className="quote-highlight">
-                            "{rec.quote}"
-                          </div>
-                          <div className="source-id-mono">
-                            source_id: {rec.source_id}
-                          </div>
-                        </div>
-                      ))}
+                    <div className="detail-expanded" style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
+                      <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Why is Snitch's price and quality different on official website vs Flipkart/Myntra? (reddit_t3_1nywvf3)"</div>
+                      <div><strong>Sources:</strong> Reddit, YouTube Comments</div>
                     </div>
                   )}
                 </div>
@@ -810,31 +651,9 @@ export default function App() {
                     {expandedCards['rank_4'] ? '▲ Hide Detail' : '▼ Expand Detail'}
                   </button>
                   {expandedCards['rank_4'] && (
-                    <div className="detail-expanded" style={{ marginTop: '14px', paddingTop: '14px', borderTop: '1px solid var(--line)', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                      <div style={{ fontSize: '0.8rem', fontWeight: '600', textTransform: 'uppercase', color: 'var(--muted)', letterSpacing: '0.04em' }}>
-                        Evidence Record Drill-Down (2 verified records):
-                      </div>
-                      {EVIDENCE_RECORDS_BY_FINDING['rank_4'].map((rec, idx) => (
-                        <div key={idx} className="evidence-card">
-                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                              <span className="pill-moderate" style={{ fontSize: '0.72rem' }}>{rec.source}</span>
-                              <span style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>{rec.date}</span>
-                            </div>
-                            {rec.url && (
-                              <a href={rec.url} target="_blank" rel="noopener noreferrer" className="ext-link-btn">
-                                View original ↗
-                              </a>
-                            )}
-                          </div>
-                          <div className="quote-highlight">
-                            "{rec.quote}"
-                          </div>
-                          <div className="source-id-mono">
-                            source_id: {rec.source_id}
-                          </div>
-                        </div>
-                      ))}
+                    <div className="detail-expanded" style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
+                      <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Color in reality is much darker than shown in the app photos. Kept it in shortlist for a month... (pdp_rev_103)"</div>
+                      <div><strong>Source:</strong> Myntra PDP Reviews</div>
                     </div>
                   )}
                 </div>
@@ -860,31 +679,9 @@ export default function App() {
                     {expandedCards['rank_5'] ? '▲ Hide Detail' : '▼ Expand Detail'}
                   </button>
                   {expandedCards['rank_5'] && (
-                    <div className="detail-expanded" style={{ marginTop: '14px', paddingTop: '14px', borderTop: '1px solid var(--line)', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                      <div style={{ fontSize: '0.8rem', fontWeight: '600', textTransform: 'uppercase', color: 'var(--muted)', letterSpacing: '0.04em' }}>
-                        Evidence Record Drill-Down (12 verified records):
-                      </div>
-                      {EVIDENCE_RECORDS_BY_FINDING['rank_5'].map((rec, idx) => (
-                        <div key={idx} className="evidence-card">
-                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                              <span className="pill-moderate" style={{ fontSize: '0.72rem' }}>{rec.source}</span>
-                              <span style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>{rec.date}</span>
-                            </div>
-                            {rec.url && (
-                              <a href={rec.url} target="_blank" rel="noopener noreferrer" className="ext-link-btn">
-                                View original ↗
-                              </a>
-                            )}
-                          </div>
-                          <div className="quote-highlight">
-                            "{rec.quote}"
-                          </div>
-                          <div className="source-id-mono">
-                            source_id: {rec.source_id}
-                          </div>
-                        </div>
-                      ))}
+                    <div className="detail-expanded" style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
+                      <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Help me choose one dress for reception party (reddit_rss_t3_1k48pyu)"</div>
+                      <div><strong>Source:</strong> Reddit (r/IndianFashionAddicts)</div>
                     </div>
                   )}
                 </div>
@@ -910,31 +707,9 @@ export default function App() {
                     {expandedCards['rank_6'] ? '▲ Hide Detail' : '▼ Expand Detail'}
                   </button>
                   {expandedCards['rank_6'] && (
-                    <div className="detail-expanded" style={{ marginTop: '14px', paddingTop: '14px', borderTop: '1px solid var(--line)', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                      <div style={{ fontSize: '0.8rem', fontWeight: '600', textTransform: 'uppercase', color: 'var(--muted)', letterSpacing: '0.04em' }}>
-                        Evidence Record Drill-Down (19 verified records):
-                      </div>
-                      {EVIDENCE_RECORDS_BY_FINDING['rank_6'].map((rec, idx) => (
-                        <div key={idx} className="evidence-card">
-                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                              <span className="pill-moderate" style={{ fontSize: '0.72rem' }}>{rec.source}</span>
-                              <span style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>{rec.date}</span>
-                            </div>
-                            {rec.url && (
-                              <a href={rec.url} target="_blank" rel="noopener noreferrer" className="ext-link-btn">
-                                View original ↗
-                              </a>
-                            )}
-                          </div>
-                          <div className="quote-highlight">
-                            "{rec.quote}"
-                          </div>
-                          <div className="source-id-mono">
-                            source_id: {rec.source_id}
-                          </div>
-                        </div>
-                      ))}
+                    <div className="detail-expanded" style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
+                      <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Help me choose what to wear for my very close friend's engagement! (reddit_rss_t3_1d82ls4)"</div>
+                      <div><strong>Sources:</strong> Reddit, Myntra PDP Reviews</div>
                     </div>
                   )}
                 </div>
@@ -1110,7 +885,7 @@ export default function App() {
                     <div>
                       <h4 style={{ fontSize: '0.95rem', fontWeight: '600', color: 'var(--brand-dark)', marginBottom: '4px' }}>Data Sources</h4>
                       <p style={{ color: 'var(--muted)' }}>
-                        Processed 979 total raw feedback items collected across 4 channels (YouTube: 859, Play Store: 46, Myntra PDP: 39, Reddit: 35). Of these, 179 passed Stage A/B relevance screening into the locked dataset.
+                        Processed 979 total feedback items collected across 4 channels: Myntra Product Detail Page (PDP) reviews & Q&A, YouTube try-on haul comments, Reddit fashion communities (r/IndianFashionAddicts), and Google Play Store reviews.
                       </p>
                     </div>
 
@@ -1254,13 +1029,6 @@ export default function App() {
                           <span style={{ backgroundColor: '#F3F4F6', color: '#374151', border: '1px solid #E5E7EB', padding: '4px 10px', borderRadius: '12px', fontSize: '0.78rem', fontWeight: '500' }}>
                             {item.category}
                           </span>
-
-                          {/* Cross-Link to Dashboard Finding */}
-                          {item.matched && (
-                            <button className="cross-link-btn" onClick={() => navigateToFinding(item.matchingRankId || 'rank_1')}>
-                              → matches finding #{item.findingNum || 1}
-                            </button>
-                          )}
                         </div>
                       </div>
                     ))}
