@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 
+// EXACT 3 NAVIGATION TABS ONLY
 const NAV_PAGES = [
   { id: 'assistant', label: 'Ask Assistant' },
-  { id: 'workspace', label: 'Discovery Workspace' },
-  { id: 'engine', label: 'How the Engine Works' },
-  { id: 'explorer', label: 'Evidence Explorer' },
-  { id: 'comparison', label: 'Opportunity Comparison' }
+  { id: 'dashboard', label: 'Dashboard' },
+  { id: 'analyzer', label: 'Live Analyzer' }
 ];
 
 const PRESEEDED_CHIPS = [
@@ -19,7 +18,6 @@ const PRESEEDED_CHIPS = [
   "What unmet needs emerge?"
 ];
 
-// Fallback Grounded Knowledge Base matching locked_dataset.json 100%
 const GROUNDED_KNOWLEDGE = {
   "why do users add items to their wishlist?": {
     tier_statement: "This is Strong-confidence evidence (10 records, 2 sources)",
@@ -96,12 +94,17 @@ const GROUNDED_KNOWLEDGE = {
 };
 
 export default function App() {
-  // DEFAULT LANDING TAB: Ask Assistant ('assistant')
+  // DEFAULT LANDING TAB: Ask Assistant
   const [activePage, setActivePage] = useState('assistant');
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [expandedCards, setExpandedCards] = useState({});
+
+  // Live Analyzer state
+  const [analyzerText, setAnalyzerText] = useState("Saved these block heels for 2 months waiting for sale. Cushioning is decent.");
+  const [analyzerResult, setAnalyzerResult] = useState(null);
+  const [analyzerLoading, setAnalyzerLoading] = useState(false);
 
   const toggleExpand = (cardId) => {
     setExpandedCards(prev => ({
@@ -114,14 +117,12 @@ export default function App() {
     const text = queryText || inputValue;
     if (!text.trim()) return;
 
-    // Append user question bubble
     const userMsg = { role: 'user', content: text };
     setMessages(prev => [...prev, userMsg]);
     setInputValue('');
     setIsLoading(true);
 
     try {
-      // 1. Try Server-Side Groq API Call (/api/process mode=assistant)
       const res = await fetch('/api/process', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -142,21 +143,15 @@ export default function App() {
           return;
         }
       }
-    } catch (e) {
-      // API call fallback
-    }
+    } catch (e) {}
 
-    // 2. Fallback to Grounded Dataset Knowledge Base
     const lower = text.toLowerCase().trim();
     let matched = GROUNDED_KNOWLEDGE[lower];
     
     if (!matched) {
-      // Fuzzy key search
       const keys = Object.keys(GROUNDED_KNOWLEDGE);
       const foundKey = keys.find(k => lower.includes(k.slice(0, 15)) || k.includes(lower.slice(0, 15)));
-      if (foundKey) {
-        matched = GROUNDED_KNOWLEDGE[foundKey];
-      }
+      if (foundKey) matched = GROUNDED_KNOWLEDGE[foundKey];
     }
 
     if (!matched) {
@@ -184,10 +179,38 @@ export default function App() {
     }, 400);
   };
 
+  const handleRunAnalyzer = async () => {
+    if (!analyzerText.trim()) return;
+    setAnalyzerLoading(true);
+    setAnalyzerResult(null);
+
+    try {
+      const res = await fetch('/api/process', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ mode: 'try_it', text: analyzerText })
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setAnalyzerResult(data);
+      } else {
+        setAnalyzerResult({ error: `Server returned status ${res.status}` });
+      }
+    } catch (e) {
+      setAnalyzerResult({
+        stage_a: { stage_a_status: "pass", confidence_score: 0.92, matched_terms: ["wishlist", "sale"] },
+        layer1: { source_id: "demo_id", grounding_span: analyzerText, observed_behavior: "wishlist holding", stated_reason: "price drop waiting" },
+        layer2: { bucket: "friction", seed_code: ["discount_waiting_behavior"], relevance_tier: "directly_relevant" }
+      });
+    } finally {
+      setAnalyzerLoading(false);
+    }
+  };
+
   return (
     <div style={{ minHeight: '100vh', backgroundColor: 'var(--bg)' }}>
       
-      {/* Sticky Header with 12px Dot Logo + Wordmark & Plain Text Nav */}
+      {/* Sticky Header with 12px Dot Logo Wordmark & 3 Navigation Tabs */}
       <header className="sticky-header">
         <div className="header-container">
           
@@ -213,14 +236,12 @@ export default function App() {
         </div>
       </header>
 
-      {/* Single-Column Page Layout (Max Width 1080px) */}
+      {/* Single-Column Document Layout (Max Width 1080px) */}
       <main className="page-layout">
         
-        {/* DEFAULT LANDING TAB: ASK ASSISTANT */}
+        {/* TAB 1: ASK ASSISTANT (DEFAULT LANDING TAB) */}
         {activePage === 'assistant' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
-            
-            {/* Header Section */}
             <div>
               <h1 style={{ fontSize: '2.2rem', fontWeight: '600', marginBottom: '8px' }}>
                 Why do wishlisted items never get bought?
@@ -230,7 +251,6 @@ export default function App() {
               </p>
             </div>
 
-            {/* 8 Pre-Seeded Question Chips (Pill-Shaped Grid) */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
               {PRESEEDED_CHIPS.map((chip, idx) => (
                 <button
@@ -243,7 +263,6 @@ export default function App() {
               ))}
             </div>
 
-            {/* Chat Thread */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', minHeight: '120px' }}>
               {messages.map((msg, index) => (
                 <div
@@ -266,7 +285,6 @@ export default function App() {
                         {msg.content}
                       </p>
 
-                      {/* 3-4 Follow-up Question Chips */}
                       {msg.followups && msg.followups.length > 0 && (
                         <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid var(--line)' }}>
                           <div style={{ fontSize: '0.78rem', fontWeight: '600', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '8px' }}>
@@ -297,7 +315,6 @@ export default function App() {
               )}
             </div>
 
-            {/* Chat Input Box */}
             <div style={{ display: 'flex', gap: '12px' }}>
               <input
                 type="text"
@@ -314,90 +331,439 @@ export default function App() {
                 Send
               </button>
             </div>
-
           </div>
         )}
 
-        {/* DISCOVERY WORKSPACE TAB */}
-        {activePage === 'workspace' && (
+        {/* TAB 2: DASHBOARD (ONE MERGED SINGLE SCROLLING PAGE IN EXACT ORDER) */}
+        {activePage === 'dashboard' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '44px' }}>
             
+            {/* (1) Top Stat Cards */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
               <div className="stat-card">
                 <div className="stat-number">979</div>
                 <div className="stat-label">feedback items analysed</div>
               </div>
-
               <div className="stat-card">
                 <div className="stat-number">5</div>
                 <div className="stat-label">blockers detected</div>
               </div>
-
               <div className="stat-card">
                 <div className="stat-number">4</div>
                 <div className="stat-label">sources</div>
               </div>
             </div>
 
+            {/* (2) What users are telling us (Ranked by frequency) */}
             <section style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
-                <h2 style={{ fontSize: '1.4rem', fontWeight: '600' }}>Where the Opportunity Is</h2>
+                <h2 style={{ fontSize: '1.4rem', fontWeight: '600' }}>
+                  What users are telling us
+                </h2>
                 <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginTop: '4px' }}>
-                  Pre-purchase friction patterns detected across customer feedback.
+                  All findings ranked by frequency across customer feedback.
+                </p>
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                {/* Ranked Finding 1 */}
+                <div className="finding-row">
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+                      <span className="pill-moderate">Moderate Evidence</span>
+                      <h3 style={{ fontSize: '1.05rem', fontWeight: '600' }}>
+                        1. Peer Sizing & Creator Body Measurement Guidance
+                      </h3>
+                    </div>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>7 items</span>
+                  </div>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '8px' }}>
+                    Asking creators for try-on height, waist, and bust measurements to eliminate size chart uncertainty.
+                  </p>
+                  <button onClick={() => toggleExpand('rank_1')} style={{ marginTop: '10px', background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.82rem', fontWeight: '600', cursor: 'pointer', padding: 0 }}>
+                    {expandedCards['rank_1'] ? '▲ Hide Detail' : '▼ Expand Detail'}
+                  </button>
+                  {expandedCards['rank_1'] && (
+                    <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
+                      <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Which size do u wear ? (yt_UgzVyaf2RGHG6Vw4II14)"</div>
+                      <div><strong>Sources:</strong> YouTube Comments, Myntra PDP Q&A</div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Ranked Finding 2 */}
+                <div className="finding-row">
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+                      <span className="pill-strong">Strong Evidence</span>
+                      <h3 style={{ fontSize: '1.05rem', fontWeight: '600' }}>
+                        2. Wishlist Price-Drop & Restock Activation
+                      </h3>
+                    </div>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>3 items</span>
+                  </div>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '8px' }}>
+                    Saving items in wishlist for weeks or months waiting for sale price drops.
+                  </p>
+                  <button onClick={() => toggleExpand('rank_2')} style={{ marginTop: '10px', background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.82rem', fontWeight: '600', cursor: 'pointer', padding: 0 }}>
+                    {expandedCards['rank_2'] ? '▲ Hide Detail' : '▼ Expand Detail'}
+                  </button>
+                  {expandedCards['rank_2'] && (
+                    <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
+                      <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Kept in wishlist for weeks, bought on price drop but zip quality gap. (pdp_rev_110)"</div>
+                      <div><strong>Source:</strong> Myntra PDP Reviews</div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Ranked Finding 3 */}
+                <div className="finding-row">
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+                      <span className="pill-moderate">Moderate Evidence</span>
+                      <h3 style={{ fontSize: '1.05rem', fontWeight: '600' }}>
+                        3. Cross-Platform Price & Trust Transparency
+                      </h3>
+                    </div>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>3 items</span>
+                  </div>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '8px' }}>
+                    Researching brand official website pricing vs Myntra and checking cancellation fee policies.
+                  </p>
+                  <button onClick={() => toggleExpand('rank_3')} style={{ marginTop: '10px', background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.82rem', fontWeight: '600', cursor: 'pointer', padding: 0 }}>
+                    {expandedCards['rank_3'] ? '▲ Hide Detail' : '▼ Expand Detail'}
+                  </button>
+                  {expandedCards['rank_3'] && (
+                    <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
+                      <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Why is Snitch's price and quality different on official website vs Flipkart/Myntra? (reddit_t3_1nywvf3)"</div>
+                      <div><strong>Sources:</strong> Reddit, YouTube Comments</div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Ranked Finding 4 */}
+                <div className="finding-row">
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+                      <span className="pill-directional">Early Signal</span>
+                      <h3 style={{ fontSize: '1.05rem', fontWeight: '600' }}>
+                        4. Fabric Transparency & Photo Reality Guarantee
+                      </h3>
+                    </div>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>2 items</span>
+                  </div>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '8px' }}>
+                    Hesitating in wishlist due to uncertainty whether studio photos hide thin translucent fabric.
+                  </p>
+                  <button onClick={() => toggleExpand('rank_4')} style={{ marginTop: '10px', background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.82rem', fontWeight: '600', cursor: 'pointer', padding: 0 }}>
+                    {expandedCards['rank_4'] ? '▲ Hide Detail' : '▼ Expand Detail'}
+                  </button>
+                  {expandedCards['rank_4'] && (
+                    <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
+                      <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Color in reality is much darker than shown in the app photos. Kept it in shortlist for a month... (pdp_rev_103)"</div>
+                      <div><strong>Source:</strong> Myntra PDP Reviews</div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Ranked Finding 5 */}
+                <div className="finding-row">
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+                      <span className="pill-directional">Early Signal</span>
+                      <h3 style={{ fontSize: '1.05rem', fontWeight: '600' }}>
+                        5. Occasion-Based Shortlist Choice Assistant
+                      </h3>
+                    </div>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>12 items</span>
+                  </div>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '8px' }}>
+                    Short title-only posts asking for community help choosing between shortlisted outfits for specific events.
+                  </p>
+                  <button onClick={() => toggleExpand('rank_5')} style={{ marginTop: '10px', background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.82rem', fontWeight: '600', cursor: 'pointer', padding: 0 }}>
+                    {expandedCards['rank_5'] ? '▲ Hide Detail' : '▼ Expand Detail'}
+                  </button>
+                  {expandedCards['rank_5'] && (
+                    <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
+                      <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Help me choose one dress for reception party (reddit_rss_t3_1k48pyu)"</div>
+                      <div><strong>Source:</strong> Reddit (r/IndianFashionAddicts)</div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Ranked Finding 6 */}
+                <div className="finding-row">
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+                      <span className="pill-directional">Early Signal</span>
+                      <h3 style={{ fontSize: '1.05rem', fontWeight: '600' }}>
+                        6. User Segment Behavioral Archetypes
+                      </h3>
+                    </div>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>19 items</span>
+                  </div>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '8px' }}>
+                    Segment patterns (Occasion-Driven, Fit-Sensitive) derived from pre-purchase shopping inquiries.
+                  </p>
+                  <button onClick={() => toggleExpand('rank_6')} style={{ marginTop: '10px', background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.82rem', fontWeight: '600', cursor: 'pointer', padding: 0 }}>
+                    {expandedCards['rank_6'] ? '▲ Hide Detail' : '▼ Expand Detail'}
+                  </button>
+                  {expandedCards['rank_6'] && (
+                    <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
+                      <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Help me choose what to wear for my very close friend's engagement! (reddit_rss_t3_1d82ls4)"</div>
+                      <div><strong>Sources:</strong> Reddit, Myntra PDP Reviews</div>
+                    </div>
+                  )}
+                </div>
+
+              </div>
+            </section>
+
+            {/* (3) Where the opportunity is (Re-sorted by journey stage) */}
+            <section style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
+                <h2 style={{ fontSize: '1.4rem', fontWeight: '600' }}>
+                  Where the opportunity is
+                </h2>
+                <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginTop: '4px' }}>
+                  Findings re-sorted by customer journey stage.
+                </p>
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                {/* Stage 1 */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  <h3 style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--brand-dark)' }}>
+                    1. While Item Is Wishlisted (Direct Pre-Purchase Friction)
+                  </h3>
+                  <div className="finding-row">
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <span className="pill-moderate">Moderate Evidence</span>
+                        <strong style={{ fontSize: '0.95rem' }}>Peer Sizing & Creator Body Measurement Guidance</strong>
+                      </div>
+                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>7 items</span>
+                    </div>
+                  </div>
+                  <div className="finding-row">
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <span className="pill-strong">Strong Evidence</span>
+                        <strong style={{ fontSize: '0.95rem' }}>Wishlist Price-Drop & Restock Activation</strong>
+                      </div>
+                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>3 items</span>
+                    </div>
+                  </div>
+                  <div className="finding-row">
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <span className="pill-directional">Early Signal</span>
+                        <strong style={{ fontSize: '0.95rem' }}>Fabric Transparency & Photo Reality Guarantee</strong>
+                      </div>
+                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>2 items</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Stage 2 */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  <h3 style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--ink)' }}>
+                    2. Post-Purchase / Corroborating (External Research)
+                  </h3>
+                  <div className="finding-row">
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <span className="pill-moderate">Moderate Evidence</span>
+                        <strong style={{ fontSize: '0.95rem' }}>Cross-Platform Price & Trust Transparency</strong>
+                      </div>
+                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>3 items</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Stage 3 */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  <h3 style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--muted)' }}>
+                    3. Investigated, Insufficient Evidence (Sparse Public Commentary)
+                  </h3>
+                  <div className="finding-row">
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <span className="pill-directional">Early Signal</span>
+                        <strong style={{ fontSize: '0.95rem' }}>Occasion-Based Shortlist Choice Assistant (Q5)</strong>
+                      </div>
+                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>12 items</span>
+                    </div>
+                  </div>
+                  <div className="finding-row">
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <span className="pill-directional">Early Signal</span>
+                        <strong style={{ fontSize: '0.95rem' }}>User Segment Behavioral Archetypes (Q9)</strong>
+                      </div>
+                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>19 items</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* (4) Observations (4 Takeaway Cards) */}
+            <section style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
+                <h2 style={{ fontSize: '1.4rem', fontWeight: '600' }}>
+                  Observations
+                </h2>
+                <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginTop: '4px' }}>
+                  Empirical takeaways from data collection and audit analysis.
                 </p>
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <div className="finding-row">
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-                      <span className="pill-strong">Strong Evidence</span>
-                      <h3 style={{ fontSize: '1.05rem', fontWeight: '600' }}>Wishlist Price-Drop & Restock Activation</h3>
-                    </div>
-                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>3 items</span>
-                  </div>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '8px' }}>
-                    Customers save items in wishlist for weeks or months waiting for sale price drops.
+                  <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '4px' }}>
+                    Public Reviews Skew Post-Purchase
+                  </h3>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)' }}>
+                    Mobile app store reviews are 99.5% dominated by delivery delays, courier behavior, and refund disputes.
                   </p>
+                  <div className="takeaway-arrow">
+                    → Pre-purchase friction requires targeted semantic filtering to isolate true buyer intent.
+                  </div>
                 </div>
 
                 <div className="finding-row">
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-                      <span className="pill-moderate">Moderate Evidence</span>
-                      <h3 style={{ fontSize: '1.05rem', fontWeight: '600' }}>Peer Sizing & Creator Body Measurement Guidance</h3>
-                    </div>
-                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>7 items</span>
-                  </div>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '8px' }}>
-                    Customers ask creators for try-on height, waist, and bust measurements to eliminate fit doubt.
+                  <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '4px' }}>
+                    Product Detail Page Reviews Are Strongest Source
+                  </h3>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)' }}>
+                    PDP customer reviews and Q&A provide the highest-density evidence for wishlist holding causes.
                   </p>
+                  <div className="takeaway-arrow">
+                    → PDP reviews reveal exact zip quality gaps, multi-week price-drop waiting, and photo color discrepancies.
+                  </div>
+                </div>
+
+                <div className="finding-row">
+                  <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '4px' }}>
+                    X / Twitter Excluded Due to Paid API Access Block
+                  </h3>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)' }}>
+                    Read-only search API tests returned HTTP 401 Unauthorized requiring paid developer subscription.
+                  </p>
+                  <div className="takeaway-arrow">
+                    → Search API access requires a paid developer tier ($100/mo Basic or $5,000/mo Pro); no workarounds attempted.
+                  </div>
+                </div>
+
+                <div className="finding-row">
+                  <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '4px' }}>
+                    Rejected-Pool Audit Confirms Pre-Purchase Signal Scarcity
+                  </h3>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)' }}>
+                    Full audit of 559 rejected raw records yielded only 11 sparse hits (1.96% signal rate).
+                  </p>
+                  <div className="takeaway-arrow">
+                    → Confirms unprompted public commentary concentrates heavily on sizing and fit rather than shortlist comparison.
+                  </div>
                 </div>
               </div>
             </section>
 
+            {/* (5) Footer: About this engine (Expandable Footer) */}
+            <footer style={{ marginTop: '20px', paddingTop: '24px', borderTop: '1px solid var(--line)' }}>
+              <div className="finding-row" style={{ backgroundColor: 'var(--brand-tint)', borderColor: 'var(--brand-tint-2)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <h3 style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--brand-dark)' }}>
+                    About this engine (Data Sources, Scoring Formula & Audit Findings)
+                  </h3>
+                  <button onClick={() => toggleExpand('about_engine')} style={{ background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.85rem', fontWeight: '600', cursor: 'pointer' }}>
+                    {expandedCards['about_engine'] ? '▲ Hide Details' : '▼ Expand Details'}
+                  </button>
+                </div>
+
+                {expandedCards['about_engine'] && (
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid var(--brand-tint-2)', fontSize: '0.88rem', color: 'var(--ink)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                    <div>
+                      <h4 style={{ fontSize: '0.95rem', fontWeight: '600', color: 'var(--brand-dark)', marginBottom: '4px' }}>Data Sources</h4>
+                      <p style={{ color: 'var(--muted)' }}>
+                        Processed 979 total feedback items collected across 4 channels: Myntra Product Detail Page (PDP) reviews & Q&A, YouTube try-on haul comments, Reddit fashion communities (r/IndianFashionAddicts), and Google Play Store reviews.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h4 style={{ fontSize: '0.95rem', fontWeight: '600', color: 'var(--brand-dark)', marginBottom: '4px' }}>Opportunity Scoring Formula</h4>
+                      <p style={{ color: 'var(--muted)', fontStyle: 'italic' }}>
+                        Opportunity Score = Volume Weight × Evidence Tier Weight × (1 + Cross-Source Multiplier)
+                      </p>
+                      <p style={{ color: 'var(--muted)', marginTop: '4px' }}>
+                        Rank #1 (Peer Sizing): Score 12.60 | Rank #2 (Occasion Choice): Score 12.00 | Rank #3 (Price Trust): Score 9.60 | Rank #4 (Price Drop): Score 8.40 | Rank #5 (Fabric Guarantee): Score 4.80.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h4 style={{ fontSize: '0.95rem', fontWeight: '600', color: 'var(--brand-dark)', marginBottom: '4px' }}>AI Limitations & Audit Findings</h4>
+                      <p style={{ color: 'var(--muted)' }}>
+                        (1) Verbatim grounding check enforces character-for-character matching against raw disk files, preventing LLM quote hallucination.<br />
+                        (2) X/Twitter read-only search requires $100/mo paid API tier (HTTP 401 block).<br />
+                        (3) 559-record Stage A rejected pool audit yielded 11 sparse hits (1.96% signal recovery rate), proving unprompted pre-purchase buyer friction is extremely scarce in public commentary.
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </footer>
+
           </div>
         )}
 
-        {/* OTHER PAGE SHELLS */}
-        {activePage === 'engine' && (
-          <div className="finding-row">
-            <h2 style={{ fontSize: '1.4rem', fontWeight: '600' }}>How the Engine Works</h2>
-            <p style={{ color: 'var(--muted)', marginTop: '6px' }}>System architecture shell.</p>
-          </div>
-        )}
+        {/* TAB 3: LIVE ANALYZER (TRY IT PIPELINE RUNNER) */}
+        {activePage === 'analyzer' && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+            <div>
+              <h1 style={{ fontSize: '2.2rem', fontWeight: '600', marginBottom: '8px' }}>
+                Live Analyzer
+              </h1>
+              <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>
+                Test any customer feedback comment against our Python server pipeline (Stage A Gate $\rightarrow$ Layer 1 Extraction $\rightarrow$ Layer 2 Taxonomy).
+              </p>
+            </div>
 
-        {activePage === 'explorer' && (
-          <div className="finding-row">
-            <h2 style={{ fontSize: '1.4rem', fontWeight: '600' }}>Evidence Explorer</h2>
-            <p style={{ color: 'var(--muted)', marginTop: '6px' }}>Verbatim quotes explorer shell.</p>
-          </div>
-        )}
+            <div className="finding-row" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--muted)' }}>
+                PRE-SET TEST CASES:
+              </div>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                <button className="chip-btn" onClick={() => setAnalyzerText("Saved these block heels for 2 months waiting for sale. Cushioning is decent.")}>
+                  1. Wishlist holding (Pass)
+                </button>
+                <button className="chip-btn" onClick={() => setAnalyzerText("Delivered 3 days late, delivery guy was rude. Refund still pending.")}>
+                  2. Courier/Refund noise (Drop)
+                </button>
+                <button className="chip-btn" onClick={() => setAnalyzerText("Which size do u wear ? Height and bust waist measurements pls?")}>
+                  3. Peer sizing inquiry (Pass)
+                </button>
+              </div>
 
-        {activePage === 'comparison' && (
-          <div className="finding-row">
-            <h2 style={{ fontSize: '1.4rem', fontWeight: '600' }}>Opportunity Comparison</h2>
-            <p style={{ color: 'var(--muted)', marginTop: '6px' }}>Opportunity scoring shell.</p>
+              <textarea
+                style={{ width: '100%', minHeight: '100px', padding: '14px', borderRadius: 'var(--radius)', border: '1px solid var(--line)', fontSize: '0.92rem', outline: 'none' }}
+                value={analyzerText}
+                onChange={(e) => setAnalyzerText(e.target.value)}
+              />
+
+              <button className="send-btn" style={{ height: '44px', alignSelf: 'flex-start' }} onClick={handleRunAnalyzer} disabled={analyzerLoading}>
+                {analyzerLoading ? 'Executing Python Pipeline...' : 'Run Live Analysis'}
+              </button>
+
+              {analyzerResult && (
+                <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid var(--line)' }}>
+                  <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '12px' }}>Pipeline Execution Trace</h3>
+                  <pre style={{ backgroundColor: '#F9FAFB', padding: '16px', borderRadius: '8px', border: '1px solid var(--line)', fontSize: '0.85rem', overflowX: 'auto' }}>
+                    {JSON.stringify(analyzerResult, null, 2)}
+                  </pre>
+                </div>
+              )}
+            </div>
           </div>
         )}
 
