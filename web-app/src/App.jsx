@@ -218,10 +218,12 @@ function classifyLinesText(inputText) {
     }
   });
 
+  const maxCount = Math.max(...Object.values(summaryMap), 1);
+
   const summaryBars = Object.keys(summaryMap).map(theme => ({
     theme,
     count: summaryMap[theme],
-    percent: Math.round((summaryMap[theme] / classifiedItems.length) * 100)
+    percent: Math.round((summaryMap[theme] / maxCount) * 100)
   })).sort((a, b) => b.count - a.count);
 
   return {
@@ -239,7 +241,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [expandedCards, setExpandedCards] = useState({});
 
-  // Live Analyzer Initial State: MUST START COMPLETELY EMPTY (NO PRE-FILLED RESULTS)
+  // Live Analyzer Initial State: Starts empty
   const [analyzerInput, setAnalyzerInput] = useState('');
   const [analyzedResults, setAnalyzedResults] = useState(null);
   const [analyzerLoading, setAnalyzerLoading] = useState(false);
@@ -332,13 +334,19 @@ export default function App() {
     }, 200);
   };
 
-  // Load Example Cycles Through Pool of 4 Different Sets
   const handleLoadExample = () => {
     const nextText = EXAMPLE_POOLS[poolIndex];
     setAnalyzerInput(nextText);
-    setAnalyzedResults(null); // Reset results so they only appear after clicking 'Analyze'
+    setAnalyzedResults(null);
     setPoolIndex((prev) => (prev + 1) % EXAMPLE_POOLS.length);
   };
+
+  const handleClear = () => {
+    setAnalyzerInput('');
+    setAnalyzedResults(null);
+  };
+
+  const activeLineCount = analyzerInput.split('\n').filter(l => l.trim().length > 0).length;
 
   return (
     <div style={{ minHeight: '100vh', backgroundColor: 'var(--bg)' }}>
@@ -850,35 +858,44 @@ export default function App() {
           </div>
         )}
 
-        {/* TAB 3: REBUILT MULTI-LINE LIVE ANALYZER (FIXED EMPTY INITIAL STATE) */}
+        {/* TAB 3: REBUILT LIVE ANALYZER WITH FULL STYLING & BAR SCALING PASS */}
         {activePage === 'analyzer' && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
             <div>
-              <h1 style={{ fontSize: '2.2rem', fontWeight: '600', marginBottom: '8px' }}>
-                Live Analyzer
+              <h1 style={{ fontSize: '2.1rem', fontWeight: '700', marginBottom: '6px', color: 'var(--ink)' }}>
+                Live analyzer
               </h1>
-              <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>
-                Paste real customer feedback and watch the engine classify it live — no data is saved.
+              <p style={{ color: 'var(--muted)', fontSize: '0.95rem', marginBottom: '4px' }}>
+                Paste real reviews or posts — one per line — and the engine classifies each against the blocker taxonomy in real time.
               </p>
             </div>
 
-            {/* Amber Disclosure Banner */}
-            <div style={{ backgroundColor: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 'var(--radius)', padding: '12px 18px', fontSize: '0.88rem', color: '#92400E', fontWeight: '500' }}>
-              Temporary session — nothing is saved to database.
+            {/* Temporary Session Box */}
+            <div style={{ backgroundColor: '#FFF7E6', border: '1px solid #F0D999', borderRadius: 'var(--radius)', padding: '12px 18px', fontSize: '0.88rem', color: '#7A5F14' }}>
+              <strong style={{ fontWeight: '700' }}>Temporary session.</strong> No data is saved to any database.
             </div>
 
             <div className="finding-row" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
                 <span style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--muted)' }}>
-                  PASTE CUSTOMER COMMENTS (ONE PER LINE, UP TO 20 LINES):
+                  Paste customer comments
                 </span>
-                <button
-                  className="chip-btn"
-                  onClick={handleLoadExample}
-                  style={{ backgroundColor: 'var(--brand-tint)', color: 'var(--brand-dark)', borderColor: 'var(--brand-tint-2)' }}
-                >
-                  Load example
-                </button>
+                <div style={{ display: 'flex', gap: '8px' }}>
+                  <button
+                    className="chip-btn"
+                    onClick={handleLoadExample}
+                    style={{ backgroundColor: 'var(--brand-tint)', color: 'var(--brand-dark)', borderColor: 'var(--brand-tint-2)', padding: '8px 16px', fontSize: '0.85rem' }}
+                  >
+                    Load example
+                  </button>
+                  <button
+                    className="chip-btn"
+                    onClick={handleClear}
+                    style={{ backgroundColor: '#ffffff', color: 'var(--muted)', borderColor: 'var(--line)', padding: '8px 16px', fontSize: '0.85rem' }}
+                  >
+                    Clear
+                  </button>
+                </div>
               </div>
 
               <textarea
@@ -888,18 +905,23 @@ export default function App() {
                 placeholder="Paste customer feedback comments, one per line (up to 20 lines)..."
               />
 
-              <button className="send-btn" style={{ height: '44px', alignSelf: 'flex-start' }} onClick={() => handleAnalyzeMultiLine()} disabled={analyzerLoading}>
-                {analyzerLoading ? 'Classifying Feedback...' : 'Analyze'}
+              <button className="send-btn" style={{ height: '44px', padding: '0 24px', alignSelf: 'flex-start' }} onClick={() => handleAnalyzeMultiLine()} disabled={analyzerLoading}>
+                {analyzerLoading ? 'Classifying...' : `Analyze ${activeLineCount > 0 ? activeLineCount : ''}`}
               </button>
 
-              {/* Multi-Line Classified Results (ONLY DISPLAYED AFTER CLICKING 'ANALYZE') */}
+              {/* Multi-Line Classified Results */}
               {analyzedResults && (
-                <div style={{ marginTop: '24px', display: 'flex', flexDirection: 'column', gap: '28px' }}>
+                <div style={{ marginTop: '24px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
                   
+                  {/* Pink Confirmation Banner Above Summary Bar */}
+                  <div style={{ backgroundColor: 'var(--brand-tint)', border: '1px solid var(--brand-tint-2)', borderRadius: 'var(--radius)', padding: '12px 18px', color: 'var(--brand-dark)', fontWeight: '600', fontSize: '0.9rem' }}>
+                    Analyzed {analyzedResults.totalItems} items (this session only).
+                  </div>
+
                   {/* Summary Bar List at Top: "Blockers in your pasted items" */}
                   {analyzedResults.summaryBars.length > 0 && (
                     <div style={{ backgroundColor: '#ffffff', border: '1px solid var(--line)', borderRadius: 'var(--radius)', padding: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                      <h3 style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--ink)' }}>
+                      <h3 style={{ fontSize: '1.05rem', fontWeight: '600', color: 'var(--ink)' }}>
                         Blockers in your pasted items
                       </h3>
                       <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
@@ -909,8 +931,9 @@ export default function App() {
                               <span>{bar.theme}</span>
                               <span style={{ color: 'var(--muted)', fontWeight: '600' }}>{bar.count} {bar.count === 1 ? 'item' : 'items'}</span>
                             </div>
-                            <div style={{ width: '100%', height: '6px', backgroundColor: '#F3F4F6', borderRadius: '3px', overflow: 'hidden' }}>
-                              <div style={{ width: `${bar.percent}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
+                            {/* Two-Tone Track + Fill Bar (Light pink background track + solid pink fill bar) */}
+                            <div style={{ width: '100%', height: '8px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '4px', overflow: 'hidden' }}>
+                              <div style={{ width: `${bar.percent}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '4px' }}></div>
                             </div>
                           </div>
                         ))}
@@ -920,8 +943,8 @@ export default function App() {
 
                   {/* Individual Item Cards */}
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                    <div style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--muted)', textTransform: 'uppercase' }}>
-                      Pasted Line Classifications ({analyzedResults.totalItems} items):
+                    <div style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--muted)' }}>
+                      PASTED LINE CLASSIFICATIONS ({analyzedResults.totalItems} ITEMS):
                     </div>
                     {analyzedResults.items.map((item, idx) => (
                       <div key={idx} className="finding-row" style={{ backgroundColor: item.matched ? '#ffffff' : '#F9FAFB' }}>
