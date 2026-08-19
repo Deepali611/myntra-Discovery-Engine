@@ -1,0 +1,4 @@
+# Vercel Deployment Exclusions
+scratch/
+scratch/*
+scratch/nykaa_extracted/

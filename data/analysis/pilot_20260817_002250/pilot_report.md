@@ -72,7 +72,7 @@
    - Layer 2 Supporting Quote Failures: 0
    - Failed Record IDs: None (100% exact substring match)
 8. **Strongest Emerging Signals:**
-   - Evidence suggests detailed cross-retailer comparison (Myntra vs AJIO vs Nykaa) is primary decision process before checkout.
+   - Evidence suggests detailed cross-retailer comparison (Myntra vs AJIO vs competitor platforms) is primary decision process before checkout.
    - Hypothesis to validate: Decision paralysis peaks when styling/occasion fit advice is actively sought on Reddit subreddits.
 
 ---

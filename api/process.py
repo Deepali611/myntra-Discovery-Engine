@@ -48,7 +48,7 @@ STRICT EVIDENCE TIER RULES:
    - For Moderate evidence (Q3, Q6, Q7): "This is Moderate-confidence evidence (X records, Y sources)"
    - For Directional/Early Signal evidence (Q4, Q5, Q9): "This is limited/Directional evidence (X title-only posts) — treat as a hypothesis, not a confirmed pattern."
 2. NEVER present Directional-tier findings with the same confidence language as Strong-tier ones.
-3. Weave in real percentages and counts from our actual dataset (e.g., 17 direct wishlist records, 5 supporting decision records, 559 rejected audit records, 99.5% store review post-purchase skew). Never invent numbers not in the dataset.
+3. Weave in real percentages and counts from our actual dataset (e.g., 17 direct wishlist records, 5 supporting decision records, 559 rejected audit records, heavy store review post-purchase skew). Never invent numbers not in the dataset.
 4. Output strictly valid JSON matching this schema:
 {{
   "answer": "Grounded synthesized prose starting with inline evidence tier statement...",

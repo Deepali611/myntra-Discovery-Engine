@@ -9,6 +9,7 @@
   --bg: #ffffff;
   --radius: 16px;
   --shadow: 0 1px 2px rgba(40,44,63,0.04), 0 8px 30px rgba(40,44,63,0.06);
+  --shadow-hover: 0 4px 14px rgba(40,44,63,0.08), 0 12px 36px rgba(40,44,63,0.06);
   --maxw: 1080px;
 }
 
@@ -37,8 +38,8 @@ h1, h2, h3 {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: saturate(180%) blur(10px);
   border-bottom: 1px solid var(--line);
   padding: 0 24px;
 }
@@ -58,6 +59,7 @@ h1, h2, h3 {
   border-radius: 50%;
   background-color: var(--brand);
   display: inline-block;
+  box-shadow: 0 0 0 4px var(--brand-tint);
 }
 
 .nav-tabs {
@@ -77,11 +79,15 @@ h1, h2, h3 {
   height: 100%;
   display: flex;
   align-items: center;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  transition: color 0.15s ease, border-color 0.15s ease, transform 0.05s ease;
 }
 
 .nav-tab:hover {
-  color: var(--ink);
+  color: var(--brand);
+}
+
+.nav-tab:active {
+  transform: translateY(1px);
 }
 
 .nav-tab.active {
@@ -108,7 +114,7 @@ h1, h2, h3 {
   color: var(--ink);
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: all 0.2s ease, transform 0.05s ease;
   box-shadow: 0 1px 2px rgba(40,44,63,0.03);
 
   align-self: flex-start;
@@ -117,9 +123,15 @@ h1, h2, h3 {
 }
 
 .chip-btn:hover {
-  border-color: var(--brand);
+  border-color: var(--brand-tint-2);
   color: var(--brand-dark);
   background-color: var(--brand-tint);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(40,44,63,0.06);
+}
+
+.chip-btn:active {
+  transform: translateY(1px);
 }
 
 .chat-input {
@@ -130,11 +142,12 @@ h1, h2, h3 {
   font-size: 0.95rem;
   color: var(--ink);
   outline: none;
-  transition: border-color 0.15s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .chat-input:focus {
   border-color: var(--brand);
+  box-shadow: 0 0 0 3px var(--brand-tint);
 }
 
 .send-btn {
@@ -146,11 +159,17 @@ h1, h2, h3 {
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.15s ease;
+  transition: background-color 0.2s ease, transform 0.05s ease, box-shadow 0.2s ease;
 }
 
 .send-btn:hover {
   background-color: var(--brand-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(255,63,108,0.25);
+}
+
+.send-btn:active {
+  transform: translateY(1px);
 }
 
 .user-bubble {
@@ -175,6 +194,12 @@ h1, h2, h3 {
   max-width: 90%;
   box-shadow: var(--shadow);
   align-self: flex-start;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.assistant-bubble:hover {
+  border-color: var(--brand-tint-2);
+  box-shadow: var(--shadow-hover);
 }
 
 .stat-card {
@@ -186,13 +211,20 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand-tint-2);
+  box-shadow: var(--shadow-hover);
 }
 
 .stat-number {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 2.8rem;
   font-weight: 600;
-  color: var(--ink);
+  color: var(--brand);
   line-height: 1;
 }
 
@@ -211,6 +243,12 @@ h1, h2, h3 {
   border-radius: var(--radius);
   padding: 20px 24px;
   box-shadow: var(--shadow);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.finding-row:hover {
+  border-color: var(--brand-tint-2);
+  box-shadow: var(--shadow-hover);
 }
 
 .pill-strong {
@@ -220,6 +258,7 @@ h1, h2, h3 {
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 600;
+  border: 1px solid var(--brand-tint-2);
 }
 
 .pill-moderate {
@@ -229,6 +268,7 @@ h1, h2, h3 {
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 600;
+  border: 1px solid #E5E7EB;
 }
 
 .pill-directional {
@@ -238,6 +278,7 @@ h1, h2, h3 {
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 600;
+  border: 1px solid #FCD34D;
 }
 
 .takeaway-arrow {
@@ -246,3 +287,25 @@ h1, h2, h3 {
   margin-top: 8px;
   font-size: 0.88rem;
 }
+
+/* Smooth Detail Expand Keyframe Animation */
+@keyframes expandFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.detail-expanded {
+  animation: expandFade 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Smooth Bar Fill Animation */
+.bar-fill-animated {
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+

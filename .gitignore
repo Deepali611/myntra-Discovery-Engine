@@ -10,8 +10,6 @@ venv/
 .venv/
 env/
 
-# IDE & OS Files
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
+# Scratch & Temporary Reference Files
+scratch/
+

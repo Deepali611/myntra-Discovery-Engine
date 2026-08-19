@@ -94,7 +94,7 @@ def generate_pilot_report(
                 "Hypothesis to validate: iOS users frequently use wishlist as price tracking bookmark rather than immediate buy queue."
             ],
             "reddit": [
-                "Evidence suggests detailed cross-retailer comparison (Myntra vs AJIO vs Nykaa) is primary decision process before checkout.",
+                "Evidence suggests detailed cross-retailer comparison (Myntra vs AJIO vs competitor platforms) is primary decision process before checkout.",
                 "Hypothesis to validate: Decision paralysis peaks when styling/occasion fit advice is actively sought on Reddit subreddits."
             ],
             "youtube": [

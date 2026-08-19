@@ -501,6 +501,36 @@ export default function App() {
                 <strong style={{ color: 'var(--brand-dark)', fontWeight: '600' }}>About this data: </strong>
                 979 total feedback items were collected and classified. Of these, 46 surfaced as genuine pre-purchase wishlist evidence across 6 findings below — the remainder were correctly excluded as post-purchase service complaints, generic praise, or off-topic content during relevance filtering.
               </div>
+
+              {/* Where the feedback came from (Raw Records Collected) */}
+              <div className="finding-row" style={{ marginTop: '4px' }}>
+                <h3 style={{ fontSize: '1.05rem', fontWeight: '600', color: 'var(--ink)' }}>
+                  Raw feedback records collected per source (979 total)
+                </h3>
+                <p style={{ color: 'var(--muted)', fontSize: '0.84rem', marginTop: '2px', marginBottom: '14px' }}>
+                  Total raw items collected across 4 channels prior to relevance filtering into the 46 confirmed evidence findings.
+                </p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  {[
+                    { source: 'YouTube Comments', count: 859 },
+                    { source: 'Google Play Store Reviews', count: 46 },
+                    { source: 'Myntra PDP Reviews & Q&A', count: 39 },
+                    { source: 'Reddit Fashion Communities', count: 35 }
+                  ].map((srcItem, idx) => {
+                    const maxSourceCount = 859;
+                    const barPct = Math.round((srcItem.count / maxSourceCount) * 100);
+                    return (
+                      <div key={idx} style={{ display: 'grid', gridTemplateColumns: '220px 1fr 60px', alignItems: 'center', gap: '12px' }}>
+                        <div style={{ fontSize: '0.88rem', fontWeight: '500', color: 'var(--ink)' }}>{srcItem.source}</div>
+                        <div style={{ width: '100%', height: '8px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '4px', overflow: 'hidden' }}>
+                          <div className="bar-fill-animated" style={{ width: `${barPct}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '4px', minWidth: '4px' }}></div>
+                        </div>
+                        <div style={{ textAlign: 'right', fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>{srcItem.count}</div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
 
             {/* (2) What users are telling us (Ranked by frequency with Proportional Bar Scaling) */}
@@ -527,7 +557,7 @@ export default function App() {
                     <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>7 items</span>
                   </div>
                   <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
-                    <div style={{ width: `${Math.round((7 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
+                    <div className="bar-fill-animated" style={{ width: `${Math.round((7 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
                   </div>
                   <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '4px' }}>
                     Asking creators for try-on height, waist, and bust measurements to eliminate size chart uncertainty.
@@ -536,7 +566,7 @@ export default function App() {
                     {expandedCards['rank_1'] ? '▲ Hide Detail' : '▼ Expand Detail'}
                   </button>
                   {expandedCards['rank_1'] && (
-                    <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
+                    <div className="detail-expanded" style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
                       <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Which size do u wear ? (yt_UgzVyaf2RGHG6Vw4II14)"</div>
                       <div><strong>Sources:</strong> YouTube Comments, Myntra PDP Q&A</div>
                     </div>
@@ -555,7 +585,7 @@ export default function App() {
                     <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>3 items</span>
                   </div>
                   <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
-                    <div style={{ width: `${Math.round((3 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
+                    <div className="bar-fill-animated" style={{ width: `${Math.round((3 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
                   </div>
                   <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '4px' }}>
                     Saving items in wishlist for weeks or months waiting for sale price drops.
@@ -564,7 +594,7 @@ export default function App() {
                     {expandedCards['rank_2'] ? '▲ Hide Detail' : '▼ Expand Detail'}
                   </button>
                   {expandedCards['rank_2'] && (
-                    <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
+                    <div className="detail-expanded" style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
                       <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Kept in wishlist for weeks, bought on price drop but zip quality gap. (pdp_rev_110)"</div>
                       <div><strong>Source:</strong> Myntra PDP Reviews</div>
                     </div>
@@ -583,7 +613,7 @@ export default function App() {
                     <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>3 items</span>
                   </div>
                   <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
-                    <div style={{ width: `${Math.round((3 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
+                    <div className="bar-fill-animated" style={{ width: `${Math.round((3 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
                   </div>
                   <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '4px' }}>
                     Researching brand official website pricing vs Myntra and checking cancellation fee policies.
@@ -592,7 +622,7 @@ export default function App() {
                     {expandedCards['rank_3'] ? '▲ Hide Detail' : '▼ Expand Detail'}
                   </button>
                   {expandedCards['rank_3'] && (
-                    <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
+                    <div className="detail-expanded" style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
                       <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Why is Snitch's price and quality different on official website vs Flipkart/Myntra? (reddit_t3_1nywvf3)"</div>
                       <div><strong>Sources:</strong> Reddit, YouTube Comments</div>
                     </div>
@@ -611,7 +641,7 @@ export default function App() {
                     <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>2 items</span>
                   </div>
                   <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
-                    <div style={{ width: `${Math.round((2 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
+                    <div className="bar-fill-animated" style={{ width: `${Math.round((2 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
                   </div>
                   <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '4px' }}>
                     Hesitating in wishlist due to uncertainty whether studio photos hide thin translucent fabric.
@@ -620,7 +650,7 @@ export default function App() {
                     {expandedCards['rank_4'] ? '▲ Hide Detail' : '▼ Expand Detail'}
                   </button>
                   {expandedCards['rank_4'] && (
-                    <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
+                    <div className="detail-expanded" style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
                       <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Color in reality is much darker than shown in the app photos. Kept it in shortlist for a month... (pdp_rev_103)"</div>
                       <div><strong>Source:</strong> Myntra PDP Reviews</div>
                     </div>
@@ -639,7 +669,7 @@ export default function App() {
                     <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>12 items</span>
                   </div>
                   <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
-                    <div style={{ width: `${Math.round((12 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
+                    <div className="bar-fill-animated" style={{ width: `${Math.round((12 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
                   </div>
                   <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '4px' }}>
                     Short title-only posts asking for community help choosing between shortlisted outfits for specific events.
@@ -648,7 +678,7 @@ export default function App() {
                     {expandedCards['rank_5'] ? '▲ Hide Detail' : '▼ Expand Detail'}
                   </button>
                   {expandedCards['rank_5'] && (
-                    <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
+                    <div className="detail-expanded" style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
                       <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Help me choose one dress for reception party (reddit_rss_t3_1k48pyu)"</div>
                       <div><strong>Source:</strong> Reddit (r/IndianFashionAddicts)</div>
                     </div>
@@ -667,7 +697,7 @@ export default function App() {
                     <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>19 items</span>
                   </div>
                   <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
-                    <div style={{ width: '100%', height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
+                    <div className="bar-fill-animated" style={{ width: '100%', height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
                   </div>
                   <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '4px' }}>
                     Segment patterns (Occasion-Driven, Fit-Sensitive) derived from pre-purchase shopping inquiries.
@@ -676,7 +706,7 @@ export default function App() {
                     {expandedCards['rank_6'] ? '▲ Hide Detail' : '▼ Expand Detail'}
                   </button>
                   {expandedCards['rank_6'] && (
-                    <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
+                    <div className="detail-expanded" style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
                       <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Help me choose what to wear for my very close friend's engagement! (reddit_rss_t3_1d82ls4)"</div>
                       <div><strong>Sources:</strong> Reddit, Myntra PDP Reviews</div>
                     </div>
@@ -850,7 +880,7 @@ export default function App() {
                 </div>
 
                 {expandedCards['about_engine'] && (
-                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid var(--brand-tint-2)', fontSize: '0.88rem', color: 'var(--ink)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                  <div className="detail-expanded" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid var(--brand-tint-2)', fontSize: '0.88rem', color: 'var(--ink)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
                     <div>
                       <h4 style={{ fontSize: '0.95rem', fontWeight: '600', color: 'var(--brand-dark)', marginBottom: '4px' }}>Data Sources</h4>
                       <p style={{ color: 'var(--muted)' }}>
