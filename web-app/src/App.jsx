@@ -495,7 +495,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* (2) What users are telling us (Ranked by frequency) */}
+            {/* (2) What users are telling us (Ranked by frequency with Proportional Bar Scaling) */}
             <section style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
                 <h2 style={{ fontSize: '1.4rem', fontWeight: '600' }}>
@@ -507,7 +507,7 @@ export default function App() {
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                {/* Ranked Finding 1 */}
+                {/* Ranked Finding 1 (19 items max count -> 7/19 = 37%) */}
                 <div className="finding-row">
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
@@ -518,7 +518,10 @@ export default function App() {
                     </div>
                     <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>7 items</span>
                   </div>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '8px' }}>
+                  <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
+                    <div style={{ width: `${Math.round((7 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
+                  </div>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '4px' }}>
                     Asking creators for try-on height, waist, and bust measurements to eliminate size chart uncertainty.
                   </p>
                   <button onClick={() => toggleExpand('rank_1')} style={{ marginTop: '10px', background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.82rem', fontWeight: '600', cursor: 'pointer', padding: 0 }}>
@@ -532,7 +535,7 @@ export default function App() {
                   )}
                 </div>
 
-                {/* Ranked Finding 2 */}
+                {/* Ranked Finding 2 (3/19 = 16%) */}
                 <div className="finding-row">
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
@@ -543,7 +546,10 @@ export default function App() {
                     </div>
                     <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>3 items</span>
                   </div>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '8px' }}>
+                  <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
+                    <div style={{ width: `${Math.round((3 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
+                  </div>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '4px' }}>
                     Saving items in wishlist for weeks or months waiting for sale price drops.
                   </p>
                   <button onClick={() => toggleExpand('rank_2')} style={{ marginTop: '10px', background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.82rem', fontWeight: '600', cursor: 'pointer', padding: 0 }}>
@@ -557,7 +563,7 @@ export default function App() {
                   )}
                 </div>
 
-                {/* Ranked Finding 3 */}
+                {/* Ranked Finding 3 (3/19 = 16%) */}
                 <div className="finding-row">
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
@@ -568,7 +574,10 @@ export default function App() {
                     </div>
                     <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>3 items</span>
                   </div>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '8px' }}>
+                  <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
+                    <div style={{ width: `${Math.round((3 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
+                  </div>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '4px' }}>
                     Researching brand official website pricing vs Myntra and checking cancellation fee policies.
                   </p>
                   <button onClick={() => toggleExpand('rank_3')} style={{ marginTop: '10px', background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.82rem', fontWeight: '600', cursor: 'pointer', padding: 0 }}>
@@ -582,7 +591,7 @@ export default function App() {
                   )}
                 </div>
 
-                {/* Ranked Finding 4 */}
+                {/* Ranked Finding 4 (2/19 = 11%) */}
                 <div className="finding-row">
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
@@ -593,7 +602,10 @@ export default function App() {
                     </div>
                     <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>2 items</span>
                   </div>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '8px' }}>
+                  <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
+                    <div style={{ width: `${Math.round((2 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
+                  </div>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '4px' }}>
                     Hesitating in wishlist due to uncertainty whether studio photos hide thin translucent fabric.
                   </p>
                   <button onClick={() => toggleExpand('rank_4')} style={{ marginTop: '10px', background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.82rem', fontWeight: '600', cursor: 'pointer', padding: 0 }}>
@@ -607,7 +619,7 @@ export default function App() {
                   )}
                 </div>
 
-                {/* Ranked Finding 5 */}
+                {/* Ranked Finding 5 (12/19 = 63%) */}
                 <div className="finding-row">
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
@@ -618,7 +630,10 @@ export default function App() {
                     </div>
                     <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>12 items</span>
                   </div>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '8px' }}>
+                  <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
+                    <div style={{ width: `${Math.round((12 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
+                  </div>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '4px' }}>
                     Short title-only posts asking for community help choosing between shortlisted outfits for specific events.
                   </p>
                   <button onClick={() => toggleExpand('rank_5')} style={{ marginTop: '10px', background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.82rem', fontWeight: '600', cursor: 'pointer', padding: 0 }}>
@@ -632,7 +647,7 @@ export default function App() {
                   )}
                 </div>
 
-                {/* Ranked Finding 6 */}
+                {/* Ranked Finding 6 (19/19 = 100%) */}
                 <div className="finding-row">
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
@@ -643,7 +658,10 @@ export default function App() {
                     </div>
                     <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>19 items</span>
                   </div>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '8px' }}>
+                  <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
+                    <div style={{ width: '100%', height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
+                  </div>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '4px' }}>
                     Segment patterns (Occasion-Driven, Fit-Sensitive) derived from pre-purchase shopping inquiries.
                   </p>
                   <button onClick={() => toggleExpand('rank_6')} style={{ marginTop: '10px', background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.82rem', fontWeight: '600', cursor: 'pointer', padding: 0 }}>
@@ -858,7 +876,7 @@ export default function App() {
           </div>
         )}
 
-        {/* TAB 3: REBUILT LIVE ANALYZER WITH FULL STYLING & BAR SCALING PASS */}
+        {/* TAB 3: LIVE ANALYZER (PILL TAG CHIP LIST REPLACING BARS SPECIFICALLY ON THIS PAGE) */}
         {activePage === 'analyzer' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
             <div>
@@ -913,29 +931,36 @@ export default function App() {
               {analyzedResults && (
                 <div style={{ marginTop: '24px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
                   
-                  {/* Pink Confirmation Banner Above Summary Bar */}
+                  {/* Pink Confirmation Banner Above Summary Tag List */}
                   <div style={{ backgroundColor: 'var(--brand-tint)', border: '1px solid var(--brand-tint-2)', borderRadius: 'var(--radius)', padding: '12px 18px', color: 'var(--brand-dark)', fontWeight: '600', fontSize: '0.9rem' }}>
                     Analyzed {analyzedResults.totalItems} items (this session only).
                   </div>
 
-                  {/* Summary Bar List at Top: "Blockers in your pasted items" */}
+                  {/* Summary Tag Pill List (REPLACING BAR CHART ON THIS PAGE ONLY) */}
                   {analyzedResults.summaryBars.length > 0 && (
-                    <div style={{ backgroundColor: '#ffffff', border: '1px solid var(--line)', borderRadius: 'var(--radius)', padding: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                    <div style={{ backgroundColor: '#ffffff', border: '1px solid var(--line)', borderRadius: 'var(--radius)', padding: '20px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
                       <h3 style={{ fontSize: '1.05rem', fontWeight: '600', color: 'var(--ink)' }}>
                         Blockers in your pasted items
                       </h3>
-                      <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
                         {analyzedResults.summaryBars.map((bar, bIdx) => (
-                          <div key={bIdx} style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.88rem', fontWeight: '500' }}>
-                              <span>{bar.theme}</span>
-                              <span style={{ color: 'var(--muted)', fontWeight: '600' }}>{bar.count} {bar.count === 1 ? 'item' : 'items'}</span>
-                            </div>
-                            {/* Two-Tone Track + Fill Bar (Light pink background track + solid pink fill bar) */}
-                            <div style={{ width: '100%', height: '8px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '4px', overflow: 'hidden' }}>
-                              <div style={{ width: `${bar.percent}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '4px' }}></div>
-                            </div>
-                          </div>
+                          <span
+                            key={bIdx}
+                            style={{
+                              backgroundColor: 'var(--brand-tint)',
+                              color: 'var(--brand-dark)',
+                              border: '1px solid var(--brand-tint-2)',
+                              padding: '6px 14px',
+                              borderRadius: '20px',
+                              fontSize: '0.88rem',
+                              fontWeight: '600',
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: '6px'
+                            }}
+                          >
+                            {bar.theme} <span style={{ opacity: 0.5 }}>·</span> {bar.count}
+                          </span>
                         ))}
                       </div>
                     </div>
