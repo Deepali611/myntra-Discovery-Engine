@@ -10,6 +10,14 @@ const NAV_PAGES = [
 
 export default function App() {
   const [activePage, setActivePage] = useState('workspace');
+  const [expandedCards, setExpandedCards] = useState({});
+
+  const toggleExpand = (cardId) => {
+    setExpandedCards(prev => ({
+      ...prev,
+      [cardId]: !prev[cardId]
+    }));
+  };
 
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#F5F5F6' }}>
@@ -51,33 +59,56 @@ export default function App() {
             
             {/* SECTION A: 3 TOP STAT CARDS */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+              
+              {/* Stat Card 1: Total Records Processed (Headline: 979 Records) */}
               <div className="card">
-                <div style={{ color: '#535766', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Total Evidence Count</div>
-                <div style={{ fontSize: '2.2rem', fontWeight: '800', color: '#FF3F6C', marginTop: '4px', fontFamily: 'var(--font-heading)' }}>22 Records</div>
-                <div style={{ color: '#535766', fontSize: '0.82rem', marginTop: '4px' }}>17 Direct Wishlist + 5 Supporting Decision</div>
+                <div style={{ color: '#535766', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  Total Pipeline Records Processed
+                </div>
+                <div style={{ fontSize: '2.2rem', fontWeight: '800', color: '#FF3F6C', marginTop: '4px', fontFamily: 'var(--font-heading)' }}>
+                  979 Records
+                </div>
+                <div style={{ color: '#535766', fontSize: '0.8rem', marginTop: '4px' }}>
+                  Breakdown: 17 Direct Wishlist + 5 Supporting Evidence (22 Grounded Baseline)
+                </div>
               </div>
 
+              {/* Stat Card 2: Distinct Opportunity Themes */}
               <div className="card">
-                <div style={{ color: '#535766', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Distinct Opportunity Themes</div>
-                <div style={{ fontSize: '2.2rem', fontWeight: '800', color: '#282C3F', marginTop: '4px', fontFamily: 'var(--font-heading)' }}>5 Themes</div>
-                <div style={{ color: '#535766', fontSize: '0.82rem', marginTop: '4px' }}>Fit, Price-Drop, Photo Reality, Trust, Occasion</div>
+                <div style={{ color: '#535766', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  Distinct Opportunity Themes
+                </div>
+                <div style={{ fontSize: '2.2rem', fontWeight: '800', color: '#282C3F', marginTop: '4px', fontFamily: 'var(--font-heading)' }}>
+                  5 Themes
+                </div>
+                <div style={{ color: '#535766', fontSize: '0.8rem', marginTop: '4px' }}>
+                  Fit, Price-Drop, Photo Reality, Trust, Occasion
+                </div>
               </div>
 
+              {/* Stat Card 3: Primary Sources Used */}
               <div className="card">
-                <div style={{ color: '#535766', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Primary Sources Used</div>
-                <div style={{ fontSize: '2.2rem', fontWeight: '800', color: '#282C3F', marginTop: '4px', fontFamily: 'var(--font-heading)' }}>4 Channels</div>
-                <div style={{ color: '#535766', fontSize: '0.82rem', marginTop: '4px' }}>Myntra PDP, YouTube, Reddit, Play Store</div>
+                <div style={{ color: '#535766', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  Primary Sources Used
+                </div>
+                <div style={{ fontSize: '2.2rem', fontWeight: '800', color: '#282C3F', marginTop: '4px', fontFamily: 'var(--font-heading)' }}>
+                  4 Channels
+                </div>
+                <div style={{ color: '#535766', fontSize: '0.8rem', marginTop: '4px' }}>
+                  Myntra PDP, YouTube, Reddit, Play Store
+                </div>
               </div>
+
             </div>
 
-            {/* SECTION B: WHERE THE OPPORTUNITY IS (3 GROUPS) */}
+            {/* SECTION B: WHERE THE OPPORTUNITY IS (COLLAPSED BY DEFAULT) */}
             <section style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div style={{ borderBottom: '1px solid #EAEAEC', paddingBottom: '12px' }}>
                 <h2 style={{ fontSize: '1.3rem', fontWeight: '700', color: '#282C3F', fontFamily: 'var(--font-heading)' }}>
                   Where the Opportunity Is
                 </h2>
                 <p style={{ color: '#535766', fontSize: '0.88rem', marginTop: '2px' }}>
-                  Strategic opportunity themes re-sorted into 3 evidence groups (Primary visual element: Evidence Tier badge).
+                  Strategic themes collapsed by default (Title + One-line Summary + Tier Badge). Click 'Expand Details' for full verbatim quotes & methodology.
                 </p>
               </div>
 
@@ -103,9 +134,26 @@ export default function App() {
                       <div style={{ fontWeight: '700', color: '#282C3F', fontSize: '0.92rem' }}>
                         Peer Sizing & Creator Body Measurement Guidance
                       </div>
-                      <div style={{ fontSize: '0.8rem', color: '#535766', marginTop: '4px' }}>
+                      <div style={{ fontSize: '0.82rem', color: '#535766', marginTop: '4px' }}>
                         Asking creators for try-on height, waist, and bust measurements to eliminate fit doubt.
                       </div>
+
+                      <button
+                        onClick={() => toggleExpand('theme_a')}
+                        style={{ marginTop: '10px', background: 'none', border: 'none', color: '#FF3F6C', fontSize: '0.8rem', fontWeight: '700', cursor: 'pointer', padding: 0 }}
+                      >
+                        {expandedCards['theme_a'] ? '▲ Hide Full Quote & Details' : '▼ Expand Full Quote & Details'}
+                      </button>
+
+                      {expandedCards['theme_a'] && (
+                        <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid #EAEAEC', fontSize: '0.8rem', color: '#282C3F' }}>
+                          <div style={{ fontStyle: 'italic', color: '#535766', marginBottom: '6px' }}>
+                            "Which size do u wear ? (yt_UgzVyaf2RGHG6Vw4II14)"
+                          </div>
+                          <div><strong>Cross-Source Support:</strong> 2 sources (YouTube, Myntra PDP)</div>
+                          <div><strong>Metric Linkage:</strong> Conversion Rate + Return Rate Reduction RTO (Weight: 0.90)</div>
+                        </div>
+                      )}
                     </div>
 
                     {/* Theme B */}
@@ -117,9 +165,26 @@ export default function App() {
                       <div style={{ fontWeight: '700', color: '#282C3F', fontSize: '0.92rem' }}>
                         Wishlist Price-Drop & Restock Activation
                       </div>
-                      <div style={{ fontSize: '0.8rem', color: '#535766', marginTop: '4px' }}>
+                      <div style={{ fontSize: '0.82rem', color: '#535766', marginTop: '4px' }}>
                         Saving items in wishlist for weeks/months waiting for sale price drops.
                       </div>
+
+                      <button
+                        onClick={() => toggleExpand('theme_b')}
+                        style={{ marginTop: '10px', background: 'none', border: 'none', color: '#FF3F6C', fontSize: '0.8rem', fontWeight: '700', cursor: 'pointer', padding: 0 }}
+                      >
+                        {expandedCards['theme_b'] ? '▲ Hide Full Quote & Details' : '▼ Expand Full Quote & Details'}
+                      </button>
+
+                      {expandedCards['theme_b'] && (
+                        <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid #EAEAEC', fontSize: '0.8rem', color: '#282C3F' }}>
+                          <div style={{ fontStyle: 'italic', color: '#535766', marginBottom: '6px' }}>
+                            "Kept in wishlist for weeks, bought on price drop but zip quality gap. (pdp_rev_110)"
+                          </div>
+                          <div><strong>Cross-Source Support:</strong> 1 source (Myntra PDP)</div>
+                          <div><strong>Metric Linkage:</strong> Wishlist-to-Cart Conversion Velocity (Weight: 1.00)</div>
+                        </div>
+                      )}
                     </div>
 
                     {/* Theme C */}
@@ -131,15 +196,32 @@ export default function App() {
                       <div style={{ fontWeight: '700', color: '#282C3F', fontSize: '0.92rem' }}>
                         Fabric Transparency & Photo Reality Guarantee
                       </div>
-                      <div style={{ fontSize: '0.8rem', color: '#535766', marginTop: '4px' }}>
+                      <div style={{ fontSize: '0.82rem', color: '#535766', marginTop: '4px' }}>
                         Hesitating in wishlist due to fear that studio photos hide thin translucent fabric.
                       </div>
+
+                      <button
+                        onClick={() => toggleExpand('theme_c')}
+                        style={{ marginTop: '10px', background: 'none', border: 'none', color: '#FF3F6C', fontSize: '0.8rem', fontWeight: '700', cursor: 'pointer', padding: 0 }}
+                      >
+                        {expandedCards['theme_c'] ? '▲ Hide Full Quote & Details' : '▼ Expand Full Quote & Details'}
+                      </button>
+
+                      {expandedCards['theme_c'] && (
+                        <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid #EAEAEC', fontSize: '0.8rem', color: '#282C3F' }}>
+                          <div style={{ fontStyle: 'italic', color: '#535766', marginBottom: '6px' }}>
+                            "Color in reality is much darker than shown in the app photos. Kept it in shortlist for a month... (pdp_rev_103)"
+                          </div>
+                          <div><strong>Cross-Source Support:</strong> 1 source (Myntra PDP)</div>
+                          <div><strong>Metric Linkage:</strong> Wishlist-to-Cart Conversion Velocity (Weight: 1.00)</div>
+                        </div>
+                      )}
                     </div>
 
                   </div>
                 </div>
 
-                {/* Group 2: Post-Purchase / Corroborating (indirectly_relevant + PDP corroboration) */}
+                {/* Group 2: Post-Purchase / Corroborating */}
                 <div className="card" style={{ borderTop: '4px solid #6366F1' }}>
                   <div style={{ fontWeight: '700', color: '#282C3F', fontSize: '1.05rem', marginBottom: '4px', fontFamily: 'var(--font-heading)' }}>
                     2. Post-Purchase / Corroborating
@@ -159,15 +241,32 @@ export default function App() {
                       <div style={{ fontWeight: '700', color: '#282C3F', fontSize: '0.92rem' }}>
                         Cross-Platform Price & Trust Transparency
                       </div>
-                      <div style={{ fontSize: '0.8rem', color: '#535766', marginTop: '4px' }}>
-                        Researching brand official website pricing vs Myntra and checking platform cancellation fee policies.
+                      <div style={{ fontSize: '0.82rem', color: '#535766', marginTop: '4px' }}>
+                        Researching brand official website pricing vs Myntra and checking cancellation fee policies.
                       </div>
+
+                      <button
+                        onClick={() => toggleExpand('theme_d')}
+                        style={{ marginTop: '10px', background: 'none', border: 'none', color: '#FF3F6C', fontSize: '0.8rem', fontWeight: '700', cursor: 'pointer', padding: 0 }}
+                      >
+                        {expandedCards['theme_d'] ? '▲ Hide Full Quote & Details' : '▼ Expand Full Quote & Details'}
+                      </button>
+
+                      {expandedCards['theme_d'] && (
+                        <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid #EAEAEC', fontSize: '0.8rem', color: '#282C3F' }}>
+                          <div style={{ fontStyle: 'italic', color: '#535766', marginBottom: '6px' }}>
+                            "Why is Snitch's price and quality different on official website vs Flipkart/Myntra? (reddit_t3_1nywvf3)"
+                          </div>
+                          <div><strong>Cross-Source Support:</strong> 2 sources (Reddit, YouTube)</div>
+                          <div><strong>Metric Linkage:</strong> Checkout Abandonment Rate (Weight: 0.80)</div>
+                        </div>
+                      )}
                     </div>
 
                   </div>
                 </div>
 
-                {/* Group 3: Investigated, Insufficient Evidence (Q5/Q6/Q9 findings) */}
+                {/* Group 3: Investigated, Insufficient Evidence */}
                 <div className="card" style={{ borderTop: '4px solid #F59E0B' }}>
                   <div style={{ fontWeight: '700', color: '#282C3F', fontSize: '1.05rem', marginBottom: '4px', fontFamily: 'var(--font-heading)' }}>
                     3. Investigated, Insufficient Evidence
@@ -187,9 +286,26 @@ export default function App() {
                       <div style={{ fontWeight: '700', color: '#282C3F', fontSize: '0.92rem' }}>
                         Occasion-Based Shortlist Choice Assistant (Q5)
                       </div>
-                      <div style={{ fontSize: '0.8rem', color: '#535766', marginTop: '4px' }}>
+                      <div style={{ fontSize: '0.82rem', color: '#535766', marginTop: '4px' }}>
                         Short title-only posts asking "help me choose between 2 outfits" without comment elaboration.
                       </div>
+
+                      <button
+                        onClick={() => toggleExpand('theme_e')}
+                        style={{ marginTop: '10px', background: 'none', border: 'none', color: '#FF3F6C', fontSize: '0.8rem', fontWeight: '700', cursor: 'pointer', padding: 0 }}
+                      >
+                        {expandedCards['theme_e'] ? '▲ Hide Full Quote & Details' : '▼ Expand Full Quote & Details'}
+                      </button>
+
+                      {expandedCards['theme_e'] && (
+                        <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid #EAEAEC', fontSize: '0.8rem', color: '#282C3F' }}>
+                          <div style={{ fontStyle: 'italic', color: '#535766', marginBottom: '6px' }}>
+                            "Help me choose one dress for reception party (reddit_rss_t3_1k48pyu)"
+                          </div>
+                          <div><strong>Cross-Source Support:</strong> 1 source (Reddit: r/IndianFashionAddicts)</div>
+                          <div><strong>Metric Linkage:</strong> Wishlist-to-Cart Conversion Velocity (Weight: 1.00)</div>
+                        </div>
+                      )}
                     </div>
 
                     {/* Theme F */}
@@ -201,9 +317,26 @@ export default function App() {
                       <div style={{ fontWeight: '700', color: '#282C3F', fontSize: '0.92rem' }}>
                         User Segment Behavioral Archetypes (Q9)
                       </div>
-                      <div style={{ fontSize: '0.8rem', color: '#535766', marginTop: '4px' }}>
+                      <div style={{ fontSize: '0.82rem', color: '#535766', marginTop: '4px' }}>
                         Segment patterns (Occasion-Driven, Fit-Sensitive) are hypotheses requiring Part 3 user validation.
                       </div>
+
+                      <button
+                        onClick={() => toggleExpand('theme_f')}
+                        style={{ marginTop: '10px', background: 'none', border: 'none', color: '#FF3F6C', fontSize: '0.8rem', fontWeight: '700', cursor: 'pointer', padding: 0 }}
+                      >
+                        {expandedCards['theme_f'] ? '▲ Hide Full Quote & Details' : '▼ Expand Full Quote & Details'}
+                      </button>
+
+                      {expandedCards['theme_f'] && (
+                        <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid #EAEAEC', fontSize: '0.8rem', color: '#282C3F' }}>
+                          <div style={{ fontStyle: 'italic', color: '#535766', marginBottom: '6px' }}>
+                            "Help me choose what to wear for my very close friend's engagement! (reddit_rss_t3_1d82ls4)"
+                          </div>
+                          <div><strong>Cross-Source Support:</strong> 2 sources (Reddit, Myntra PDP)</div>
+                          <div><strong>Metric Linkage:</strong> Hypothesis Validation Required in Part 3</div>
+                        </div>
+                      )}
                     </div>
 
                   </div>
@@ -212,14 +345,14 @@ export default function App() {
               </div>
             </section>
 
-            {/* SECTION C: OBSERVATIONS SECTION (4 TAKEAWAY CARDS) */}
+            {/* SECTION C: OBSERVATIONS SECTION (COLLAPSIBLE TAKEAWAYS) */}
             <section style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div style={{ borderBottom: '1px solid #EAEAEC', paddingBottom: '12px' }}>
                 <h2 style={{ fontSize: '1.3rem', fontWeight: '700', color: '#282C3F', fontFamily: 'var(--font-heading)' }}>
                   Observations & Key Takeaways
                 </h2>
                 <p style={{ color: '#535766', fontSize: '0.88rem', marginTop: '2px' }}>
-                  Four empirical observations drawn directly from backend data collection and audit findings.
+                  Four empirical observations collapsed to title + one-line summary by default.
                 </p>
               </div>
 
@@ -231,9 +364,22 @@ export default function App() {
                   <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#282C3F', marginBottom: '6px', fontFamily: 'var(--font-heading)' }}>
                     1. Public Reviews Skew Post-Purchase
                   </h3>
-                  <p style={{ fontSize: '0.85rem', color: '#535766', lineHeight: '1.5' }}>
-                    Mobile app store reviews are <strong>99.5% dominated by post-purchase complaints</strong> (delivery delays, courier behavior, app crashes, refund status). Pre-purchase wishlist friction accounts for under <strong>0.5%</strong> of raw store reviews, requiring strict Stage A semantic gating.
+                  <p style={{ fontSize: '0.83rem', color: '#535766' }}>
+                    Mobile app store reviews are 99.5% dominated by post-purchase courier, delivery, and refund disputes.
                   </p>
+
+                  <button
+                    onClick={() => toggleExpand('takeaway_1')}
+                    style={{ marginTop: '10px', background: 'none', border: 'none', color: '#FF3F6C', fontSize: '0.8rem', fontWeight: '700', cursor: 'pointer', padding: 0 }}
+                  >
+                    {expandedCards['takeaway_1'] ? '▲ Hide Details' : '▼ Expand Details'}
+                  </button>
+
+                  {expandedCards['takeaway_1'] && (
+                    <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid #EAEAEC', fontSize: '0.8rem', color: '#282C3F' }}>
+                      Pre-purchase wishlist friction accounts for under <strong>0.5%</strong> of raw store reviews, necessitating strict Stage A semantic gating to isolate true pre-purchase buyer intent.
+                    </div>
+                  )}
                 </div>
 
                 {/* Takeaway Card 2 */}
@@ -242,9 +388,22 @@ export default function App() {
                   <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#282C3F', marginBottom: '6px', fontFamily: 'var(--font-heading)' }}>
                     2. Myntra PDP Reviews Are Strongest Pre-Purchase Source
                   </h3>
-                  <p style={{ fontSize: '0.85rem', color: '#535766', lineHeight: '1.5' }}>
-                    Product Detail Page customer reviews and Q&A provide the highest-density grounded evidence for wishlist holding causes (zip defects, multi-week sale waiting, color discrepancies).
+                  <p style={{ fontSize: '0.83rem', color: '#535766' }}>
+                    PDP customer reviews and Q&A provide the highest-density grounded evidence for wishlist holding causes.
                   </p>
+
+                  <button
+                    onClick={() => toggleExpand('takeaway_2')}
+                    style={{ marginTop: '10px', background: 'none', border: 'none', color: '#FF3F6C', fontSize: '0.8rem', fontWeight: '700', cursor: 'pointer', padding: 0 }}
+                  >
+                    {expandedCards['takeaway_2'] ? '▲ Hide Details' : '▼ Expand Details'}
+                  </button>
+
+                  {expandedCards['takeaway_2'] && (
+                    <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid #EAEAEC', fontSize: '0.8rem', color: '#282C3F' }}>
+                      Presents character-grounded evidence detailing zip defects, multi-week sale price-drop holding behavior, and studio photo color discrepancies.
+                    </div>
+                  )}
                 </div>
 
                 {/* Takeaway Card 3 */}
@@ -253,9 +412,22 @@ export default function App() {
                   <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#282C3F', marginBottom: '6px', fontFamily: 'var(--font-heading)' }}>
                     3. X / Twitter Excluded Due to Paid-Tier Block
                   </h3>
-                  <p style={{ fontSize: '0.85rem', color: '#535766', lineHeight: '1.5' }}>
-                    Read-only search tests against X/Twitter API v2 returned <code>HTTP 401 Unauthorized</code>. The X API requires a paid developer tier ($100/mo Basic or $5,000/mo Pro). Per project guidelines, no unauthenticated scraping workarounds were attempted.
+                  <p style={{ fontSize: '0.83rem', color: '#535766' }}>
+                    Read-only search API tests returned HTTP 401 Unauthorized requiring paid developer subscription.
                   </p>
+
+                  <button
+                    onClick={() => toggleExpand('takeaway_3')}
+                    style={{ marginTop: '10px', background: 'none', border: 'none', color: '#FF3F6C', fontSize: '0.8rem', fontWeight: '700', cursor: 'pointer', padding: 0 }}
+                  >
+                    {expandedCards['takeaway_3'] ? '▲ Hide Details' : '▼ Expand Details'}
+                  </button>
+
+                  {expandedCards['takeaway_3'] && (
+                    <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid #EAEAEC', fontSize: '0.8rem', color: '#282C3F' }}>
+                      X/Twitter API v2 search endpoint requires $100/mo Basic or $5,000/mo Pro. Per project instructions, no unauthenticated web scraping workarounds were attempted.
+                    </div>
+                  )}
                 </div>
 
                 {/* Takeaway Card 4 */}
@@ -264,9 +436,22 @@ export default function App() {
                   <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#282C3F', marginBottom: '6px', fontFamily: 'var(--font-heading)' }}>
                     4. 559-Record Rejected-Pool Audit Confirms Scarcity
                   </h3>
-                  <p style={{ fontSize: '0.85rem', color: '#535766', lineHeight: '1.5' }}>
-                    A 100% LLM audit of all 559 Stage A rejected raw records yielded only 11 sparse hits (1.96% signal rate), confirming public commentary concentrates heavily on size/fit rather than complex shortlist choice.
+                  <p style={{ fontSize: '0.83rem', color: '#535766' }}>
+                    100% LLM audit of all 559 Stage A rejected raw records yielded only 11 sparse hits (1.96% signal rate).
                   </p>
+
+                  <button
+                    onClick={() => toggleExpand('takeaway_4')}
+                    style={{ marginTop: '10px', background: 'none', border: 'none', color: '#FF3F6C', fontSize: '0.8rem', fontWeight: '700', cursor: 'pointer', padding: 0 }}
+                  >
+                    {expandedCards['takeaway_4'] ? '▲ Hide Details' : '▼ Expand Details'}
+                  </button>
+
+                  {expandedCards['takeaway_4'] && (
+                    <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid #EAEAEC', fontSize: '0.8rem', color: '#282C3F' }}>
+                      Confirms unprompted public commentary concentrates heavily on sizing/fit rather than complex shortlist choice dilemmas.
+                    </div>
+                  )}
                 </div>
 
               </div>
