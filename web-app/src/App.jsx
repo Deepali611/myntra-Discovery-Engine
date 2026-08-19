@@ -298,7 +298,7 @@ export default function App() {
     if (!matched) {
       matched = {
         tier_statement: "This is Moderate-confidence evidence (22 grounded records)",
-        answer: "This is Moderate-confidence evidence (22 grounded records across 4 sources). Based on our locked dataset, pre-purchase wishlist friction centers on size/fit doubt (7 records), price-drop waiting behavior (3 records), and photo vs. reality color discrepancies (2 records). Public store reviews are 99.5% dominated by post-purchase delivery complaints.",
+        answer: "This is Moderate-confidence evidence (22 grounded records across 4 sources). Based on our locked dataset, pre-purchase wishlist friction centers on size/fit doubt (7 records), price-drop waiting behavior (3 records), and photo vs. reality color discrepancies (2 records). Public store reviews are heavily dominated by post-purchase delivery complaints.",
         followups: [
           "Why do users add items to their wishlist?",
           "What prevents purchase after wishlisting?",
@@ -480,18 +480,26 @@ export default function App() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '44px' }}>
             
             {/* (1) Top Stat Cards */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
-              <div className="stat-card">
-                <div className="stat-number">979</div>
-                <div className="stat-label">feedback items analysed</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
+                <div className="stat-card">
+                  <div className="stat-number">979</div>
+                  <div className="stat-label">feedback items analysed</div>
+                </div>
+                <div className="stat-card">
+                  <div className="stat-number">5</div>
+                  <div className="stat-label">blockers detected</div>
+                </div>
+                <div className="stat-card">
+                  <div className="stat-number">4</div>
+                  <div className="stat-label">sources</div>
+                </div>
               </div>
-              <div className="stat-card">
-                <div className="stat-number">5</div>
-                <div className="stat-label">blockers detected</div>
-              </div>
-              <div className="stat-card">
-                <div className="stat-number">4</div>
-                <div className="stat-label">sources</div>
+
+              {/* About this data note */}
+              <div style={{ backgroundColor: 'var(--brand-tint)', border: '1px solid var(--brand-tint-2)', borderRadius: 'var(--radius)', padding: '14px 18px', fontSize: '0.88rem', color: 'var(--ink)', lineHeight: '1.5' }}>
+                <strong style={{ color: 'var(--brand-dark)', fontWeight: '600' }}>About this data: </strong>
+                979 total feedback items were collected and classified. Of these, 46 surfaced as genuine pre-purchase wishlist evidence across 6 findings below — the remainder were correctly excluded as post-purchase service complaints, generic praise, or off-topic content during relevance filtering.
               </div>
             </div>
 
@@ -767,7 +775,7 @@ export default function App() {
               </div>
             </section>
 
-            {/* (4) Observations (4 Takeaway Cards) */}
+            {/* (4) Observations (4 Takeaway Cards - Accurately Verifiable Language) */}
             <section style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
                 <h2 style={{ fontSize: '1.4rem', fontWeight: '600' }}>
@@ -784,7 +792,7 @@ export default function App() {
                     Public Reviews Skew Post-Purchase
                   </h3>
                   <p style={{ fontSize: '0.9rem', color: 'var(--muted)' }}>
-                    Mobile app store reviews are 99.5% dominated by delivery delays, courier behavior, and refund disputes.
+                    Mobile app store reviews are heavily dominated by post-purchase delivery delays, courier behavior, and refund disputes.
                   </p>
                   <div className="takeaway-arrow">
                     → Pre-purchase friction requires targeted semantic filtering to isolate true buyer intent.
