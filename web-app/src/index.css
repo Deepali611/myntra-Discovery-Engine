@@ -62,7 +62,7 @@ h1, h2, h3 {
 
 .nav-tabs {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   height: 100%;
 }
 
@@ -99,6 +99,84 @@ h1, h2, h3 {
   gap: 40px;
 }
 
+.chip-btn {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 9999px;
+  padding: 8px 16px;
+  font-size: 0.86rem;
+  color: var(--ink);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 2px rgba(40,44,63,0.03);
+
+  align-self: flex-start;
+  width: auto;
+  max-width: 100%;
+}
+
+.chip-btn:hover {
+  border-color: var(--brand);
+  color: var(--brand-dark);
+  background-color: var(--brand-tint);
+}
+
+.chat-input {
+  width: 100%;
+  padding: 14px 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.chat-input:focus {
+  border-color: var(--brand);
+}
+
+.send-btn {
+  background-color: var(--brand);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.send-btn:hover {
+  background-color: var(--brand-dark);
+}
+
+.user-bubble {
+  background-color: var(--brand-tint);
+  color: var(--brand-dark);
+  border: 1px solid var(--brand-tint-2);
+  border-radius: 16px 16px 4px 16px;
+  padding: 14px 20px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  max-width: 80%;
+  align-self: flex-end;
+}
+
+.assistant-bubble {
+  background-color: #ffffff;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 16px 16px 16px 4px;
+  padding: 20px;
+  font-size: 0.92rem;
+  max-width: 90%;
+  box-shadow: var(--shadow);
+  align-self: flex-start;
+}
+
 .stat-card {
   background: #ffffff;
   border: 1px solid var(--line);
@@ -133,11 +211,6 @@ h1, h2, h3 {
   border-radius: var(--radius);
   padding: 20px 24px;
   box-shadow: var(--shadow);
-  transition: border-color 0.15s ease;
-}
-
-.finding-row:hover {
-  border-color: #D1D5DB;
 }
 
 .pill-strong {
