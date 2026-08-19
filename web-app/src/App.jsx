@@ -26,15 +26,15 @@ export default function App() {
       <header className="nav-header">
         <div style={{ maxWidth: '1280px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
           
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <span style={{ fontSize: '1.4rem' }}>🛍️</span>
-            <div>
-              <h1 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#282C3F', fontFamily: 'var(--font-heading)', letterSpacing: '-0.01em' }}>
-                Myntra Discovery Engine
-              </h1>
-            </div>
+          {/* Solid Pink Dot Logo + Text Wordmark Only */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#FF3F6C', display: 'inline-block' }}></span>
+            <h1 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#282C3F', letterSpacing: '-0.01em' }}>
+              Myntra Discovery Engine
+            </h1>
           </div>
 
+          {/* Nav active-state: Thin Pink Underline under plain text */}
           <nav style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
             {NAV_PAGES.map(page => (
               <button
@@ -60,12 +60,12 @@ export default function App() {
             {/* SECTION A: 3 TOP STAT CARDS */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
               
-              {/* Stat Card 1: Total Records Processed (Headline: 979 Records) */}
+              {/* Stat Card 1: Total Records Processed (Headline: 979 pieces of feedback analysed) */}
               <div className="card">
                 <div style={{ color: '#535766', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                   Total Pipeline Records Processed
                 </div>
-                <div style={{ fontSize: '1.85rem', fontWeight: '800', color: '#FF3F6C', marginTop: '4px', fontFamily: 'var(--font-heading)' }}>
+                <div style={{ fontSize: '1.85rem', fontWeight: '800', color: '#FF3F6C', marginTop: '4px' }}>
                   979 pieces of feedback analysed
                 </div>
                 <div style={{ color: '#535766', fontSize: '0.8rem', marginTop: '4px' }}>
@@ -78,7 +78,7 @@ export default function App() {
                 <div style={{ color: '#535766', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                   Distinct Opportunity Themes
                 </div>
-                <div style={{ fontSize: '2.2rem', fontWeight: '800', color: '#282C3F', marginTop: '4px', fontFamily: 'var(--font-heading)' }}>
+                <div style={{ fontSize: '2.2rem', fontWeight: '800', color: '#282C3F', marginTop: '4px' }}>
                   5 Themes
                 </div>
                 <div style={{ color: '#535766', fontSize: '0.8rem', marginTop: '4px' }}>
@@ -91,7 +91,7 @@ export default function App() {
                 <div style={{ color: '#535766', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                   Primary Sources Used
                 </div>
-                <div style={{ fontSize: '2.2rem', fontWeight: '800', color: '#282C3F', marginTop: '4px', fontFamily: 'var(--font-heading)' }}>
+                <div style={{ fontSize: '2.2rem', fontWeight: '800', color: '#282C3F', marginTop: '4px' }}>
                   4 Channels
                 </div>
                 <div style={{ color: '#535766', fontSize: '0.8rem', marginTop: '4px' }}>
@@ -101,10 +101,10 @@ export default function App() {
 
             </div>
 
-            {/* SECTION B: WHERE THE OPPORTUNITY IS (COLLAPSED BY DEFAULT) */}
+            {/* SECTION B: WHERE THE OPPORTUNITY IS (CLEAN ALIGNED 3-COLUMN GRID) */}
             <section style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div style={{ borderBottom: '1px solid #EAEAEC', paddingBottom: '12px' }}>
-                <h2 style={{ fontSize: '1.3rem', fontWeight: '700', color: '#282C3F', fontFamily: 'var(--font-heading)' }}>
+                <h2 style={{ fontSize: '1.3rem', fontWeight: '700', color: '#282C3F' }}>
                   Where the Opportunity Is
                 </h2>
                 <p style={{ color: '#535766', fontSize: '0.88rem', marginTop: '2px' }}>
@@ -112,13 +112,13 @@ export default function App() {
                 </p>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '20px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '20px', alignItems: 'start' }}>
                 
                 {/* Group 1: While Item Is Wishlisted (directly_relevant) */}
                 <div className="card" style={{ borderTop: '4px solid #FF3F6C' }}>
-                  <div style={{ fontWeight: '700', color: '#282C3F', fontSize: '1.05rem', marginBottom: '4px', fontFamily: 'var(--font-heading)' }}>
+                  <h3 style={{ fontWeight: '700', color: '#282C3F', fontSize: '1.05rem', marginBottom: '4px' }}>
                     1. While Item Is Wishlisted
-                  </div>
+                  </h3>
                   <div style={{ color: '#535766', fontSize: '0.8rem', marginBottom: '16px' }}>
                     Direct pre-purchase friction & intent (directly_relevant)
                   </div>
@@ -223,9 +223,9 @@ export default function App() {
 
                 {/* Group 2: Post-Purchase / Corroborating */}
                 <div className="card" style={{ borderTop: '4px solid #6366F1' }}>
-                  <div style={{ fontWeight: '700', color: '#282C3F', fontSize: '1.05rem', marginBottom: '4px', fontFamily: 'var(--font-heading)' }}>
+                  <h3 style={{ fontWeight: '700', color: '#282C3F', fontSize: '1.05rem', marginBottom: '4px' }}>
                     2. Post-Purchase / Corroborating
-                  </div>
+                  </h3>
                   <div style={{ color: '#535766', fontSize: '0.8rem', marginBottom: '16px' }}>
                     External research & platform pricing corroboration
                   </div>
@@ -268,9 +268,9 @@ export default function App() {
 
                 {/* Group 3: Investigated, Insufficient Evidence */}
                 <div className="card" style={{ borderTop: '4px solid #F59E0B' }}>
-                  <div style={{ fontWeight: '700', color: '#282C3F', fontSize: '1.05rem', marginBottom: '4px', fontFamily: 'var(--font-heading)' }}>
+                  <h3 style={{ fontWeight: '700', color: '#282C3F', fontSize: '1.05rem', marginBottom: '4px' }}>
                     3. Investigated, Insufficient Evidence
-                  </div>
+                  </h3>
                   <div style={{ color: '#535766', fontSize: '0.8rem', marginBottom: '16px' }}>
                     Q5/Q6/Q9 empirical findings (sparse public commentary)
                   </div>
@@ -348,7 +348,7 @@ export default function App() {
             {/* SECTION C: OBSERVATIONS SECTION (COLLAPSIBLE TAKEAWAYS) */}
             <section style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div style={{ borderBottom: '1px solid #EAEAEC', paddingBottom: '12px' }}>
-                <h2 style={{ fontSize: '1.3rem', fontWeight: '700', color: '#282C3F', fontFamily: 'var(--font-heading)' }}>
+                <h2 style={{ fontSize: '1.3rem', fontWeight: '700', color: '#282C3F' }}>
                   Observations & Key Takeaways
                 </h2>
                 <p style={{ color: '#535766', fontSize: '0.88rem', marginTop: '2px' }}>
@@ -356,12 +356,12 @@ export default function App() {
                 </p>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px', alignItems: 'start' }}>
                 
                 {/* Takeaway Card 1 */}
                 <div className="card">
                   <div style={{ fontSize: '1.2rem', marginBottom: '8px' }}>📢</div>
-                  <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#282C3F', marginBottom: '6px', fontFamily: 'var(--font-heading)' }}>
+                  <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#282C3F', marginBottom: '6px' }}>
                     1. Public Reviews Skew Post-Purchase
                   </h3>
                   <p style={{ fontSize: '0.83rem', color: '#535766' }}>
@@ -385,7 +385,7 @@ export default function App() {
                 {/* Takeaway Card 2 */}
                 <div className="card">
                   <div style={{ fontSize: '1.2rem', marginBottom: '8px' }}>🏷️</div>
-                  <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#282C3F', marginBottom: '6px', fontFamily: 'var(--font-heading)' }}>
+                  <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#282C3F', marginBottom: '6px' }}>
                     2. Myntra PDP Reviews Are Strongest Pre-Purchase Source
                   </h3>
                   <p style={{ fontSize: '0.83rem', color: '#535766' }}>
@@ -409,7 +409,7 @@ export default function App() {
                 {/* Takeaway Card 3 */}
                 <div className="card">
                   <div style={{ fontSize: '1.2rem', marginBottom: '8px' }}>🔒</div>
-                  <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#282C3F', marginBottom: '6px', fontFamily: 'var(--font-heading)' }}>
+                  <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#282C3F', marginBottom: '6px' }}>
                     3. X / Twitter Excluded Due to Paid-Tier Block
                   </h3>
                   <p style={{ fontSize: '0.83rem', color: '#535766' }}>
@@ -433,7 +433,7 @@ export default function App() {
                 {/* Takeaway Card 4 */}
                 <div className="card">
                   <div style={{ fontSize: '1.2rem', marginBottom: '8px' }}>🔎</div>
-                  <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#282C3F', marginBottom: '6px', fontFamily: 'var(--font-heading)' }}>
+                  <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#282C3F', marginBottom: '6px' }}>
                     4. 559-Record Rejected-Pool Audit Confirms Scarcity
                   </h3>
                   <p style={{ fontSize: '0.83rem', color: '#535766' }}>
@@ -463,28 +463,28 @@ export default function App() {
         {/* OTHER EMPTY PAGE SHELLS */}
         {activePage === 'engine' && (
           <div className="card">
-            <h2 style={{ fontSize: '1.4rem', fontWeight: '700', color: '#282C3F', fontFamily: 'var(--font-heading)' }}>How the Engine Works</h2>
+            <h2>How the Engine Works</h2>
             <p style={{ color: '#535766', marginTop: '6px' }}>Pipeline architecture shell.</p>
           </div>
         )}
 
         {activePage === 'explorer' && (
           <div className="card">
-            <h2 style={{ fontSize: '1.4rem', fontWeight: '700', color: '#282C3F', fontFamily: 'var(--font-heading)' }}>Evidence Explorer</h2>
+            <h2>Evidence Explorer</h2>
             <p style={{ color: '#535766', marginTop: '6px' }}>Verbatim quotes explorer shell.</p>
           </div>
         )}
 
         {activePage === 'comparison' && (
           <div className="card">
-            <h2 style={{ fontSize: '1.4rem', fontWeight: '700', color: '#282C3F', fontFamily: 'var(--font-heading)' }}>Opportunity Comparison</h2>
+            <h2>Opportunity Comparison</h2>
             <p style={{ color: '#535766', marginTop: '6px' }}>Mathematical opportunity scoring shell.</p>
           </div>
         )}
 
         {activePage === 'try_it' && (
           <div className="card">
-            <h2 style={{ fontSize: '1.4rem', fontWeight: '700', color: '#282C3F', fontFamily: 'var(--font-heading)' }}>Try It</h2>
+            <h2>Try It</h2>
             <p style={{ color: '#535766', marginTop: '6px' }}>Live try mode API runner shell.</p>
           </div>
         )}
