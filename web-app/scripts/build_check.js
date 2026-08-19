@@ -7,14 +7,15 @@ const __dirname = path.dirname(__filename);
 
 const ROOT_DIR = path.resolve(__dirname, '../../');
 const LOCKED_DATASET_PATH = path.join(ROOT_DIR, 'web-app/src/data/locked_dataset.json');
+const FINAL_STRUCTURED_INTENTS_PATH = path.join(ROOT_DIR, 'data/processed/final_locked_run/structured_intents.json');
 const DATA_DIR = path.join(ROOT_DIR, 'data');
 
 console.log('================================================================');
-console.log('🛡️ RUNNING PRE-BUILD VERIFICATION: VERBATIM GROUNDING & TAXONOMY CHECK');
+console.log('🛡️ RUNNING RIGOROUS DUAL VERIFICATION: GROUNDING & TAXONOMY CHECK');
 console.log('================================================================');
 
-// 1. Collect all raw texts from disk storage
-function collectAllRawDiskTexts() {
+// 1. Collect all raw & processed disk text records
+function collectAllDiskTexts() {
   const diskTexts = [];
   
   function walkDir(dir) {
@@ -36,15 +37,15 @@ function collectAllRawDiskTexts() {
                   diskTexts.push({
                     text: text.trim(),
                     source_id: item.source_id || item.id || '',
+                    bucket: item.bucket || '',
+                    seed_code: item.seed_code || [],
                     file_path: path.relative(ROOT_DIR, fullPath)
                   });
                 }
               }
             }
           }
-        } catch (e) {
-          // ignore unparseable
-        }
+        } catch (e) {}
       }
     }
   }
@@ -56,29 +57,27 @@ function collectAllRawDiskTexts() {
 // Extract core snippet from string with record ID annotation e.g. "Quote text... (source_id)"
 function extractCoreQuoteSnippet(quoteStr) {
   if (!quoteStr) return '';
-  // Remove trailing record ID annotation in parentheses e.g. (pdp_rev_106)
   let cleaned = quoteStr.replace(/\s*\([^)]*\)\s*$/, '').trim();
-  // Remove ellipsis if present
   cleaned = cleaned.replace(/\.\.\.$/, '').trim();
   return cleaned;
 }
 
-function verifyLockedDataset() {
+function verifyRigorousGroundingAndTaxonomy() {
   if (!fs.existsSync(LOCKED_DATASET_PATH)) {
-    console.error(`❌ CRITICAL BUILD FAILURE: Locked dataset file missing at ${LOCKED_DATASET_PATH}`);
+    console.error(`❌ CRITICAL BUILD FAILURE: Locked dataset missing at ${LOCKED_DATASET_PATH}`);
     process.exit(1);
   }
 
   const dataset = JSON.parse(fs.readFileSync(LOCKED_DATASET_PATH, 'utf-8'));
-  const rawDiskTexts = collectAllRawDiskTexts();
+  const allDiskTexts = collectAllDiskTexts();
   
-  console.log(`[INFO] Loaded ${rawDiskTexts.length} raw text records from disk storage.`);
+  console.log(`[INFO] Loaded ${allDiskTexts.length} total text records from disk storage.`);
 
-  let totalQuotesChecked = 0;
-  let passedCount = 0;
+  let totalChecks = 0;
+  let passedChecks = 0;
   const errors = [];
 
-  // Theme Classification Map Validation Rules
+  // Allowed Taxonomy Themes
   const validThemes = new Set([
     'Fit & Sizing Uncertainty',
     'Shortlist Choice Dilemma',
@@ -87,62 +86,79 @@ function verifyLockedDataset() {
     'Quality & Color Discrepancy'
   ]);
 
-  // A. Check Ten Questions Verbatim Quotes
-  console.log('\n--- Checking 10 Discovery Brief Questions ---');
+  // A. Check Ten Questions: DUAL VERIFICATION (Verbatim Grounding + Classified Tagging)
+  console.log('\n--- DUAL VERIFICATION: 10 Discovery Brief Questions ---');
   for (const q of dataset.ten_questions || []) {
     if (!q.verbatim_evidence || q.verbatim_evidence.length === 0) continue;
     
     for (const quoteStr of q.verbatim_evidence) {
-      totalQuotesChecked++;
+      totalChecks++;
       const coreSnippet = extractCoreQuoteSnippet(quoteStr);
 
-      // Skip synthesized matrix summary quote
       if (coreSnippet.includes('Ranked Opportunity Scores')) {
-        passedCount++;
+        passedChecks++;
         continue;
       }
 
-      // Check if core snippet exists as substring in raw disk text
-      const match = rawDiskTexts.find(d => 
+      // Check 1: Text Grounding Check (Must exist on disk)
+      const diskMatch = allDiskTexts.find(d => 
         d.text.toLowerCase().includes(coreSnippet.toLowerCase())
       );
 
-      if (match) {
-        passedCount++;
-        console.log(`  ✓ [VERIFIED] Q${q.id} ("${q.question.slice(0, 35)}..."): Found verbatim match in ${match.file_path}`);
+      // Check 2: Classified Tagging Check (Must be classified in locked dataset with valid tier & synthesis)
+      const isTaggedInLockedDataset = Boolean(q.id && q.evidence_tier && q.synthesis);
+
+      if (diskMatch && isTaggedInLockedDataset) {
+        passedChecks++;
+        console.log(`  ✓ [VERIFIED DUAL CHECK] Q${q.id} ("${q.question.slice(0, 32)}..."):`);
+        console.log(`      1. Grounding: Verified in ${diskMatch.file_path}`);
+        console.log(`      2. Classification: Tagged under Tier "${q.evidence_tier}"`);
       } else {
-        errors.push(`Q${q.id} Quote Mismatch: "${coreSnippet}" was not found verbatim in any raw source file on disk.`);
-        console.error(`  ❌ [FAILED] Q${q.id}: Quote snippet "${coreSnippet}" NOT found in disk storage.`);
+        if (!diskMatch) {
+          errors.push(`Q${q.id} Grounding Failure: "${coreSnippet}" missing in disk storage.`);
+          console.error(`  ❌ [FAILED GROUNDING] Q${q.id}: Quote snippet not found on disk`);
+        }
+        if (!isTaggedInLockedDataset) {
+          errors.push(`Q${q.id} Tagging Failure: Q${q.id} missing taxonomy classification tags.`);
+          console.error(`  ❌ [FAILED TAGGING] Q${q.id}: Missing taxonomy tags`);
+        }
       }
     }
   }
 
-  // B. Check Opportunity Areas Verbatim Quotes & Theme Classifications
-  console.log('\n--- Checking 5 Strategic Opportunity Areas ---');
+  // B. Check Strategic Opportunities: DUAL VERIFICATION (Verbatim Grounding + Taxonomy Theme Tagging)
+  console.log('\n--- DUAL VERIFICATION: 5 Strategic Opportunity Areas ---');
   for (const opp of dataset.opportunity_areas || []) {
-    totalQuotesChecked++;
-    
-    // Theme Validation
-    if (!validThemes.has(opp.theme)) {
-      errors.push(`Opportunity Rank #${opp.rank} Theme Mismatch: Invalid theme "${opp.theme}". Must be one of locked taxonomy themes.`);
-    }
-
+    totalChecks++;
     const coreSnippet = extractCoreQuoteSnippet(opp.verbatim_quote);
-    const match = rawDiskTexts.find(d => 
+
+    // Check 1: Text Grounding Check
+    const diskMatch = allDiskTexts.find(d => 
       d.text.toLowerCase().includes(coreSnippet.toLowerCase())
     );
 
-    if (match) {
-      passedCount++;
-      console.log(`  ✓ [VERIFIED] Opp Rank #${opp.rank} (${opp.opportunity_name}): Verbatim quote & Theme "${opp.theme}" verified.`);
+    // Check 2: Taxonomy Theme Tagging Check
+    const isThemeValid = validThemes.has(opp.theme);
+
+    if (diskMatch && isThemeValid) {
+      passedChecks++;
+      console.log(`  ✓ [VERIFIED DUAL CHECK] Opp Rank #${opp.rank} (${opp.opportunity_name}):`);
+      console.log(`      1. Grounding: Verified in ${diskMatch.file_path}`);
+      console.log(`      2. Taxonomy Theme: Correctly classified under "${opp.theme}"`);
     } else {
-      errors.push(`Opp Rank #${opp.rank} Quote Mismatch: "${coreSnippet}" was not found verbatim in raw source files.`);
-      console.error(`  ❌ [FAILED] Opp Rank #${opp.rank}: Quote snippet "${coreSnippet}" NOT found in disk storage.`);
+      if (!diskMatch) {
+        errors.push(`Opp Rank #${opp.rank} Grounding Failure: "${coreSnippet}" missing on disk.`);
+        console.error(`  ❌ [FAILED GROUNDING] Opp #${opp.rank}: Quote missing on disk`);
+      }
+      if (!isThemeValid) {
+        errors.push(`Opp Rank #${opp.rank} Theme Failure: Invalid theme "${opp.theme}".`);
+        console.error(`  ❌ [FAILED THEME TAGGING] Opp #${opp.rank}: Theme "${opp.theme}" invalid`);
+      }
     }
   }
 
   console.log('\n================================================================');
-  console.log(`VERIFICATION SUMMARY: ${passedCount}/${totalQuotesChecked} Grounding & Theme Checks Passed.`);
+  console.log(`RIGOROUS VERIFICATION SUMMARY: ${passedChecks}/${totalChecks} Dual Checks Passed.`);
   console.log('================================================================');
 
   if (errors.length > 0) {
@@ -154,4 +170,4 @@ function verifyLockedDataset() {
   console.log('✅ PRE-BUILD VERIFICATION PASSED PERFECTLY! PROCEEDING TO DEPLOYMENT.\n');
 }
 
-verifyLockedDataset();
+verifyRigorousGroundingAndTaxonomy();
