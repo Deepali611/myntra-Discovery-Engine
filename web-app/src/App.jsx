@@ -483,8 +483,9 @@ export default function App() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
                 <div className="stat-card">
-                  <div className="stat-number">979</div>
-                  <div className="stat-label">feedback items analysed</div>
+                  <div className="stat-number">179</div>
+                  <div className="stat-label">feedback items passed relevance screening</div>
+                  <div style={{ fontSize: '0.78rem', color: 'var(--muted)', marginTop: '4px', fontWeight: '500' }}>from 979 raw items collected</div>
                 </div>
                 <div className="stat-card">
                   <div className="stat-number">5</div>
@@ -499,7 +500,7 @@ export default function App() {
               {/* About this data note */}
               <div style={{ backgroundColor: 'var(--brand-tint)', border: '1px solid var(--brand-tint-2)', borderRadius: 'var(--radius)', padding: '14px 18px', fontSize: '0.88rem', color: 'var(--ink)', lineHeight: '1.5' }}>
                 <strong style={{ color: 'var(--brand-dark)', fontWeight: '600' }}>About this data: </strong>
-                979 total feedback items were collected and classified. Of these, 46 surfaced as genuine pre-purchase wishlist evidence across 6 findings below — the remainder were correctly excluded as post-purchase service complaints, generic praise, or off-topic content during relevance filtering.
+                Of 979 raw feedback items collected, 179 passed Stage A/B relevance screening. Across these, 46 surfaced as genuine pre-purchase wishlist evidence in the 6 findings below — the remainder were correctly excluded as post-purchase service complaints, generic praise, or off-topic noise.
               </div>
 
               {/* Where the feedback came from (Raw Records Collected) */}
