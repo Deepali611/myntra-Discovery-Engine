@@ -915,6 +915,49 @@ export default function App() {
               )}
             </section>
 
+            {/* (3) Where the opportunity is (Flat Numbered List 1 to 9) */}
+            <section style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '40px' }}>
+              <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
+                <h2 style={{ fontSize: '1.4rem', fontWeight: '600' }}>
+                  Where the opportunity is
+                </h2>
+                <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginTop: '4px' }}>
+                  Findings ordered by customer journey stage and impact potential.
+                </p>
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                {[
+                  { num: 1, title: "Peer sizing guidance", stage: "While the item is saved", count: "7 items (3.9%)", exp: "Raised before any purchase decision: shoppers ask creators rather than trust Myntra's own size chart." },
+                  { num: 2, title: "Price-drop waiting", stage: "While the item is saved", count: "3 items (1.7%)", exp: "Parked until price moves: shoppers describe holding specific items for sales and waiting long stretches for the right offer." },
+                  { num: 3, title: "Cross-platform price trust", stage: "Before checkout", count: "3 items (1.7%)", exp: "Cross-platform price checks: shoppers check official brand sites to verify pricing and authenticity before committing." },
+                  { num: 4, title: "Fabric & photo reality", stage: "While the item is saved", count: "2 items (1.1%)", exp: "Visual texture gap: studio lighting creates doubt about fabric thickness and actual color shades." },
+                  { num: 5, title: "Occasion choice dilemma", stage: "While the item is saved", count: "12 items (6.7%)", exp: "Choice paralysis: shoppers save multiple similar items for specific events and seek community votes to decide." },
+                  { num: 6, title: "User segment patterns", stage: "Across buying journey", count: "5 items (2.8%)", exp: "Persona variations: friction differs significantly between occasion buyers and daily workwear shoppers." },
+                  { num: 7, title: "Photo vs reality doubts (Q4)", stage: "While the item is saved", count: "2 items (1.1%)", exp: "Photo discrepancy investigation: confirming studio photo lighting gaps from review data." },
+                  { num: 8, title: "Occasion choice dilemma (Q5)", stage: "While the item is saved", count: "12 items (6.7%)", exp: "Shortlist decision friction investigation: community polling for event outfit selection." },
+                  { num: 9, title: "User segment patterns (Q9)", stage: "Across buying journey", count: "5 items (2.8%)", exp: "Intent segment investigation: evaluating persona intent signals across public feedback." }
+                ].map((opp, oIdx) => (
+                  <div key={oIdx} className="finding-row" style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+                    <div style={{ fontSize: '1.4rem', fontWeight: '700', color: 'var(--brand)', minWidth: '24px', lineHeight: '1' }}>
+                      {opp.num}
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', width: '100%' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+                        <span style={{ fontSize: '1rem', fontWeight: '600', color: 'var(--ink)' }}>
+                          {opp.title} <span style={{ color: 'var(--muted)', fontWeight: '400' }}>· {opp.stage}</span>
+                        </span>
+                        <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>{opp.count}</span>
+                      </div>
+                      <p style={{ fontSize: '0.9rem', color: 'var(--muted)', margin: 0, lineHeight: '1.5' }}>
+                        {opp.exp}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
             {/* (4) Observations (Short Plain Sentences, No Technical Jargon) */}
             <section style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '40px' }}>
               <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
