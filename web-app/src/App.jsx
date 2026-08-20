@@ -702,7 +702,7 @@ export default function App() {
             <section style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '40px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '16px', borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
                 <div>
-                  <h2 style={{ fontSize: '1.4rem', fontWeight: '600' }}>
+                  <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', fontWeight: '700' }}>
                     What users are telling us
                   </h2>
                   <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginTop: '4px' }}>
@@ -918,7 +918,7 @@ export default function App() {
             {/* (3) Where the opportunity is (Matching Reference Screenshot 1 Layout) */}
             <section style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '40px' }}>
               <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
-                <h2 className="serif-heading" style={{ fontSize: '1.4rem' }}>
+                <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', fontWeight: '700' }}>
                   Where the opportunity is
                 </h2>
                 <p style={{ color: 'var(--muted)', fontSize: '0.92rem', marginTop: '6px', lineHeight: '1.55' }}>
@@ -962,7 +962,7 @@ export default function App() {
             {/* (4) Observations (Short Plain Sentences, No Technical Jargon) */}
             <section style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '40px' }}>
               <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
-                <h2 style={{ fontSize: '1.4rem', fontWeight: '600' }}>
+                <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', fontWeight: '700' }}>
                   Observations
                 </h2>
                 <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginTop: '4px' }}>
