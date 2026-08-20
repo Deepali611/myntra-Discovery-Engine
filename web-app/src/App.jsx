@@ -959,63 +959,63 @@ export default function App() {
               </div>
             </section>
 
-            {/* (4) Observations (Short Plain Sentences, No Technical Jargon) */}
+            {/* (4) Observations (Nykaa Narrative Structure Adaptation) */}
             <section style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '40px' }}>
               <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
                 <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', fontWeight: '700' }}>
                   Observations
                 </h2>
-                <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginTop: '4px' }}>
-                  Key takeaways from feedback data collection and pipeline analysis.
+                <p style={{ color: 'var(--muted)', fontSize: '0.92rem', marginTop: '4px', lineHeight: '1.5' }}>
+                  Patterns that emerge when the feedback is read together.
                 </p>
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                <div className="finding-row">
-                  <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '4px' }}>
-                    Public Reviews Focus Post-Purchase
+                <div className="finding-row" style={{ padding: '20px 24px', borderRadius: '14px' }}>
+                  <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '6px', color: 'var(--ink)' }}>
+                    Public reviews skew heavily post-purchase
                   </h3>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', margin: '0 0 6px 0' }}>
-                    App store reviews talk mostly about delivery delays and return pickups after orders are placed.
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', margin: '0 0 8px 0', lineHeight: '1.55' }}>
+                    Most public review writing centers on what happens after checkout: shipping, return pickups, and refunds, rather than what stops shoppers while an item is saved.
                   </p>
                   <div className="takeaway-arrow">
-                    → Finding true wishlist doubts requires filtering for pre-purchase questions.
+                    → Finding true wishlist doubts requires isolating pre-purchase discussions.
                   </div>
                 </div>
 
-                <div className="finding-row">
-                  <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '4px' }}>
-                    Product Pages Show Highest Purchase Intent
+                <div className="finding-row" style={{ padding: '20px 24px', borderRadius: '14px' }}>
+                  <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '6px', color: 'var(--ink)' }}>
+                    Wishlist doubts surface outside app reviews
                   </h3>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', margin: '0 0 6px 0' }}>
-                    Product review sections and Q&A show exactly why items sit saved for weeks without checkout.
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', margin: '0 0 8px 0', lineHeight: '1.55' }}>
+                    Friction while items sit saved: body try-on sizing doubts and fabric transparency questions appear on community forums and creator Q&A rather than store reviews.
                   </p>
                   <div className="takeaway-arrow">
-                    → Direct evidence of sizing uncertainty, price waiting, and fabric doubts.
+                    → Unresolved saved-item hesitation lives in discussion spaces, not product reviews.
                   </div>
                 </div>
 
-                <div className="finding-row">
-                  <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '4px' }}>
-                    X / Twitter Search Unavailable
+                <div className="finding-row" style={{ padding: '20px 24px', borderRadius: '14px' }}>
+                  <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '6px', color: 'var(--ink)' }}>
+                    Saved items reflect diverse intent archetypes
                   </h3>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', margin: '0 0 6px 0' }}>
-                    Social media search access requires premium API developer access.
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', margin: '0 0 8px 0', lineHeight: '1.55' }}>
+                    Shoppers save fashion items for vastly different reasons: price-drop waiting, occasion shortlisting, or inspiration bookmarking, and each intent behaves differently.
                   </p>
                   <div className="takeaway-arrow">
-                    → Focus data collection on public video channels, Reddit forums, and store reviews.
+                    → A saved item is a signal of interest, not an immediate commitment to buy.
                   </div>
                 </div>
 
-                <div className="finding-row">
-                  <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '4px' }}>
-                    Most Public Feedback Is Post-Purchase
+                <div className="finding-row" style={{ padding: '20px 24px', borderRadius: '14px' }}>
+                  <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '6px', color: 'var(--ink)' }}>
+                    Shortlist decisions are community-validated
                   </h3>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', margin: '0 0 6px 0' }}>
-                    Checking unselected feedback shows only a tiny fraction talks about wishlisting before buying.
+                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', margin: '0 0 8px 0', lineHeight: '1.55' }}>
+                    Shoppers ask creators and fashion subreddits to vote between competing saved outfits, actively modifying their wishlists based on peer recommendations.
                   </p>
                   <div className="takeaway-arrow">
-                    → Public comments concentrate heavily on delivery and refunds rather than shortlist comparison.
+                    → High-consideration fashion choices are peer-guided before checkout.
                   </div>
                 </div>
               </div>
