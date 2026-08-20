@@ -128,25 +128,36 @@ const EXAMPLE_POOLS = [
 // Master FINDING_DETAILS Dictionary for Restructured Cards (Category Tags, Problem Statements, Quotes, Quiet Evidence Line, Product Implications)
 
 // Master FINDING_DETAILS Dictionary — Capped at Max 4 Quotes per Finding (Nykaa Style Reference Layout)
+
+// Master FINDING_DETAILS Dictionary — All 5 Nykaa Refinements Applied (Short Names, Category Tags, Problem Statements, Explanatory Paragraphs, ALL Quotes, No Sources line)
 const FINDING_DETAILS = {
   rank_1: {
+    shortTitle: "Peer sizing guidance",
     categoryTag: "Sizing doubt",
-    problemStatement: "Unsure what size to order without trying it on first",
+    problemStatement: "Asking creators and Q&A responders for try-on height, waist, and bust measurements to eliminate size chart uncertainty.",
     description: "Shoppers ask video creators or Q&A responders directly for their body measurements before ordering — height, waist, bust — because they don't trust Myntra's own size chart to translate to their body. This happens while the item is still saved in the wishlist, before any purchase decision is made.",
-    quietLine: "Based on 7 · 3.9% (7 of 179 screened items) across sources.",
+    quietLine: "Based on 7 signals across 2 sources (YouTube Comments, Myntra PDP Q&A).",
+    countFormatted: "7 · 3.9%",
+    barPct: 37,
     quotes: [
       { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgzVyaf2RGHG6Vw4II14AaABAg', quote: 'Which size do u wear ?', url: 'https://youtube.com' },
       { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_Ugwwq_7QHa9BUywaZUp4AaABAg', quote: 'Can you share exact bust and waist try-on measurements for this dress?', url: 'https://youtube.com' },
       { source: 'Myntra PDP Q&A', date: 'Aug 17, 2026', source_id: 'pdp_qa_204', quote: 'Should I buy size M or L for a relaxed fit on 38 inch chest?', url: 'https://myntra.com' },
-      { source: 'Myntra PDP Q&A', date: 'Aug 17, 2026', source_id: 'pdp_qa_205', quote: 'What size should I get if my waist is 28 inches? Height is 5\'4".', url: 'https://myntra.com' }
+      { source: 'Myntra PDP Q&A', date: 'Aug 17, 2026', source_id: 'pdp_qa_205', quote: 'What size should I get if my waist is 28 inches? Height is 5\'4".', url: 'https://myntra.com' },
+      { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgwtLL16fgchhKaUWvh4AaABAg', quote: 'Does this denim jacket run small on shoulders?', url: 'https://youtube.com' },
+      { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgyP9OrMOvM4BaVxreF4AaABAg', quote: 'Please tell your height di so I can compare dress length', url: 'https://youtube.com' },
+      { source: 'Myntra PDP Q&A', date: 'Aug 17, 2026', source_id: 'pdp_qa_208', quote: 'Is size XL tight around arms or stretchy?', url: 'https://myntra.com' }
     ],
     productImplication: "PRODUCT IMPLICATION: Embed creator try-on height/waist badges on PDPs and launch a peer sizing Q&A module. Solving sizing return fear directly unlocks 30-day wishlist-to-purchase conversions through non-monetary UX clarity rather than price discounting."
   },
   rank_2: {
+    shortTitle: "Price-drop waiting",
     categoryTag: "Value & timing",
-    problemStatement: "Items sit saved in wishlists for weeks or months waiting for a sale price drop or restock alert",
+    problemStatement: "Saving items in wishlist for weeks or months waiting for a sale price drop or restock alert.",
     description: "Shoppers treat wishlists as passive price-drop watchlists, holding items for weeks or months while waiting for promotional sales or restock alerts. The intent to buy is already present, but stays dormant without active trigger events.",
-    quietLine: "Based on 3 · 1.7% (3 of 179 screened items) across sources.",
+    quietLine: "Based on 3 signals across 1 source (Myntra PDP Reviews).",
+    countFormatted: "3 · 1.7%",
+    barPct: 16,
     quotes: [
       { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_110', quote: 'Kept in wishlist for weeks, bought on price drop but zip quality gap.', url: 'https://myntra.com' },
       { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_106', quote: 'Saved these block heels for 2 months waiting for a sale price drop.', url: 'https://myntra.com' },
@@ -155,10 +166,13 @@ const FINDING_DETAILS = {
     productImplication: "PRODUCT IMPLICATION: Implement automated wishlist price-drop notifications and back-in-stock activation alerts. Re-engaging high-intent shoppers within their 30-day window increases purchase frequency via product-based nudges."
   },
   rank_3: {
+    shortTitle: "Cross-platform price trust",
     categoryTag: "Trust gap",
-    problemStatement: "Hesitation from comparing prices and authenticity on official brand sites vs Myntra before checkout",
+    problemStatement: "Researching brand official website pricing vs Myntra and checking cancellation fee policies before checkout.",
     description: "Shoppers cross-check prices and product authenticity across external brand sites (e.g. Snitch official site vs. Myntra/Flipkart) and query community forums before checking out. Platform fee increases and price discrepancies trigger purchase hesitation.",
-    quietLine: "Based on 3 · 1.7% (3 of 179 screened items) across sources.",
+    quietLine: "Based on 3 signals across 2 sources (Reddit, YouTube).",
+    countFormatted: "3 · 1.7%",
+    barPct: 16,
     quotes: [
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_t3_1nywvf3', quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?', url: 'https://reddit.com/r/IndianFashionAddicts' },
       { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_comment_409', quote: 'Is Snitch official website price cheaper than Myntra listing?', url: 'https://youtube.com' },
@@ -167,10 +181,13 @@ const FINDING_DETAILS = {
     productImplication: "PRODUCT IMPLICATION: Display official brand store verification badges and price match guarantee trust seals on PDPs to prevent off-platform leakage and retain shopper checkout confidence."
   },
   rank_4: {
+    shortTitle: "Fabric & photo reality",
     categoryTag: "Confidence gap",
-    problemStatement: "Doubt whether studio app photos hide translucent fabric or darker reality colors",
+    problemStatement: "Hesitating in wishlist due to uncertainty whether studio photos hide thin translucent fabric or darker reality colors.",
     description: "Shoppers hesitate in wishlists due to doubts about fabric quality, translucent materials, or app photo studio lighting hiding darker reality colors. The gap between studio photography and physical product reality creates fear of disappointment.",
-    quietLine: "Based on 2 · 1.1% (2 of 179 screened items) across sources.",
+    quietLine: "Based on 2 signals across 1 source (Myntra PDP Reviews).",
+    countFormatted: "2 · 1.1%",
+    barPct: 11,
     quotes: [
       { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_103', quote: 'Color in reality is much darker than shown in the app photos. Kept it in shortlist for a month...', url: 'https://myntra.com' },
       { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_105', quote: 'Fabric feels very thin and see-through compared to app studio picture.', url: 'https://myntra.com' }
@@ -178,36 +195,54 @@ const FINDING_DETAILS = {
     productImplication: "PRODUCT IMPLICATION: Add unedited customer photo galleries, fabric GSM weight transparency specs, and realistic color lighting tags to PDPs to eliminate visual texture uncertainty."
   },
   rank_5: {
+    shortTitle: "Occasion choice dilemma",
     categoryTag: "Decision friction",
-    problemStatement: "Difficulty choosing between multiple shortlisted outfits saved for specific events",
+    problemStatement: "Short title-only posts asking for community help choosing between shortlisted outfits for specific events.",
     description: "Shoppers frequently save multiple similar items for specific events (weddings, receptions, third dates) and seek community feedback to choose between shortlisted options. The friction is a choice dilemma between competing saved items.",
-    quietLine: "Based on 12 · 6.7% (12 of 179 screened items) across sources.",
+    quietLine: "Based on 12 signals across 1 source (Reddit Fashion Communities).",
+    countFormatted: "12 · 6.7%",
+    barPct: 63,
     quotes: [
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1k48pyu', quote: 'Help me choose one dress for reception party', url: 'https://reddit.com/r/IndianFashionAddicts' },
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1e64y2w', quote: 'Help Me Choose an Outfit for My Third Date!', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_18oxzh9', quote: 'Help me choose from the following looks.', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1tkc1zw', quote: 'Help me choose the correct size?', url: 'https://reddit.com/r/IndianFashionAddicts' },
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1baajra', quote: 'Help Me Choose a Dress for My Birthday (Urgent!)', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' }
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1b70l87', quote: 'Help me to choose between 2 watches', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1ejncx2', quote: 'need help choosing my first white sneakers', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1p8u5ik', quote: 'A Quick Guide to Choosing the Right Jacket Length', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1qchfwa', quote: 'Help me choose outfit for coctail', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_19dw0cf', quote: 'Help me choose..', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_17lv7un', quote: 'Help me choose a gift for bf!', url: 'https://reddit.com/r/IndianFashionAddicts' }
     ],
     productImplication: "PRODUCT IMPLICATION: Introduce an in-app \'Compare Shortlist\' side-by-side tool and occasion styling voting polls to resolve choice paralyzed wishlists into final orders."
   },
   rank_6: {
+    shortTitle: "User segment patterns",
     categoryTag: "Segment pattern",
-    problemStatement: "Wishlisting behavior varies across buyer personas (occasion-driven vs office-wear shoppers)",
+    problemStatement: "Segment patterns (Occasion-Driven, Fit-Sensitive) derived from pre-purchase shopping inquiries.",
     description: "Shopping friction manifests differently across user personas — from occasion-driven buyers needing event approval, to working professionals seeking office-wear guidance, to brand-conscious shoppers evaluating website authenticity.",
-    quietLine: "Based on 5 · 2.8% (5 of 179 screened items) across sources.",
+    quietLine: "Based on 5 signals across 2 sources (Reddit, YouTube).",
+    countFormatted: "5 · 2.8%",
+    barPct: 26,
     quotes: [
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' },
       { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgzAm09_blzRXPpXdqV4', quote: 'Please do more office recommendations for upcoming weather in delhi', url: 'https://youtube.com' },
       { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgwVFhp7iC70ZCs2i', quote: 'Really enjoying the western wear /office wear options recently showcased on the channel. Really helps with shortlisting options', url: 'https://youtube.com' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_t3_1nywvf3', quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?', url: 'https://reddit.com/r/IndianFashionAddicts' }
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_t3_1nywvf3', quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1vmh03t', quote: 'Please suggest some good affordable brands for cotton and linen shirts for women.', url: 'https://reddit.com/r/IndianFashionAddicts' }
     ],
     productImplication: "PRODUCT IMPLICATION: Personalize wishlist notification timing and PDP recommendation feeds based on persona intent signals (office wear vs. occasion wear) to accelerate 30-day purchases."
   },
   q4_investigated: {
+    shortTitle: "Photo vs reality doubts",
     categoryTag: "Confidence gap",
-    problemStatement: "Investigating whether app studio photos hide translucent fabric or darker reality colors",
+    problemStatement: "Investigating whether app studio photos hide translucent fabric or darker reality colors.",
     description: "Investigation into whether studio photography misleads shoppers regarding fabric texture or color shades. Current evidence confirms color tone discrepancy and unexpected translucent fabric thickness in PDP reviews.",
-    quietLine: "Based on 2 · 1.1% (2 of 179 screened items) across sources.",
+    quietLine: "Based on 2 signals across 1 source (Myntra PDP Reviews).",
+    countFormatted: "2 · 1.1%",
+    barPct: 11,
     quotes: [
       { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_103', quote: 'Color in reality is much darker than shown in the app photos. Kept it in shortlist for a month...', url: 'https://myntra.com' },
       { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_107', quote: 'Stitching quality came off after single hand wash. Very disappointed after waiting so long to buy during discount.', url: 'https://myntra.com' }
@@ -215,32 +250,48 @@ const FINDING_DETAILS = {
     productImplication: "PRODUCT IMPLICATION: Mandate unedited customer photo uploads in reviews and add photo-accuracy voting flags to reduce returns and resolve photo reality doubts."
   },
   q5_investigated: {
+    shortTitle: "Occasion choice dilemma",
     categoryTag: "Decision friction",
-    problemStatement: "Investigating how shoppers deliberate between competing saved items for specific events",
+    problemStatement: "Investigating how shoppers deliberate between competing saved items for specific events.",
     description: "Investigation into how shoppers evaluate competing items saved in their wishlist. Public evidence is dominated by short title-only community posts asking for choice help for specific events.",
-    quietLine: "Based on 12 · 6.7% (12 of 179 screened items) across sources.",
+    quietLine: "Based on 12 signals across 1 source (Reddit Fashion Communities).",
+    countFormatted: "12 · 6.7%",
+    barPct: 63,
     quotes: [
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1k48pyu', quote: 'Help me choose one dress for reception party', url: 'https://reddit.com/r/IndianFashionAddicts' },
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1e64y2w', quote: 'Help Me Choose an Outfit for My Third Date!', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_18oxzh9', quote: 'Help me choose from the following looks.', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1tkc1zw', quote: 'Help me choose the correct size?', url: 'https://reddit.com/r/IndianFashionAddicts' },
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1baajra', quote: 'Help Me Choose a Dress for My Birthday (Urgent!)', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' }
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1b70l87', quote: 'Help me to choose between 2 watches', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1ejncx2', quote: 'need help choosing my first white sneakers', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1p8u5ik', quote: 'A Quick Guide to Choosing the Right Jacket Length', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1qchfwa', quote: 'Help me choose outfit for coctail', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_19dw0cf', quote: 'Help me choose..', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_17lv7un', quote: 'Help me choose a gift for bf!', url: 'https://reddit.com/r/IndianFashionAddicts' }
     ],
     productImplication: "PRODUCT IMPLICATION: Provide a wishlist comparison matrix (price, fabric, rating, delivery speed side-by-side) to convert shortlist deliberation into active checkout."
   },
   q9_investigated: {
+    shortTitle: "User segment patterns",
     categoryTag: "Segment pattern",
-    problemStatement: "Investigating user segment differences in wishlisting intent and shopping friction",
+    problemStatement: "Investigating user segment differences in wishlisting intent and shopping friction.",
     description: "Investigation into user segment variation. Public review data rarely includes explicit demographic tags (unknown for ~98% of records), but distinct shopping archetypes emerge across occasion wear vs. office wear inquiries.",
-    quietLine: "Based on 5 · 2.8% (5 of 179 screened items) across sources.",
+    quietLine: "Based on 5 signals across 2 sources (Reddit, YouTube).",
+    countFormatted: "5 · 2.8%",
+    barPct: 26,
     quotes: [
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' },
       { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgzAm09_blzRXPpXdqV4', quote: 'Please do more office recommendations for upcoming weather in delhi', url: 'https://youtube.com' },
       { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgwVFhp7iC70ZCs2i', quote: 'Really enjoying the western wear /office wear options recently showcased on the channel. Really helps with shortlisting options', url: 'https://youtube.com' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_t3_1nywvf3', quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?...', url: 'https://reddit.com/r/IndianFashionAddicts' }
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_t3_1nywvf3', quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?...', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1vmh03t', quote: 'Please suggest some good affordable brands for cotton and linen shirts for women.', url: 'https://reddit.com/r/IndianFashionAddicts' }
     ],
     productImplication: "PRODUCT IMPLICATION: Segment wishlist notifications by intent persona (workwear vs. occasion wear) rather than generic reminders to accelerate 30-day purchases."
   }
 };
+
 
 
 function classifyLinesText(inputText) {
@@ -666,220 +717,71 @@ export default function App() {
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 {/* Ranked Finding 1 (5 · 2.8% max count -> 7/19 = 37%) */}
-                <div className="finding-row">
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-                      <span className="pill-moderate">Moderate Evidence</span>
-                      <h3 style={{ fontSize: '1.05rem', fontWeight: '600' }}>
-                        1. Peer Sizing & Creator Body Measurement Guidance
+                <div className="finding-row" id="rank_1" style={{ cursor: "pointer" }} onClick={() => toggleExpand("rank_1")}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
+                      <h3 style={{ fontSize: "1.05rem", fontWeight: "600", color: "var(--ink)" }}>
+                        {FINDING_DETAILS["rank_1"].shortTitle}
                       </h3>
+                      <span className="category-tag">{FINDING_DETAILS["rank_1"].categoryTag}</span>
                     </div>
-                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>7 · 3.9%</span>
+                    <span style={{ fontSize: "0.85rem", color: "var(--muted)", fontWeight: "500" }}>{FINDING_DETAILS["rank_1"].countFormatted}</span>
                   </div>
-                  <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
-                    <div className="bar-fill-animated" style={{ width: `${Math.round((7 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
-                  </div>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '4px' }}>
-                    Asking creators for try-on height, waist, and bust measurements to eliminate size chart uncertainty.
+                  <p className="problem-statement-line">
+                    {FINDING_DETAILS["rank_1"].problemStatement}
                   </p>
-                  <button onClick={() => toggleExpand('rank_1')} style={{ marginTop: '10px', background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.82rem', fontWeight: '600', cursor: 'pointer', padding: 0 }}>
-                    {expandedCards['rank_1'] ? '▲ Hide Detail' : '▼ Expand Detail'}
+                  <div style={{ width: "100%", height: "6px", backgroundColor: "var(--brand-tint-2)", borderRadius: "3px", margin: "10px 0 6px 0", overflow: "hidden" }}>
+                    <div className="bar-fill-animated" style={{ width: `${FINDING_DETAILS["rank_1"].barPct}%`, height: "100%", backgroundColor: "var(--brand)", borderRadius: "3px" }}></div>
+                  </div>
+                  <button onClick={(e) => { e.stopPropagation(); toggleExpand("rank_1"); }} style={{ marginTop: "6px", background: "none", border: "none", color: "var(--brand-dark)", fontSize: "0.82rem", fontWeight: "600", cursor: "pointer", padding: 0 }}>
+                    {expandedCards["rank_1"] ? "▲ Hide Detail" : "▼ Expand Detail"}
                   </button>
-                  {expandedCards['rank_1'] && (
-                    <div className="detail-expanded" style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
-                      <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Which size do u wear ? (yt_UgzVyaf2RGHG6Vw4II14)"</div>
-                      <div><strong>Sources:</strong> YouTube Comments, Myntra PDP Q&A</div>
-                    </div>
-                  )}
-                </div>
 
-                {/* Ranked Finding 2 (3/19 = 16%) */}
-                <div className="finding-row">
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-                      <span className="pill-strong">Strong Evidence</span>
-                      <h3 style={{ fontSize: '1.05rem', fontWeight: '600' }}>
-                        2. Wishlist Price-Drop & Restock Activation
-                      </h3>
-                    </div>
-                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>3 · 1.7%</span>
-                  </div>
-                  <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
-                    <div className="bar-fill-animated" style={{ width: `${Math.round((3 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
-                  </div>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '4px' }}>
-                    Saving items in wishlist for weeks or months waiting for sale price drops.
-                  </p>
-                  <button onClick={() => toggleExpand('rank_2')} style={{ marginTop: '10px', background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.82rem', fontWeight: '600', cursor: 'pointer', padding: 0 }}>
-                    {expandedCards['rank_2'] ? '▲ Hide Detail' : '▼ Expand Detail'}
-                  </button>
-                  {expandedCards['rank_2'] && (
-                    <div className="detail-expanded" style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
-                      <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Kept in wishlist for weeks, bought on price drop but zip quality gap. (pdp_rev_110)"</div>
-                      <div><strong>Source:</strong> Myntra PDP Reviews</div>
-                    </div>
-                  )}
-                </div>
-
-                {/* Ranked Finding 3 (3/19 = 16%) */}
-                <div className="finding-row">
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-                      <span className="pill-moderate">Moderate Evidence</span>
-                      <h3 style={{ fontSize: '1.05rem', fontWeight: '600' }}>
-                        3. Cross-Platform Price & Trust Transparency
-                      </h3>
-                    </div>
-                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>3 · 1.7%</span>
-                  </div>
-                  <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
-                    <div className="bar-fill-animated" style={{ width: `${Math.round((3 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
-                  </div>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '4px' }}>
-                    Researching brand official website pricing vs Myntra and checking cancellation fee policies.
-                  </p>
-                  <button onClick={() => toggleExpand('rank_3')} style={{ marginTop: '10px', background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.82rem', fontWeight: '600', cursor: 'pointer', padding: 0 }}>
-                    {expandedCards['rank_3'] ? '▲ Hide Detail' : '▼ Expand Detail'}
-                  </button>
-                  {expandedCards['rank_3'] && (
-                    <div className="detail-expanded" style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
-                      <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Why is Snitch's price and quality different on official website vs Flipkart/Myntra? (reddit_t3_1nywvf3)"</div>
-                      <div><strong>Sources:</strong> Reddit, YouTube Comments</div>
-                    </div>
-                  )}
-                </div>
-
-                {/* Ranked Finding 4 (2/19 = 11%) */}
-                <div className="finding-row">
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-                      <span className="pill-directional">Early Signal</span>
-                      <h3 style={{ fontSize: '1.05rem', fontWeight: '600' }}>
-                        4. Fabric Transparency & Photo Reality Guarantee
-                      </h3>
-                    </div>
-                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>2 · 1.1%</span>
-                  </div>
-                  <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
-                    <div className="bar-fill-animated" style={{ width: `${Math.round((2 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
-                  </div>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '4px' }}>
-                    Hesitating in wishlist due to uncertainty whether studio photos hide thin translucent fabric.
-                  </p>
-                  <button onClick={() => toggleExpand('rank_4')} style={{ marginTop: '10px', background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.82rem', fontWeight: '600', cursor: 'pointer', padding: 0 }}>
-                    {expandedCards['rank_4'] ? '▲ Hide Detail' : '▼ Expand Detail'}
-                  </button>
-                  {expandedCards['rank_4'] && (
-                    <div className="detail-expanded" style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
-                      <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Color in reality is much darker than shown in the app photos. Kept it in shortlist for a month... (pdp_rev_103)"</div>
-                      <div><strong>Source:</strong> Myntra PDP Reviews</div>
-                    </div>
-                  )}
-                </div>
-
-                {/* Ranked Finding 5 (12/19 = 63%) */}
-                <div className="finding-row">
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-                      <span className="pill-directional">Early Signal</span>
-                      <h3 style={{ fontSize: '1.05rem', fontWeight: '600' }}>
-                        5. Occasion-Based Shortlist Choice Assistant
-                      </h3>
-                    </div>
-                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>12 · 6.7%</span>
-                  </div>
-                  <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
-                    <div className="bar-fill-animated" style={{ width: `${Math.round((12 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
-                  </div>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '4px' }}>
-                    Short title-only posts asking for community help choosing between shortlisted outfits for specific events.
-                  </p>
-                  <button onClick={() => toggleExpand('rank_5')} style={{ marginTop: '10px', background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.82rem', fontWeight: '600', cursor: 'pointer', padding: 0 }}>
-                    {expandedCards['rank_5'] ? '▲ Hide Detail' : '▼ Expand Detail'}
-                  </button>
-                  {expandedCards['rank_5'] && (
-                    <div className="detail-expanded" style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
-                      <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Help me choose one dress for reception party (reddit_rss_t3_1k48pyu)"</div>
-                      <div><strong>Source:</strong> Reddit (r/IndianFashionAddicts)</div>
-                    </div>
-                  )}
-                </div>
-
-                {/* Ranked Finding 6 (19/19 = 100%) */}
-                <div className="finding-row">
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-                      <span className="pill-directional">Early Signal</span>
-                      <h3 style={{ fontSize: '1.05rem', fontWeight: '600' }}>
-                        6. User Segment Behavioral Archetypes
-                      </h3>
-                    </div>
-                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>5 · 2.8%</span>
-                  </div>
-                  <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
-                    <div className="bar-fill-animated" style={{ width: '100%', height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
-                  </div>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginTop: '4px' }}>
-                    Segment patterns (Occasion-Driven, Fit-Sensitive) derived from pre-purchase shopping inquiries.
-                  </p>
-                  <button onClick={() => toggleExpand('rank_6')} style={{ marginTop: '10px', background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.82rem', fontWeight: '600', cursor: 'pointer', padding: 0 }}>
-                    {expandedCards['rank_6'] ? '▲ Hide Detail' : '▼ Expand Detail'}
-                  </button>
-                  {expandedCards['rank_6'] && (
-                    <div className="detail-expanded" style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid var(--line)', fontSize: '0.85rem', color: 'var(--ink)' }}>
-                      <div style={{ fontStyle: 'italic', color: 'var(--muted)', marginBottom: '4px' }}>"Help me choose what to wear for my very close friend's engagement! (reddit_rss_t3_1d82ls4)"</div>
-                      <div><strong>Sources:</strong> Reddit, Myntra PDP Reviews</div>
-                    </div>
-                  )}
-                </div>
-
-              </div>
-            </section>
-
-            {/* (3) Where the opportunity is (Re-sorted by journey stage) */}
-            <section style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-              <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
-                <h2 style={{ fontSize: '1.4rem', fontWeight: '600' }}>
-                  Where the opportunity is
-                </h2>
-                <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginTop: '4px' }}>
-                  Findings re-sorted by customer journey stage.
-                </p>
-              </div>
-
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                {/* Stage 1 */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                  <h3 style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--brand-dark)' }}>
-                    1. While Item Is Wishlisted (Direct Pre-Purchase Friction)
-                  </h3>
-                  <div className="finding-row">
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <span className="category-tag">Sizing doubt</span>
-                        <strong style={{ fontSize: '0.95rem' }}>Peer Sizing & Creator Body Measurement Guidance</strong>
+                  {expandedCards["rank_1"] && (
+                    <div className="detail-expanded" style={{ marginTop: "14px", paddingTop: "14px", borderTop: "1px solid var(--line)", display: "flex", flexDirection: "column", gap: "14px" }}>
+                      
+                      <div className="finding-description">
+                        {FINDING_DETAILS["rank_1"].description}
                       </div>
-                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>7 · 3.9%</span>
-                    </div>
-                  </div>
-                  <div className="finding-row">
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <span className="category-tag">Value & timing</span>
-                        <strong style={{ fontSize: '0.95rem' }}>Wishlist Price-Drop & Restock Activation</strong>
+
+                      <div style={{ fontSize: "0.78rem", fontWeight: "600", textTransform: "uppercase", color: "var(--muted)", letterSpacing: "0.04em" }}>
+                        VERBATIM EVIDENCE ({FINDING_DETAILS["rank_1"].quotes.length} REAL QUOTES):
                       </div>
-                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>3 · 1.7%</span>
-                    </div>
-                  </div>
-                  <div className="finding-row">
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <span className="category-tag">Confidence gap</span>
-                        <strong style={{ fontSize: '0.95rem' }}>Fabric Transparency & Photo Reality Guarantee</strong>
+
+                      <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                        {FINDING_DETAILS["rank_1"].quotes.map((q, qIdx) => (
+                          <div key={qIdx} className="quote-box-citation">
+                            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "8px" }}>
+                              <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                                <span className="pill-moderate" style={{ fontSize: "0.72rem" }}>{q.source}</span>
+                                <span style={{ fontSize: "0.78rem", color: "var(--muted)" }}>{q.date}</span>
+                              </div>
+                              {q.url && (
+                                <a href={q.url} target="_blank" rel="noopener noreferrer" className="ext-link-btn">
+                                  View original ↗
+                                </a>
+                              )}
+                            </div>
+                            <div style={{ fontSize: "0.9rem", color: "var(--ink)", lineHeight: "1.5" }}>
+                              "{q.quote}"
+                            </div>
+                            <div className="source-id-mono">
+                              source_id: {q.source_id}
+                            </div>
+                          </div>
+                        ))}
                       </div>
-                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>2 · 1.1%</span>
+
+                      <div className="quiet-evidence-line">
+                        {FINDING_DETAILS["rank_1"].quietLine}
+                      </div>
+
+                      <div className="product-implication-box">
+                        <strong>{FINDING_DETAILS["rank_1"].productImplication}</strong>
+                      </div>
+
                     </div>
-                  </div>
+                  )}
                 </div>
 
                 {/* Stage 2 */}
