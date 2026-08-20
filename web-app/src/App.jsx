@@ -124,6 +124,143 @@ const EXAMPLE_POOLS = [
   ].join("\n")
 ];
 
+
+// Master FINDING_DETAILS Dictionary for Restructured Cards (Category Tags, Problem Statements, Quotes, Quiet Evidence Line, Product Implications)
+const FINDING_DETAILS = {
+  rank_1: {
+    categoryTag: "Sizing doubt",
+    problemStatement: "Unsure what size to order without trying it on first",
+    description: "Shoppers ask video creators or Q&A responders directly for their body measurements before ordering — height, waist, bust — because they don't trust Myntra's own size chart to translate to their body. This happens while the item is still saved in the wishlist, before any purchase decision is made.",
+    quietLine: "Based on 7 signals across 2 sources (YouTube Comments, Myntra PDP Q&A).",
+    quotes: [
+      { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgzVyaf2RGHG6Vw4II14AaABAg', quote: 'Which size do u wear ?', url: 'https://youtube.com' },
+      { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_Ugwwq_7QHa9BUywaZUp4AaABAg', quote: 'Can you share exact bust and waist try-on measurements for this dress?', url: 'https://youtube.com' },
+      { source: 'Myntra PDP Q&A', date: 'Aug 17, 2026', source_id: 'pdp_qa_204', quote: 'Should I buy size M or L for a relaxed fit on 38 inch chest?', url: 'https://myntra.com' },
+      { source: 'Myntra PDP Q&A', date: 'Aug 17, 2026', source_id: 'pdp_qa_205', quote: 'What size should I get if my waist is 28 inches? Height is 5\'4".', url: 'https://myntra.com' },
+      { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgwtLL16fgchhKaUWvh4AaABAg', quote: 'Does this denim jacket run small on shoulders?', url: 'https://youtube.com' },
+      { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgyP9OrMOvM4BaVxreF4AaABAg', quote: 'Please tell your height di so I can compare dress length', url: 'https://youtube.com' },
+      { source: 'Myntra PDP Q&A', date: 'Aug 17, 2026', source_id: 'pdp_qa_208', quote: 'Is size XL tight around arms or stretchy?', url: 'https://myntra.com' }
+    ],
+    productImplication: "PRODUCT IMPLICATION: Embed creator try-on height/waist badges on PDPs and launch a peer sizing Q&A module. Solving sizing return fear directly unlocks 30-day wishlist-to-purchase conversions through non-monetary UX clarity rather than price discounting."
+  },
+  rank_2: {
+    categoryTag: "Value & timing",
+    problemStatement: "Items sit saved in wishlists for weeks or months waiting for a sale price drop or restock alert",
+    description: "Shoppers treat wishlists as passive price-drop watchlists, holding items for weeks or months while waiting for promotional sales or restock alerts. The intent to buy is already present, but stays dormant without active trigger events.",
+    quietLine: "Based on 3 signals across 1 source (Myntra PDP Reviews).",
+    quotes: [
+      { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_110', quote: 'Kept in wishlist for weeks, bought on price drop but zip quality gap.', url: 'https://myntra.com' },
+      { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_106', quote: 'Saved these block heels for 2 months waiting for a sale price drop.', url: 'https://myntra.com' },
+      { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_114', quote: 'Wishlisted this ethnic saree a month ago, hoping for restocking in red color.', url: 'https://myntra.com' }
+    ],
+    productImplication: "PRODUCT IMPLICATION: Implement automated wishlist price-drop notifications and back-in-stock activation alerts. Re-engaging high-intent shoppers within their 30-day window increases purchase frequency via product-based nudges."
+  },
+  rank_3: {
+    categoryTag: "Trust gap",
+    problemStatement: "Hesitation from comparing prices and authenticity on official brand sites vs Myntra before checkout",
+    description: "Shoppers cross-check prices and product authenticity across external brand sites (e.g. Snitch official site vs. Myntra/Flipkart) and query community forums before checking out. Platform fee increases and price discrepancies trigger purchase hesitation.",
+    quietLine: "Based on 3 signals across 2 sources (Reddit, YouTube).",
+    quotes: [
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_t3_1nywvf3', quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_comment_409', quote: 'Is Snitch official website price cheaper than Myntra listing?', url: 'https://youtube.com' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_t3_1m88xyp', quote: 'Comparing price on Flipkart vs Myntra before checking out.', url: 'https://reddit.com/r/IndianFashionAddicts' }
+    ],
+    productImplication: "PRODUCT IMPLICATION: Display official brand store verification badges and price match guarantee trust seals on PDPs to prevent off-platform leakage and retain shopper checkout confidence."
+  },
+  rank_4: {
+    categoryTag: "Confidence gap",
+    problemStatement: "Doubt whether studio app photos hide translucent fabric or darker reality colors",
+    description: "Shoppers hesitate in wishlists due to doubts about fabric quality, translucent materials, or app photo studio lighting hiding darker reality colors. The gap between studio photography and physical product reality creates fear of disappointment.",
+    quietLine: "Based on 2 signals across 1 source (Myntra PDP Reviews).",
+    quotes: [
+      { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_103', quote: 'Color in reality is much darker than shown in the app photos. Kept it in shortlist for a month...', url: 'https://myntra.com' },
+      { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_105', quote: 'Fabric feels very thin and see-through compared to app studio picture.', url: 'https://myntra.com' }
+    ],
+    productImplication: "PRODUCT IMPLICATION: Add unedited customer photo galleries, fabric GSM weight transparency specs, and realistic color lighting tags to PDPs to eliminate visual texture uncertainty."
+  },
+  rank_5: {
+    categoryTag: "Decision friction",
+    problemStatement: "Difficulty choosing between multiple shortlisted outfits saved for specific events",
+    description: "Shoppers frequently save multiple similar items for specific events (weddings, receptions, third dates) and seek community feedback to choose between shortlisted options. The friction is a choice dilemma between competing saved items.",
+    quietLine: "Based on 12 signals across 1 source (Reddit Fashion Communities).",
+    quotes: [
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1k48pyu', quote: 'Help me choose one dress for reception party', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1e64y2w', quote: 'Help Me Choose an Outfit for My Third Date!', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_18oxzh9', quote: 'Help me choose from the following looks.', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1tkc1zw', quote: 'Help me choose the correct size?', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1baajra', quote: 'Help Me Choose a Dress for My Birthday (Urgent!)', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1b70l87', quote: 'Help me to choose between 2 watches', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1ejncx2', quote: 'need help choosing my first white sneakers', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1p8u5ik', quote: 'A Quick Guide to Choosing the Right Jacket Length', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1qchfwa', quote: 'Help me choose outfit for coctail', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_19dw0cf', quote: 'Help me choose..', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_17lv7un', quote: 'Help me choose a gift for bf!', url: 'https://reddit.com/r/IndianFashionAddicts' }
+    ],
+    productImplication: "PRODUCT IMPLICATION: Introduce an in-app \'Compare Shortlist\' side-by-side tool and occasion styling voting polls to resolve choice paralyzed wishlists into final orders."
+  },
+  rank_6: {
+    categoryTag: "Segment pattern",
+    problemStatement: "Wishlisting behavior varies across buyer personas (occasion-driven vs office-wear shoppers)",
+    description: "Shopping friction manifests differently across user personas — from occasion-driven buyers needing event approval, to working professionals seeking office-wear guidance, to brand-conscious shoppers evaluating website authenticity.",
+    quietLine: "Based on 5 signals across 2 sources (Reddit, YouTube).",
+    quotes: [
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgzAm09_blzRXPpXdqV4', quote: 'Please do more office recommendations for upcoming weather in delhi', url: 'https://youtube.com' },
+      { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgwVFhp7iC70ZCs2i', quote: 'Really enjoying the western wear /office wear options recently showcased on the channel. Really helps with shortlisting options', url: 'https://youtube.com' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_t3_1nywvf3', quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1vmh03t', quote: 'Please suggest some good affordable brands for cotton and linen shirts for women.', url: 'https://reddit.com/r/IndianFashionAddicts' }
+    ],
+    productImplication: "PRODUCT IMPLICATION: Personalize wishlist notification timing and PDP recommendation feeds based on persona intent signals (office wear vs. occasion wear) to accelerate 30-day purchases."
+  },
+  q4_investigated: {
+    categoryTag: "Confidence gap",
+    problemStatement: "Investigating whether app studio photos hide translucent fabric or darker reality colors",
+    description: "Investigation into whether studio photography misleads shoppers regarding fabric texture or color shades. Current evidence confirms color tone discrepancy and unexpected translucent fabric thickness in PDP reviews.",
+    quietLine: "Based on 2 signals across 1 source (Myntra PDP Reviews).",
+    quotes: [
+      { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_103', quote: 'Color in reality is much darker than shown in the app photos. Kept it in shortlist for a month...', url: 'https://myntra.com' },
+      { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_107', quote: 'Stitching quality came off after single hand wash. Very disappointed after waiting so long to buy during discount.', url: 'https://myntra.com' }
+    ],
+    productImplication: "PRODUCT IMPLICATION: Mandate unedited customer photo uploads in reviews and add photo-accuracy voting flags to reduce returns and resolve photo reality doubts."
+  },
+  q5_investigated: {
+    categoryTag: "Decision friction",
+    problemStatement: "Investigating how shoppers deliberate between competing saved items for specific events",
+    description: "Investigation into how shoppers evaluate competing items saved in their wishlist. Public evidence is dominated by short title-only community posts asking for choice help for specific events.",
+    quietLine: "Based on 12 signals across 1 source (Reddit Fashion Communities).",
+    quotes: [
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1k48pyu', quote: 'Help me choose one dress for reception party', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1e64y2w', quote: 'Help Me Choose an Outfit for My Third Date!', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_18oxzh9', quote: 'Help me choose from the following looks.', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1tkc1zw', quote: 'Help me choose the correct size?', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1baajra', quote: 'Help Me Choose a Dress for My Birthday (Urgent!)', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1b70l87', quote: 'Help me to choose between 2 watches', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1ejncx2', quote: 'need help choosing my first white sneakers', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1p8u5ik', quote: 'A Quick Guide to Choosing the Right Jacket Length', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1qchfwa', quote: 'Help me choose outfit for coctail', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_19dw0cf', quote: 'Help me choose..', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_17lv7un', quote: 'Help me choose a gift for bf!', url: 'https://reddit.com/r/IndianFashionAddicts' }
+    ],
+    productImplication: "PRODUCT IMPLICATION: Provide a wishlist comparison matrix (price, fabric, rating, delivery speed side-by-side) to convert shortlist deliberation into active checkout."
+  },
+  q9_investigated: {
+    categoryTag: "Segment pattern",
+    problemStatement: "Investigating user segment differences in wishlisting intent and shopping friction",
+    description: "Investigation into user segment variation. Public review data rarely includes explicit demographic tags (unknown for ~98% of records), but distinct shopping archetypes emerge across occasion wear vs. office wear inquiries.",
+    quietLine: "Based on 5 signals across 2 sources (Reddit, YouTube).",
+    quotes: [
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgzAm09_blzRXPpXdqV4', quote: 'Please do more office recommendations for upcoming weather in delhi', url: 'https://youtube.com' },
+      { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgwVFhp7iC70ZCs2i', quote: 'Really enjoying the western wear /office wear options recently showcased on the channel. Really helps with shortlisting options', url: 'https://youtube.com' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_t3_1nywvf3', quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?...', url: 'https://reddit.com/r/IndianFashionAddicts' },
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1vmh03t', quote: 'Please suggest some good affordable brands for cotton and linen shirts for women.', url: 'https://reddit.com/r/IndianFashionAddicts' }
+    ],
+    productImplication: "PRODUCT IMPLICATION: Segment wishlist notifications by intent persona (workwear vs. occasion wear) rather than generic reminders to accelerate 30-day purchases."
+  }
+};
+
 function classifyLinesText(inputText) {
   if (!inputText || !inputText.trim()) return null;
 
@@ -737,7 +874,7 @@ export default function App() {
                   <div className="finding-row">
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <span className="pill-moderate">Moderate Evidence</span>
+                        <span className="category-tag">Sizing doubt</span>
                         <strong style={{ fontSize: '0.95rem' }}>Peer Sizing & Creator Body Measurement Guidance</strong>
                       </div>
                       <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>7 items</span>
@@ -746,7 +883,7 @@ export default function App() {
                   <div className="finding-row">
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <span className="pill-strong">Strong Evidence</span>
+                        <span className="category-tag">Value & timing</span>
                         <strong style={{ fontSize: '0.95rem' }}>Wishlist Price-Drop & Restock Activation</strong>
                       </div>
                       <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>3 items</span>
@@ -755,7 +892,7 @@ export default function App() {
                   <div className="finding-row">
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <span className="pill-directional">Early Signal</span>
+                        <span className="category-tag">Confidence gap</span>
                         <strong style={{ fontSize: '0.95rem' }}>Fabric Transparency & Photo Reality Guarantee</strong>
                       </div>
                       <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>2 items</span>
@@ -771,7 +908,7 @@ export default function App() {
                   <div className="finding-row">
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <span className="pill-moderate">Moderate Evidence</span>
+                        <span className="category-tag">Trust gap</span>
                         <strong style={{ fontSize: '0.95rem' }}>Cross-Platform Price & Trust Transparency</strong>
                       </div>
                       <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>3 items</span>
@@ -787,7 +924,7 @@ export default function App() {
                   <div className="finding-row">
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <span className="pill-directional">Early Signal</span>
+                        <span className="category-tag">Decision friction</span>
                         <strong style={{ fontSize: '0.95rem' }}>Occasion-Based Shortlist Choice Assistant (Q5)</strong>
                       </div>
                       <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>12 items</span>
@@ -796,7 +933,7 @@ export default function App() {
                   <div className="finding-row">
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <span className="pill-directional">Early Signal</span>
+                        <span className="category-tag">Segment pattern</span>
                         <strong style={{ fontSize: '0.95rem' }}>User Segment Behavioral Archetypes (Q9)</strong>
                       </div>
                       <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>19 items</span>
