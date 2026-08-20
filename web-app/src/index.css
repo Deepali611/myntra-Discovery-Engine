@@ -363,6 +363,106 @@ h1, h2, h3 {
   }
 }
 
+/* Hero Large Number (72px) */
+.hero-stat-large {
+  font-size: 72px;
+  font-weight: 800;
+  color: var(--brand);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+/* Surprising Insight Callout Box */
+.surprising-callout-box {
+  background-color: #FFF8FA;
+  border: 1px solid #FFE4E9;
+  border-left: 4px solid var(--brand);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 12px rgba(232, 0, 113, 0.05);
+}
+
+/* Assumed vs Found Cards */
+.assumed-vs-found-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.assumed-vs-found-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.assumed-line {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.assumed-badge {
+  font-weight: 700;
+  color: #8C8C8C;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+}
+
+.found-line {
+  font-size: 0.92rem;
+  color: var(--ink);
+  font-weight: 500;
+  line-height: 1.48;
+}
+
+.found-badge {
+  font-weight: 700;
+  color: var(--brand-dark);
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+}
+
+/* Dynamic Card Scaling (By Volume Importance) */
+.card-scale-high {
+  padding: 22px 24px !important;
+  border-left: 4px solid var(--brand) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+.card-scale-high .card-title {
+  font-size: 1.18rem !important;
+  font-weight: 700 !important;
+}
+
+.card-scale-mid {
+  padding: 16px 20px !important;
+  border-left: 3px solid var(--brand-tint-2) !important;
+}
+
+.card-scale-mid .card-title {
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+}
+
+.card-scale-low {
+  padding: 12px 16px !important;
+  border-left: 2px solid var(--line) !important;
+}
+
+.card-scale-low .card-title {
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+}
+
 /* Category Tag Pill (Nykaa Style) */
 .category-tag {
   background-color: var(--brand-tint);

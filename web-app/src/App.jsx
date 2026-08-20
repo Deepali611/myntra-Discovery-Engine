@@ -397,6 +397,14 @@ export default function App() {
   const [expandedCards, setExpandedCards] = useState({});
   const [findingsSortView, setFindingsSortView] = useState('frequency');
 
+  const getCardScaleClass = (item) => {
+    if (!item) return 'card-scale-mid';
+    if (item.barPct >= 35) return 'card-scale-high';
+    if (item.barPct >= 15) return 'card-scale-mid';
+    return 'card-scale-low';
+  };
+
+
   // Live Analyzer Initial State: Starts empty
   const [analyzerInput, setAnalyzerInput] = useState('');
   const [analyzedResults, setAnalyzedResults] = useState(null);
@@ -690,7 +698,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* (2) What users are telling us (With Animated View Toggle: By Frequency / By Journey Stage) */}
+            {/* (2) What users are telling us (With Assumed vs. Found, Scaled Cards & View Toggle) */}
             <section style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '40px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '16px', borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
                 <div>
@@ -719,17 +727,50 @@ export default function App() {
                 </div>
               </div>
 
-              {/* View 1: By Frequency (Ranked Count Order) */}
+              {/* Assumed vs. Found Sequence */}
+              <div style={{ marginBottom: '12px' }}>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--ink)', marginBottom: '4px' }}>
+                  Assumed vs. Found
+                </h3>
+                <p style={{ fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '14px' }}>
+                  How real feedback challenges common e-commerce assumptions.
+                </p>
+
+                <div className="assumed-vs-found-grid">
+                  <div className="assumed-vs-found-card">
+                    <div className="assumed-line"><span className="assumed-badge">ASSUMED:</span> Users forget what's in their wishlist.</div>
+                    <div className="found-line"><span className="found-badge">FOUND:</span> People actively revisit saved items — the block isn't memory, it's unresolved sizing and quality doubt.</div>
+                  </div>
+
+                  <div className="assumed-vs-found-card">
+                    <div className="assumed-line"><span className="assumed-badge">ASSUMED:</span> Price is the main reason wishlisted items don't convert.</div>
+                    <div className="found-line"><span className="found-badge">FOUND:</span> Our strongest evidence points to sizing uncertainty and photo-vs-reality doubt — not price.</div>
+                  </div>
+
+                  <div className="assumed-vs-found-card">
+                    <div className="assumed-line"><span className="assumed-badge">ASSUMED:</span> A wishlist means someone plans to buy.</div>
+                    <div className="found-line"><span className="found-badge">FOUND:</span> A meaningful share of saves are bookmarking or inspiration, never intended as a purchase plan.</div>
+                  </div>
+
+                  <div className="assumed-vs-found-card">
+                    <div className="assumed-line"><span className="assumed-badge">ASSUMED:</span> App store reviews tell us why items sit unbought.</div>
+                    <div className="found-line"><span className="found-badge">FOUND:</span> App store reviews skew heavily post-purchase — true wishlist friction is revealed on PDP Q&A and community forums.</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* View 1: By Frequency (Ranked Count Order with Scaled Card Sizing) */}
               {findingsSortView === 'frequency' && (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                   {['rank_1', 'rank_2', 'rank_3', 'rank_4', 'rank_5', 'rank_6', 'q4_investigated', 'q5_investigated', 'q9_investigated'].map((fKey) => {
                     const item = FINDING_DETAILS[fKey];
                     if (!item) return null;
+                    const scaleClass = getCardScaleClass(item);
                     return (
-                      <div key={fKey} className="finding-row finding-card-transition" id={fKey} style={{ cursor: "pointer" }} onClick={() => toggleExpand(fKey)}>
+                      <div key={fKey} className={`finding-row finding-card-transition ${scaleClass}`} id={fKey} style={{ cursor: "pointer" }} onClick={() => toggleExpand(fKey)}>
                         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
                           <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
-                            <h3 style={{ fontSize: "1.05rem", fontWeight: "600", color: "var(--ink)" }}>
+                            <h3 className="card-title" style={{ color: "var(--ink)" }}>
                               {item.shortTitle}
                             </h3>
                             <span className="category-tag">{item.categoryTag}</span>
@@ -780,7 +821,7 @@ export default function App() {
                 </div>
               )}
 
-              {/* View 2: By Journey Stage (Grouped Stage Order) */}
+              {/* View 2: By Journey Stage (Grouped Stage Order with Scaled Card Sizing) */}
               {findingsSortView === 'journey' && (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
                   {[
@@ -814,11 +855,12 @@ export default function App() {
                         {stageGroup.keys.map((fKey) => {
                           const item = FINDING_DETAILS[fKey];
                           if (!item) return null;
+                          const scaleClass = getCardScaleClass(item);
                           return (
-                            <div key={fKey} className="finding-row finding-card-transition" id={`stage_${fKey}`} style={{ cursor: "pointer" }} onClick={() => toggleExpand(fKey)}>
+                            <div key={fKey} className={`finding-row finding-card-transition ${scaleClass}`} id={`stage_${fKey}`} style={{ cursor: "pointer" }} onClick={() => toggleExpand(fKey)}>
                               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
                                 <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
-                                  <h3 style={{ fontSize: "1.05rem", fontWeight: "600", color: "var(--ink)" }}>
+                                  <h3 className="card-title" style={{ color: "var(--ink)" }}>
                                     {item.shortTitle}
                                   </h3>
                                   <span className="category-tag">{item.categoryTag}</span>
