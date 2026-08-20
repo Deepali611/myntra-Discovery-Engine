@@ -286,10 +286,11 @@ h1, h2, h3 {
 }
 
 .takeaway-arrow {
-  color: var(--brand-dark);
+  color: var(--brand);
   font-weight: 600;
   margin-top: 8px;
   font-size: 0.88rem;
+  letter-spacing: -0.01em;
 }
 
 /* Smooth Detail Expand Keyframe Animation */
