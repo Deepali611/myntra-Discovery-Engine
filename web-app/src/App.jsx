@@ -977,50 +977,6 @@ export default function App() {
               </div>
             </section>
 
-            {/* (5) Footer  : About this engine (Expandable Footer) */}
-            <footer style={{ marginTop: '20px', paddingTop: '24px', borderTop: '1px solid var(--line)' }}>
-              <div className="finding-row" style={{ backgroundColor: 'var(--brand-tint)', borderColor: 'var(--brand-tint-2)' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <h3 style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--brand-dark)' }}>
-                    About this engine (Data Sources, Scoring Formula & Audit Findings)
-                  </h3>
-                  <button onClick={() => toggleExpand('about_engine')} style={{ background: 'none', border: 'none', color: 'var(--brand-dark)', fontSize: '0.85rem', fontWeight: '600', cursor: 'pointer' }}>
-                    {expandedCards['about_engine'] ? '▲ Hide Details' : '▼ Expand Details'}
-                  </button>
-                </div>
-
-                {expandedCards['about_engine'] && (
-                  <div className="detail-expanded" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid var(--brand-tint-2)', fontSize: '0.88rem', color: 'var(--ink)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                    <div>
-                      <h4 style={{ fontSize: '0.95rem', fontWeight: '600', color: 'var(--brand-dark)', marginBottom: '4px' }}>Data Sources</h4>
-                      <p style={{ color: 'var(--muted)' }}>
-                        Processed 979 total raw feedback items collected across 4 channels (YouTube: 859, Play Store: 46, Myntra PDP: 39, Reddit: 35). Of these, 179 passed Stage A/B relevance screening into the locked dataset.
-                      </p>
-                    </div>
-
-                    <div>
-                      <h4 style={{ fontSize: '0.95rem', fontWeight: '600', color: 'var(--brand-dark)', marginBottom: '4px' }}>Opportunity Scoring Formula</h4>
-                      <p style={{ color: 'var(--muted)', fontStyle: 'italic' }}>
-                        Opportunity Score = Volume Weight × Evidence Tier Weight × (1 + Cross-Source Multiplier)
-                      </p>
-                      <p style={{ color: 'var(--muted)', marginTop: '4px' }}>
-                        Rank #1 (Peer Sizing): Score 12.60 | Rank #2 (Occasion Choice): Score 12.00 | Rank #3 (Price Trust): Score 9.60 | Rank #4 (Price Drop): Score 8.40 | Rank #5 (Fabric Guarantee): Score 4.80.
-                      </p>
-                    </div>
-
-                    <div>
-                      <h4 style={{ fontSize: '0.95rem', fontWeight: '600', color: 'var(--brand-dark)', marginBottom: '4px' }}>AI Limitations & Audit Findings</h4>
-                      <p style={{ color: 'var(--muted)' }}>
-                        (1) Verbatim grounding check enforces character-for-character matching against raw disk files, preventing AI quote hallucination.<br />
-                        (2) X/Twitter read-only search requires $100/mo paid API tier (HTTP 401 block).<br />
-                        (3) 559-record rejected pool audit yielded 11 sparse hits (1.96% signal recovery rate), proving unprompted pre-purchase buyer friction is extremely scarce in public commentary.
-                      </p>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </footer>
-
           </div>
         )}
 
