@@ -126,6 +126,8 @@ const EXAMPLE_POOLS = [
 
 
 // Master FINDING_DETAILS Dictionary for Restructured Cards (Category Tags, Problem Statements, Quotes, Quiet Evidence Line, Product Implications)
+
+// Master FINDING_DETAILS Dictionary — Capped at Max 4 Quotes per Finding (Nykaa Style Reference Layout)
 const FINDING_DETAILS = {
   rank_1: {
     categoryTag: "Sizing doubt",
@@ -136,10 +138,7 @@ const FINDING_DETAILS = {
       { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgzVyaf2RGHG6Vw4II14AaABAg', quote: 'Which size do u wear ?', url: 'https://youtube.com' },
       { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_Ugwwq_7QHa9BUywaZUp4AaABAg', quote: 'Can you share exact bust and waist try-on measurements for this dress?', url: 'https://youtube.com' },
       { source: 'Myntra PDP Q&A', date: 'Aug 17, 2026', source_id: 'pdp_qa_204', quote: 'Should I buy size M or L for a relaxed fit on 38 inch chest?', url: 'https://myntra.com' },
-      { source: 'Myntra PDP Q&A', date: 'Aug 17, 2026', source_id: 'pdp_qa_205', quote: 'What size should I get if my waist is 28 inches? Height is 5\'4".', url: 'https://myntra.com' },
-      { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgwtLL16fgchhKaUWvh4AaABAg', quote: 'Does this denim jacket run small on shoulders?', url: 'https://youtube.com' },
-      { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgyP9OrMOvM4BaVxreF4AaABAg', quote: 'Please tell your height di so I can compare dress length', url: 'https://youtube.com' },
-      { source: 'Myntra PDP Q&A', date: 'Aug 17, 2026', source_id: 'pdp_qa_208', quote: 'Is size XL tight around arms or stretchy?', url: 'https://myntra.com' }
+      { source: 'Myntra PDP Q&A', date: 'Aug 17, 2026', source_id: 'pdp_qa_205', quote: 'What size should I get if my waist is 28 inches? Height is 5\'4".', url: 'https://myntra.com' }
     ],
     productImplication: "PRODUCT IMPLICATION: Embed creator try-on height/waist badges on PDPs and launch a peer sizing Q&A module. Solving sizing return fear directly unlocks 30-day wishlist-to-purchase conversions through non-monetary UX clarity rather than price discounting."
   },
@@ -182,20 +181,12 @@ const FINDING_DETAILS = {
     categoryTag: "Decision friction",
     problemStatement: "Difficulty choosing between multiple shortlisted outfits saved for specific events",
     description: "Shoppers frequently save multiple similar items for specific events (weddings, receptions, third dates) and seek community feedback to choose between shortlisted options. The friction is a choice dilemma between competing saved items.",
-    quietLine: "Based on 12 signals across 1 source (Reddit Fashion Communities).",
+    quietLine: "Based on 12 signals across 1 source (Reddit Fashion Communities). Showing top 4 representative quotes.",
     quotes: [
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1k48pyu', quote: 'Help me choose one dress for reception party', url: 'https://reddit.com/r/IndianFashionAddicts' },
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1e64y2w', quote: 'Help Me Choose an Outfit for My Third Date!', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_18oxzh9', quote: 'Help me choose from the following looks.', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1tkc1zw', quote: 'Help me choose the correct size?', url: 'https://reddit.com/r/IndianFashionAddicts' },
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1baajra', quote: 'Help Me Choose a Dress for My Birthday (Urgent!)', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1b70l87', quote: 'Help me to choose between 2 watches', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1ejncx2', quote: 'need help choosing my first white sneakers', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1p8u5ik', quote: 'A Quick Guide to Choosing the Right Jacket Length', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1qchfwa', quote: 'Help me choose outfit for coctail', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_19dw0cf', quote: 'Help me choose..', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_17lv7un', quote: 'Help me choose a gift for bf!', url: 'https://reddit.com/r/IndianFashionAddicts' }
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' }
     ],
     productImplication: "PRODUCT IMPLICATION: Introduce an in-app \'Compare Shortlist\' side-by-side tool and occasion styling voting polls to resolve choice paralyzed wishlists into final orders."
   },
@@ -203,13 +194,12 @@ const FINDING_DETAILS = {
     categoryTag: "Segment pattern",
     problemStatement: "Wishlisting behavior varies across buyer personas (occasion-driven vs office-wear shoppers)",
     description: "Shopping friction manifests differently across user personas — from occasion-driven buyers needing event approval, to working professionals seeking office-wear guidance, to brand-conscious shoppers evaluating website authenticity.",
-    quietLine: "Based on 5 signals across 2 sources (Reddit, YouTube).",
+    quietLine: "Based on 5 signals across 2 sources (Reddit, YouTube). Showing top 4 representative quotes.",
     quotes: [
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' },
       { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgzAm09_blzRXPpXdqV4', quote: 'Please do more office recommendations for upcoming weather in delhi', url: 'https://youtube.com' },
       { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgwVFhp7iC70ZCs2i', quote: 'Really enjoying the western wear /office wear options recently showcased on the channel. Really helps with shortlisting options', url: 'https://youtube.com' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_t3_1nywvf3', quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1vmh03t', quote: 'Please suggest some good affordable brands for cotton and linen shirts for women.', url: 'https://reddit.com/r/IndianFashionAddicts' }
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_t3_1nywvf3', quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?', url: 'https://reddit.com/r/IndianFashionAddicts' }
     ],
     productImplication: "PRODUCT IMPLICATION: Personalize wishlist notification timing and PDP recommendation feeds based on persona intent signals (office wear vs. occasion wear) to accelerate 30-day purchases."
   },
@@ -228,20 +218,12 @@ const FINDING_DETAILS = {
     categoryTag: "Decision friction",
     problemStatement: "Investigating how shoppers deliberate between competing saved items for specific events",
     description: "Investigation into how shoppers evaluate competing items saved in their wishlist. Public evidence is dominated by short title-only community posts asking for choice help for specific events.",
-    quietLine: "Based on 12 signals across 1 source (Reddit Fashion Communities).",
+    quietLine: "Based on 12 signals across 1 source (Reddit Fashion Communities). Showing top 4 representative quotes.",
     quotes: [
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1k48pyu', quote: 'Help me choose one dress for reception party', url: 'https://reddit.com/r/IndianFashionAddicts' },
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1e64y2w', quote: 'Help Me Choose an Outfit for My Third Date!', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_18oxzh9', quote: 'Help me choose from the following looks.', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1tkc1zw', quote: 'Help me choose the correct size?', url: 'https://reddit.com/r/IndianFashionAddicts' },
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1baajra', quote: 'Help Me Choose a Dress for My Birthday (Urgent!)', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1b70l87', quote: 'Help me to choose between 2 watches', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1ejncx2', quote: 'need help choosing my first white sneakers', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1p8u5ik', quote: 'A Quick Guide to Choosing the Right Jacket Length', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1qchfwa', quote: 'Help me choose outfit for coctail', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_19dw0cf', quote: 'Help me choose..', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_17lv7un', quote: 'Help me choose a gift for bf!', url: 'https://reddit.com/r/IndianFashionAddicts' }
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' }
     ],
     productImplication: "PRODUCT IMPLICATION: Provide a wishlist comparison matrix (price, fabric, rating, delivery speed side-by-side) to convert shortlist deliberation into active checkout."
   },
@@ -249,17 +231,17 @@ const FINDING_DETAILS = {
     categoryTag: "Segment pattern",
     problemStatement: "Investigating user segment differences in wishlisting intent and shopping friction",
     description: "Investigation into user segment variation. Public review data rarely includes explicit demographic tags (unknown for ~98% of records), but distinct shopping archetypes emerge across occasion wear vs. office wear inquiries.",
-    quietLine: "Based on 5 signals across 2 sources (Reddit, YouTube).",
+    quietLine: "Based on 5 signals across 2 sources (Reddit, YouTube). Showing top 4 representative quotes.",
     quotes: [
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' },
       { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgzAm09_blzRXPpXdqV4', quote: 'Please do more office recommendations for upcoming weather in delhi', url: 'https://youtube.com' },
       { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgwVFhp7iC70ZCs2i', quote: 'Really enjoying the western wear /office wear options recently showcased on the channel. Really helps with shortlisting options', url: 'https://youtube.com' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_t3_1nywvf3', quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?...', url: 'https://reddit.com/r/IndianFashionAddicts' },
-      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1vmh03t', quote: 'Please suggest some good affordable brands for cotton and linen shirts for women.', url: 'https://reddit.com/r/IndianFashionAddicts' }
+      { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_t3_1nywvf3', quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?...', url: 'https://reddit.com/r/IndianFashionAddicts' }
     ],
     productImplication: "PRODUCT IMPLICATION: Segment wishlist notifications by intent persona (workwear vs. occasion wear) rather than generic reminders to accelerate 30-day purchases."
   }
 };
+
 
 function classifyLinesText(inputText) {
   if (!inputText || !inputText.trim()) return null;
