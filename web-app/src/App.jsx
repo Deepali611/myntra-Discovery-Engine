@@ -133,7 +133,7 @@ const FINDING_DETAILS = {
     categoryTag: "Sizing doubt",
     problemStatement: "Unsure what size to order without trying it on first",
     description: "Shoppers ask video creators or Q&A responders directly for their body measurements before ordering — height, waist, bust — because they don't trust Myntra's own size chart to translate to their body. This happens while the item is still saved in the wishlist, before any purchase decision is made.",
-    quietLine: "Based on 7 signals across 2 sources (YouTube Comments, Myntra PDP Q&A).",
+    quietLine: "Based on 7 · 3.9% (7 of 179 screened items) across sources.",
     quotes: [
       { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgzVyaf2RGHG6Vw4II14AaABAg', quote: 'Which size do u wear ?', url: 'https://youtube.com' },
       { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_Ugwwq_7QHa9BUywaZUp4AaABAg', quote: 'Can you share exact bust and waist try-on measurements for this dress?', url: 'https://youtube.com' },
@@ -146,7 +146,7 @@ const FINDING_DETAILS = {
     categoryTag: "Value & timing",
     problemStatement: "Items sit saved in wishlists for weeks or months waiting for a sale price drop or restock alert",
     description: "Shoppers treat wishlists as passive price-drop watchlists, holding items for weeks or months while waiting for promotional sales or restock alerts. The intent to buy is already present, but stays dormant without active trigger events.",
-    quietLine: "Based on 3 signals across 1 source (Myntra PDP Reviews).",
+    quietLine: "Based on 3 · 1.7% (3 of 179 screened items) across sources.",
     quotes: [
       { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_110', quote: 'Kept in wishlist for weeks, bought on price drop but zip quality gap.', url: 'https://myntra.com' },
       { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_106', quote: 'Saved these block heels for 2 months waiting for a sale price drop.', url: 'https://myntra.com' },
@@ -158,7 +158,7 @@ const FINDING_DETAILS = {
     categoryTag: "Trust gap",
     problemStatement: "Hesitation from comparing prices and authenticity on official brand sites vs Myntra before checkout",
     description: "Shoppers cross-check prices and product authenticity across external brand sites (e.g. Snitch official site vs. Myntra/Flipkart) and query community forums before checking out. Platform fee increases and price discrepancies trigger purchase hesitation.",
-    quietLine: "Based on 3 signals across 2 sources (Reddit, YouTube).",
+    quietLine: "Based on 3 · 1.7% (3 of 179 screened items) across sources.",
     quotes: [
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_t3_1nywvf3', quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?', url: 'https://reddit.com/r/IndianFashionAddicts' },
       { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_comment_409', quote: 'Is Snitch official website price cheaper than Myntra listing?', url: 'https://youtube.com' },
@@ -170,7 +170,7 @@ const FINDING_DETAILS = {
     categoryTag: "Confidence gap",
     problemStatement: "Doubt whether studio app photos hide translucent fabric or darker reality colors",
     description: "Shoppers hesitate in wishlists due to doubts about fabric quality, translucent materials, or app photo studio lighting hiding darker reality colors. The gap between studio photography and physical product reality creates fear of disappointment.",
-    quietLine: "Based on 2 signals across 1 source (Myntra PDP Reviews).",
+    quietLine: "Based on 2 · 1.1% (2 of 179 screened items) across sources.",
     quotes: [
       { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_103', quote: 'Color in reality is much darker than shown in the app photos. Kept it in shortlist for a month...', url: 'https://myntra.com' },
       { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_105', quote: 'Fabric feels very thin and see-through compared to app studio picture.', url: 'https://myntra.com' }
@@ -181,7 +181,7 @@ const FINDING_DETAILS = {
     categoryTag: "Decision friction",
     problemStatement: "Difficulty choosing between multiple shortlisted outfits saved for specific events",
     description: "Shoppers frequently save multiple similar items for specific events (weddings, receptions, third dates) and seek community feedback to choose between shortlisted options. The friction is a choice dilemma between competing saved items.",
-    quietLine: "Based on 12 signals across 1 source (Reddit Fashion Communities). Showing top 4 representative quotes.",
+    quietLine: "Based on 12 · 6.7% (12 of 179 screened items) across sources.",
     quotes: [
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1k48pyu', quote: 'Help me choose one dress for reception party', url: 'https://reddit.com/r/IndianFashionAddicts' },
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1e64y2w', quote: 'Help Me Choose an Outfit for My Third Date!', url: 'https://reddit.com/r/IndianFashionAddicts' },
@@ -194,7 +194,7 @@ const FINDING_DETAILS = {
     categoryTag: "Segment pattern",
     problemStatement: "Wishlisting behavior varies across buyer personas (occasion-driven vs office-wear shoppers)",
     description: "Shopping friction manifests differently across user personas — from occasion-driven buyers needing event approval, to working professionals seeking office-wear guidance, to brand-conscious shoppers evaluating website authenticity.",
-    quietLine: "Based on 5 signals across 2 sources (Reddit, YouTube). Showing top 4 representative quotes.",
+    quietLine: "Based on 5 · 2.8% (5 of 179 screened items) across sources.",
     quotes: [
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' },
       { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgzAm09_blzRXPpXdqV4', quote: 'Please do more office recommendations for upcoming weather in delhi', url: 'https://youtube.com' },
@@ -207,7 +207,7 @@ const FINDING_DETAILS = {
     categoryTag: "Confidence gap",
     problemStatement: "Investigating whether app studio photos hide translucent fabric or darker reality colors",
     description: "Investigation into whether studio photography misleads shoppers regarding fabric texture or color shades. Current evidence confirms color tone discrepancy and unexpected translucent fabric thickness in PDP reviews.",
-    quietLine: "Based on 2 signals across 1 source (Myntra PDP Reviews).",
+    quietLine: "Based on 2 · 1.1% (2 of 179 screened items) across sources.",
     quotes: [
       { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_103', quote: 'Color in reality is much darker than shown in the app photos. Kept it in shortlist for a month...', url: 'https://myntra.com' },
       { source: 'Myntra PDP Reviews', date: 'Aug 17, 2026', source_id: 'pdp_rev_107', quote: 'Stitching quality came off after single hand wash. Very disappointed after waiting so long to buy during discount.', url: 'https://myntra.com' }
@@ -218,7 +218,7 @@ const FINDING_DETAILS = {
     categoryTag: "Decision friction",
     problemStatement: "Investigating how shoppers deliberate between competing saved items for specific events",
     description: "Investigation into how shoppers evaluate competing items saved in their wishlist. Public evidence is dominated by short title-only community posts asking for choice help for specific events.",
-    quietLine: "Based on 12 signals across 1 source (Reddit Fashion Communities). Showing top 4 representative quotes.",
+    quietLine: "Based on 12 · 6.7% (12 of 179 screened items) across sources.",
     quotes: [
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1k48pyu', quote: 'Help me choose one dress for reception party', url: 'https://reddit.com/r/IndianFashionAddicts' },
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1e64y2w', quote: 'Help Me Choose an Outfit for My Third Date!', url: 'https://reddit.com/r/IndianFashionAddicts' },
@@ -231,7 +231,7 @@ const FINDING_DETAILS = {
     categoryTag: "Segment pattern",
     problemStatement: "Investigating user segment differences in wishlisting intent and shopping friction",
     description: "Investigation into user segment variation. Public review data rarely includes explicit demographic tags (unknown for ~98% of records), but distinct shopping archetypes emerge across occasion wear vs. office wear inquiries.",
-    quietLine: "Based on 5 signals across 2 sources (Reddit, YouTube). Showing top 4 representative quotes.",
+    quietLine: "Based on 5 · 2.8% (5 of 179 screened items) across sources.",
     quotes: [
       { source: 'Reddit', date: 'Aug 17, 2026', source_id: 'reddit_rss_t3_1d82ls4', quote: 'Help me choose what to wear for my very close friend\'s engagement!', url: 'https://reddit.com/r/IndianFashionAddicts' },
       { source: 'YouTube Comments', date: 'Aug 17, 2026', source_id: 'yt_UgzAm09_blzRXPpXdqV4', quote: 'Please do more office recommendations for upcoming weather in delhi', url: 'https://youtube.com' },
@@ -665,7 +665,7 @@ export default function App() {
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                {/* Ranked Finding 1 (19 items max count -> 7/19 = 37%) */}
+                {/* Ranked Finding 1 (5 · 2.8% max count -> 7/19 = 37%) */}
                 <div className="finding-row">
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
@@ -674,7 +674,7 @@ export default function App() {
                         1. Peer Sizing & Creator Body Measurement Guidance
                       </h3>
                     </div>
-                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>7 items</span>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>7 · 3.9%</span>
                   </div>
                   <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
                     <div className="bar-fill-animated" style={{ width: `${Math.round((7 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
@@ -702,7 +702,7 @@ export default function App() {
                         2. Wishlist Price-Drop & Restock Activation
                       </h3>
                     </div>
-                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>3 items</span>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>3 · 1.7%</span>
                   </div>
                   <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
                     <div className="bar-fill-animated" style={{ width: `${Math.round((3 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
@@ -730,7 +730,7 @@ export default function App() {
                         3. Cross-Platform Price & Trust Transparency
                       </h3>
                     </div>
-                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>3 items</span>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>3 · 1.7%</span>
                   </div>
                   <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
                     <div className="bar-fill-animated" style={{ width: `${Math.round((3 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
@@ -758,7 +758,7 @@ export default function App() {
                         4. Fabric Transparency & Photo Reality Guarantee
                       </h3>
                     </div>
-                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>2 items</span>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>2 · 1.1%</span>
                   </div>
                   <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
                     <div className="bar-fill-animated" style={{ width: `${Math.round((2 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
@@ -786,7 +786,7 @@ export default function App() {
                         5. Occasion-Based Shortlist Choice Assistant
                       </h3>
                     </div>
-                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>12 items</span>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>12 · 6.7%</span>
                   </div>
                   <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
                     <div className="bar-fill-animated" style={{ width: `${Math.round((12 / 19) * 100)}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
@@ -814,7 +814,7 @@ export default function App() {
                         6. User Segment Behavioral Archetypes
                       </h3>
                     </div>
-                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>19 items</span>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>5 · 2.8%</span>
                   </div>
                   <div style={{ width: '100%', height: '6px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '3px', margin: '8px 0', overflow: 'hidden' }}>
                     <div className="bar-fill-animated" style={{ width: '100%', height: '100%', backgroundColor: 'var(--brand)', borderRadius: '3px' }}></div>
@@ -859,7 +859,7 @@ export default function App() {
                         <span className="category-tag">Sizing doubt</span>
                         <strong style={{ fontSize: '0.95rem' }}>Peer Sizing & Creator Body Measurement Guidance</strong>
                       </div>
-                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>7 items</span>
+                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>7 · 3.9%</span>
                     </div>
                   </div>
                   <div className="finding-row">
@@ -868,7 +868,7 @@ export default function App() {
                         <span className="category-tag">Value & timing</span>
                         <strong style={{ fontSize: '0.95rem' }}>Wishlist Price-Drop & Restock Activation</strong>
                       </div>
-                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>3 items</span>
+                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>3 · 1.7%</span>
                     </div>
                   </div>
                   <div className="finding-row">
@@ -877,7 +877,7 @@ export default function App() {
                         <span className="category-tag">Confidence gap</span>
                         <strong style={{ fontSize: '0.95rem' }}>Fabric Transparency & Photo Reality Guarantee</strong>
                       </div>
-                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>2 items</span>
+                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>2 · 1.1%</span>
                     </div>
                   </div>
                 </div>
@@ -893,7 +893,7 @@ export default function App() {
                         <span className="category-tag">Trust gap</span>
                         <strong style={{ fontSize: '0.95rem' }}>Cross-Platform Price & Trust Transparency</strong>
                       </div>
-                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>3 items</span>
+                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>3 · 1.7%</span>
                     </div>
                   </div>
                 </div>
@@ -909,7 +909,7 @@ export default function App() {
                         <span className="category-tag">Decision friction</span>
                         <strong style={{ fontSize: '0.95rem' }}>Occasion-Based Shortlist Choice Assistant (Q5)</strong>
                       </div>
-                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>12 items</span>
+                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>12 · 6.7%</span>
                     </div>
                   </div>
                   <div className="finding-row">
@@ -918,7 +918,7 @@ export default function App() {
                         <span className="category-tag">Segment pattern</span>
                         <strong style={{ fontSize: '0.95rem' }}>User Segment Behavioral Archetypes (Q9)</strong>
                       </div>
-                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>19 items</span>
+                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>5 · 2.8%</span>
                     </div>
                   </div>
                 </div>
