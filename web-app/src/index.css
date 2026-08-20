@@ -314,6 +314,55 @@ h1, h2, h3 {
   background-color: #C4005B !important;
 }
 
+/* Segmented View Toggle Container */
+.view-toggle-container {
+  display: inline-flex;
+  background-color: var(--brand-tint);
+  border: 1px solid var(--brand-tint-2);
+  border-radius: 9999px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.view-toggle-btn {
+  background: none;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.view-toggle-btn.active {
+  background-color: var(--brand);
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(232, 0, 113, 0.2);
+}
+
+.view-toggle-btn:hover:not(.active) {
+  color: var(--brand-dark);
+  background-color: rgba(232, 0, 113, 0.08);
+}
+
+/* Smooth Card Repositioning Transition */
+.finding-card-transition {
+  animation: reorderFade 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes reorderFade {
+  0% {
+    opacity: 0.3;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Category Tag Pill (Nykaa Style) */
 .category-tag {
   background-color: var(--brand-tint);

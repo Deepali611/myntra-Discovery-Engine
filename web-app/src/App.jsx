@@ -395,6 +395,7 @@ export default function App() {
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [expandedCards, setExpandedCards] = useState({});
+  const [findingsSortView, setFindingsSortView] = useState('frequency');
 
   // Live Analyzer Initial State: Starts empty
   const [analyzerInput, setAnalyzerInput] = useState('');
@@ -689,78 +690,187 @@ export default function App() {
               </div>
             </div>
 
-            {/* (2) What users are telling us (All 9 Findings Rendered Identically) */}
+            {/* (2) What users are telling us (With Animated View Toggle: By Frequency / By Journey Stage) */}
             <section style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '40px' }}>
-              <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
-                <h2 style={{ fontSize: '1.4rem', fontWeight: '600' }}>
-                  What users are telling us
-                </h2>
-                <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginTop: '4px' }}>
-                  Every finding found across 179 screened items, ranked by how often it appears. Expand any row to read the feedback behind it.
-                </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '16px', borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
+                <div>
+                  <h2 style={{ fontSize: '1.4rem', fontWeight: '600' }}>
+                    What users are telling us
+                  </h2>
+                  <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginTop: '4px' }}>
+                    Every finding found across 179 screened items, {findingsSortView === 'frequency' ? 'ranked by how often it appears.' : 'grouped by customer journey stage.'} Expand any row to read the feedback behind it.
+                  </p>
+                </div>
+
+                {/* Animated View Toggle Pills */}
+                <div className="view-toggle-container">
+                  <button 
+                    className={`view-toggle-btn ${findingsSortView === 'frequency' ? 'active' : ''}`}
+                    onClick={() => setFindingsSortView('frequency')}
+                  >
+                    By Frequency
+                  </button>
+                  <button 
+                    className={`view-toggle-btn ${findingsSortView === 'journey' ? 'active' : ''}`}
+                    onClick={() => setFindingsSortView('journey')}
+                  >
+                    By Journey Stage
+                  </button>
+                </div>
               </div>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                {['rank_1', 'rank_2', 'rank_3', 'rank_4', 'rank_5', 'rank_6', 'q4_investigated', 'q5_investigated', 'q9_investigated'].map((fKey) => {
-                  const item = FINDING_DETAILS[fKey];
-                  if (!item) return null;
-                  return (
-                    <div key={fKey} className="finding-row" id={fKey} style={{ cursor: "pointer" }} onClick={() => toggleExpand(fKey)}>
-                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
-                        <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
-                          <h3 style={{ fontSize: "1.05rem", fontWeight: "600", color: "var(--ink)" }}>
-                            {item.shortTitle}
-                          </h3>
-                          <span className="category-tag">{item.categoryTag}</span>
-                        </div>
-                        <span style={{ fontSize: "0.85rem", color: "var(--muted)", fontWeight: "500" }}>{item.countFormatted}</span>
-                      </div>
-                      
-                      <p className="problem-statement-line">
-                        {item.problemStatement}
-                      </p>
-
-                      <div style={{ width: "100%", height: "6px", backgroundColor: "var(--brand-tint-2)", borderRadius: "3px", margin: "10px 0 6px 0", overflow: "hidden" }}>
-                        <div className="bar-fill-animated" style={{ width: `${item.barPct}%`, height: "100%", backgroundColor: "var(--brand)", borderRadius: "3px" }}></div>
-                      </div>
-
-                      <button onClick={(e) => { e.stopPropagation(); toggleExpand(fKey); }} style={{ marginTop: "6px", background: "none", border: "none", color: "var(--brand-dark)", fontSize: "0.82rem", fontWeight: "600", cursor: "pointer", padding: 0 }}>
-                        {expandedCards[fKey] ? "▲ Hide Detail" : "▼ Expand Detail"}
-                      </button>
-
-                      {expandedCards[fKey] && (
-                        <div className="detail-expanded" style={{ marginTop: "14px", paddingTop: "14px", borderTop: "1px solid var(--line)", display: "flex", flexDirection: "column", gap: "14px" }}>
-                          
-                          {/* Conversational 1-2 sentence context line */}
-                          <div className="finding-description">
-                            {item.description}
+              {/* View 1: By Frequency (Ranked Count Order) */}
+              {findingsSortView === 'frequency' && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                  {['rank_1', 'rank_2', 'rank_3', 'rank_4', 'rank_5', 'rank_6', 'q4_investigated', 'q5_investigated', 'q9_investigated'].map((fKey) => {
+                    const item = FINDING_DETAILS[fKey];
+                    if (!item) return null;
+                    return (
+                      <div key={fKey} className="finding-row finding-card-transition" id={fKey} style={{ cursor: "pointer" }} onClick={() => toggleExpand(fKey)}>
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
+                          <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
+                            <h3 style={{ fontSize: "1.05rem", fontWeight: "600", color: "var(--ink)" }}>
+                              {item.shortTitle}
+                            </h3>
+                            <span className="category-tag">{item.categoryTag}</span>
                           </div>
+                          <span style={{ fontSize: "0.85rem", color: "var(--muted)", fontWeight: "500" }}>{item.countFormatted}</span>
+                        </div>
+                        
+                        <p className="problem-statement-line">
+                          {item.problemStatement}
+                        </p>
 
-                          {/* Quote boxes — QUOTE TEXT ONLY */}
-                          <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-                            {item.quotes.map((q, qIdx) => (
-                              <div key={qIdx} className="quote-box-citation" style={{ fontSize: '0.92rem', color: 'var(--ink)', lineHeight: '1.5', padding: '14px 18px' }}>
-                                "{q.quote}"
+                        <div style={{ width: "100%", height: "6px", backgroundColor: "var(--brand-tint-2)", borderRadius: "3px", margin: "10px 0 6px 0", overflow: "hidden" }}>
+                          <div className="bar-fill-animated" style={{ width: `${item.barPct}%`, height: "100%", backgroundColor: "var(--brand)", borderRadius: "3px" }}></div>
+                        </div>
+
+                        <button onClick={(e) => { e.stopPropagation(); toggleExpand(fKey); }} style={{ marginTop: "6px", background: "none", border: "none", color: "var(--brand-dark)", fontSize: "0.82rem", fontWeight: "600", cursor: "pointer", padding: 0 }}>
+                          {expandedCards[fKey] ? "▲ Hide Detail" : "▼ Expand Detail"}
+                        </button>
+
+                        {expandedCards[fKey] && (
+                          <div className="detail-expanded" style={{ marginTop: "14px", paddingTop: "14px", borderTop: "1px solid var(--line)", display: "flex", flexDirection: "column", gap: "14px" }}>
+                            
+                            <div className="finding-description">
+                              {item.description}
+                            </div>
+
+                            <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                              {item.quotes.map((q, qIdx) => (
+                                <div key={qIdx} className="quote-box-citation" style={{ fontSize: '0.92rem', color: 'var(--ink)', lineHeight: '1.5', padding: '14px 18px' }}>
+                                  "{q.quote}"
+                                </div>
+                              ))}
+                            </div>
+
+                            <div className="quiet-evidence-line">
+                              {item.quietLine}
+                            </div>
+
+                            <div className="product-implication-box">
+                              <strong>{item.productImplication}</strong>
+                            </div>
+
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+
+              {/* View 2: By Journey Stage (Grouped Stage Order) */}
+              {findingsSortView === 'journey' && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
+                  {[
+                    {
+                      stageTitle: '1. While Item Is Saved (Direct Pre-Purchase Friction)',
+                      stageDesc: 'Friction experienced while decision-making is active in wishlists.',
+                      keys: ['rank_1', 'rank_2', 'rank_4', 'rank_5']
+                    },
+                    {
+                      stageTitle: '2. Before Checkout (External Research & Trust)',
+                      stageDesc: 'Hesitation from comparing prices and authenticity off-platform.',
+                      keys: ['rank_3']
+                    },
+                    {
+                      stageTitle: '3. Persona & Segment Patterns (Exploratory)',
+                      stageDesc: 'Differences across user archetypes and shopping intents.',
+                      keys: ['rank_6', 'q4_investigated', 'q5_investigated', 'q9_investigated']
+                    }
+                  ].map((stageGroup, sIdx) => (
+                    <div key={sIdx} style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                      <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '8px' }}>
+                        <h3 style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--brand-dark)' }}>
+                          {stageGroup.stageTitle}
+                        </h3>
+                        <p style={{ fontSize: '0.85rem', color: 'var(--muted)', marginTop: '2px' }}>
+                          {stageGroup.stageDesc}
+                        </p>
+                      </div>
+
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                        {stageGroup.keys.map((fKey) => {
+                          const item = FINDING_DETAILS[fKey];
+                          if (!item) return null;
+                          return (
+                            <div key={fKey} className="finding-row finding-card-transition" id={`stage_${fKey}`} style={{ cursor: "pointer" }} onClick={() => toggleExpand(fKey)}>
+                              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
+                                <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
+                                  <h3 style={{ fontSize: "1.05rem", fontWeight: "600", color: "var(--ink)" }}>
+                                    {item.shortTitle}
+                                  </h3>
+                                  <span className="category-tag">{item.categoryTag}</span>
+                                </div>
+                                <span style={{ fontSize: "0.85rem", color: "var(--muted)", fontWeight: "500" }}>{item.countFormatted}</span>
                               </div>
-                            ))}
-                          </div>
+                              
+                              <p className="problem-statement-line">
+                                {item.problemStatement}
+                              </p>
 
-                          {/* Quiet evidence line */}
-                          <div className="quiet-evidence-line">
-                            {item.quietLine}
-                          </div>
+                              <div style={{ width: "100%", height: "6px", backgroundColor: "var(--brand-tint-2)", borderRadius: "3px", margin: "10px 0 6px 0", overflow: "hidden" }}>
+                                <div className="bar-fill-animated" style={{ width: `${item.barPct}%`, height: "100%", backgroundColor: "var(--brand)", borderRadius: "3px" }}></div>
+                              </div>
 
-                          {/* Product Implication Box */}
-                          <div className="product-implication-box">
-                            <strong>{item.productImplication}</strong>
-                          </div>
+                              <button onClick={(e) => { e.stopPropagation(); toggleExpand(fKey); }} style={{ marginTop: "6px", background: "none", border: "none", color: "var(--brand-dark)", fontSize: "0.82rem", fontWeight: "600", cursor: "pointer", padding: 0 }}>
+                                {expandedCards[fKey] ? "▲ Hide Detail" : "▼ Expand Detail"}
+                              </button>
 
-                        </div>
-                      )}
+                              {expandedCards[fKey] && (
+                                <div className="detail-expanded" style={{ marginTop: "14px", paddingTop: "14px", borderTop: "1px solid var(--line)", display: "flex", flexDirection: "column", gap: "14px" }}>
+                                  
+                                  <div className="finding-description">
+                                    {item.description}
+                                  </div>
+
+                                  <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                                    {item.quotes.map((q, qIdx) => (
+                                      <div key={qIdx} className="quote-box-citation" style={{ fontSize: '0.92rem', color: 'var(--ink)', lineHeight: '1.5', padding: '14px 18px' }}>
+                                        "{q.quote}"
+                                      </div>
+                                    ))}
+                                  </div>
+
+                                  <div className="quiet-evidence-line">
+                                    {item.quietLine}
+                                  </div>
+
+                                  <div className="product-implication-box">
+                                    <strong>{item.productImplication}</strong>
+                                  </div>
+
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
                     </div>
-                  );
-                })}
-              </div>
+                  ))}
+                </div>
+              )}
             </section>
 
             {/* (4) Observations (4 Short Narrative Cards) */}
