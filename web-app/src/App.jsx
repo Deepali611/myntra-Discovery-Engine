@@ -47,8 +47,8 @@ const GROUNDED_KNOWLEDGE = {
     ]
   },
   "what causes postponement?": {
-    tier_statement: "This is limited/Directional evidence (2 records, 1 source) — treat as a hypothesis, not a confirmed pattern.",
-    answer: "This is limited/Directional evidence (2 records, 1 source) — treat as a hypothesis, not a confirmed pattern. Postponement occurs when shoppers hesitate due to fear that studio photos obscure translucent fabric quality or when waiting multi-week cycles for promotional price drops.",
+    tier_statement: "This is limited/Directional evidence (2 records, 1 source): treat as a hypothesis, not a confirmed pattern.",
+    answer: "This is limited/Directional evidence (2 records, 1 source): treat as a hypothesis, not a confirmed pattern. Postponement occurs when shoppers hesitate due to fear that studio photos obscure translucent fabric quality or when waiting multi-week cycles for promotional price drops.",
     followups: [
       "What prevents purchase after wishlisting?",
       "Wishlist as intent vs. bookmark?",
@@ -56,8 +56,8 @@ const GROUNDED_KNOWLEDGE = {
     ]
   },
   "how do users compare shortlisted items?": {
-    tier_statement: "This is limited/Directional evidence (12 title-only posts) — treat as a hypothesis, not a confirmed pattern.",
-    answer: "This is limited/Directional evidence (12 title-only posts) — treat as a hypothesis, not a confirmed pattern. Shortlist choice dilemmas appear as short title-only community posts asking 'help me choose between 2 dresses for reception party'. However, comment elaboration is sparse (1.96% signal rate across 559 rejected audit records).",
+    tier_statement: "This is limited/Directional evidence (12 title-only posts): treat as a hypothesis, not a confirmed pattern.",
+    answer: "This is limited/Directional evidence (12 title-only posts): treat as a hypothesis, not a confirmed pattern. Shortlist choice dilemmas appear as short title-only community posts asking 'help me choose between 2 dresses for reception party'. However, comment elaboration is sparse (1.96% signal rate across 559 rejected audit records).",
     followups: [
       "What info do they seek outside Myntra?",
       "What unmet needs emerge?",
@@ -127,11 +127,11 @@ const EXAMPLE_POOLS = [
 
 // Master FINDING_DETAILS Dictionary for Restructured Cards (Category Tags, Problem Statements, Quotes, Quiet Evidence Line, Product Implications)
 
-// Master FINDING_DETAILS Dictionary — Capped at Max 4 Quotes per Finding (Nykaa Style Reference Layout)
+// Master FINDING_DETAILS Dictionary: Capped at Max 4 Quotes per Finding (Nykaa Style Reference Layout)
 
-// Master FINDING_DETAILS Dictionary — All 5 Nykaa Refinements Applied (Short Names, Category Tags, Problem Statements, Explanatory Paragraphs, ALL Quotes, No Sources line)
+// Master FINDING_DETAILS Dictionary: All 5 Nykaa Refinements Applied (Short Names, Category Tags, Problem Statements, Explanatory Paragraphs, ALL Quotes, No Sources line)
 
-// Master FINDING_DETAILS Dictionary — Nykaa Reference Match (Max 4 Quotes, 1-2 Sentence Context Line, Short Titles, No Sources line)
+// Master FINDING_DETAILS Dictionary: Nykaa Reference Match (Max 4 Quotes, 1-2 Sentence Context Line, Short Titles, No Sources line)
 
 // Master FINDING_DETAILS Dictionary for All 9 Findings (Quote Text Only, Identical Clean Structure)
 const FINDING_DETAILS = {
@@ -155,7 +155,7 @@ const FINDING_DETAILS = {
     shortTitle: "Price-drop waiting",
     categoryTag: "Value & timing",
     problemStatement: "Saving items in wishlist for weeks or months waiting for a sale price drop or restock.",
-    description: "Saved items are parked until the price moves — shoppers hold items for sales and wait long stretches for offers.",
+    description: "Saved items are parked until the price moves: shoppers hold items for sales and wait long stretches for offers.",
     quietLine: "Based on 3 signals across 1 source (Myntra PDP Reviews).",
     countFormatted: "3 · 1.7%",
     barPct: 16,
@@ -739,12 +739,12 @@ export default function App() {
                 <div className="assumed-vs-found-grid">
                   <div className="assumed-vs-found-card">
                     <div className="assumed-line"><span className="assumed-badge">ASSUMED:</span> Users forget what's in their wishlist.</div>
-                    <div className="found-line"><span className="found-badge">FOUND:</span> People actively revisit saved items — the block isn't memory, it's unresolved sizing and quality doubt.</div>
+                    <div className="found-line"><span className="found-badge">FOUND:</span> People actively revisit saved items: the block isn't memory, it's unresolved sizing and quality doubt.</div>
                   </div>
 
                   <div className="assumed-vs-found-card">
                     <div className="assumed-line"><span className="assumed-badge">ASSUMED:</span> Price is the main reason wishlisted items don't convert.</div>
-                    <div className="found-line"><span className="found-badge">FOUND:</span> Our strongest evidence points to sizing uncertainty and photo-vs-reality doubt — not price.</div>
+                    <div className="found-line"><span className="found-badge">FOUND:</span> Our strongest evidence points to sizing uncertainty and photo-vs-reality doubt, not price.</div>
                   </div>
 
                   <div className="assumed-vs-found-card">
@@ -754,7 +754,7 @@ export default function App() {
 
                   <div className="assumed-vs-found-card">
                     <div className="assumed-line"><span className="assumed-badge">ASSUMED:</span> App store reviews tell us why items sit unbought.</div>
-                    <div className="found-line"><span className="found-badge">FOUND:</span> App store reviews skew heavily post-purchase — true wishlist friction is revealed on PDP Q&A and community forums.</div>
+                    <div className="found-line"><span className="found-badge">FOUND:</span> App store reviews skew heavily post-purchase: true wishlist friction is revealed on PDP Q&A and community forums.</div>
                   </div>
                 </div>
               </div>
@@ -988,7 +988,7 @@ export default function App() {
                 Live analyzer
               </h1>
               <p style={{ color: 'var(--muted)', fontSize: '0.95rem', marginBottom: '4px' }}>
-                Paste real reviews or posts — one per line — and the engine classifies each against the blocker taxonomy in real time.
+                Paste real reviews or posts (one per line) and the engine classifies each against the blocker taxonomy in real time.
               </p>
             </div>
 
