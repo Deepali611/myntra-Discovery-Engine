@@ -1,6 +1,6 @@
 :root {
   --brand: #FF3F6C;
-  --brand-dark: #C81E4A;
+  --brand-dark: #D41E48;
   --brand-tint: #FFF0F4;
   --brand-tint-2: #FFE3EC;
   --ink: #282C3F;
@@ -311,7 +311,7 @@ h1, h2, h3 {
 
 .finding-row:hover .bar-fill-animated,
 .bar-fill-animated:hover {
-  background-color: #C4005B !important;
+  background-color: var(--brand-dark) !important;
 }
 
 /* Segmented View Toggle Container */
@@ -339,12 +339,12 @@ h1, h2, h3 {
 .view-toggle-btn.active {
   background-color: var(--brand);
   color: #ffffff;
-  box-shadow: 0 2px 4px rgba(232, 0, 113, 0.2);
+  box-shadow: 0 2px 4px rgba(255, 63, 108, 0.2);
 }
 
 .view-toggle-btn:hover:not(.active) {
   color: var(--brand-dark);
-  background-color: rgba(232, 0, 113, 0.08);
+  background-color: rgba(255, 63, 108, 0.08);
 }
 
 /* Smooth Card Repositioning Transition */
@@ -400,9 +400,9 @@ h1, h2, h3 {
 
 /* Pink Stage Pill (Matching Reference Screenshot 1) */
 .pink-stage-pill {
-  background-color: #FFF5F7;
-  color: #E80071;
-  border: 1px solid #FFE4E9;
+  background-color: var(--brand-tint);
+  color: var(--brand);
+  border: 1px solid var(--brand-tint-2);
   padding: 3px 10px;
   border-radius: 9999px;
   font-size: 0.72rem;
@@ -423,13 +423,13 @@ h1, h2, h3 {
 
 /* Surprising Insight Callout Box */
 .surprising-callout-box {
-  background-color: #FFF8FA;
-  border: 1px solid #FFE4E9;
+  background-color: var(--brand-tint);
+  border: 1px solid var(--brand-tint-2);
   border-left: 4px solid var(--brand);
   border-radius: 12px;
   padding: 20px 24px;
   margin-bottom: 32px;
-  box-shadow: 0 4px 12px rgba(232, 0, 113, 0.05);
+  box-shadow: 0 4px 12px rgba(255, 63, 108, 0.05);
 }
 
 /* Assumed vs Found Cards */
@@ -545,8 +545,8 @@ h1, h2, h3 {
 }
 
 .quote-box-citation {
-  background-color: #FFF5F7;
-  border: 1px solid #FFE4E9;
+  background-color: var(--brand-tint);
+  border: 1px solid var(--brand-tint-2);
   border-left: 3px solid var(--brand);
   border-radius: 8px;
   padding: 14px 18px;

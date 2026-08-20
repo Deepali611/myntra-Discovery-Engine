@@ -939,7 +939,7 @@ export default function App() {
                   { num: 9, title: "User segment patterns (Q9)", stage: "ACROSS BUYING JOURNEY", count: "5 items (2.8%)", exp: "Intent segment investigation: evaluating persona intent signals across public feedback." }
                 ].map((opp, oIdx) => (
                   <div key={oIdx} className="finding-row" style={{ display: 'flex', gap: '20px', alignItems: 'flex-start', padding: '18px 22px', borderRadius: '14px' }}>
-                    <div style={{ fontSize: '1.4rem', fontWeight: '700', fontFamily: 'Georgia, serif', color: '#E80071', minWidth: '24px', lineHeight: '1', marginTop: '2px' }}>
+                    <div style={{ fontSize: '1.4rem', fontWeight: '700', fontFamily: 'Georgia, serif', color: 'var(--brand)', minWidth: '24px', lineHeight: '1', marginTop: '2px' }}>
                       {opp.num}
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', width: '100%' }}>
