@@ -702,7 +702,7 @@ export default function App() {
             <section style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '40px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '16px', borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
                 <div>
-                  <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', fontWeight: '700' }}>
+                  <h2 style={{ fontFamily: 'var(--font-sans)', fontSize: '1.5rem', fontWeight: '700' }}>
                     What users are telling us
                   </h2>
                   <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginTop: '4px' }}>
@@ -918,7 +918,7 @@ export default function App() {
             {/* (3) Where the opportunity is (Matching Reference Screenshot 1 Layout) */}
             <section style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '40px' }}>
               <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
-                <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', fontWeight: '700' }}>
+                <h2 style={{ fontFamily: 'var(--font-sans)', fontSize: '1.5rem', fontWeight: '700' }}>
                   Where the opportunity is
                 </h2>
                 <p style={{ color: 'var(--muted)', fontSize: '0.92rem', marginTop: '6px', lineHeight: '1.55' }}>
@@ -939,7 +939,7 @@ export default function App() {
                   { num: 9, title: "User segment patterns (Q9)", stage: "ACROSS BUYING JOURNEY", count: "5 items (2.8%)", exp: "Intent segment investigation: evaluating persona intent signals across public feedback." }
                 ].map((opp, oIdx) => (
                   <div key={oIdx} className="finding-row" style={{ display: 'flex', gap: '20px', alignItems: 'flex-start', padding: '18px 22px', borderRadius: '14px' }}>
-                    <div style={{ fontSize: '1.4rem', fontWeight: '700', fontFamily: 'Georgia, serif', color: 'var(--brand)', minWidth: '24px', lineHeight: '1', marginTop: '2px' }}>
+                    <div style={{ fontSize: '1.4rem', fontWeight: '700', fontFamily: 'var(--font-sans)', color: 'var(--brand)', minWidth: '24px', lineHeight: '1', marginTop: '2px' }}>
                       {opp.num}
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', width: '100%' }}>
@@ -962,7 +962,7 @@ export default function App() {
             {/* (4) Observations (Nykaa Narrative Structure Adaptation) */}
             <section style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '40px' }}>
               <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
-                <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', fontWeight: '700' }}>
+                <h2 style={{ fontFamily: 'var(--font-sans)', fontSize: '1.5rem', fontWeight: '700' }}>
                   Observations
                 </h2>
                 <p style={{ color: 'var(--muted)', fontSize: '0.92rem', marginTop: '4px', lineHeight: '1.5' }}>
