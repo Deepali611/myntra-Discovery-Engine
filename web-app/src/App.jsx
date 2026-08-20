@@ -915,10 +915,10 @@ export default function App() {
               )}
             </section>
 
-            {/* (3) Where the opportunity is (Nykaa Reference Structure Adaptation) */}
+            {/* (3) Where the opportunity is (Matching Reference Screenshot 1 Layout) */}
             <section style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '40px' }}>
               <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
-                <h2 style={{ fontSize: '1.4rem', fontWeight: '600' }}>
+                <h2 className="serif-heading" style={{ fontSize: '1.4rem' }}>
                   Where the opportunity is
                 </h2>
                 <p style={{ color: 'var(--muted)', fontSize: '0.92rem', marginTop: '6px', lineHeight: '1.55' }}>
@@ -926,28 +926,29 @@ export default function App() {
                 </p>
               </div>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 {[
-                  { num: 1, title: "Peer sizing guidance", stage: "While the item is saved", count: "7 items (3.9%)", exp: "Raised before any purchase decision: shoppers ask creators for try-on body measurements rather than trust Myntra's size chart." },
-                  { num: 2, title: "Price-drop waiting", stage: "While the item is saved", count: "3 items (1.7%)", exp: "Parked until price moves: shoppers hold specific items for sales and wait long stretches for restocks or offers." },
-                  { num: 3, title: "Cross-platform price trust", stage: "Before checkout", count: "3 items (1.7%)", exp: "Cross-platform checks: shoppers compare prices and authenticity on brand official websites before committing to checkout." },
-                  { num: 4, title: "Fabric & photo reality", stage: "While the item is saved", count: "2 items (1.1%)", exp: "Visual texture gap: studio app lighting creates hesitation over translucent fabric thickness or actual reality colors." },
-                  { num: 5, title: "Occasion choice dilemma", stage: "While the item is saved", count: "12 items (6.7%)", exp: "Choice paralysis: shoppers save multiple competing items for specific events and ask community groups to pick one." },
-                  { num: 6, title: "User segment patterns", stage: "Across buying journey", count: "5 items (2.8%)", exp: "Persona variations: friction differs significantly between occasion buyers and daily workwear shoppers." },
-                  { num: 7, title: "Photo vs reality doubts (Q4)", stage: "While the item is saved", count: "2 items (1.1%)", exp: "Photo discrepancy investigation: confirming studio photo lighting gaps from customer review commentary." },
-                  { num: 8, title: "Occasion choice dilemma (Q5)", stage: "While the item is saved", count: "12 items (6.7%)", exp: "Shortlist decision friction investigation: community polling for event outfit selection." },
-                  { num: 9, title: "User segment patterns (Q9)", stage: "Across buying journey", count: "5 items (2.8%)", exp: "Intent segment investigation: evaluating persona intent signals across public feedback." }
+                  { num: 1, title: "Peer sizing guidance", stage: "WHILE THE ITEM IS SAVED", count: "7 items (3.9%)", exp: "Raised before any purchase decision: shoppers ask creators for try-on body measurements rather than trust Myntra's size chart." },
+                  { num: 2, title: "Price-drop waiting", stage: "WHILE THE ITEM IS SAVED", count: "3 items (1.7%)", exp: "Parked until price moves: shoppers hold specific items for sales and wait long stretches for restocks or offers." },
+                  { num: 3, title: "Cross-platform price trust", stage: "BEFORE CHECKOUT", count: "3 items (1.7%)", exp: "Cross-platform checks: shoppers compare prices and authenticity on brand official websites before committing to checkout." },
+                  { num: 4, title: "Fabric & photo reality", stage: "WHILE THE ITEM IS SAVED", count: "2 items (1.1%)", exp: "Visual texture gap: studio app lighting creates hesitation over translucent fabric thickness or actual reality colors." },
+                  { num: 5, title: "Occasion choice dilemma", stage: "WHILE THE ITEM IS SAVED", count: "12 items (6.7%)", exp: "Choice paralysis: shoppers save multiple competing items for specific events and ask community groups to pick one." },
+                  { num: 6, title: "User segment patterns", stage: "ACROSS BUYING JOURNEY", count: "5 items (2.8%)", exp: "Persona variations: friction differs significantly between occasion buyers and daily workwear shoppers." },
+                  { num: 7, title: "Photo vs reality doubts (Q4)", stage: "WHILE THE ITEM IS SAVED", count: "2 items (1.1%)", exp: "Photo discrepancy investigation: confirming studio photo lighting gaps from customer review commentary." },
+                  { num: 8, title: "Occasion choice dilemma (Q5)", stage: "WHILE THE ITEM IS SAVED", count: "12 items (6.7%)", exp: "Shortlist decision friction investigation: community polling for event outfit selection." },
+                  { num: 9, title: "User segment patterns (Q9)", stage: "ACROSS BUYING JOURNEY", count: "5 items (2.8%)", exp: "Intent segment investigation: evaluating persona intent signals across public feedback." }
                 ].map((opp, oIdx) => (
-                  <div key={oIdx} className="finding-row" style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-                    <div style={{ fontSize: '1.4rem', fontWeight: '700', color: 'var(--brand)', minWidth: '24px', lineHeight: '1' }}>
+                  <div key={oIdx} className="finding-row" style={{ display: 'flex', gap: '20px', alignItems: 'flex-start', padding: '18px 22px', borderRadius: '14px' }}>
+                    <div style={{ fontSize: '1.4rem', fontWeight: '700', fontFamily: 'Georgia, serif', color: '#E80071', minWidth: '24px', lineHeight: '1', marginTop: '2px' }}>
                       {opp.num}
                     </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', width: '100%' }}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
-                        <span style={{ fontSize: '1rem', fontWeight: '600', color: 'var(--ink)' }}>
-                          {opp.title} <span style={{ color: 'var(--muted)', fontWeight: '400' }}>· {opp.stage}</span>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', width: '100%' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+                        <span style={{ fontSize: '1.05rem', fontWeight: '700', color: 'var(--ink)' }}>
+                          {opp.title}
                         </span>
-                        <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>{opp.count}</span>
+                        <span className="pink-stage-pill">{opp.stage}</span>
+                        <span style={{ fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>· {opp.count}</span>
                       </div>
                       <p style={{ fontSize: '0.9rem', color: 'var(--muted)', margin: 0, lineHeight: '1.5' }}>
                         {opp.exp}
