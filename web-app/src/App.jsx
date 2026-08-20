@@ -915,7 +915,7 @@ export default function App() {
               )}
             </section>
 
-            {/* (4) Observations (4 Short Narrative Cards) */}
+            {/* (4) Observations (Short Plain Sentences, No Technical Jargon) */}
             <section style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '40px' }}>
               <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
                 <h2 style={{ fontSize: '1.4rem', fontWeight: '600' }}>
@@ -929,55 +929,55 @@ export default function App() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <div className="finding-row">
                   <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '4px' }}>
-                    Public Reviews Skew Post-Purchase
+                    Public Reviews Focus Post-Purchase
                   </h3>
                   <p style={{ fontSize: '0.9rem', color: 'var(--muted)', margin: '0 0 6px 0' }}>
-                    App store reviews concentrate heavily on shipping delays, courier pickups, and refund disputes after ordering.
+                    App store reviews talk mostly about delivery delays and return pickups after orders are placed.
                   </p>
                   <div className="takeaway-arrow">
-                    → True pre-purchase friction requires semantic filtering to isolate wishlist intent.
+                    → Finding true wishlist doubts requires filtering for pre-purchase questions.
                   </div>
                 </div>
 
                 <div className="finding-row">
                   <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '4px' }}>
-                    Product Detail Pages Provide Highest Intent Density
+                    Product Pages Show Highest Purchase Intent
                   </h3>
                   <p style={{ fontSize: '0.9rem', color: 'var(--muted)', margin: '0 0 6px 0' }}>
-                    PDP customer reviews and Q&A reveal why items sit saved for weeks without checkout.
+                    Product review sections and Q&A show exactly why items sit saved for weeks without checkout.
                   </p>
                   <div className="takeaway-arrow">
-                    → Direct evidence of sizing doubts, price-drop waiting, and fabric transparency gaps.
+                    → Direct evidence of sizing uncertainty, price waiting, and fabric doubts.
                   </div>
                 </div>
 
                 <div className="finding-row">
                   <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '4px' }}>
-                    X / Twitter Excluded Due to Paid API Access Block
+                    X / Twitter Search Unavailable
                   </h3>
                   <p style={{ fontSize: '0.9rem', color: 'var(--muted)', margin: '0 0 6px 0' }}>
-                    Read-only search API tests returned HTTP 401 Unauthorized requiring paid developer subscription.
+                    Social media search access requires premium API developer access.
                   </p>
                   <div className="takeaway-arrow">
-                    → Search API access requires a paid developer tier ($100/mo Basic or $5,000/mo Pro).
+                    → Focus data collection on public video channels, Reddit forums, and store reviews.
                   </div>
                 </div>
 
                 <div className="finding-row">
                   <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '4px' }}>
-                    Rejected-Pool Audit Confirms Pre-Purchase Signal Scarcity
+                    Most Public Feedback Is Post-Purchase
                   </h3>
                   <p style={{ fontSize: '0.9rem', color: 'var(--muted)', margin: '0 0 6px 0' }}>
-                    Full audit of 559 rejected raw records yielded only 11 sparse hits (1.96% signal rate).
+                    Checking unselected feedback shows only a tiny fraction talks about wishlisting before buying.
                   </p>
                   <div className="takeaway-arrow">
-                    → Unprompted public commentary concentrates heavily on post-purchase issues rather than shortlist comparison.
+                    → Public comments concentrate heavily on delivery and refunds rather than shortlist comparison.
                   </div>
                 </div>
               </div>
             </section>
 
-            {/* (5) Footer : About this engine (Expandable Footer) */}
+            {/* (5) Footer  : About this engine (Expandable Footer) */}
             <footer style={{ marginTop: '20px', paddingTop: '24px', borderTop: '1px solid var(--line)' }}>
               <div className="finding-row" style={{ backgroundColor: 'var(--brand-tint)', borderColor: 'var(--brand-tint-2)' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
