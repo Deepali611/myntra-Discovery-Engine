@@ -726,71 +726,58 @@ export default function App() {
                     const item = FINDING_DETAILS[fKey];
                     if (!item) return null;
                     const scaleClass = getCardScaleClass(item);
+                    const isExpanded = !!expandedCards[fKey];
                     return (
                       <div key={fKey} className={`finding-row finding-card-transition ${scaleClass}`} id={fKey} style={{ cursor: "pointer" }} onClick={() => toggleExpand(fKey)}>
-                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
-                          <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
-                            <h3 className="card-title" style={{ color: "#282C3F", fontWeight: 500 }}>
-                              {item.shortTitle}
-                            </h3>
-                            <span className="category-tag">{item.categoryTag}</span>
-                          </div>
-                          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                            <span style={{ fontSize: "0.86rem", color: "#282C3F", fontWeight: "500" }}>{item.countFormatted}</span>
-                            <button
-                              onClick={(e) => { e.stopPropagation(); toggleExpand(fKey); }}
-                              style={{
-                                background: "var(--brand-tint)",
-                                border: "1px solid var(--brand-tint-2)",
-                                color: "var(--brand-dark)",
-                                width: "26px",
-                                height: "26px",
-                                borderRadius: "50%",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                fontSize: "0.7rem",
-                                cursor: "pointer",
-                                transition: "transform 0.2s ease",
-                                transform: expandedCards[fKey] ? "rotate(180deg)" : "rotate(0deg)",
-                                padding: 0
-                              }}
-                            >
-                              ▼
-                            </button>
-                          </div>
-                        </div>
-                        
-                        <p className="problem-statement-line">
-                          {item.problemStatement}
-                        </p>
-
-                        <div className="myntra-bar-track" style={{ margin: "12px 0 8px 0" }}>
-                          <div className="myntra-bar-fill bar-fill-animated" style={{ width: `${item.barPct}%` }}></div>
-                        </div>
-
-                        {expandedCards[fKey] && (
-                          <div className="detail-expanded" style={{ marginTop: "14px", paddingTop: "14px", borderTop: "1px solid var(--line)", display: "flex", flexDirection: "column", gap: "14px" }}>
-                            
-                            <div className="finding-description">
-                              {item.description}
-                            </div>
-
-                            <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-                              {item.quotes.map((q, qIdx) => (
-                                <div key={qIdx} className="quote-box-citation" style={{ fontSize: '0.92rem', color: 'var(--ink)', lineHeight: '1.5', padding: '14px 18px' }}>
-                                  "{q.quote}"
-                                </div>
-                              ))}
-                            </div>
-
-                            {item.productImplication && (
-                              <p style={{ fontSize: '0.88rem', color: 'var(--muted)', lineHeight: '1.5', margin: 0 }}>
-                                {item.productImplication}
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "12px" }}>
+                          <div style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
+                            <span style={{ fontSize: "1.2rem", fontWeight: "700", color: "#FF3F6C", lineHeight: "1.2", minWidth: "14px", userSelect: "none" }}>
+                              {isExpanded ? "-" : "+"}
+                            </span>
+                            <div>
+                              <div style={{ display: "flex", alignItems: "center", gap: "10px", flexWrap: "wrap" }}>
+                                <h3 className="card-title" style={{ color: "#1E2229", fontWeight: 600, fontSize: "1.05rem" }}>
+                                  {item.shortTitle}
+                                </h3>
+                                <span className="pink-stage-pill">{item.categoryTag}</span>
+                              </div>
+                              <p className="problem-statement-line" style={{ marginTop: "4px", fontSize: "0.86rem", color: "var(--muted)" }}>
+                                {item.problemStatement}
                               </p>
-                            )}
-
+                            </div>
                           </div>
+                          <div style={{ fontSize: "0.9rem", color: "#535766", fontWeight: "500" }}>
+                            {item.countFormatted ? item.countFormatted.replace('|', '·') : ''}
+                          </div>
+                        </div>
+
+                        {/* Thin 3px Accent Bar & Details when Expanded (Matching Nykaa Reference Screenshot) */}
+                        {isExpanded && (
+                          <>
+                            <div style={{ width: "100%", height: "3px", backgroundColor: "#FFF0F3", borderRadius: "9999px", margin: "14px 0 14px 0", overflow: "hidden" }}>
+                              <div style={{ width: `${item.barPct}%`, height: "100%", backgroundColor: "#FF3F6C", borderRadius: "9999px" }}></div>
+                            </div>
+
+                            <div className="detail-expanded" style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
+                              <div className="finding-description" style={{ fontSize: "0.9rem", color: "var(--ink)", lineHeight: "1.55" }}>
+                                {item.description}
+                              </div>
+
+                              <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                                {item.quotes.map((q, qIdx) => (
+                                  <div key={qIdx} style={{ backgroundColor: "#FFF5F7", borderLeft: "3px solid #FF3F6C", borderRadius: "4px", padding: "12px 18px", fontSize: "0.9rem", color: "#1E2229", lineHeight: "1.5" }}>
+                                    "{q.quote}"
+                                  </div>
+                                ))}
+                              </div>
+
+                              {item.productImplication && (
+                                <p style={{ fontSize: "0.88rem", color: "var(--muted)", lineHeight: "1.5", margin: 0 }}>
+                                  {item.productImplication}
+                                </p>
+                              )}
+                            </div>
+                          </>
                         )}
                       </div>
                     );
@@ -833,71 +820,58 @@ export default function App() {
                           const item = FINDING_DETAILS[fKey];
                           if (!item) return null;
                           const scaleClass = getCardScaleClass(item);
+                          const isExpanded = !!expandedCards[fKey];
                           return (
                             <div key={fKey} className={`finding-row finding-card-transition ${scaleClass}`} id={`stage_${fKey}`} style={{ cursor: "pointer" }} onClick={() => toggleExpand(fKey)}>
-                              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
-                                <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
-                                  <h3 className="card-title" style={{ color: "#282C3F", fontWeight: 500 }}>
-                                    {item.shortTitle}
-                                  </h3>
-                                  <span className="category-tag">{item.categoryTag}</span>
-                                </div>
-                                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                                  <span style={{ fontSize: "0.86rem", color: "#282C3F", fontWeight: "500" }}>{item.countFormatted}</span>
-                                  <button
-                                    onClick={(e) => { e.stopPropagation(); toggleExpand(fKey); }}
-                                    style={{
-                                      background: "var(--brand-tint)",
-                                      border: "1px solid var(--brand-tint-2)",
-                                      color: "var(--brand-dark)",
-                                      width: "26px",
-                                      height: "26px",
-                                      borderRadius: "50%",
-                                      display: "flex",
-                                      alignItems: "center",
-                                      justifyContent: "center",
-                                      fontSize: "0.7rem",
-                                      cursor: "pointer",
-                                      transition: "transform 0.2s ease",
-                                      transform: expandedCards[fKey] ? "rotate(180deg)" : "rotate(0deg)",
-                                      padding: 0
-                                    }}
-                                  >
-                                    ▼
-                                  </button>
-                                </div>
-                              </div>
-                              
-                              <p className="problem-statement-line">
-                                {item.problemStatement}
-                              </p>
-
-                              <div className="myntra-bar-track" style={{ margin: "12px 0 8px 0" }}>
-                                <div className="myntra-bar-fill bar-fill-animated" style={{ width: `${item.barPct}%` }}></div>
-                              </div>
-
-                              {expandedCards[fKey] && (
-                                <div className="detail-expanded" style={{ marginTop: "14px", paddingTop: "14px", borderTop: "1px solid var(--line)", display: "flex", flexDirection: "column", gap: "14px" }}>
-                                  
-                                  <div className="finding-description">
-                                    {item.description}
-                                  </div>
-
-                                  <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-                                    {item.quotes.map((q, qIdx) => (
-                                      <div key={qIdx} className="quote-box-citation" style={{ fontSize: '0.92rem', color: 'var(--ink)', lineHeight: '1.5', padding: '14px 18px' }}>
-                                        "{q.quote}"
-                                      </div>
-                                    ))}
-                                  </div>
-
-                                  {item.productImplication && (
-                                    <p style={{ fontSize: '0.88rem', color: 'var(--muted)', lineHeight: '1.5', margin: 0 }}>
-                                      {item.productImplication}
+                              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "12px" }}>
+                                <div style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
+                                  <span style={{ fontSize: "1.2rem", fontWeight: "700", color: "#FF3F6C", lineHeight: "1.2", minWidth: "14px", userSelect: "none" }}>
+                                    {isExpanded ? "-" : "+"}
+                                  </span>
+                                  <div>
+                                    <div style={{ display: "flex", alignItems: "center", gap: "10px", flexWrap: "wrap" }}>
+                                      <h3 className="card-title" style={{ color: "#1E2229", fontWeight: 600, fontSize: "1.05rem" }}>
+                                        {item.shortTitle}
+                                      </h3>
+                                      <span className="pink-stage-pill">{item.categoryTag}</span>
+                                    </div>
+                                    <p className="problem-statement-line" style={{ marginTop: "4px", fontSize: "0.86rem", color: "var(--muted)" }}>
+                                      {item.problemStatement}
                                     </p>
-                                  )}
-
+                                  </div>
                                 </div>
+                                <div style={{ fontSize: "0.9rem", color: "#535766", fontWeight: "500" }}>
+                                  {item.countFormatted ? item.countFormatted.replace('|', '·') : ''}
+                                </div>
+                              </div>
+
+                              {/* Thin 3px Accent Bar & Details when Expanded (Matching Nykaa Reference Screenshot) */}
+                              {isExpanded && (
+                                <>
+                                  <div style={{ width: "100%", height: "3px", backgroundColor: "#FFF0F3", borderRadius: "9999px", margin: "14px 0 14px 0", overflow: "hidden" }}>
+                                    <div style={{ width: `${item.barPct}%`, height: "100%", backgroundColor: "#FF3F6C", borderRadius: "9999px" }}></div>
+                                  </div>
+
+                                  <div className="detail-expanded" style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
+                                    <div className="finding-description" style={{ fontSize: "0.9rem", color: "var(--ink)", lineHeight: "1.55" }}>
+                                      {item.description}
+                                    </div>
+
+                                    <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                                      {item.quotes.map((q, qIdx) => (
+                                        <div key={qIdx} style={{ backgroundColor: "#FFF5F7", borderLeft: "3px solid #FF3F6C", borderRadius: "4px", padding: "12px 18px", fontSize: "0.9rem", color: "#1E2229", lineHeight: "1.5" }}>
+                                          "{q.quote}"
+                                        </div>
+                                      ))}
+                                    </div>
+
+                                    {item.productImplication && (
+                                      <p style={{ fontSize: "0.88rem", color: "var(--muted)", lineHeight: "1.5", margin: 0 }}>
+                                        {item.productImplication}
+                                      </p>
+                                    )}
+                                  </div>
+                                </>
                               )}
                             </div>
                           );
