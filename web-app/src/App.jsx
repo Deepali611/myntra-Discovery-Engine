@@ -133,69 +133,25 @@ const EXAMPLE_POOLS = [
 
 // Master FINDING_DETAILS Dictionary: Nykaa Reference Match (Max 4 Quotes, 1-2 Sentence Context Line, Short Titles, No Sources line)
 
-// Master FINDING_DETAILS Dictionary for All 9 Findings (Quote Text Only, Identical Clean Structure)
+// Master FINDING_DETAILS Dictionary for All 9 Unique Findings (Quote Text Only, Clean Titles, No (Q) Words)
 const FINDING_DETAILS = {
-  rank_1: {
-    shortTitle: "Peer sizing guidance",
-    categoryTag: "Sizing doubt",
-    problemStatement: "Asking creators or Q&A for body measurements before ordering.",
-    description: "Shoppers ask creators directly for height, waist, and bust measurements rather than trust the size chart.",
-    quietLine: "Based on 7 signals across 2 sources (YouTube Comments, Myntra PDP Q&A).",
-    countFormatted: "7 · 3.9%",
-    barPct: 37,
+  finding_7: {
+    shortTitle: "Event suitability & styling",
+    categoryTag: "Styling alignment",
+    problemStatement: "Uncertainty whether a wishlisted item matches specific dress codes or event themes.",
+    description: "Shoppers seek advice on fit, styling, and appropriateness for specific social settings like dates or birthdays.",
+    quietLine: "Based on 20 signals across 2 sources (Reddit, Myntra PDP). Showing top 4 quotes.",
+    countFormatted: "20 · 11.2%",
+    barPct: 85,
     quotes: [
-      { quote: 'Which size do u wear ?' },
-      { quote: 'Can you share exact bust and waist try-on measurements for this dress?' },
-      { quote: 'Should I buy size M or L for a relaxed fit on 38 inch chest?' },
-      { quote: 'What size should I get if my waist is 28 inches? Height is 5\'4".' }
+      { quote: 'Help Me Choose an Outfit for My Third Date!' },
+      { quote: 'Help Me Choose a Dress for My Birthday (Urgent!)' },
+      { quote: 'Is this saree suitable for evening reception party?' },
+      { quote: 'Need styling tips for ethnic wear wedding event.' }
     ],
-    productImplication: "PRODUCT IMPLICATION: Embed creator try-on height/waist badges on PDPs and launch a peer sizing Q&A module to eliminate size return anxiety."
+    productImplication: "PRODUCT IMPLICATION: Provide occasion tag filtering and community styling advice directly within the wishlist."
   },
-  rank_2: {
-    shortTitle: "Price-drop waiting",
-    categoryTag: "Value & timing",
-    problemStatement: "Saving items in wishlist for weeks or months waiting for a sale price drop or restock.",
-    description: "Saved items are parked until the price moves: shoppers hold items for sales and wait long stretches for offers.",
-    quietLine: "Based on 3 signals across 1 source (Myntra PDP Reviews).",
-    countFormatted: "3 · 1.7%",
-    barPct: 16,
-    quotes: [
-      { quote: 'Kept in wishlist for weeks, bought on price drop but zip quality gap.' },
-      { quote: 'Saved these block heels for 2 months waiting for a sale price drop.' },
-      { quote: 'Wishlisted this ethnic saree a month ago, hoping for restocking in red color.' }
-    ],
-    productImplication: "PRODUCT IMPLICATION: Implement automated wishlist price-drop notifications and back-in-stock activation alerts to re-engage high-intent shoppers."
-  },
-  rank_3: {
-    shortTitle: "Cross-platform price trust",
-    categoryTag: "Trust gap",
-    problemStatement: "Comparing prices and authenticity on brand official websites vs Myntra before checkout.",
-    description: "Doubt about whether official store prices or product listings differ across platforms before placing orders.",
-    quietLine: "Based on 3 signals across 2 sources (Reddit, YouTube).",
-    countFormatted: "3 · 1.7%",
-    barPct: 16,
-    quotes: [
-      { quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?' },
-      { quote: 'Is Snitch official website price cheaper than Myntra listing?' },
-      { quote: 'Comparing price on Flipkart vs Myntra before checking out.' }
-    ],
-    productImplication: "PRODUCT IMPLICATION: Display official brand store verification badges and price match guarantee trust seals on PDPs."
-  },
-  rank_4: {
-    shortTitle: "Fabric & photo reality",
-    categoryTag: "Confidence gap",
-    problemStatement: "Uncertainty whether app studio photos hide thin translucent fabric or darker reality colors.",
-    description: "Shoppers hesitate in wishlists when studio photos obscure true fabric thickness or actual color tones.",
-    quietLine: "Based on 2 signals across 1 source (Myntra PDP Reviews).",
-    countFormatted: "2 · 1.1%",
-    barPct: 11,
-    quotes: [
-      { quote: 'Color in reality is much darker than shown in the app photos. Kept it in shortlist for a month...' },
-      { quote: 'Fabric feels very thin and see-through compared to app studio picture.' }
-    ],
-    productImplication: "PRODUCT IMPLICATION: Add unedited customer photo galleries, fabric GSM weight transparency specs, and realistic color lighting tags."
-  },
-  rank_5: {
+  finding_5: {
     shortTitle: "Occasion choice dilemma",
     categoryTag: "Decision friction",
     problemStatement: "Difficulty choosing between multiple shortlisted outfits saved for specific events.",
@@ -211,7 +167,23 @@ const FINDING_DETAILS = {
     ],
     productImplication: "PRODUCT IMPLICATION: Introduce an in-app \'Compare Shortlist\' side-by-side tool and occasion styling voting polls."
   },
-  rank_6: {
+  finding_3: {
+    shortTitle: "Peer sizing guidance",
+    categoryTag: "Sizing doubt",
+    problemStatement: "Asking creators or Q&A for body measurements before ordering.",
+    description: "Shoppers ask creators directly for height, waist, and bust measurements rather than trust the size chart.",
+    quietLine: "Based on 7 signals across 2 sources (YouTube Comments, Myntra PDP Q&A).",
+    countFormatted: "7 · 3.9%",
+    barPct: 37,
+    quotes: [
+      { quote: 'Which size do u wear ?' },
+      { quote: 'Can you share exact bust and waist try-on measurements for this dress?' },
+      { quote: 'Should I buy size M or L for a relaxed fit on 38 inch chest?' },
+      { quote: 'What size should I get if my waist is 28 inches? Height is 5\'4".' }
+    ],
+    productImplication: "PRODUCT IMPLICATION: Embed creator try-on height/waist badges on PDPs and launch a peer sizing Q&A module to eliminate size return anxiety."
+  },
+  finding_9: {
     shortTitle: "User segment patterns",
     categoryTag: "Segment pattern",
     problemStatement: "Wishlisting behavior varies across buyer personas (occasion-driven vs office-wear shoppers).",
@@ -227,7 +199,90 @@ const FINDING_DETAILS = {
     ],
     productImplication: "PRODUCT IMPLICATION: Personalize wishlist notification timing and PDP recommendation feeds based on persona intent signals."
   },
+  finding_1: {
+    shortTitle: "Wishlist intent & purpose",
+    categoryTag: "Intent pattern",
+    problemStatement: "Saving items as inspiration bookmarks or price watchlists rather than immediate cart additions.",
+    description: "Shoppers add footwear and ethnic wear to wishlists to defer decisions until sales or when inspired by creator try-ons.",
+    quietLine: "Based on 4 signals across 2 sources (Myntra PDP Reviews, YouTube).",
+    countFormatted: "4 · 2.2%",
+    barPct: 21,
+    quotes: [
+      { quote: 'Saved these block heels for 2 months. Cushioning is decent...' },
+      { quote: 'Added to wishlist after seeing try-on haul video.' }
+    ],
+    productImplication: "PRODUCT IMPLICATION: Differentiate wishlist save modes between price-watch alerts and outfit inspiration boards."
+  },
+  finding_2: {
+    shortTitle: "Stalled wishlist & quality gaps",
+    categoryTag: "Quality uncertainty",
+    problemStatement: "Wishlisted items remaining unbought for weeks due to defect fears like sticking zippers.",
+    description: "Items sit unbought in wishlists due to quality concerns surfacing in review commentary while waiting for discounts.",
+    quietLine: "Based on 3 signals across 1 source (Myntra PDP Reviews).",
+    countFormatted: "3 · 1.7%",
+    barPct: 16,
+    quotes: [
+      { quote: 'Kept in wishlist for weeks, bought on price drop but zip quality gap.' }
+    ],
+    productImplication: "PRODUCT IMPLICATION: Surface verified zip/stitching quality badges directly on wishlist item cards."
+  },
+  finding_6: {
+    shortTitle: "Cross-platform price trust",
+    categoryTag: "Trust gap",
+    problemStatement: "Comparing prices and authenticity on brand official websites vs Myntra before checkout.",
+    description: "Doubt about whether official store prices or product listings differ across platforms before placing orders.",
+    quietLine: "Based on 3 signals across 2 sources (Reddit, YouTube).",
+    countFormatted: "3 · 1.7%",
+    barPct: 16,
+    quotes: [
+      { quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?' },
+      { quote: 'Is Snitch official website price cheaper than Myntra listing?' },
+      { quote: 'Comparing price on Flipkart vs Myntra before checking out.' }
+    ],
+    productImplication: "PRODUCT IMPLICATION: Display official brand store verification badges and price match guarantee trust seals on PDPs."
+  },
+  finding_8: {
+    shortTitle: "Price-drop waiting",
+    categoryTag: "Value & timing",
+    problemStatement: "Saving items in wishlist for weeks or months waiting for a sale price drop or restock.",
+    description: "Saved items are parked until the price moves: shoppers hold items for sales and wait long stretches for offers.",
+    quietLine: "Based on 3 signals across 1 source (Myntra PDP Reviews).",
+    countFormatted: "3 · 1.7%",
+    barPct: 16,
+    quotes: [
+      { quote: 'Kept in wishlist for weeks, bought on price drop but zip quality gap.' },
+      { quote: 'Saved these block heels for 2 months waiting for a sale price drop.' },
+      { quote: 'Wishlisted this ethnic saree a month ago, hoping for restocking in red color.' }
+    ],
+    productImplication: "PRODUCT IMPLICATION: Implement automated wishlist price-drop notifications and back-in-stock activation alerts to re-engage high-intent shoppers."
+  },
+  finding_4: {
+    shortTitle: "Fabric & photo reality",
+    categoryTag: "Confidence gap",
+    problemStatement: "Uncertainty whether app studio photos hide thin translucent fabric or darker reality colors.",
+    description: "Shoppers hesitate in wishlists when studio photos obscure true fabric thickness or actual color tones.",
+    quietLine: "Based on 2 signals across 1 source (Myntra PDP Reviews).",
+    countFormatted: "2 · 1.1%",
+    barPct: 11,
+    quotes: [
+      { quote: 'Color in reality is much darker than shown in the app photos. Kept it in shortlist for a month...' },
+      { quote: 'Fabric feels very thin and see-through compared to app studio picture.' }
+    ],
+    productImplication: "PRODUCT IMPLICATION: Add unedited customer photo galleries, fabric GSM weight transparency specs, and realistic color lighting tags."
+  }
 };
+
+const FINDINGS_SORTED_FREQUENCY = [
+  'finding_7',
+  'finding_5',
+  'finding_3',
+  'finding_9',
+  'finding_1',
+  'finding_2',
+  'finding_6',
+  'finding_8',
+  'finding_4'
+];
 
 
 
@@ -605,8 +660,8 @@ export default function App() {
                   <div className="stat-label">feedback items passed relevance screening</div>
                 </div>
                 <div className="stat-card">
-                  <div className="stat-number">5</div>
-                  <div className="stat-label">blockers detected</div>
+                  <div className="stat-number">9</div>
+                  <div className="stat-label">findings detected</div>
                 </div>
                 <div className="stat-card">
                   <div className="stat-number">5</div>
@@ -614,11 +669,7 @@ export default function App() {
                 </div>
               </div>
 
-              {/* About this data note */}
-              <div style={{ backgroundColor: 'var(--brand-tint)', border: '1px solid var(--brand-tint-2)', borderRadius: 'var(--radius)', padding: '14px 18px', fontSize: '0.88rem', color: 'var(--ink)', lineHeight: '1.5' }}>
-                <strong style={{ color: 'var(--brand-dark)', fontWeight: '600' }}>About this data: </strong>
-                179 of our collected feedback items passed relevance screening. Of these, 46 surfaced as genuine pre-purchase wishlist evidence across the 6 findings below.
-              </div>
+
 
               {/* Where the 179 screened items came from */}
               <div className="finding-row" style={{ marginTop: '4px' }}>
@@ -716,7 +767,7 @@ export default function App() {
               {/* View 1: By Frequency (Ranked Count Order with Scaled Card Sizing) */}
               {findingsSortView === 'frequency' && (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                  {['rank_1', 'rank_2', 'rank_3', 'rank_4', 'rank_5', 'rank_6', 'q4_investigated', 'q5_investigated', 'q9_investigated'].map((fKey) => {
+                  {FINDINGS_SORTED_FREQUENCY.map((fKey) => {
                     const item = FINDING_DETAILS[fKey];
                     if (!item) return null;
                     const scaleClass = getCardScaleClass(item);
@@ -782,17 +833,17 @@ export default function App() {
                     {
                       stageTitle: '1. While Item Is Saved (Direct Pre-Purchase Friction)',
                       stageDesc: 'Friction experienced while decision-making is active in wishlists.',
-                      keys: ['rank_5', 'rank_1', 'rank_2', 'rank_4']
+                      keys: ['finding_7', 'finding_5', 'finding_3', 'finding_1', 'finding_2', 'finding_8', 'finding_4']
                     },
                     {
                       stageTitle: '2. Before Checkout (External Research & Trust)',
                       stageDesc: 'Hesitation from comparing prices and authenticity off-platform.',
-                      keys: ['rank_3']
+                      keys: ['finding_6']
                     },
                     {
                       stageTitle: '3. Persona & Segment Patterns (Exploratory)',
                       stageDesc: 'Differences across user archetypes and shopping intents.',
-                      keys: ['rank_6']
+                      keys: ['finding_9']
                     }
                   ].map((stageGroup, sIdx) => (
                     <div key={sIdx} style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
