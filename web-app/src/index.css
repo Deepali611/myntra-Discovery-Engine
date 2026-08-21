@@ -103,7 +103,7 @@ h1, h2, h3 {
 .page-layout {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 40px 24px 80px 24px;
+  padding: 40px 24px 100px 24px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -135,17 +135,18 @@ h1, h2, h3 {
 
 .chat-container {
   border: 1px solid #EFEFEF;
-  border-radius: 20px;
+  border-radius: 24px;
   background: #ffffff;
-  box-shadow: 0 4px 24px rgba(40,44,63,0.04);
+  box-shadow: 0 4px 32px rgba(40,44,63,0.04);
   display: flex;
   flex-direction: column;
-  height: 520px;
-  overflow: hidden;
+  padding: 32px 36px 28px 36px;
+  gap: 20px;
+  min-height: 480px;
 }
 
 .chat-header {
-  padding: 14px 24px;
+  padding-bottom: 12px;
   border-bottom: 1px solid #F3F4F6;
   background: #ffffff;
   display: flex;
@@ -179,26 +180,27 @@ h1, h2, h3 {
 .chat-history {
   flex: 1;
   overflow-y: auto;
-  padding: 24px;
+  padding: 12px 0;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background-color: #ffffff;
+  background-color: transparent;
+  min-height: 220px;
 }
 
 .chat-input-bar {
-  padding: 16px 20px;
+  padding-top: 16px;
   border-top: 1px solid #F3F4F6;
-  background: #ffffff;
+  background: transparent;
   display: flex;
-  gap: 12px;
+  gap: 14px;
   align-items: center;
 }
 
 .chat-input {
   width: 100%;
-  padding: 14px 24px;
-  border: 1.5px solid #FF3F6C;
+  padding: 15px 26px;
+  border: 1px solid #E5E7EB;
   border-radius: 9999px;
   font-size: 0.94rem;
   color: var(--ink);
@@ -208,8 +210,8 @@ h1, h2, h3 {
 }
 
 .chat-input:focus {
-  border-color: #D41E48;
-  box-shadow: 0 0 0 3px rgba(255,63,108,0.15);
+  border-color: #FF3F6C;
+  box-shadow: 0 0 0 3px rgba(255,63,108,0.12);
 }
 
 .send-btn {
@@ -217,12 +219,21 @@ h1, h2, h3 {
   color: #ffffff;
   border: none;
   border-radius: 9999px;
-  padding: 0 28px;
+  padding: 0 32px;
   height: 48px;
-  font-size: 0.92rem;
+  font-size: 0.94rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.app-footer {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 24px 24px 80px 24px;
+  font-size: 0.86rem;
+  color: #9CA3AF;
+  font-weight: 500;
 }
 
 .send-btn.active, .send-btn:hover {

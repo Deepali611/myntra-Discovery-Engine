@@ -1142,6 +1142,11 @@ export default function App() {
 
       </main>
 
+      {/* Nykaa Reference Style Footer */}
+      <footer className="app-footer">
+        Myntra · Discovery Engine
+      </footer>
+
     </div>
   );
 }
