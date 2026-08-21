@@ -8,39 +8,39 @@ const NAV_PAGES = [
 ];
 
 const PRESEEDED_CHIPS = [
-  "Why do users add items to their wishlist?",
-  "What prevents purchase after wishlisting?",
-  "What uncertainties remain?",
-  "What causes postponement?",
-  "How do users compare shortlisted items?",
-  "What info do they seek outside Myntra?",
-  "Wishlist as intent vs. bookmark?",
-  "What unmet needs emerge?"
+  "Why do users save items to their wishlist?",
+  "What blocks the purchase of a saved item?",
+  "What uncertainties do shoppers express before buying?",
+  "Why do purchases get postponed / deferred?",
+  "How do users compare options?",
+  "Bookmarking vs. genuine buying intent?",
+  "How do blockers differ by segment / category?",
+  "What unmet needs / opportunities emerge?"
 ];
 
 const GROUNDED_KNOWLEDGE = {
-  "why do users add items to their wishlist?": {
-    answer: "Shoppers add items to wishlists primarily as price watchlists to wait for sale discounts (16 items) or to save inspiration from creator try-on videos (12 items). Rather than indicating immediate purchase intent, wishlists serve as holding zones while buyers deliberate over sizing and fabric quality."
+  "why do users save items to their wishlist?": {
+    answer: "Shoppers save items to wishlists primarily as price watchlists to wait for sale discounts (16 items) or to save inspiration from creator try-on videos (12 items). Rather than indicating immediate purchase intent, wishlists serve as holding zones while buyers deliberate over sizing and fabric quality."
   },
-  "what prevents purchase after wishlisting?": {
+  "what blocks the purchase of a saved item?": {
     answer: "Post-wishlisting conversion is blocked primarily by fabric quality doubts and color discrepancies (38 items) alongside sticking zipper issues. Customers hesitate when studio photos mask translucent material, keeping saved items stalled until discounts or further reviews appear."
   },
-  "what uncertainties remain?": {
+  "what uncertainties do shoppers express before buying?": {
     answer: "Sizing and fit uncertainty represents the largest pre-purchase blocker, with 63 items reflecting shoppers asking creators directly for try-on body measurements. Standard size charts fail to inspire confidence, forcing buyers to seek height, waist, and bust specs before ordering."
   },
-  "what causes postponement?": {
+  "why do purchases get postponed / deferred?": {
     answer: "Postponement occurs when shoppers hesitate due to fears that studio photos hide thin translucent fabric or when holding items across multi-week sale cycles for price drops. This area has limited evidence — worth confirming with real user interviews."
   },
-  "how do users compare shortlisted items?": {
+  "how do users compare options?": {
     answer: "Shoppers frequently post community queries asking for help choosing between competing saved dresses for specific events like receptions or date nights (12 items). Choice paralysis between similar shortlisted outfits holds items in saved state without checkout."
   },
-  "what info do they seek outside myntra?": {
-    answer: "Shoppers actively cross-reference official brand website pricing and inspect cross-platform quality reviews (16 items) before placing an order. Doubts regarding price markups or platform return fee changes prompt external research off-app."
-  },
-  "wishlist as intent vs. bookmark?": {
+  "bookmarking vs. genuine buying intent?": {
     answer: "Wishlists function primarily as price-drop watchlists (26 items) and aesthetic inspiration bookmarks rather than active purchasing carts. Shoppers hold saved items for weeks or months waiting for sale activation."
   },
-  "what unmet needs emerge?": {
+  "how do blockers differ by segment / category?": {
+    answer: "Friction patterns vary distinctly across personas: occasion-driven buyers face choice paralysis between shortlisted dresses, while office-wear buyers seek fit and fabric thickness guarantees. Personalizing notifications by intent segment helps overcome these distinct blockers."
+  },
+  "what unmet needs / opportunities emerge?": {
     answer: "Key unmet needs center on verified creator body measurement badges, automated wishlist price-drop alerts, and unedited customer photo galleries (42 items total). Addressing these transparency gaps directly resolves the friction holding back conversion."
   }
 };
@@ -434,14 +434,17 @@ export default function App() {
   return (
     <div style={{ minHeight: '100vh', backgroundColor: 'var(--bg)' }}>
       
-      {/* Sticky Header with 12px Dot Logo Wordmark & 3 Navigation Tabs */}
+      {/* Sticky Header with Dot Logo Wordmark & 3 Navigation Tabs */}
       <header className="sticky-header">
         <div className="header-container">
           
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <span className="brand-dot"></span>
-            <span style={{ fontSize: '1.05rem', fontWeight: '500', color: 'var(--ink)', letterSpacing: '-0.01em' }}>
-              Myntra Discovery Engine
+            <span style={{ fontSize: '1.05rem', fontWeight: '700', color: 'var(--ink)', fontFamily: 'Georgia, serif' }}>
+              Myntra Fashion
+            </span>
+            <span style={{ fontSize: '1.05rem', fontWeight: '400', color: 'var(--muted)' }}>
+              · Wishlist Discovery
             </span>
           </div>
 
@@ -460,64 +463,71 @@ export default function App() {
         </div>
       </header>
 
-      {/* Single-Column Document Layout (Max Width 1080px) */}
+      {/* Single-Column Document Layout */}
       <main className="page-layout">
         
         {/* TAB 1: ASK ASSISTANT (DEFAULT LANDING TAB) */}
         {activePage === 'assistant' && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxWidth: '880px', margin: '0 auto', width: '100%' }}>
             <div>
-              <h1 style={{ fontSize: '2.2rem', fontWeight: '600', marginBottom: '8px' }}>
-                Why do wishlisted items never get bought?
-              </h1>
-              <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>
-                An AI engine that reads real shopper feedback and ranks the reasons wishlisted items don't get bought.
+              <p style={{ color: 'var(--muted)', fontSize: '0.96rem', fontWeight: '400' }}>
+                Ask anything about the findings, or pick a question to get started.
               </p>
             </div>
 
-            {/* Prompt Suggestion Chips */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
-              {PRESEEDED_CHIPS.map((chip, idx) => (
-                <button
-                  key={idx}
-                  className="chip-btn"
-                  onClick={() => handleSendQuery(chip)}
-                >
-                  {chip}
-                </button>
-              ))}
-            </div>
-
-            {/* Fixed-Height Scrollable Chat Container */}
+            {/* Container Card */}
             <div className="chat-container">
               
-              {/* Header Inside Chat Container */}
-              <div className="chat-header">
-                <span className="chat-header-title">
-                  {userQuestionCount} {userQuestionCount === 1 ? 'question' : 'questions'} asked
-                </span>
-                <button className="clear-chat-btn" onClick={() => setMessages([])}>
-                  Clear chat
-                </button>
-              </div>
+              {/* Header Inside Chat Container (Only shown when messages > 0) */}
+              {messages.length > 0 && (
+                <div className="chat-header">
+                  <span className="chat-header-title">
+                    {userQuestionCount} {userQuestionCount === 1 ? 'question' : 'questions'} asked
+                  </span>
+                  <button className="clear-chat-btn" onClick={() => setMessages([])}>
+                    Clear chat
+                  </button>
+                </div>
+              )}
 
-              {/* Scrollable Message History */}
+              {/* Scrollable Message History / Empty State Chips */}
               <div className="chat-history" ref={chatHistoryRef}>
-                {messages.map((msg, index) => (
-                  <div
-                    key={index}
-                    className={msg.role === 'user' ? 'user-bubble' : 'assistant-bubble'}
-                  >
-                    {msg.content}
+                {messages.length === 0 ? (
+                  <div style={{ padding: '4px 0' }}>
+                    <strong style={{ fontSize: '0.9rem', fontWeight: '600', color: 'var(--ink)', marginBottom: '16px', display: 'block' }}>
+                      Try a question:
+                    </strong>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+                      {PRESEEDED_CHIPS.map((chip, idx) => (
+                        <button
+                          key={idx}
+                          className="chip-btn"
+                          onClick={() => handleSendQuery(chip)}
+                        >
+                          {chip}
+                        </button>
+                      ))}
+                    </div>
                   </div>
-                ))}
+                ) : (
+                  <>
+                    {messages.map((msg, index) => (
+                      <div
+                        key={index}
+                        className={msg.role === 'user' ? 'user-bubble' : 'assistant-bubble'}
+                      >
+                        {msg.content}
+                      </div>
+                    ))}
 
-                {isLoading && (
-                  <div className="typing-indicator">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
+                    {isLoading && (
+                      <div className="typing-indicator">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                    )}
+                  </>
                 )}
               </div>
 
@@ -526,13 +536,13 @@ export default function App() {
                 <input
                   type="text"
                   className="chat-input"
-                  placeholder="Ask any question about wishlisting friction, sizing doubt, or price-drop behavior..."
+                  placeholder="Ask about wishlist blockers, opportunities, segments..."
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && handleSendQuery()}
                 />
                 <button
-                  className="send-btn"
+                  className={`send-btn ${inputValue.trim() ? 'active' : ''}`}
                   onClick={() => handleSendQuery()}
                 >
                   Send
