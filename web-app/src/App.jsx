@@ -465,7 +465,7 @@ export default function App() {
         
         {/* TAB 1: ASK ASSISTANT (DEFAULT LANDING TAB) */}
         {activePage === 'assistant' && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <div>
               <h1 style={{ fontSize: '2.2rem', fontWeight: '600', marginBottom: '8px' }}>
                 Why do wishlisted items never get bought?
@@ -475,39 +475,50 @@ export default function App() {
               </p>
             </div>
 
-            {/* Dynamic Container Card (collapses height naturally when empty) */}
-            <div className={`chat-container ${messages.length > 0 ? 'active' : 'empty'}`}>
+            {/* Always Available Prompt Suggestion Chips */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <strong style={{ fontSize: '0.88rem', fontWeight: '600', color: 'var(--ink)' }}>
+                Try a question:
+              </strong>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+                {PRESEEDED_CHIPS.map((chip, idx) => (
+                  <button
+                    key={idx}
+                    className="chip-btn"
+                    onClick={() => handleSendQuery(chip)}
+                  >
+                    {chip}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Chat Container Card */}
+            <div className="chat-container">
               
-              {/* Header Inside Chat Container (Only shown when messages > 0) */}
-              {messages.length > 0 && (
-                <div className="chat-header">
-                  <span className="chat-header-title">
-                    {userQuestionCount} {userQuestionCount === 1 ? 'question' : 'questions'} asked
-                  </span>
+              {/* Header Inside Chat Container */}
+              <div className="chat-header">
+                <span className="chat-header-title">
+                  {userQuestionCount === 0 
+                    ? "Ask a question above or type below" 
+                    : `${userQuestionCount} ${userQuestionCount === 1 ? 'question' : 'questions'} asked`}
+                </span>
+                {messages.length > 0 && (
                   <button className="clear-chat-btn" onClick={() => setMessages([])}>
                     Clear chat
                   </button>
-                </div>
-              )}
+                )}
+              </div>
 
-              {/* Scrollable Message History / Empty State Chips */}
+              {/* Scrollable Message History */}
               <div className="chat-history" ref={chatHistoryRef}>
                 {messages.length === 0 ? (
-                  <div>
-                    <strong style={{ fontSize: '0.9rem', fontWeight: '600', color: 'var(--ink)', marginBottom: '14px', display: 'block' }}>
-                      Try a question:
-                    </strong>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
-                      {PRESEEDED_CHIPS.map((chip, idx) => (
-                        <button
-                          key={idx}
-                          className="chip-btn"
-                          onClick={() => handleSendQuery(chip)}
-                        >
-                          {chip}
-                        </button>
-                      ))}
-                    </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', color: 'var(--muted)', textAlign: 'center', gap: '8px', padding: '40px 20px' }}>
+                    <span style={{ fontSize: '1.6rem' }}>💬</span>
+                    <span style={{ fontSize: '0.95rem', fontWeight: '600', color: 'var(--ink)' }}>Start a Conversation</span>
+                    <span style={{ fontSize: '0.86rem', color: 'var(--muted)', maxWidth: '420px', lineHeight: '1.5' }}>
+                      Click any suggested question above or type your own question below to explore wishlist friction insights.
+                    </span>
                   </div>
                 ) : (
                   <>

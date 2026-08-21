@@ -140,16 +140,8 @@ h1, h2, h3 {
   box-shadow: 0 4px 24px rgba(40,44,63,0.04);
   display: flex;
   flex-direction: column;
+  height: 520px;
   overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.chat-container.active {
-  height: 560px;
-}
-
-.chat-container.empty {
-  height: auto;
 }
 
 .chat-header {
@@ -192,11 +184,6 @@ h1, h2, h3 {
   flex-direction: column;
   gap: 16px;
   background-color: #ffffff;
-}
-
-.chat-container.empty .chat-history {
-  flex: none;
-  padding: 24px 24px 16px 24px;
 }
 
 .chat-input-bar {
