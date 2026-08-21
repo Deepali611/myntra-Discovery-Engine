@@ -1009,13 +1009,13 @@ export default function App() {
 
                 <div className="finding-row" style={{ padding: '20px 24px', borderRadius: '14px' }}>
                   <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '6px', color: 'var(--ink)' }}>
-                    Shortlist decisions are community-validated
+                    Shoppers seek public help choosing between saved items
                   </h3>
                   <p style={{ fontSize: '0.9rem', color: 'var(--muted)', margin: '0 0 8px 0', lineHeight: '1.55' }}>
-                    Shoppers ask creators and fashion subreddits to vote between competing saved outfits, actively modifying their wishlists based on peer recommendations.
+                    Shoppers post publicly asking others to help them choose between saved outfits for specific occasions: proof that the decision itself, not just the purchase, happens outside the app.
                   </p>
                   <div className="takeaway-arrow">
-                    → High-consideration fashion choices are peer-guided before checkout.
+                    → The choice between shortlisted items is often a public, social question: before any purchase decision.
                   </div>
                 </div>
               </div>
