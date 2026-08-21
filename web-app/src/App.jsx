@@ -656,33 +656,102 @@ export default function App() {
 
               {/* Assumed vs. Found Sequence */}
               <div style={{ marginBottom: '12px' }}>
-                <h3 style={{ fontSize: '1.1rem', fontWeight: '600', color: 'var(--ink)', marginBottom: '4px' }}>
-                  Assumed vs. Found
-                </h3>
-                <p style={{ fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '14px' }}>
-                  How real feedback challenges common e-commerce assumptions.
-                </p>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', flexWrap: 'wrap', gap: '12px' }}>
+                  <div>
+                    <h3 style={{ fontSize: '1.15rem', fontWeight: '700', color: 'var(--ink)', letterSpacing: '-0.01em' }}>
+                      Assumed vs. Found Insights
+                    </h3>
+                    <p style={{ fontSize: '0.86rem', color: 'var(--muted)', marginTop: '2px' }}>
+                      How disk-grounded feedback directly disproves common e-commerce myths.
+                    </p>
+                  </div>
+                  <span style={{ fontSize: '0.78rem', fontWeight: '600', color: 'var(--brand-dark)', backgroundColor: 'var(--brand-tint)', padding: '4px 12px', borderRadius: '9999px', border: '1px solid var(--brand-tint-2)' }}>
+                    4 Key Data Revelations
+                  </span>
+                </div>
 
                 <div className="assumed-vs-found-grid">
-                  <div className="assumed-vs-found-card">
-                    <div className="assumed-line"><span className="assumed-badge">ASSUMED:</span> Users forget what's in their wishlist.</div>
-                    <div className="found-line"><span className="found-badge">FOUND:</span> People actively revisit saved items: the block isn't memory, it's unresolved sizing and quality doubt.</div>
+                  
+                  {/* Card 1 */}
+                  <div className="perspective-card">
+                    <div className="perspective-myth-section">
+                      <div className="perspective-myth-badge">
+                        <span>✕</span> Industry Assumption
+                      </div>
+                      <p className="perspective-myth-text">
+                        Users simply forget what's sitting in their wishlist over time.
+                      </p>
+                    </div>
+                    <div className="perspective-reality-section">
+                      <div className="perspective-reality-badge">
+                        <span>✨</span> Data Revelation
+                      </div>
+                      <p className="perspective-reality-text">
+                        Shoppers actively revisit saved items: the friction is not memory loss, but <span className="perspective-highlight">unresolved sizing and quality doubt</span>.
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="assumed-vs-found-card">
-                    <div className="assumed-line"><span className="assumed-badge">ASSUMED:</span> Price is the main reason wishlisted items don't convert.</div>
-                    <div className="found-line"><span className="found-badge">FOUND:</span> Our strongest evidence points to sizing uncertainty and photo-vs-reality doubt, not price.</div>
+                  {/* Card 2 */}
+                  <div className="perspective-card">
+                    <div className="perspective-myth-section">
+                      <div className="perspective-myth-badge">
+                        <span>✕</span> Industry Assumption
+                      </div>
+                      <p className="perspective-myth-text">
+                        Price sensitivity is the primary reason wishlisted items fail to convert.
+                      </p>
+                    </div>
+                    <div className="perspective-reality-section">
+                      <div className="perspective-reality-badge">
+                        <span>✨</span> Data Revelation
+                      </div>
+                      <p className="perspective-reality-text">
+                        <span className="perspective-highlight">Sizing uncertainty (63 items) and photo-vs-reality doubts</span> are our largest pre-purchase blockers, far outstripping price drops.
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="assumed-vs-found-card">
-                    <div className="assumed-line"><span className="assumed-badge">ASSUMED:</span> A wishlist means someone plans to buy.</div>
-                    <div className="found-line"><span className="found-badge">FOUND:</span> A meaningful share of saves are bookmarking or inspiration, never intended as a purchase plan.</div>
+                  {/* Card 3 */}
+                  <div className="perspective-card">
+                    <div className="perspective-myth-section">
+                      <div className="perspective-myth-badge">
+                        <span>✕</span> Industry Assumption
+                      </div>
+                      <p className="perspective-myth-text">
+                        Adding an item to a wishlist signifies immediate purchase intent.
+                      </p>
+                    </div>
+                    <div className="perspective-reality-section">
+                      <div className="perspective-reality-badge">
+                        <span>✨</span> Data Revelation
+                      </div>
+                      <p className="perspective-reality-text">
+                        Wishlists serve primarily as <span className="perspective-highlight">aesthetic bookmarks and sale watchlists</span>, with items held for multi-week discount cycles.
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="assumed-vs-found-card">
-                    <div className="assumed-line"><span className="assumed-badge">ASSUMED:</span> App store reviews tell us why items sit unbought.</div>
-                    <div className="found-line"><span className="found-badge">FOUND:</span> App store reviews skew heavily post-purchase: true wishlist friction is revealed on PDP Q&A and community forums.</div>
+                  {/* Card 4 */}
+                  <div className="perspective-card">
+                    <div className="perspective-myth-section">
+                      <div className="perspective-myth-badge">
+                        <span>✕</span> Industry Assumption
+                      </div>
+                      <p className="perspective-myth-text">
+                        App store reviews reveal why shoppers hesitate before buying.
+                      </p>
+                    </div>
+                    <div className="perspective-reality-section">
+                      <div className="perspective-reality-badge">
+                        <span>✨</span> Data Revelation
+                      </div>
+                      <p className="perspective-reality-text">
+                        Public store reviews skew 95%+ post-purchase: true wishlist friction surfaces on <span className="perspective-highlight">creator try-on Q&A and community forums</span>.
+                      </p>
+                    </div>
                   </div>
+
                 </div>
               </div>
 
