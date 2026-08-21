@@ -1140,12 +1140,12 @@ export default function App() {
           </div>
         )}
 
-      </main>
+        {/* Nykaa Reference Style Footer */}
+        <footer className="app-footer">
+          Myntra · Wishlist Discovery Engine
+        </footer>
 
-      {/* Nykaa Reference Style Footer */}
-      <footer className="app-footer">
-        Myntra · Discovery Engine
-      </footer>
+      </main>
 
     </div>
   );
