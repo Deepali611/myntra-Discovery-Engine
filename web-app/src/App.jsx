@@ -438,10 +438,15 @@ export default function App() {
       <header className="sticky-header">
         <div className="header-container">
           
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <span className="brand-dot"></span>
-            <span style={{ fontSize: '1.05rem', fontWeight: '500', color: 'var(--ink)', letterSpacing: '-0.01em' }}>
-              Myntra Discovery Engine
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <svg width="34" height="25" viewBox="0 0 102 75" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: 'block' }}>
+              <path d="M0,74.1 L19.4,36.5 C22.9,29.7 27.2,22.1 32.7,14.6 C37.8,7.6 43.6,1.9 49.3,0 C43.2,8.6 37.8,17.9 33.1,27.1 L8.6,74.1 L0,74.1 Z" fill="#FF3F6C"/>
+              <path d="M49.3,0 C54.7,2.1 59.8,7.4 64.3,14.2 C69.4,21.9 73.5,30.2 76.7,37.2 L94.2,74.1 L85.5,74.1 L62.5,25.8 C57.8,15.9 53.6,8.7 49.3,0 Z" fill="#FF905A"/>
+              <path d="M33.1,27.1 C38.5,16.6 44.4,7.4 50.8,0 C44.8,2.2 39.4,7.8 34.6,15.1 C29.4,23.1 25.1,31.4 21.8,38.5 L4.5,74.1 L13.2,74.1 L33.1,27.1 Z" fill="#D41E48"/>
+              <path d="M50.8,0 C54.9,9 58.9,16.8 63.3,27 L82.5,74.1 L91.2,74.1 L72.3,33.5 C68.7,25.8 64.8,17.8 59.9,10.6 C56.6,5.7 53.6,2.1 50.8,0 Z" fill="#FF527B"/>
+            </svg>
+            <span style={{ fontSize: '0.92rem', fontWeight: '600', color: 'var(--ink)', letterSpacing: '-0.01em', fontFamily: 'var(--font-sans)' }}>
+              Discovery Engine
             </span>
           </div>
 
