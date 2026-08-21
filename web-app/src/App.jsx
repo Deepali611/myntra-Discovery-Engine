@@ -45,24 +45,7 @@ const GROUNDED_KNOWLEDGE = {
   }
 };
 
-const INITIAL_MESSAGES = [
-  {
-    role: 'user',
-    content: 'Why do users add items to their wishlist?'
-  },
-  {
-    role: 'assistant',
-    content: 'Shoppers add items to wishlists primarily as price watchlists to wait for sale discounts (16 items) or to save inspiration from creator try-on videos (12 items). Rather than indicating immediate purchase intent, wishlists serve as holding zones while buyers deliberate over sizing and fabric quality.'
-  },
-  {
-    role: 'user',
-    content: 'What prevents purchase after wishlisting?'
-  },
-  {
-    role: 'assistant',
-    content: 'Post-wishlisting conversion is blocked primarily by fabric quality doubts and color discrepancies (38 items) alongside sticking zipper issues. Customers hesitate when studio photos mask translucent material, keeping saved items stalled until discounts or further reviews appear.'
-  }
-];
+
 
 const EXAMPLE_POOLS = [
   [
@@ -356,7 +339,7 @@ function classifyLinesText(inputText) {
 export default function App() {
   // DEFAULT LANDING TAB: Ask Assistant
   const [activePage, setActivePage] = useState('assistant');
-  const [messages, setMessages] = useState(INITIAL_MESSAGES);
+  const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [expandedCards, setExpandedCards] = useState({});
