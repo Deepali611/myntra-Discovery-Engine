@@ -227,52 +227,6 @@ const FINDING_DETAILS = {
     ],
     productImplication: "PRODUCT IMPLICATION: Personalize wishlist notification timing and PDP recommendation feeds based on persona intent signals."
   },
-  q4_investigated: {
-    shortTitle: "Photo vs reality doubts (Q4)",
-    categoryTag: "Confidence gap",
-    problemStatement: "Investigating whether app studio photos hide translucent fabric or darker reality colors.",
-    description: "Doubt about product photos vs physical reality raised in customer review commentary.",
-    quietLine: "Based on 2 signals across 1 source (Myntra PDP Reviews).",
-    countFormatted: "2 · 1.1%",
-    barPct: 11,
-    quotes: [
-      { quote: 'Color in reality is much darker than shown in the app photos. Kept it in shortlist for a month...' },
-      { quote: 'Stitching quality came off after single hand wash. Very disappointed after waiting so long to buy during discount.' }
-    ],
-    productImplication: "PRODUCT IMPLICATION: Mandate unedited customer photo uploads in reviews and add photo-accuracy voting flags."
-  },
-  q5_investigated: {
-    shortTitle: "Occasion choice dilemma (Q5)",
-    categoryTag: "Decision friction",
-    problemStatement: "Investigating how shoppers deliberate between competing saved items for specific events.",
-    description: "Evaluating choice friction when shoppers hold multiple saved items for a single event.",
-    quietLine: "Based on 12 signals across 1 source (Reddit Fashion Communities). Showing top 4 quotes.",
-    countFormatted: "12 · 6.7%",
-    barPct: 63,
-    quotes: [
-      { quote: 'Help me choose one dress for reception party' },
-      { quote: 'Help Me Choose an Outfit for My Third Date!' },
-      { quote: 'Help Me Choose a Dress for My Birthday (Urgent!)' },
-      { quote: 'Help me choose what to wear for my very close friend\'s engagement!' }
-    ],
-    productImplication: "PRODUCT IMPLICATION: Provide a wishlist comparison matrix to convert shortlist deliberation into active checkout."
-  },
-  q9_investigated: {
-    shortTitle: "User segment patterns (Q9)",
-    categoryTag: "Segment pattern",
-    problemStatement: "Investigating user segment differences in wishlisting intent and shopping friction.",
-    description: "Examining persona variations in pre-purchase friction across office and event categories.",
-    quietLine: "Based on 5 signals across 2 sources (Reddit, YouTube). Showing top 4 quotes.",
-    countFormatted: "5 · 2.8%",
-    barPct: 26,
-    quotes: [
-      { quote: 'Help me choose what to wear for my very close friend\'s engagement!' },
-      { quote: 'Please do more office recommendations for upcoming weather in delhi' },
-      { quote: 'Really enjoying the western wear /office wear options recently showcased on the channel. Really helps with shortlisting options' },
-      { quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?...' }
-    ],
-    productImplication: "PRODUCT IMPLICATION: Segment wishlist notifications by intent persona rather than generic reminders."
-  }
 };
 
 
