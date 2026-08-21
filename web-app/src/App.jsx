@@ -434,17 +434,14 @@ export default function App() {
   return (
     <div style={{ minHeight: '100vh', backgroundColor: 'var(--bg)' }}>
       
-      {/* Sticky Header with Dot Logo Wordmark & 3 Navigation Tabs */}
+      {/* Sticky Header with 12px Dot Logo Wordmark & 3 Navigation Tabs */}
       <header className="sticky-header">
         <div className="header-container">
           
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <span className="brand-dot"></span>
-            <span style={{ fontSize: '1.05rem', fontWeight: '700', color: 'var(--ink)', fontFamily: 'Georgia, serif' }}>
-              Myntra Fashion
-            </span>
-            <span style={{ fontSize: '1.05rem', fontWeight: '400', color: 'var(--muted)' }}>
-              · Wishlist Discovery
+            <span style={{ fontSize: '1.05rem', fontWeight: '500', color: 'var(--ink)', letterSpacing: '-0.01em' }}>
+              Myntra Discovery Engine
             </span>
           </div>
 
@@ -468,15 +465,18 @@ export default function App() {
         
         {/* TAB 1: ASK ASSISTANT (DEFAULT LANDING TAB) */}
         {activePage === 'assistant' && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxWidth: '880px', margin: '0 auto', width: '100%' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
             <div>
-              <p style={{ color: 'var(--muted)', fontSize: '0.96rem', fontWeight: '400' }}>
-                Ask anything about the findings, or pick a question to get started.
+              <h1 style={{ fontSize: '2.2rem', fontWeight: '600', marginBottom: '8px' }}>
+                Why do wishlisted items never get bought?
+              </h1>
+              <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>
+                An AI engine that reads real shopper feedback and ranks the reasons wishlisted items don't get bought.
               </p>
             </div>
 
-            {/* Container Card */}
-            <div className="chat-container">
+            {/* Dynamic Container Card (collapses height naturally when empty) */}
+            <div className={`chat-container ${messages.length > 0 ? 'active' : 'empty'}`}>
               
               {/* Header Inside Chat Container (Only shown when messages > 0) */}
               {messages.length > 0 && (
@@ -493,8 +493,8 @@ export default function App() {
               {/* Scrollable Message History / Empty State Chips */}
               <div className="chat-history" ref={chatHistoryRef}>
                 {messages.length === 0 ? (
-                  <div style={{ padding: '4px 0' }}>
-                    <strong style={{ fontSize: '0.9rem', fontWeight: '600', color: 'var(--ink)', marginBottom: '16px', display: 'block' }}>
+                  <div>
+                    <strong style={{ fontSize: '0.9rem', fontWeight: '600', color: 'var(--ink)', marginBottom: '14px', display: 'block' }}>
                       Try a question:
                     </strong>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
