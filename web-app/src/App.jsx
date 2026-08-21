@@ -569,7 +569,7 @@ export default function App() {
           </div>
         )}        {/* TAB 2: DASHBOARD (ONE MERGED SINGLE SCROLLING PAGE IN EXACT ORDER) */}
         {activePage === 'dashboard' && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '36px' }}>
             
             {/* (1) Top Stat Cards */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
