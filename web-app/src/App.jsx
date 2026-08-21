@@ -601,22 +601,22 @@ export default function App() {
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                   {[
-                    { source: 'YouTube Comments', count: 135, pct: '75.4%' },
-                    { source: 'Reddit Fashion Communities', count: 26, pct: '14.5%' },
-                    { source: 'Myntra PDP Reviews & Q&A', count: 10, pct: '5.6%' },
-                    { source: 'Google Play Store Reviews', count: 7, pct: '3.9%' },
-                    { source: 'Apple App Store Reviews', count: 1, pct: '0.6%' }
+                    { source: 'YouTube Comments', count: 135 },
+                    { source: 'Reddit Fashion Communities', count: 26 },
+                    { source: 'Myntra PDP Reviews & Q&A', count: 10 },
+                    { source: 'Google Play Store Reviews', count: 7 },
+                    { source: 'Apple App Store Reviews', count: 1 }
                   ].map((srcItem, idx) => {
                     const maxSourceCount = 135;
                     const barPct = Math.round((srcItem.count / maxSourceCount) * 100);
                     return (
-                      <div key={idx} style={{ display: 'grid', gridTemplateColumns: '220px 1fr 140px', alignItems: 'center', gap: '14px' }}>
+                      <div key={idx} style={{ display: 'grid', gridTemplateColumns: '220px 1fr 60px', alignItems: 'center', gap: '14px' }}>
                         <div style={{ fontSize: '0.88rem', fontWeight: '500', color: '#282C3F' }}>{srcItem.source}</div>
                         <div className="myntra-bar-track">
                           <div className="myntra-bar-fill bar-fill-animated" style={{ width: `${barPct}%` }}></div>
                         </div>
                         <div style={{ textAlign: 'right', fontSize: '0.85rem', color: '#282C3F', fontWeight: '500' }}>
-                          {srcItem.count} {srcItem.count === 1 ? 'item' : 'items'} | {srcItem.pct}
+                          {srcItem.count}
                         </div>
                       </div>
                     );
