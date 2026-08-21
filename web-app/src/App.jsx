@@ -89,13 +89,53 @@ const EXAMPLE_POOLS = [
 
 // Master FINDING_DETAILS Dictionary for All 9 Unique Findings (Simplified, No quietLine, Implications on Top 3 Only)
 const FINDING_DETAILS = {
+  finding_3: {
+    shortTitle: "Peer sizing guidance",
+    categoryTag: "Sizing doubt",
+    problemStatement: "Asking creators or Q&A for body measurements before ordering.",
+    description: "Shoppers ask creators directly for height, waist, and bust measurements rather than trust the size chart.",
+    countFormatted: "63 items | 35.2%",
+    barPct: 100,
+    quotes: [
+      { quote: 'Which size do u wear ?' },
+      { quote: 'Can you share exact bust and waist try-on measurements for this dress?' },
+      { quote: 'Should I buy size M or L for a relaxed fit on 38 inch chest?' },
+      { quote: 'What size should I get if my waist is 28 inches? Height is 5\'4".' }
+    ],
+    productImplication: "Embed creator try-on height/waist badges on PDPs and launch a peer sizing Q&A module to eliminate size return anxiety."
+  },
+  finding_1: {
+    shortTitle: "Wishlist intent & purpose",
+    categoryTag: "Intent pattern",
+    problemStatement: "Saving items as inspiration bookmarks or price watchlists rather than immediate cart additions.",
+    description: "Shoppers add footwear and ethnic wear to wishlists to defer decisions until sales or when inspired by creator try-ons.",
+    countFormatted: "38 items | 21.2%",
+    barPct: 60,
+    quotes: [
+      { quote: 'Saved these block heels for 2 months. Cushioning is decent...' },
+      { quote: 'Added to wishlist after seeing try-on haul video.' }
+    ]
+  },
+  finding_8: {
+    shortTitle: "Price-drop waiting",
+    categoryTag: "Value & timing",
+    problemStatement: "Saving items in wishlist for weeks or months waiting for a sale price drop or restock.",
+    description: "Saved items are parked until the price moves: shoppers hold items for sales and wait long stretches for offers.",
+    countFormatted: "26 items | 14.5%",
+    barPct: 41,
+    quotes: [
+      { quote: 'Kept in wishlist for weeks, bought on price drop but zip quality gap.' },
+      { quote: 'Saved these block heels for 2 months waiting for a sale price drop.' },
+      { quote: 'Wishlisted this ethnic saree a month ago, hoping for restocking in red color.' }
+    ]
+  },
   finding_7: {
     shortTitle: "Event suitability & styling",
     categoryTag: "Styling alignment",
     problemStatement: "Uncertainty whether a wishlisted item matches specific dress codes or event themes.",
     description: "Shoppers seek advice on fit, styling, and appropriateness for specific social settings like dates or birthdays.",
-    countFormatted: "20 · 11.2%",
-    barPct: 85,
+    countFormatted: "20 items | 11.2%",
+    barPct: 32,
     quotes: [
       { quote: 'Help Me Choose an Outfit for My Third Date!' },
       { quote: 'Help Me Choose a Dress for My Birthday (Urgent!)' },
@@ -108,8 +148,8 @@ const FINDING_DETAILS = {
     categoryTag: "Decision friction",
     problemStatement: "Difficulty choosing between multiple shortlisted outfits saved for specific events.",
     description: "Shoppers save multiple similar items for events like receptions or dates and ask community groups to pick.",
-    countFormatted: "12 · 6.7%",
-    barPct: 63,
+    countFormatted: "12 items | 6.7%",
+    barPct: 19,
     quotes: [
       { quote: 'Help me choose one dress for reception party' },
       { quote: 'Help Me Choose an Outfit for My Third Date!' },
@@ -118,46 +158,17 @@ const FINDING_DETAILS = {
     ],
     productImplication: "Introduce an in-app compare shortlist side-by-side tool and occasion styling voting polls."
   },
-  finding_3: {
-    shortTitle: "Peer sizing guidance",
-    categoryTag: "Sizing doubt",
-    problemStatement: "Asking creators or Q&A for body measurements before ordering.",
-    description: "Shoppers ask creators directly for height, waist, and bust measurements rather than trust the size chart.",
-    countFormatted: "7 · 3.9%",
-    barPct: 37,
+  finding_6: {
+    shortTitle: "Cross-platform price trust",
+    categoryTag: "Trust gap",
+    problemStatement: "Comparing prices and authenticity on brand official websites vs Myntra before checkout.",
+    description: "Doubt about whether official store prices or product listings differ across platforms before placing orders.",
+    countFormatted: "8 items | 4.5%",
+    barPct: 13,
     quotes: [
-      { quote: 'Which size do u wear ?' },
-      { quote: 'Can you share exact bust and waist try-on measurements for this dress?' },
-      { quote: 'Should I buy size M or L for a relaxed fit on 38 inch chest?' },
-      { quote: 'What size should I get if my waist is 28 inches? Height is 5\'4".' }
-    ],
-    productImplication: "Embed creator try-on height/waist badges on PDPs and launch a peer sizing Q&A module to eliminate size return anxiety."
-  },
-  finding_9: {
-    shortTitle: "User segment patterns",
-    categoryTag: "Segment pattern",
-    problemStatement: "Wishlisting behavior varies across buyer personas (occasion-driven vs office-wear shoppers).",
-    description: "Shopping friction shows distinct patterns depending on whether the buyer is shopping for workwear or events.",
-    countFormatted: "5 · 2.8%",
-    barPct: 26,
-    quotes: [
-      { quote: 'Help me choose what to wear for my very close friend\'s engagement!' },
-      { quote: 'Please do more office recommendations for upcoming weather in delhi' },
-      { quote: 'Really enjoying the western wear /office wear options recently showcased on the channel. Really helps with shortlisting options' },
-      { quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?' }
-    ],
-    productImplication: "Personalize wishlist notification timing and PDP recommendation feeds based on persona intent signals."
-  },
-  finding_1: {
-    shortTitle: "Wishlist intent & purpose",
-    categoryTag: "Intent pattern",
-    problemStatement: "Saving items as inspiration bookmarks or price watchlists rather than immediate cart additions.",
-    description: "Shoppers add footwear and ethnic wear to wishlists to defer decisions until sales or when inspired by creator try-ons.",
-    countFormatted: "4 · 2.2%",
-    barPct: 21,
-    quotes: [
-      { quote: 'Saved these block heels for 2 months. Cushioning is decent...' },
-      { quote: 'Added to wishlist after seeing try-on haul video.' }
+      { quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?' },
+      { quote: 'Is Snitch official website price cheaper than Myntra listing?' },
+      { quote: 'Comparing price on Flipkart vs Myntra before checking out.' }
     ]
   },
   finding_2: {
@@ -165,36 +176,10 @@ const FINDING_DETAILS = {
     categoryTag: "Quality uncertainty",
     problemStatement: "Wishlisted items remaining unbought for weeks due to defect fears like sticking zippers.",
     description: "Items sit unbought in wishlists due to quality concerns surfacing in review commentary while waiting for discounts.",
-    countFormatted: "3 · 1.7%",
-    barPct: 16,
+    countFormatted: "5 items | 2.8%",
+    barPct: 8,
     quotes: [
       { quote: 'Kept in wishlist for weeks, bought on price drop but zip quality gap.' }
-    ]
-  },
-  finding_6: {
-    shortTitle: "Cross-platform price trust",
-    categoryTag: "Trust gap",
-    problemStatement: "Comparing prices and authenticity on brand official websites vs Myntra before checkout.",
-    description: "Doubt about whether official store prices or product listings differ across platforms before placing orders.",
-    countFormatted: "3 · 1.7%",
-    barPct: 16,
-    quotes: [
-      { quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?' },
-      { quote: 'Is Snitch official website price cheaper than Myntra listing?' },
-      { quote: 'Comparing price on Flipkart vs Myntra before checking out.' }
-    ]
-  },
-  finding_8: {
-    shortTitle: "Price-drop waiting",
-    categoryTag: "Value & timing",
-    problemStatement: "Saving items in wishlist for weeks or months waiting for a sale price drop or restock.",
-    description: "Saved items are parked until the price moves: shoppers hold items for sales and wait long stretches for offers.",
-    countFormatted: "3 · 1.7%",
-    barPct: 16,
-    quotes: [
-      { quote: 'Kept in wishlist for weeks, bought on price drop but zip quality gap.' },
-      { quote: 'Saved these block heels for 2 months waiting for a sale price drop.' },
-      { quote: 'Wishlisted this ethnic saree a month ago, hoping for restocking in red color.' }
     ]
   },
   finding_4: {
@@ -202,25 +187,40 @@ const FINDING_DETAILS = {
     categoryTag: "Confidence gap",
     problemStatement: "Uncertainty whether app studio photos hide thin translucent fabric or darker reality colors.",
     description: "Shoppers hesitate in wishlists when studio photos obscure true fabric thickness or actual color tones.",
-    countFormatted: "2 · 1.1%",
-    barPct: 11,
+    countFormatted: "4 items | 2.2%",
+    barPct: 6,
     quotes: [
       { quote: 'Color in reality is much darker than shown in the app photos. Kept it in shortlist for a month...' },
       { quote: 'Fabric feels very thin and see-through compared to app studio picture.' }
     ]
+  },
+  finding_9: {
+    shortTitle: "User segment patterns",
+    categoryTag: "Segment pattern",
+    problemStatement: "Wishlisting behavior varies across buyer personas (occasion-driven vs office-wear shoppers).",
+    description: "Shopping friction shows distinct patterns depending on whether the buyer is shopping for workwear or events.",
+    countFormatted: "3 items | 1.7%",
+    barPct: 5,
+    quotes: [
+      { quote: 'Help me choose what to wear for my very close friend\'s engagement!' },
+      { quote: 'Please do more office recommendations for upcoming weather in delhi' },
+      { quote: 'Really enjoying the western wear /office wear options recently showcased on the channel. Really helps with shortlisting options' },
+      { quote: 'Why is Snitch\'s price and quality different on official website vs Flipkart/Myntra?' }
+    ],
+    productImplication: "Personalize wishlist notification timing and PDP recommendation feeds based on persona intent signals."
   }
 };
 
 const FINDINGS_SORTED_FREQUENCY = [
+  'finding_3',
+  'finding_1',
+  'finding_8',
   'finding_7',
   'finding_5',
-  'finding_3',
-  'finding_9',
-  'finding_1',
-  'finding_2',
   'finding_6',
-  'finding_8',
-  'finding_4'
+  'finding_2',
+  'finding_4',
+  'finding_9'
 ];
 
 
@@ -593,29 +593,31 @@ export default function App() {
 
               {/* Where the 179 screened items came from */}
               <div className="finding-row" style={{ marginTop: '4px' }}>
-                <h3 style={{ fontSize: '1.05rem', fontWeight: '600', color: 'var(--ink)' }}>
+                <h3 style={{ fontSize: '1.05rem', fontWeight: '600', color: '#282C3F' }}>
                   Where the 179 screened items came from
                 </h3>
-                <p style={{ color: 'var(--muted)', fontSize: '0.84rem', marginTop: '2px', marginBottom: '14px' }}>
+                <p style={{ color: 'var(--muted)', fontSize: '0.84rem', marginTop: '2px', marginBottom: '16px' }}>
                   Breakdown of the 179 Stage A/B gate-passed customer feedback items by source channel.
                 </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                   {[
-                    { source: 'YouTube Comments', count: 135 },
-                    { source: 'Reddit Fashion Communities', count: 26 },
-                    { source: 'Myntra PDP Reviews & Q&A', count: 10 },
-                    { source: 'Google Play Store Reviews', count: 7 },
-                    { source: 'Apple App Store Reviews', count: 1 }
+                    { source: 'YouTube Comments', count: 135, pct: '75.4%' },
+                    { source: 'Reddit Fashion Communities', count: 26, pct: '14.5%' },
+                    { source: 'Myntra PDP Reviews & Q&A', count: 10, pct: '5.6%' },
+                    { source: 'Google Play Store Reviews', count: 7, pct: '3.9%' },
+                    { source: 'Apple App Store Reviews', count: 1, pct: '0.6%' }
                   ].map((srcItem, idx) => {
                     const maxSourceCount = 135;
                     const barPct = Math.round((srcItem.count / maxSourceCount) * 100);
                     return (
-                      <div key={idx} style={{ display: 'grid', gridTemplateColumns: '220px 1fr 60px', alignItems: 'center', gap: '12px' }}>
-                        <div style={{ fontSize: '0.88rem', fontWeight: '500', color: 'var(--ink)' }}>{srcItem.source}</div>
-                        <div style={{ width: '100%', height: '8px', backgroundColor: 'var(--brand-tint-2)', borderRadius: '4px', overflow: 'hidden' }}>
-                          <div className="bar-fill-animated" style={{ width: `${barPct}%`, height: '100%', backgroundColor: 'var(--brand)', borderRadius: '4px', minWidth: '4px' }}></div>
+                      <div key={idx} style={{ display: 'grid', gridTemplateColumns: '220px 1fr 140px', alignItems: 'center', gap: '14px' }}>
+                        <div style={{ fontSize: '0.88rem', fontWeight: '500', color: '#282C3F' }}>{srcItem.source}</div>
+                        <div className="myntra-bar-track">
+                          <div className="myntra-bar-fill bar-fill-animated" style={{ width: `${barPct}%` }}></div>
                         </div>
-                        <div style={{ textAlign: 'right', fontSize: '0.85rem', color: 'var(--muted)', fontWeight: '500' }}>{srcItem.count}</div>
+                        <div style={{ textAlign: 'right', fontSize: '0.85rem', color: '#282C3F', fontWeight: '500' }}>
+                          {srcItem.count} {srcItem.count === 1 ? 'item' : 'items'} | {srcItem.pct}
+                        </div>
                       </div>
                     );
                   })}
@@ -695,20 +697,20 @@ export default function App() {
                       <div key={fKey} className={`finding-row finding-card-transition ${scaleClass}`} id={fKey} style={{ cursor: "pointer" }} onClick={() => toggleExpand(fKey)}>
                         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
                           <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
-                            <h3 className="card-title" style={{ color: "var(--ink)" }}>
+                            <h3 className="card-title" style={{ color: "#282C3F", fontWeight: 500 }}>
                               {item.shortTitle}
                             </h3>
                             <span className="category-tag">{item.categoryTag}</span>
                           </div>
-                          <span style={{ fontSize: "0.85rem", color: "var(--muted)", fontWeight: "500" }}>{item.countFormatted}</span>
+                          <span style={{ fontSize: "0.86rem", color: "#282C3F", fontWeight: "500" }}>{item.countFormatted}</span>
                         </div>
                         
                         <p className="problem-statement-line">
                           {item.problemStatement}
                         </p>
 
-                        <div style={{ width: "100%", height: "6px", backgroundColor: "var(--brand-tint-2)", borderRadius: "3px", margin: "10px 0 6px 0", overflow: "hidden" }}>
-                          <div className="bar-fill-animated" style={{ width: `${item.barPct}%`, height: "100%", backgroundColor: "var(--brand)", borderRadius: "3px" }}></div>
+                        <div className="myntra-bar-track" style={{ margin: "12px 0 8px 0" }}>
+                          <div className="myntra-bar-fill bar-fill-animated" style={{ width: `${item.barPct}%` }}></div>
                         </div>
 
                         <button onClick={(e) => { e.stopPropagation(); toggleExpand(fKey); }} style={{ marginTop: "6px", background: "none", border: "none", color: "var(--brand-dark)", fontSize: "0.82rem", fontWeight: "600", cursor: "pointer", padding: 0 }}>
@@ -783,20 +785,20 @@ export default function App() {
                             <div key={fKey} className={`finding-row finding-card-transition ${scaleClass}`} id={`stage_${fKey}`} style={{ cursor: "pointer" }} onClick={() => toggleExpand(fKey)}>
                               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
                                 <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
-                                  <h3 className="card-title" style={{ color: "var(--ink)" }}>
+                                  <h3 className="card-title" style={{ color: "#282C3F", fontWeight: 500 }}>
                                     {item.shortTitle}
                                   </h3>
                                   <span className="category-tag">{item.categoryTag}</span>
                                 </div>
-                                <span style={{ fontSize: "0.85rem", color: "var(--muted)", fontWeight: "500" }}>{item.countFormatted}</span>
+                                <span style={{ fontSize: "0.86rem", color: "#282C3F", fontWeight: "500" }}>{item.countFormatted}</span>
                               </div>
                               
                               <p className="problem-statement-line">
                                 {item.problemStatement}
                               </p>
 
-                              <div style={{ width: "100%", height: "6px", backgroundColor: "var(--brand-tint-2)", borderRadius: "3px", margin: "10px 0 6px 0", overflow: "hidden" }}>
-                                <div className="bar-fill-animated" style={{ width: `${item.barPct}%`, height: "100%", backgroundColor: "var(--brand)", borderRadius: "3px" }}></div>
+                              <div className="myntra-bar-track" style={{ margin: "12px 0 8px 0" }}>
+                                <div className="myntra-bar-fill bar-fill-animated" style={{ width: `${item.barPct}%` }}></div>
                               </div>
 
                               <button onClick={(e) => { e.stopPropagation(); toggleExpand(fKey); }} style={{ marginTop: "6px", background: "none", border: "none", color: "var(--brand-dark)", fontSize: "0.82rem", fontWeight: "600", cursor: "pointer", padding: 0 }}>
