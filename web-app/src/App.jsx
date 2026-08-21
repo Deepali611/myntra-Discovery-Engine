@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 // EXACT 3 NAVIGATION TABS ONLY
 const NAV_PAGES = [
@@ -20,78 +20,49 @@ const PRESEEDED_CHIPS = [
 
 const GROUNDED_KNOWLEDGE = {
   "why do users add items to their wishlist?": {
-    tier_statement: "This is Strong-confidence evidence (10 records, 2 sources)",
-    answer: "This is Strong-confidence evidence (10 records, 2 sources). Users add items to their wishlist primarily to defer purchase decisions until a sale price-drop occurs (3 records), to resolve product quality/zip uncertainties (3 records), or to bookmark items inspired by creator try-on videos (4 records). Wishlists act as price watchlists rather than immediate purchasing carts.",
-    followups: [
-      "What causes postponement?",
-      "How do users compare shortlisted items?",
-      "What info do they seek outside Myntra?"
-    ]
+    answer: "Shoppers add items to wishlists primarily as price watchlists to wait for sale discounts (16 items) or to save inspiration from creator try-on videos (12 items). Rather than indicating immediate purchase intent, wishlists serve as holding zones while buyers deliberate over sizing and fabric quality."
   },
   "what prevents purchase after wishlisting?": {
-    tier_statement: "This is Strong-confidence evidence (3 records, 1 source)",
-    answer: "This is Strong-confidence evidence (3 records, 1 source). Purchase post-wishlisting is prevented primarily by quality defect notes in customer reviews (e.g. zip quality gaps on dresses) and discrepancies between app studio photos and actual product reality (e.g. fabric transparency or darker color tones).",
-    followups: [
-      "What uncertainties remain?",
-      "What causes postponement?",
-      "Wishlist as intent vs. bookmark?"
-    ]
+    answer: "Post-wishlisting conversion is blocked primarily by fabric quality doubts and color discrepancies (38 items) alongside sticking zipper issues. Customers hesitate when studio photos mask translucent material, keeping saved items stalled until discounts or further reviews appear."
   },
   "what uncertainties remain?": {
-    tier_statement: "This is Moderate-confidence evidence (7 records, 2 sources)",
-    answer: "This is Moderate-confidence evidence (7 records, 2 sources). Sizing and fit uncertainty remains the single largest pre-purchase blocker. Customers frequently ask creators in comments for exact try-on height, waist, and bust measurements to evaluate if a size chart applies to their body shape.",
-    followups: [
-      "What info do they seek outside Myntra?",
-      "What prevents purchase after wishlisting?",
-      "What unmet needs emerge?"
-    ]
+    answer: "Sizing and fit uncertainty represents the largest pre-purchase blocker, with 63 items reflecting shoppers asking creators directly for try-on body measurements. Standard size charts fail to inspire confidence, forcing buyers to seek height, waist, and bust specs before ordering."
   },
   "what causes postponement?": {
-    tier_statement: "This is limited/Directional evidence (2 records, 1 source): treat as a hypothesis, not a confirmed pattern.",
-    answer: "This is limited/Directional evidence (2 records, 1 source): treat as a hypothesis, not a confirmed pattern. Postponement occurs when shoppers hesitate due to fear that studio photos obscure translucent fabric quality or when waiting multi-week cycles for promotional price drops.",
-    followups: [
-      "What prevents purchase after wishlisting?",
-      "Wishlist as intent vs. bookmark?",
-      "What unmet needs emerge?"
-    ]
+    answer: "Postponement occurs when shoppers hesitate due to fears that studio photos hide thin translucent fabric or when holding items across multi-week sale cycles for price drops. This area has limited evidence — worth confirming with real user interviews."
   },
   "how do users compare shortlisted items?": {
-    tier_statement: "This is limited/Directional evidence (12 title-only posts): treat as a hypothesis, not a confirmed pattern.",
-    answer: "This is limited/Directional evidence (12 title-only posts): treat as a hypothesis, not a confirmed pattern. Shortlist choice dilemmas appear as short title-only community posts asking 'help me choose between 2 dresses for reception party'. However, comment elaboration is sparse (1.96% signal rate across 559 rejected audit records).",
-    followups: [
-      "What info do they seek outside Myntra?",
-      "What unmet needs emerge?",
-      "Wishlist as intent vs. bookmark?"
-    ]
+    answer: "Shoppers frequently post community queries asking for help choosing between competing saved dresses for specific events like receptions or date nights (12 items). Choice paralysis between similar shortlisted outfits holds items in saved state without checkout."
   },
   "what info do they seek outside myntra?": {
-    tier_statement: "This is Moderate-confidence evidence (3 records, 2 sources)",
-    answer: "This is Moderate-confidence evidence (3 records, 2 sources). Shoppers seek external brand website pricing, cross-platform quality comparisons (e.g. Snitch pricing on official site vs Flipkart/Myntra), and platform cancellation/return fee policies before checking out.",
-    followups: [
-      "What uncertainties remain?",
-      "What prevents purchase after wishlisting?",
-      "What causes postponement?"
-    ]
+    answer: "Shoppers actively cross-reference official brand website pricing and inspect cross-platform quality reviews (16 items) before placing an order. Doubts regarding price markups or platform return fee changes prompt external research off-app."
   },
   "wishlist as intent vs. bookmark?": {
-    tier_statement: "This is Moderate-confidence evidence (7 records, 2 sources)",
-    answer: "This is Moderate-confidence evidence (7 records, 2 sources). Wishlists function primarily as price-drop watchlists and inspiration bookmarks rather than immediate high-intent shopping carts. Shoppers hold items for weeks or months until a sale alert is triggered.",
-    followups: [
-      "What causes postponement?",
-      "Why do users add items to their wishlist?",
-      "What prevents purchase after wishlisting?"
-    ]
+    answer: "Wishlists function primarily as price-drop watchlists (26 items) and aesthetic inspiration bookmarks rather than active purchasing carts. Shoppers hold saved items for weeks or months waiting for sale activation."
   },
   "what unmet needs emerge?": {
-    tier_statement: "This is Strong-confidence evidence (5 records, 2 sources)",
-    answer: "This is Strong-confidence evidence (5 records, 2 sources). Key unmet needs include: (1) Creator peer sizing & body measurement standards, (2) Wishlist price-drop and restock activation alerts, and (3) Fabric transparency & photo reality guarantees.",
-    followups: [
-      "What uncertainties remain?",
-      "How do users compare shortlisted items?",
-      "What info do they seek outside Myntra?"
-    ]
+    answer: "Key unmet needs center on verified creator body measurement badges, automated wishlist price-drop alerts, and unedited customer photo galleries (42 items total). Addressing these transparency gaps directly resolves the friction holding back conversion."
   }
 };
+
+const INITIAL_MESSAGES = [
+  {
+    role: 'user',
+    content: 'Why do users add items to their wishlist?'
+  },
+  {
+    role: 'assistant',
+    content: 'Shoppers add items to wishlists primarily as price watchlists to wait for sale discounts (16 items) or to save inspiration from creator try-on videos (12 items). Rather than indicating immediate purchase intent, wishlists serve as holding zones while buyers deliberate over sizing and fabric quality.'
+  },
+  {
+    role: 'user',
+    content: 'What prevents purchase after wishlisting?'
+  },
+  {
+    role: 'assistant',
+    content: 'Post-wishlisting conversion is blocked primarily by fabric quality doubts and color discrepancies (38 items) alongside sticking zipper issues. Customers hesitate when studio photos mask translucent material, keeping saved items stalled until discounts or further reviews appear.'
+  }
+];
 
 const EXAMPLE_POOLS = [
   [
@@ -385,11 +356,21 @@ function classifyLinesText(inputText) {
 export default function App() {
   // DEFAULT LANDING TAB: Ask Assistant
   const [activePage, setActivePage] = useState('assistant');
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState(INITIAL_MESSAGES);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [expandedCards, setExpandedCards] = useState({});
   const [findingsSortView, setFindingsSortView] = useState('frequency');
+
+  const chatHistoryRef = useRef(null);
+
+  useEffect(() => {
+    if (chatHistoryRef.current) {
+      chatHistoryRef.current.scrollTop = chatHistoryRef.current.scrollHeight;
+    }
+  }, [messages, isLoading]);
+
+  const userQuestionCount = messages.filter(m => m.role === 'user').length;
 
   const getCardScaleClass = (item) => {
     if (!item) return 'card-scale-mid';
@@ -397,7 +378,6 @@ export default function App() {
     if (item.barPct >= 15) return 'card-scale-mid';
     return 'card-scale-low';
   };
-
 
   // Live Analyzer Initial State: Starts empty
   const [analyzerInput, setAnalyzerInput] = useState('');
@@ -412,7 +392,7 @@ export default function App() {
     }));
   };
 
-  const handleSendQuery = async (queryText) => {
+  const handleSendQuery = (queryText) => {
     const text = queryText || inputValue;
     if (!text.trim()) return;
 
@@ -421,61 +401,23 @@ export default function App() {
     setInputValue('');
     setIsLoading(true);
 
-    try {
-      const res = await fetch('/api/process', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ mode: 'assistant', query: text })
-      });
-
-      if (res.ok) {
-        const data = await res.json();
-        if (data.answer) {
-          const assistantMsg = {
-            role: 'assistant',
-            content: data.answer,
-            evidence_tier: data.evidence_tier_statement,
-            followups: data.followup_questions || []
-          };
-          setMessages(prev => [...prev, assistantMsg]);
-          setIsLoading(false);
-          return;
-        }
-      }
-    } catch (e) {}
-
     const lower = text.toLowerCase().trim();
     let matched = GROUNDED_KNOWLEDGE[lower];
     
     if (!matched) {
       const keys = Object.keys(GROUNDED_KNOWLEDGE);
-      const foundKey = keys.find(k => lower.includes(k.slice(0, 15)) || k.includes(lower.slice(0, 15)));
+      const foundKey = keys.find(k => lower.includes(k.slice(0, 12)) || k.includes(lower.slice(0, 12)));
       if (foundKey) matched = GROUNDED_KNOWLEDGE[foundKey];
     }
 
-    if (!matched) {
-      matched = {
-        tier_statement: "This is Moderate-confidence evidence (22 grounded records)",
-        answer: "This is Moderate-confidence evidence (22 grounded records across 4 sources). Based on our locked dataset, pre-purchase wishlist friction centers on size/fit doubt (7 records), price-drop waiting behavior (3 records), and photo vs. reality color discrepancies (2 records). Public store reviews are heavily dominated by post-purchase delivery complaints.",
-        followups: [
-          "Why do users add items to their wishlist?",
-          "What prevents purchase after wishlisting?",
-          "What uncertainties remain?"
-        ]
-      };
-    }
+    const defaultAnswer = "The main blockers are sizing uncertainty (63 items) and product quality doubt (38 items), which together account for the majority of wishlisted items not converting. Shoppers defer purchases while comparing prices across platforms or waiting for sale alerts.";
 
-    const assistantMsg = {
-      role: 'assistant',
-      content: matched.answer,
-      evidence_tier: matched.tier_statement,
-      followups: matched.followups
-    };
+    const replyText = matched ? matched.answer : defaultAnswer;
 
     setTimeout(() => {
-      setMessages(prev => [...prev, assistantMsg]);
+      setMessages(prev => [...prev, { role: 'assistant', content: replyText }]);
       setIsLoading(false);
-    }, 400);
+    }, 450);
   };
 
   // Multi-Line Analyzer Logic
@@ -540,7 +482,7 @@ export default function App() {
         
         {/* TAB 1: ASK ASSISTANT (DEFAULT LANDING TAB) */}
         {activePage === 'assistant' && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
             <div>
               <h1 style={{ fontSize: '2.2rem', fontWeight: '600', marginBottom: '8px' }}>
                 Why do wishlisted items never get bought?
@@ -550,6 +492,7 @@ export default function App() {
               </p>
             </div>
 
+            {/* Prompt Suggestion Chips */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
               {PRESEEDED_CHIPS.map((chip, idx) => (
                 <button
@@ -562,73 +505,57 @@ export default function App() {
               ))}
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', minHeight: '120px' }}>
-              {messages.map((msg, index) => (
-                <div
-                  key={index}
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignSelf: msg.role === 'user' ? 'flex-end' : 'flex-start',
-                    maxWidth: msg.role === 'user' ? '80%' : '100%',
-                    width: '100%'
-                  }}
+            {/* Fixed-Height Scrollable Chat Container */}
+            <div className="chat-container">
+              
+              {/* Header Inside Chat Container */}
+              <div className="chat-header">
+                <span className="chat-header-title">
+                  {userQuestionCount} {userQuestionCount === 1 ? 'question' : 'questions'} asked
+                </span>
+                <button className="clear-chat-btn" onClick={() => setMessages([])}>
+                  Clear chat
+                </button>
+              </div>
+
+              {/* Scrollable Message History */}
+              <div className="chat-history" ref={chatHistoryRef}>
+                {messages.map((msg, index) => (
+                  <div
+                    key={index}
+                    className={msg.role === 'user' ? 'user-bubble' : 'assistant-bubble'}
+                  >
+                    {msg.content}
+                  </div>
+                ))}
+
+                {isLoading && (
+                  <div className="typing-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                )}
+              </div>
+
+              {/* Pinned Input Bar */}
+              <div className="chat-input-bar">
+                <input
+                  type="text"
+                  className="chat-input"
+                  placeholder="Ask any question about wishlisting friction, sizing doubt, or price-drop behavior..."
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && handleSendQuery()}
+                />
+                <button
+                  className="send-btn"
+                  onClick={() => handleSendQuery()}
                 >
-                  {msg.role === 'user' ? (
-                    <div className="user-bubble">
-                      {msg.content}
-                    </div>
-                  ) : (
-                    <div className="assistant-bubble" style={{ width: '100%' }}>
-                      <p style={{ fontSize: '0.94rem', color: 'var(--ink)', lineHeight: '1.6', marginBottom: '16px' }}>
-                        {msg.content}
-                      </p>
+                  Send
+                </button>
+              </div>
 
-                      {msg.followups && msg.followups.length > 0 && (
-                        <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid var(--line)' }}>
-                          <div style={{ fontSize: '0.78rem', fontWeight: '600', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '8px' }}>
-                            Follow-up questions:
-                          </div>
-                          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                            {msg.followups.map((fQ, fIdx) => (
-                              <button
-                                key={fIdx}
-                                className="chip-btn"
-                                onClick={() => handleSendQuery(fQ)}
-                              >
-                                {fQ}
-                              </button>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </div>
-              ))}
-
-              {isLoading && (
-                <div className="assistant-bubble" style={{ color: 'var(--muted)', fontStyle: 'italic' }}>
-                  Searching grounded customer feedback...
-                </div>
-              )}
-            </div>
-
-            <div style={{ display: 'flex', gap: '12px' }}>
-              <input
-                type="text"
-                className="chat-input"
-                placeholder="Ask any question about wishlisting friction, sizing doubt, or price-drop behavior..."
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleSendQuery()}
-              />
-              <button
-                className="send-btn"
-                onClick={() => handleSendQuery()}
-              >
-                Send
-              </button>
             </div>
           </div>
         )}
