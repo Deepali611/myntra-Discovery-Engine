@@ -29,7 +29,7 @@ const GROUNDED_KNOWLEDGE = {
     answer: "Sizing and fit uncertainty represents the largest pre-purchase blocker, with 63 items reflecting shoppers asking creators directly for try-on body measurements. Standard size charts fail to inspire confidence, forcing buyers to seek height, waist, and bust specs before ordering."
   },
   "why do purchases get postponed / deferred?": {
-    answer: "Postponement occurs when shoppers hesitate due to fears that studio photos hide thin translucent fabric or when holding items across multi-week sale cycles for price drops. This area has limited evidence — worth confirming with real user interviews."
+    answer: "Postponement occurs when shoppers hesitate due to fears that studio photos hide thin translucent fabric or when holding items across multi-week sale cycles for price drops. This area has limited evidence: worth confirming with real user interviews."
   },
   "how do users compare options?": {
     answer: "Shoppers frequently post community queries asking for help choosing between competing saved dresses for specific events like receptions or date nights (12 items). Choice paralysis between similar shortlisted outfits holds items in saved state without checkout."
@@ -343,6 +343,7 @@ export default function App() {
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [expandedCards, setExpandedCards] = useState({});
+  const [expandedAssumed, setExpandedAssumed] = useState({ assumed_1: true });
   const [findingsSortView, setFindingsSortView] = useState('frequency');
 
   const chatHistoryRef = useRef(null);
@@ -566,11 +567,9 @@ export default function App() {
 
             </div>
           </div>
-        )}
-
-        {/* TAB 2: DASHBOARD (ONE MERGED SINGLE SCROLLING PAGE IN EXACT ORDER) */}
+        )}        {/* TAB 2: DASHBOARD (ONE MERGED SINGLE SCROLLING PAGE IN EXACT ORDER) */}
         {activePage === 'dashboard' && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '44px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
             
             {/* (1) Top Stat Cards */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
@@ -625,11 +624,77 @@ export default function App() {
               </div>
             </div>
 
-            {/* (2) What users are telling us (With Assumed vs. Found, Scaled Cards & View Toggle) */}
-            <section style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '40px' }}>
+            {/* (2) Assumed Myths vs. Grounded Reality (Interactive Accordion Dropdowns) */}
+            <section style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
+                <h2 style={{ fontFamily: 'var(--font-sans)', fontSize: '1.5rem', fontWeight: '700', color: 'var(--ink)' }}>
+                  Assumed Myths vs. Grounded Reality
+                </h2>
+                <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginTop: '4px' }}>
+                  Click any common assumption below to reveal the grounded customer reality.
+                </p>
+              </div>
+
+              <div className="assumed-accordion-container">
+                {[
+                  {
+                    id: 'assumed_1',
+                    num: 'MYTH 01',
+                    myth: "Users forget what sits in their wishlist over time.",
+                    reality: "Shoppers actively revisit saved items: decision hesitation is driven by sizing and quality doubt, not memory loss."
+                  },
+                  {
+                    id: 'assumed_2',
+                    num: 'MYTH 02',
+                    myth: "Price sensitivity is the primary reason wishlisted items fail to convert.",
+                    reality: "Sizing uncertainty (63 items) and photo-vs-reality doubts are our largest friction points, outstripping price sensitivity."
+                  },
+                  {
+                    id: 'assumed_3',
+                    num: 'MYTH 03',
+                    myth: "Adding an item to a wishlist signifies immediate purchase intent.",
+                    reality: "Wishlists serve primarily as aesthetic bookmarks and price watchlists, held for multi-week discount cycles."
+                  },
+                  {
+                    id: 'assumed_4',
+                    num: 'MYTH 04',
+                    myth: "App store reviews explain why shoppers hesitate before checkout.",
+                    reality: "Public app store reviews skew post-purchase: true wishlist friction surfaces on creator try-on Q&A and community forums."
+                  }
+                ].map((item) => {
+                  const isOpen = !!expandedAssumed[item.id];
+                  return (
+                    <div key={item.id} className="assumed-accordion-item">
+                      <div
+                        className="assumed-accordion-header"
+                        onClick={() => setExpandedAssumed(prev => ({ ...prev, [item.id]: !prev[item.id] }))}
+                      >
+                        <div className="assumed-accordion-title-group">
+                          <span className="assumed-accordion-num">{item.num}</span>
+                          <span className="assumed-accordion-myth-text">{item.myth}</span>
+                        </div>
+                        <div className="assumed-accordion-toggle-btn">
+                          {isOpen ? '▲ Hide Reality' : '▼ View Reality'}
+                        </div>
+                      </div>
+
+                      {isOpen && (
+                        <div className="assumed-accordion-body">
+                          <div className="assumed-accordion-reality-label">GROUNDED CUSTOMER REALITY</div>
+                          <p className="assumed-accordion-reality-text">{item.reality}</p>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+
+            {/* (3) What users are telling us (With Scaled Cards & View Toggle) */}
+            <section style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '16px', borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
                 <div>
-                  <h2 style={{ fontFamily: 'var(--font-sans)', fontSize: '1.5rem', fontWeight: '700' }}>
+                  <h2 style={{ fontFamily: 'var(--font-sans)', fontSize: '1.5rem', fontWeight: '700', color: 'var(--ink)' }}>
                     What users are telling us
                   </h2>
                   <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginTop: '4px' }}>
@@ -654,107 +719,6 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Assumed vs. Found Sequence */}
-              <div style={{ marginBottom: '12px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', flexWrap: 'wrap', gap: '12px' }}>
-                  <div>
-                    <h3 style={{ fontSize: '1.15rem', fontWeight: '700', color: 'var(--ink)', letterSpacing: '-0.01em' }}>
-                      Assumed vs. Found Insights
-                    </h3>
-                    <p style={{ fontSize: '0.86rem', color: 'var(--muted)', marginTop: '2px' }}>
-                      How disk-grounded feedback directly disproves common e-commerce myths.
-                    </p>
-                  </div>
-                  <span style={{ fontSize: '0.78rem', fontWeight: '600', color: 'var(--brand-dark)', backgroundColor: 'var(--brand-tint)', padding: '4px 12px', borderRadius: '9999px', border: '1px solid var(--brand-tint-2)' }}>
-                    4 Key Data Revelations
-                  </span>
-                </div>
-
-                <div className="assumed-vs-found-grid">
-                  
-                  {/* Card 1 */}
-                  <div className="perspective-card">
-                    <div className="perspective-myth-section">
-                      <div className="perspective-myth-badge">
-                        <span>✕</span> Industry Assumption
-                      </div>
-                      <p className="perspective-myth-text">
-                        Users simply forget what's sitting in their wishlist over time.
-                      </p>
-                    </div>
-                    <div className="perspective-reality-section">
-                      <div className="perspective-reality-badge">
-                        <span>✨</span> Data Revelation
-                      </div>
-                      <p className="perspective-reality-text">
-                        Shoppers actively revisit saved items: the friction is not memory loss, but <span className="perspective-highlight">unresolved sizing and quality doubt</span>.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Card 2 */}
-                  <div className="perspective-card">
-                    <div className="perspective-myth-section">
-                      <div className="perspective-myth-badge">
-                        <span>✕</span> Industry Assumption
-                      </div>
-                      <p className="perspective-myth-text">
-                        Price sensitivity is the primary reason wishlisted items fail to convert.
-                      </p>
-                    </div>
-                    <div className="perspective-reality-section">
-                      <div className="perspective-reality-badge">
-                        <span>✨</span> Data Revelation
-                      </div>
-                      <p className="perspective-reality-text">
-                        <span className="perspective-highlight">Sizing uncertainty (63 items) and photo-vs-reality doubts</span> are our largest pre-purchase blockers, far outstripping price drops.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Card 3 */}
-                  <div className="perspective-card">
-                    <div className="perspective-myth-section">
-                      <div className="perspective-myth-badge">
-                        <span>✕</span> Industry Assumption
-                      </div>
-                      <p className="perspective-myth-text">
-                        Adding an item to a wishlist signifies immediate purchase intent.
-                      </p>
-                    </div>
-                    <div className="perspective-reality-section">
-                      <div className="perspective-reality-badge">
-                        <span>✨</span> Data Revelation
-                      </div>
-                      <p className="perspective-reality-text">
-                        Wishlists serve primarily as <span className="perspective-highlight">aesthetic bookmarks and sale watchlists</span>, with items held for multi-week discount cycles.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Card 4 */}
-                  <div className="perspective-card">
-                    <div className="perspective-myth-section">
-                      <div className="perspective-myth-badge">
-                        <span>✕</span> Industry Assumption
-                      </div>
-                      <p className="perspective-myth-text">
-                        App store reviews reveal why shoppers hesitate before buying.
-                      </p>
-                    </div>
-                    <div className="perspective-reality-section">
-                      <div className="perspective-reality-badge">
-                        <span>✨</span> Data Revelation
-                      </div>
-                      <p className="perspective-reality-text">
-                        Public store reviews skew 95%+ post-purchase: true wishlist friction surfaces on <span className="perspective-highlight">creator try-on Q&A and community forums</span>.
-                      </p>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
               {/* View 1: By Frequency (Ranked Count Order with Scaled Card Sizing) */}
               {findingsSortView === 'frequency' && (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
@@ -771,7 +735,30 @@ export default function App() {
                             </h3>
                             <span className="category-tag">{item.categoryTag}</span>
                           </div>
-                          <span style={{ fontSize: "0.86rem", color: "#282C3F", fontWeight: "500" }}>{item.countFormatted}</span>
+                          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                            <span style={{ fontSize: "0.86rem", color: "#282C3F", fontWeight: "500" }}>{item.countFormatted}</span>
+                            <button
+                              onClick={(e) => { e.stopPropagation(); toggleExpand(fKey); }}
+                              style={{
+                                background: "var(--brand-tint)",
+                                border: "1px solid var(--brand-tint-2)",
+                                color: "var(--brand-dark)",
+                                width: "26px",
+                                height: "26px",
+                                borderRadius: "50%",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                fontSize: "0.7rem",
+                                cursor: "pointer",
+                                transition: "transform 0.2s ease",
+                                transform: expandedCards[fKey] ? "rotate(180deg)" : "rotate(0deg)",
+                                padding: 0
+                              }}
+                            >
+                              ▼
+                            </button>
+                          </div>
                         </div>
                         
                         <p className="problem-statement-line">
@@ -781,10 +768,6 @@ export default function App() {
                         <div className="myntra-bar-track" style={{ margin: "12px 0 8px 0" }}>
                           <div className="myntra-bar-fill bar-fill-animated" style={{ width: `${item.barPct}%` }}></div>
                         </div>
-
-                        <button onClick={(e) => { e.stopPropagation(); toggleExpand(fKey); }} style={{ marginTop: "6px", background: "none", border: "none", color: "var(--brand-dark)", fontSize: "0.82rem", fontWeight: "600", cursor: "pointer", padding: 0 }}>
-                          {expandedCards[fKey] ? "▲ Hide Detail" : "▼ Expand Detail"}
-                        </button>
 
                         {expandedCards[fKey] && (
                           <div className="detail-expanded" style={{ marginTop: "14px", paddingTop: "14px", borderTop: "1px solid var(--line)", display: "flex", flexDirection: "column", gap: "14px" }}>
@@ -859,7 +842,30 @@ export default function App() {
                                   </h3>
                                   <span className="category-tag">{item.categoryTag}</span>
                                 </div>
-                                <span style={{ fontSize: "0.86rem", color: "#282C3F", fontWeight: "500" }}>{item.countFormatted}</span>
+                                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                                  <span style={{ fontSize: "0.86rem", color: "#282C3F", fontWeight: "500" }}>{item.countFormatted}</span>
+                                  <button
+                                    onClick={(e) => { e.stopPropagation(); toggleExpand(fKey); }}
+                                    style={{
+                                      background: "var(--brand-tint)",
+                                      border: "1px solid var(--brand-tint-2)",
+                                      color: "var(--brand-dark)",
+                                      width: "26px",
+                                      height: "26px",
+                                      borderRadius: "50%",
+                                      display: "flex",
+                                      alignItems: "center",
+                                      justifyContent: "center",
+                                      fontSize: "0.7rem",
+                                      cursor: "pointer",
+                                      transition: "transform 0.2s ease",
+                                      transform: expandedCards[fKey] ? "rotate(180deg)" : "rotate(0deg)",
+                                      padding: 0
+                                    }}
+                                  >
+                                    ▼
+                                  </button>
+                                </div>
                               </div>
                               
                               <p className="problem-statement-line">
@@ -869,10 +875,6 @@ export default function App() {
                               <div className="myntra-bar-track" style={{ margin: "12px 0 8px 0" }}>
                                 <div className="myntra-bar-fill bar-fill-animated" style={{ width: `${item.barPct}%` }}></div>
                               </div>
-
-                              <button onClick={(e) => { e.stopPropagation(); toggleExpand(fKey); }} style={{ marginTop: "6px", background: "none", border: "none", color: "var(--brand-dark)", fontSize: "0.82rem", fontWeight: "600", cursor: "pointer", padding: 0 }}>
-                                {expandedCards[fKey] ? "▲ Hide Detail" : "▼ Expand Detail"}
-                              </button>
 
                               {expandedCards[fKey] && (
                                 <div className="detail-expanded" style={{ marginTop: "14px", paddingTop: "14px", borderTop: "1px solid var(--line)", display: "flex", flexDirection: "column", gap: "14px" }}>
@@ -907,8 +909,8 @@ export default function App() {
               )}
             </section>
 
-            {/* (3) Where the opportunity is (Exactly 6 Unique Findings) */}
-            <section style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '40px' }}>
+            {/* (4) Where the opportunity is (Exactly 6 Unique Findings) */}
+            <section style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
                 <h2 style={{ fontFamily: 'var(--font-sans)', fontSize: '1.5rem', fontWeight: '700' }}>
                   Where the opportunity is
@@ -948,8 +950,8 @@ export default function App() {
               </div>
             </section>
 
-            {/* (4) Observations (Nykaa Narrative Structure Adaptation) */}
-            <section style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '40px' }}>
+            {/* (5) Observations (Nykaa Narrative Structure Adaptation) */}
+            <section style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
                 <h2 style={{ fontFamily: 'var(--font-sans)', fontSize: '1.5rem', fontWeight: '700' }}>
                   Observations

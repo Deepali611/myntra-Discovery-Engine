@@ -534,107 +534,94 @@ h1, h2, h3 {
   box-shadow: 0 4px 12px rgba(255, 63, 108, 0.05);
 }
 
-/* Innovative Assumed vs Found Perspective Cards */
-.assumed-vs-found-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-bottom: 32px;
-}
-
-@media (max-width: 768px) {
-  .assumed-vs-found-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.perspective-card {
-  background: #ffffff;
-  border: 1px solid #FFE3E8;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-  display: flex;
-  flex-direction: column;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  position: relative;
-}
-
-.perspective-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(255, 63, 108, 0.12);
-  border-color: #FFC2CE;
-}
-
-.perspective-myth-section {
-  background-color: #F8F9FA;
-  padding: 18px 22px;
-  border-bottom: 1px dashed #FFE3E8;
+/* Compact Interactive Accordion Dropdown for Assumed vs Found */
+.assumed-accordion-container {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-bottom: 24px;
 }
 
-.perspective-myth-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background-color: #F3F4F6;
-  color: #6B7280;
-  border: 1px solid #E5E7EB;
-  padding: 4px 10px;
-  border-radius: 9999px;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  width: fit-content;
+.assumed-accordion-item {
+  background: #ffffff;
+  border: 1px solid #EAECEE;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.perspective-myth-text {
-  font-size: 0.9rem;
-  color: #6B7280;
-  line-height: 1.5;
-  font-weight: 500;
-  text-decoration: line-through;
-  text-decoration-color: #D1D5DB;
+.assumed-accordion-item:hover {
+  border-color: #FFC2CE;
 }
 
-.perspective-reality-section {
-  background: linear-gradient(180deg, #FFF0F4 0%, #FFFFFF 100%);
-  padding: 20px 22px;
+.assumed-accordion-header {
+  padding: 12px 18px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  background: #ffffff;
+  gap: 14px;
+}
+
+.assumed-accordion-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   flex: 1;
 }
 
-.perspective-reality-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: linear-gradient(90deg, #FF3F6C 0%, #F41B52 100%);
-  color: #ffffff;
-  padding: 4px 12px;
-  border-radius: 9999px;
+.assumed-accordion-num {
   font-size: 0.72rem;
   font-weight: 700;
+  color: #FF3F6C;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
-  width: fit-content;
-  box-shadow: 0 2px 8px rgba(255, 63, 108, 0.25);
+  background-color: #FFF0F3;
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
 }
 
-.perspective-reality-text {
-  font-size: 0.95rem;
-  color: #1E2229;
+.assumed-accordion-myth-text {
+  font-size: 0.88rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.assumed-accordion-toggle-btn {
+  font-size: 0.78rem;
   font-weight: 600;
-  line-height: 1.55;
+  color: #FF3F6C;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
 }
 
-.perspective-highlight {
-  color: #D41E48;
+.assumed-accordion-body {
+  padding: 14px 18px 16px 18px;
+  background-color: #FFF9FA;
+  border-top: 1px dashed #FFE3E8;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  animation: expandFade 0.2s ease-out;
+}
+
+.assumed-accordion-reality-label {
+  font-size: 0.68rem;
   font-weight: 700;
+  color: #FF3F6C;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.assumed-accordion-reality-text {
+  font-size: 0.91rem;
+  color: #111827;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 /* Dynamic Card Scaling (By Volume Importance) */
